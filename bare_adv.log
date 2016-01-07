@@ -1,0 +1,348 @@
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  30 JUN 2015 16:47
+entering extended mode
+**bare_adv.tex
+(C:\Users\xintao\Desktop\IEEEtran\bare_adv.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\Users\xintao\Desktop\IEEEtran\IEEEtran.cls
+Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
+\@IEEEtrantmpcountC=\count82
+\@IEEEtrantmptoksA=\toks14
+-- Using IEEE Computer Society mode.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 458.
+
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+Requested font "pplr7t" at 10.0pt
+ -> pplr7t
+
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+Requested font "pplr7t" at 10.03749pt
+ -> pplr7t
+Requested font "pplr7t" at 9.53561pt
+ -> pplr7t
+Requested font "pplr7t" at 9.03374pt
+ -> pplr7t
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+Requested font "pplr7t" at 5.01874pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 5.01874pt
+ -> pplb7t
+Requested font "pplri7t" at 5.01874pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 5.01874pt
+ -> pplbi7t
+Requested font "pplr7t" at 7.02625pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 7.02625pt
+ -> pplb7t
+Requested font "pplri7t" at 7.02625pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 7.02625pt
+ -> pplbi7t
+Requested font "pplr7t" at 8.03pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 8.03pt
+ -> pplb7t
+Requested font "pplri7t" at 8.03pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 8.03pt
+ -> pplbi7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 9.03374pt
+ -> pplb7t
+Requested font "pplri7t" at 9.03374pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 9.03374pt
+ -> pplbi7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 9.53561pt
+ -> pplb7t
+Requested font "pplri7t" at 9.53561pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 9.53561pt
+ -> pplbi7t
+Requested font "pplr7t" at 11.04124pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 11.04124pt
+ -> pplb7t
+Requested font "pplri7t" at 11.04124pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 11.04124pt
+ -> pplbi7t
+Requested font "pplr7t" at 12.045pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 12.045pt
+ -> pplb7t
+Requested font "pplri7t" at 12.045pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 12.045pt
+ -> pplbi7t
+Requested font "pplr7t" at 17.06374pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 17.06374pt
+ -> pplb7t
+Requested font "pplri7t" at 17.06374pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 17.06374pt
+ -> pplbi7t
+Requested font "pplr7t" at 20.075pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 20.075pt
+ -> pplb7t
+Requested font "pplri7t" at 20.075pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 20.075pt
+ -> pplbi7t
+Requested font "pplr7t" at 24.09pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+Requested font "pplb7t" at 24.09pt
+ -> pplb7t
+Requested font "pplri7t" at 24.09pt
+ -> pplri7t
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+Requested font "pplbi7t" at 24.09pt
+ -> pplbi7t
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@IEEEsubequation=\count87
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count88
+\c@table=\count89
+\@IEEEeqnnumcols=\count90
+\@IEEEeqncolcnt=\count91
+\@IEEEsubeqnnumrollback=\count92
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count93
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\c@IEEEbiography=\count94
+\@IEEEtranrubishbin=\box27
+) (C:\CTEX\MiKTeX\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+No file bare_adv.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 529.
+LaTeX Font Info:    ... okay on input line 529.
+-- Lines per column: 61 (exact).
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 644.
+
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+Requested font "phvr7t" at 24.09pt
+ -> phvr7t
+Requested font "phvr7t" at 9.53561pt
+ -> phvr7t
+Requested font "phvr7t" at 11.04124pt
+ -> phvr7t
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 644.
+Requested font "phvro7t" at 11.04124pt
+ -> phvro7t
+Requested font "phvr7t" at 8.03pt
+ -> phvr7t
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 644.
+Requested font "phvb7t" at 8.03pt
+ -> phvb7t
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 644.
+Requested font "cmr8" at 8.0pt
+ -> cmr8
+Requested font "cmr6" at 6.0pt
+ -> cmr6
+Requested font "cmmi8" at 8.0pt
+ -> cmmi8
+Requested font "cmmi6" at 6.0pt
+ -> cmmi6
+Requested font "cmsy8" at 8.0pt
+ -> cmsy8
+Requested font "cmsy6" at 6.0pt
+ -> cmsy6
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 644.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 644.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 644.
+Requested font "phvr7t" at 5.62097pt
+ -> phvr7t
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 64
+4.
+Requested font "cmr10" at 10.95pt
+ -> cmr10
+Requested font "cmmi10" at 10.95pt
+ -> cmmi10
+Requested font "cmsy10" at 10.95pt
+ -> cmsy10
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.04124> on input line 644.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.72884> on input line 644.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.52061> on input line 644.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 644.
+
+(C:\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+Requested font "pzdr" at 11.0pt
+ -> pzdr
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 671.
+Requested font "phvb7t" at 11.04124pt
+ -> phvb7t
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
+
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 671.
+Requested font "phvbc7t" at 11.04124pt
+ -> phvbc7t
+Requested font "pplr7t" at 19.39743pt
+ -> pplr7t
+Requested font "pplr7t" at 27.76385pt
+ -> pplr7t
+Requested font "pplrc7t" at 9.53561pt
+ -> pplrc7t
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 703
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 703.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 703.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 703.
+Requested font "pplr7t" at 6.6749pt
+ -> pplr7t
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 713.
+Requested font "phvb7t" at 9.53561pt
+ -> phvb7t
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 719.
+Requested font "phvro7t" at 9.53561pt
+ -> phvro7t
+Requested font "pplri7t" at 5.62097pt
+ -> pplri7t
+Requested font "phvr7t" at 7.02625pt
+ -> phvr7t
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 947
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.02625> on input line 947.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.91833> on input line 947.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <3.51312> on input line 947.
+Requested font "phvr7t" at 4.91833pt
+ -> phvr7t
+ [1
+
+
+]
+(C:\Users\xintao\Desktop\IEEEtran\bare_adv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1250 strings out of 430478
+ 22017 string characters out of 3191502
+ 69677 words of memory out of 3000000
+ 4442 multiletter control sequences out of 15000+200000
+ 34032 words of font info for 84 fonts, out of 3000000 for 9000
+ 17 hyphenation exceptions out of 8191
+ 31i,8n,31p,203b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on bare_adv.pdf (1 page).
