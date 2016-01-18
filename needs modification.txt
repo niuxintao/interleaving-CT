@@ -1,0 +1,24 @@
+增加一个实验： 模拟， 观察 （小degree）MFS 数量对  framework 影响。
+
+
+
+增加framework 中的constraints handling 。 实验描述constraints
+
+
+描述related work. (code based, producted lines.)
+
+把数据和subjects post 网上。
+
+增加数据： 一个是performace对比，（时间， constriants 的处理时间，估计要重新选constraint处理方法，就是forbidden 方法）。
+  还有就是 inogre maksing effects 的测试用例数量。
+
+
+新算法？OFOT改为 TRT ？ (两种都有)， 然后发现问题。
+
+
+
+后面需要大量的增加options的数量来发现FIC-DA的优势，三种方法的比较。
+
+比较test-aware covering array.
+
+f-measure 改变？
