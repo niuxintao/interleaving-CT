@@ -431,7 +431,7 @@
 % one-size-fits-all approach a daunting prospect. For instance, compsoc
 % journal papers have the author affiliations above the "Manuscript
 % received ..."  text while in non-compsoc journals this is reversed. Sigh.
-\author{ Xintao Niu, Changhai Nie, ~\IEEEmembership{Member,~IEEE,} Hareton Leung,~\IEEEmembership{Member,~IEEE,}
+\author{ Xintao Niu, Changhai Nie,~\IEEEmembership{Member,~IEEE,} Hareton Leung,~\IEEEmembership{Member,~IEEE,}
    Jeff Y. Lei,~\IEEEmembership{Member,~IEEE,}
    Xiaoyin Wang, ~\IEEEmembership{Member,~IEEE,}
    JiaXi Xu and Yan Wang
@@ -520,7 +520,7 @@ E-mail: niuxintao@gmail.com, changhainie@nju.edu.cn
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Combinatorial testing(CT) seeks to detect potential faults caused by various interactions of factors that can influence the software systems. When applying CT, it is a common practice to first generate a set of test cases to cover each possible interaction and then to identify the failure-inducing interaction after a failure is detected. Although this conventional procedure is simple and straightforward, we conjecture that it is not the ideal choice in practice. This is because 1) testers desire to identify the root cause of failures before all the needed test cases are generated and executed 2) the early identified failure-inducing interactions can guide the remaining test cases generation, such that many unnecessary and invalid test cases can be avoided. For these reasons, we propose a novel CT framework that allows both generation and identification process to interact with each other. As a result, both generation and identification stages will be done more effectively and efficiently. We conducted a series of empirical studies on several open-source software, the results of which show that our framework can identify the failure-inducing interactions more quickly than traditional approaches, while requiring fewer test cases.
+Combinatorial testing(CT) seeks to detect potential faults caused by various interactions of factors that can influence the software systems. When applying CT, it is a common practice to first generate a set of test cases to cover each possible interaction and then to identify the failure-inducing interaction after a failure is detected. Although this conventional procedure is simple and forthright, we conjecture that it is not the ideal choice in practice. This is because 1) testers desire to identify the root cause of failures before all the needed test cases are generated and executed 2) the early identified failure-inducing interactions can guide the remaining test cases generation, such that many unnecessary and invalid test cases can be avoided. For these reasons, we propose a novel CT framework that allows both generation and identification process to interact with each other. As a result, both generation and identification stages will be done more effectively and efficiently. We conducted a series of empirical studies on several open-source software, the results of which show that our framework can identify the failure-inducing interactions more quickly than traditional approaches, while requiring fewer test cases.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -1826,16 +1826,16 @@ is a full professor in Department of Computer Science and Engineering at the Uni
 \end{IEEEbiography}
 
 \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.45in,clip,keepaspectratio]{xy}}]{Xiaoyin Wang}
-born in Harbin, Heilongjiang Province, China in 1984. After graduating from No.3 High School in Harbin, he entered the department of Computer Science, Harbin Institute of Technology in the year 2002. During the last two years of his undergraduate study, he did some research in the Center of Information Retrieval (CIR). From September 2006 to January 2012, he was a Ph.D. candidate in the Software Engineering Institute (SEI) of Peking Univerisity. His advisor is Prof. Hong Mei, and he also did research under the supervision of Prof. Lu Zhang and Prof. Tao Xie. From Oct 2008 to Sept 2009, he visited Singapore Management University as a research fellow, where he worked with Prof. David Lo. In Jan. 2012, he began to work with Prof. Dawn Song, as a PostDoc in UC Berkeley. In August 2013, he joined the computer science department of University of Texas at San Antonio.
+born in Harbin, Heilongjiang Province, China in 1984. From September 2006 to January 2012, he was a Ph.D. candidate in the Software Engineering Institute (SEI) of Peking Univerisity. His advisor is Prof. Hong Mei, and he also did research under the supervision of Prof. Lu Zhang and Prof. Tao Xie. From Oct 2008 to Sept 2009, he visited Singapore Management University as a research fellow, where he worked with Prof. David Lo. In Jan. 2012, he began to work with Prof. Dawn Song, as a PostDoc in UC Berkeley. In August 2013, he joined the computer science department of University of Texas at San Antonio.
 \end{IEEEbiography}
 
-\begin{IEEEbiographynophoto}{Jiaxi Xu}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.45in,clip,keepaspectratio]{xujiaxi}}]{Jiaxi Xu}
  born in 1972, Senior Engineer in School of Information Engineering of Nanjing Xiaozhuang University. His research interest is software testing, especially embedded software testing and open source software testing.
-\end{IEEEbiographynophoto}
+\end{IEEEbiography}
 
-\begin{IEEEbiographynophoto}{Yan Wang}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{wangyan}}]{Yan Wang}
 received the MS degree in Control Theory and Control Engineering from University of Electronic Science and Technology of China. She is currently a lecturer in the School of Information Engineering at Nanjing Xiaozhuang University. Her research interests include development and testing of embedded software, and combinatorial interaction testing.
-\end{IEEEbiographynophoto}
+\end{IEEEbiography}
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
