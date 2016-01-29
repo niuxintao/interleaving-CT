@@ -21,4 +21,4 @@
 
 比较test-aware covering array.
 
-f-measure 改变？
+f-measure 改变(就是综合以前的只要是有MFS的就保留，提高它的结果)
