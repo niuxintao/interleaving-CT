@@ -1670,7 +1670,7 @@ To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT a
 
 
 % there are two shortcomings for the ELA, first, it needed much more test cases that ours, second, it needs to know the number of MFS and the maximal degree of them, which is usually not available in practice.
-
+\subsection{Sensitivity of the approaches}
 
 
 \subsection{Threats to validity}

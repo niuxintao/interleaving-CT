@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  25 JAN 2016 15:24
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  1 FEB 2016 16:58
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.tex
@@ -385,7 +385,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 403.
 LaTeX Font Info:    ... okay on input line 403.
 
 -- Lines per column: 61 (exact).
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 533.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 534.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -397,17 +397,17 @@ Requested font "phvr7t" at 9.53561pt
 Requested font "phvr7t" at 11.04124pt
  -> phvr7t
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 533.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 534.
 Requested font "phvro7t" at 11.04124pt
  -> phvro7t
 Requested font "phvr7t" at 8.03pt
  -> phvr7t
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 533.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 534.
 Requested font "phvb7t" at 8.03pt
  -> phvb7t
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 53
-3.
+4.
 Requested font "cmr10" at 10.95pt
  -> cmr10
 Requested font "cmr8" at 8.0pt
@@ -432,14 +432,14 @@ Requested font "cmex7" at 7.72884pt
  -> cmex7
 Requested font "cmex7" at 5.52061pt
  -> cmex7
-LaTeX Font Info:    Try loading font information for U+pzd on input line 533.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 534.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 Requested font "pzdr" at 11.0pt
  -> pzdr
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 533.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 534.
 Requested font "cmex8" at 8.0pt
  -> cmex8
 Requested font "cmex7" at 5.62097pt
@@ -447,12 +447,12 @@ Requested font "cmex7" at 5.62097pt
 Requested font "cmex7" at 4.015pt
  -> cmex7
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 561.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 562.
 Requested font "phvb7t" at 11.04124pt
  -> phvb7t
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 561.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 562.
 Requested font "phvbc7t" at 11.04124pt
  -> phvbc7t
 Requested font "pplr7t" at 19.39743pt
@@ -463,7 +463,7 @@ Requested font "pplrc7t" at 9.53561pt
  -> pplrc7t
 Requested font "phvr7t" at 7.02625pt
  -> phvr7t
-LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 599
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 600
 .
 Requested font "cmex7" at 7.02625pt
  -> cmex7
@@ -479,7 +479,7 @@ Requested font "phvr7t" at 4.91833pt
 ]
 File: CT_lifecircle.eps Graphic file (type eps)
  <CT_lifecircle.eps>
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 738
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 739
 .
 Requested font "cmex7" at 6.6749pt
  -> cmex7
@@ -488,7 +488,7 @@ Requested font "cmex7" at 4.7678pt
 \c@definition=\count121
  [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 777.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 778.
 Requested font "phvb7t" at 9.53561pt
  -> phvb7t
  [3]
@@ -502,11 +502,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: baicOutline.eps Graphic file (type eps)
  <baicOutline.eps> [6] [7] [8] [9]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1295.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1296.
 
 Requested font "phvro7t" at 9.53561pt
  -> phvro7t
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1296
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1297
 .
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1pcr.fd
@@ -526,15 +526,15 @@ File: fd-cit.eps Graphic file (type eps)
 
 <fd-cit.eps> [13]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1572.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1573.
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
  [14]
 File: ex2.eps Graphic file (type eps)
  <ex2.eps>
-Invalid UTF-8 byte or sequence at line 1656 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1656 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1657 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1657 replaced by U+FFFD.
  [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -547,65 +547,65 @@ File: niu.png Graphic file (type QTm)
 
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1809.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1811.
 
 
 File: niu.png Graphic file (type QTm)
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1809.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1811.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1816.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1818.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1816.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1818.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1820.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1822.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1820.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1822.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1824.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1826.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1824.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1826.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1828.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1830.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1828.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1830.
 
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1828--1830
+Underfull \hbox (badness 1622) in paragraph at lines 1830--1832
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -613,17 +613,17 @@ g
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1832.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1834.
 
 
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1832.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1834.
 
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 1832--1834
+Underfull \hbox (badness 1418) in paragraph at lines 1834--1836
 []\OT1/phv/b/n/8.03 Jiaxi X-u \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-nee
 r in
  []
@@ -631,13 +631,13 @@ r in
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1836.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1838.
 
 
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1836.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1838.
 
 
 [18] (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.aux) )
@@ -645,7 +645,7 @@ Package xetex.def Warning: No clipping support in XeTeX yet on input line 1836.
 Here is how much of TeX's memory you used:
  3336 strings out of 430478
  47528 string characters out of 3191501
- 117747 words of memory out of 3000000
+ 117693 words of memory out of 3000000
  6436 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191

@@ -99,9 +99,9 @@ C.~Mart{\'\i}nez, L.~Moura, D.~Panario, and B.~Stevens, ``Algorithms to locate
   504--519.
 
 \bibitem{martinez2009locating}
-------, ``Locating errors using elas, covering arrays, and adaptive testing
-  algorithms,'' \emph{SIAM Journal on Discrete Mathematics}, vol.~23, no.~4,
-  pp. 1776--1799, 2009.
+C.~Mart{\'\i}nez, L.~Moura, D.~Panario, and B.~Stevens, ``Locating errors using
+  elas, covering arrays, and adaptive testing algorithms,'' \emph{SIAM Journal
+  on Discrete Mathematics}, vol.~23, no.~4, pp. 1776--1799, 2009.
 
 \bibitem{jin2014configurations}
 D.~Jin, X.~Qu, M.~B. Cohen, and B.~Robinson, ``Configurations everywhere:
@@ -147,9 +147,10 @@ M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Interaction testing of
   analysis}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2007, pp. 129--139.
 
 \bibitem{cohen2008constructing}
-------, ``Constructing interaction test suites for highly-configurable systems
-  in the presence of constraints: A greedy approach,'' \emph{Software
-  Engineering, IEEE Transactions on}, vol.~34, no.~5, pp. 633--650, 2008.
+M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Constructing interaction test suites
+  for highly-configurable systems in the presence of constraints: A greedy
+  approach,'' \emph{Software Engineering, IEEE Transactions on}, vol.~34,
+  no.~5, pp. 633--650, 2008.
 
 \bibitem{li2012improved}
 J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
