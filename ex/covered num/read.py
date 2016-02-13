@@ -9,7 +9,7 @@ def readFile(ax, inputFile):
     
     bar_inc = [0, 0.35, 0.7];
     a = ['ICT','SCT','FD']
-    color = ['b','r','y']
+    color = ['k','w','y']
     j = 0
     lengthMin = 0
     while line:

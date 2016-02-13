@@ -52,7 +52,7 @@ def show1_special(ax, x, y_1, minimal, labelS, c):
     #ax.annotate('pixels', xy=(20, 20),  xycoords='figure pixels')
 
 def show2(ax, x, y_1, labelS, c, mark, dot):
-   line_2, = ax.plot(x, y_1, ls=dot, marker=mark, mfc="None", label=labelS,  color=c)
+   line_2, = ax.plot(x, y_1, ls=dot, marker=mark, label=labelS,  color=c)
    return line_2
    
 def show2_special(ax, x, y_1, minimal, labelS, c, mark, dot):
@@ -73,7 +73,7 @@ def show2_special(ax, x, y_1, minimal, labelS, c, mark, dot):
         x_final = x_new
         y_final = y_new
 
-    line_2, = ax.plot(x_final, y_final, ls=dot, marker=mark, mfc="None", label=labelS,  color=c)
+    line_2, = ax.plot(x_final, y_final, ls=dot, marker=mark, label=labelS,  color=c)
     return line_2
 
 def show(x, y_1, y_2):
