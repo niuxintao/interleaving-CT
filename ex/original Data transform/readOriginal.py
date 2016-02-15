@@ -71,7 +71,7 @@ def dealLine(result, strs):
 
 
 def showResult(result):
-    for i in xrange(0,3):
+    for i in range(0,3):
         print(str(i+2) + ' way :')
         print(result[i].numAll)
         print(result[i].CoverNUM)

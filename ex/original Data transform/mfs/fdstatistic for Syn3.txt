@@ -1,0 +1,31 @@
+2-way for Syn3
+###############################################
+###############################################
+average fd num :38.2
+
+average fd num_r :38.2
+
+average fd num_i :0.0
+
+average fd recall :0.8666666666666666
+
+average fd precise :0.18752747252747254
+
+average fd f-measure :0.2986973180076628
+
+average fd multi :6.8
+
+average fd time :134.2
+
+average fd time_r :127.2
+
+average fd time_i :3.4
+
+average fd t_cover :401.0
+
+average fd all_cover :405.0
+
+average fd CoverNUM
+(1 : 23.6)  (2 : 31.4)  (3 : 16.2)  (4 : 7.0)  (5 : 3.6)  (6 : 3.0)  (7 : 1.4)  (8 : 0.8)  (9 : 1.6)  (10 : 0.8)  
+average fd CoverNUM
+([ 0 , - , 0 , - , - , - , - , - , - , - ] : 1.0)  ([ 0 , - , - , 0 , - , - , - , - , - , - ] : 1.0)  ([ 0 , 0 , - , - , - , - , - , - , - , - ] : 0.6)  
