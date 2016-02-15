@@ -78,8 +78,8 @@ def showResult(result):
                 
 if __name__ == "__main__":
 
-    approach = ['fdstatistic', 'ICT_FB_MUOFOTstatistic', 'iststatistic']
-    subject = [' for Gcc', ' for HSQLDB', ' for JFlex', ' for Tcas', ' for Tomcat']
+    approach = ['fdstatistic', 'ICT_FB_MUOFOTstatistic', 'sctstatistic']
+    subject = [' for Tomcat',' for HSQLDB', ' for Gcc', ' for JFlex', ' for Tcas' ]
 
 
     syn = ' for Syn'
@@ -88,7 +88,47 @@ if __name__ == "__main__":
 
     txt = '.txt'
 
-    
-    
-    result = getOneFile("fdstatistic for Syn10.txt")
-    showResult(result)
+    folder = ['five', 'mfs', 'op']
+
+    print('test Cases')
+    for sub in subject:
+        for j in range(1,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            for i in range(0, 3):
+                print(str(round(result[i].num_r,2)) +'\t'+ str(round(result[i].num_i,2)) + '\t' +str(round(result[i].numAll,2)) +'\t', end= '')
+            print('')
+
+    print('')
+    print('identification quality')
+    for sub in subject:
+        for j in range(1,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            for i in range(0, 3):
+                print(str(round(result[i].precise,2)) +'\t'+ str(round(result[i].recall,2)) + '\t' +str(round(result[i].f_measure,2)) +'\t', end= '')
+            print('')
+
+    print('')
+    print('multi')
+    for sub in subject:
+        for j in range(1,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            for i in range(0, 3):
+                print(str(round(result[i].multi,2)) +'\t', end= '')
+            print('')
+            
+    print('')
+    print('tested-t-way')
+    for sub in subject:
+        for j in range(1,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            for i in range(0, 3):
+                print(str(round(result[i].t_cover,2)) + '(' + str(result[i].t_cover/result[i].all_cover) +')'+'\t', end= '')
+            print('')
