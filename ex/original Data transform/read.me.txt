@@ -1,0 +1,6 @@
+run readOriginal.py
+
+
+then sensity of number of MFS.py  (test cases and f-meaure get from the output of readOriginal.py)
+
+then sensity of number of options.py  (test cases and f-meaure get from the output of readOriginal.py)

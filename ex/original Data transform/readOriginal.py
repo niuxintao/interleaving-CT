@@ -1,5 +1,7 @@
+from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 class item:
     def __init__(self):
@@ -130,5 +132,139 @@ if __name__ == "__main__":
             filename = folder[0] +'\/'+app+sub+txt
             result = getOneFile(filename)
             for i in range(0, 3):
-                print(str(round(result[i].t_cover,2)) + '(' + str(result[i].t_cover/result[i].all_cover) +')'+'\t', end= '')
+                print(str(round(result[i].t_cover,2)) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)) +')'+'\t', end= '')
             print('')
+
+
+    print('')
+    print('fd test cases')
+    for sub in subject:
+        result = []
+        for j in range(0,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result_temp = getOneFile(filename)
+            result.append(result_temp)
+        for i in range(0, 3):
+            print(str(round(result[0][i].numAll,2)) + '(' + str(round(result[0][i].numAll - result[1][i].numAll,2)) + ',' + str(round(result[0][i].numAll - result[2][i].numAll,2))+  ')' +'\t', end= '')
+        print('')
+
+    print('')
+    print('fd identification')
+    for sub in subject:
+        result = []
+        for j in range(0,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result_temp = getOneFile(filename)
+            result.append(result_temp)
+        for i in range(0, 3):
+            print(str(round(result[0][i].f_measure,2)) + '(' + str("{:.2%}".format(round(result[0][i].f_measure - result[1][i].f_measure,2))) + ',' + str("{:.2%}".format(round(result[0][i].f_measure - result[2][i].f_measure,2)))+  ')' +'\t', end= '')
+        print('')
+
+    print('')
+    print('fd tested-t-way')
+    for sub in subject:
+        result = []
+        for j in range(0,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result_temp = getOneFile(filename)
+            result.append(result_temp)
+        for i in range(0, 3):
+            print(str(round(result[0][i].t_cover,2)) + '(' + str("{:.2%}".format(round(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),2))) + ',' + str("{:.2%}".format(round(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),2)))+  ')' +'\t', end= '')
+        print('')
+
+
+    print('')
+    print('covered num')
+    for sub in subject:
+        filesNames = ['cover_num\/2-way' + sub + txt,'cover_num\/3-way' + sub + txt,'cover_num\/4-way' + sub + txt]
+        files = []
+        for k in range(0,3):
+            f = open(filesNames[k], 'w')
+            f.write('')
+            files.append(f)
+        for j in [1,2,0]:
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            for i in range(0, 3):
+                files[i].write(result[i].CoverNUM + '\n')
+                files[i].write('\n')
+
+        for k in range(0,3):
+            files[k].close()
+    print('write to files in cover_num')
+
+
+    
+
+    print('')
+    print('sensity of number of MFS --- test cases')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senMFS:
+            app = approach[j]
+            filename = folder[1] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].numAll,2)) +',', end= '')
+        print(']')
+
+    print('')
+    print('sensity of number of MFS --- f-measure')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senMFS:
+            app = approach[j]
+            filename = folder[1] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].f_measure,2)) +',', end= '')
+        print(']')
+        
+    print('')
+    print('sensity of number of MFS --- t-cover')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senMFS:
+            app = approach[j]
+            filename = folder[1] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
+        print(']')
+
+
+
+    print('')
+    print('sensity of number of options --- test cases')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senOptions:
+            app = approach[j]
+            filename = folder[2] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].numAll,2)) +',', end= '')
+        print(']')
+
+    print('')
+    print('sensity of number of options --- f-measure')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senOptions:
+            app = approach[j]
+            filename = folder[2] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].f_measure,2)) +',', end= '')
+        print(']')
+        
+    print('')
+    print('sensity of number of options --- t-cover')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senOptions:
+            app = approach[j]
+            filename = folder[2] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
+        print(']')
+
