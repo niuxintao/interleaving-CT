@@ -1,9 +1,9 @@
 2-way for Syn100
 ###############################################
 ###############################################
-average ICT_FB_MUOFOT num :116.0
+average ICT_FB_MUOFOT num :116.3
 
-average ICT_FB_MUOFOT num_r :16.0
+average ICT_FB_MUOFOT num_r :16.3
 
 average ICT_FB_MUOFOT num_i :100.0
 
@@ -15,17 +15,17 @@ average ICT_FB_MUOFOT f-measure :1.0
 
 average ICT_FB_MUOFOT multi :0.0
 
-average ICT_FB_MUOFOT time :162695.4
+average ICT_FB_MUOFOT time :116973.5
 
-average ICT_FB_MUOFOT time_r :18867.0
+average ICT_FB_MUOFOT time_r :13917.5
 
-average ICT_FB_MUOFOT time_i :142107.0
+average ICT_FB_MUOFOT time_i :102052.1
 
 average ICT_FB_MUOFOT t_cover :19800.0
 
 average ICT_FB_MUOFOT all_cover :19800.0
 
 average ICT_FB_MUOFOT CoverNUM
-(1 : 216.8)  (2 : 675.4)  (3 : 930.2)  (4 : 756.2)  (5 : 390.6)  (6 : 216.0)  (7 : 279.2)  (8 : 298.4)  (9 : 163.4)  (10 : 32.6)  (11 : 7.2)  (12 : 3.6)  
+(1 : 104.1)  (2 : 343.9)  (3 : 496.1)  (4 : 369.9)  (5 : 152.1)  (6 : 48.1)  (7 : 65.4)  (8 : 136.4)  (9 : 154.7)  (10 : 94.5)  (11 : 22.4)  (12 : 2.8)  (13 : 0.6)  
 average ICT_FB_MUOFOT CoverNUM
 ([ 0 , - , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  
