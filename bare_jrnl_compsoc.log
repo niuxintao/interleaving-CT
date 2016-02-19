@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  19 FEB 2016 02:04
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  19 FEB 2016 02:58
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.tex
@@ -516,15 +516,12 @@ Requested font "pcrr7t" at 9.53561pt
  -> pcrr7t
  [10]
 File: ex1.eps Graphic file (type eps)
- <ex1.eps> [11]
-Underfull \vbox (badness 1286) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 1286) has occurred while \output is active []
-
+ <ex1.eps> [11] [12]
 File: fd-cit.eps Graphic file (type eps)
 
 <fd-cit.eps> [13]
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1573.
 
@@ -532,20 +529,18 @@ Requested font "phvro7t" at 8.03pt
  -> phvro7t
  [14]
 File: ex2.eps Graphic file (type eps)
- <ex2.eps>
+
+<ex2.eps>
 Invalid UTF-8 byte or sequence at line 1657 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 1657 replaced by U+FFFD.
  [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5119) has occurred while \output is active []
 
  [16]
 (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.bbl
-Underfull \vbox (badness 1859) has occurred while \output is active []
-
- [17])
+[17])
 File: niu.png Graphic file (type QTm)
-
-<use  "niu.png" >
+ <use  "niu.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1811.
 
@@ -640,15 +635,18 @@ File: wangyan.png Graphic file (type QTm)
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1838.
 
 
-[18] (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.aux) )
- 
+[18] (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  3336 strings out of 430478
  47528 string characters out of 3191501
- 117693 words of memory out of 3000000
+ 116804 words of memory out of 3000000
  6436 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 30i,12n,38p,1711b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,12n,38p,1711b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_jrnl_compsoc.pdf (18 pages).

@@ -1,6 +1,7 @@
 run readOriginal.py
 
+cover_num needs run read.py and read-fd.py
 
-then sensity of number of MFS.py  (test cases and f-meaure get from the output of readOriginal.py)
+then sensity of number of MFS.py  (data needs get from the output of readOriginal.py)
 
-then sensity of number of options.py  (test cases and f-meaure get from the output of readOriginal.py)
+then sensity of number of options.py  (data needs get from the output of readOriginal.py)

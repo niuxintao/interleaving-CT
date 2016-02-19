@@ -339,6 +339,12 @@ if __name__ == "__main__":
 
     print('')
     print('sensity of number of MFS --- test cases')
+    print('sensity of number of MFS --- f-measure')
+    print('sensity of number of MFS --- t-cover')
+
+    print('[')
+
+    print('[')
     for j in range(0,3):
         print('[', end = '')
         for sub in senMFS:
@@ -348,8 +354,9 @@ if __name__ == "__main__":
             print(str(round(result[0].numAll,2)) +',', end= '')
         print('],')
 
-    print('')
-    print('sensity of number of MFS --- f-measure')
+    print('],')
+
+    print('[')
     for j in range(0,3):
         print('[', end = '')
         for sub in senMFS:
@@ -359,8 +366,9 @@ if __name__ == "__main__":
             print(str(round(result[0].f_measure,2)) +',', end= '')
         print('],')
         
-    print('')
-    print('sensity of number of MFS --- t-cover')
+    print('],')
+
+    print('[')
     for j in range(0,3):
         print('[', end = '')
         for sub in senMFS:
@@ -369,11 +377,21 @@ if __name__ == "__main__":
             result = getOneFile(filename)
             print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
         print('],')
+    print('],')
 
+    print(']') 
 
 
     print('')
     print('sensity of number of options --- test cases')
+    print('sensity of number of options --- f-measure')
+    print('sensity of number of options --- t-cover')
+
+
+    print('[')
+
+
+    print('[')
     for j in range(0,3):
         print('[', end = '')
         for sub in senOptions:
@@ -383,8 +401,10 @@ if __name__ == "__main__":
             print(str(round(result[0].numAll,2)) +',', end= '')
         print('],')
 
-    print('')
-    print('sensity of number of options --- f-measure')
+    print('],')
+
+    print('[')
+  
     for j in range(0,3):
         print('[', end = '')
         for sub in senOptions:
@@ -394,8 +414,11 @@ if __name__ == "__main__":
             print(str(round(result[0].f_measure,2)) +',', end= '')
         print('],')
         
-    print('')
-    print('sensity of number of options --- t-cover')
+        
+    print('],')
+
+    print('[')
+
     for j in range(0,3):
         print('[', end = '')
         for sub in senOptions:
@@ -405,3 +428,6 @@ if __name__ == "__main__":
             print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
         print('],')
 
+    print('],')
+
+    print(']') 
