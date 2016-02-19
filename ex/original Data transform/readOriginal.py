@@ -77,8 +77,48 @@ def showResult(result):
         print(str(i+2) + ' way :')
         print(result[i].numAll)
         print(result[i].CoverNUM)
+
+
+def getStrong(num, numTobeCompared, biggerOrSmall):
+    if numTobeCompared == -1:
+        return str(round(num,2)) 
+    if num > numTobeCompared:
+        if biggerOrSmall == 0:  #smaller
+            return str(round(num,2))
+        else:   #stress strong one
+            return "\\textbf{" + str(round(num,2)) +"}"
+    elif num < numTobeCompared:
+        if biggerOrSmall == 0:  #smaller
+            return "\\textbf{" + str(round(num,2)) +"}"
+        else:   #stress strong one
+            return str(round(num,2))
+    else:
+        return str(round(num,2))
+
+
+def getStrongPerCent(num, numTobeCompared, biggerOrSmall):
+    if numTobeCompared == -1:
+        return str("{:.2%}".format(num).replace('%','\%')) 
+    if num > numTobeCompared:
+        if biggerOrSmall == 0:  #smaller
+            return str(round(num,2))
+        else:   #stress strong one
+            return "\\textbf{" + str("{:.2%}".format(num).replace('%','\%')) +"}"
+    elif num < numTobeCompared:
+        if biggerOrSmall == 0:  #smaller
+            return "\\textbf{" + str("{:.2%}".format(num).replace('%','\%'))   +"}"
+        else:   #stress strong one
+            return str("{:.2%}".format(num).replace('%','\%'))  
+    else:
+        return str("{:.2%}".format(num).replace('%','\%')) 
+
+    
                 
 if __name__ == "__main__":
+
+
+    showresultApp = ['fd','ict','sct']
+    showresultSub =['Tomcat', 'Hsqldb', 'Gcc', 'Jflex', 'Tcas']
 
     approach = ['fdstatistic', 'ICT_FB_MUOFOTstatistic', 'sctstatistic']
     subject = [' for Tomcat',' for HSQLDB', ' for Gcc', ' for JFlex', ' for Tcas' ]
@@ -93,87 +133,184 @@ if __name__ == "__main__":
     folder = ['five', 'mfs', 'op']
 
     print('test Cases')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        results = []
         for j in range(1,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
+            result_temp = getOneFile(filename)
+            results.append(result_temp)
+            
+        for j in range(1,3):
+            result = results[j-1]
+            result_2 = [ -1, -1, -1]
+            if j == 1:
+                result_2 = [results[j][0].num_i,results[j][1].num_i,results[j][2].num_i,]
+            print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
-                print(str(round(result[i].num_r,2)) +'\t'+ str(round(result[i].num_i,2)) + '\t' +str(round(result[i].numAll,2)) +'\t', end= '')
-            print('')
+                if i < 2:
+                    print(str(round(result[i].num_r,2)) +'\t&'+ getStrong(result[i].num_i,result_2[i],0)+ '\t&' +str(round(result[i].numAll,2)) +'\t&', end= '')
+                else:
+                    print(str(round(result[i].num_r,2)) +'\t&'+ getStrong(result[i].num_i,result_2[i],0) + '\t&' +str(round(result[i].numAll,2)) +'\t\\\\', end= '')
+            if(j == 2):
+                print('\\hline')
+            else:
+                print('')
 
     print('')
     print('identification quality')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        results = []
         for j in range(1,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
+            result_temp = getOneFile(filename)
+            results.append(result_temp)
+            
+        for j in range(1,3):
+            result = results[j-1]
+            result_2 = [ -1, -1, -1]
+            if j == 1:
+                result_2 = [results[j][0].f_measure,results[j][1].f_measure,results[j][2].f_measure,]
+            print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
-                print(str(round(result[i].precise,2)) +'\t'+ str(round(result[i].recall,2)) + '\t' +str(round(result[i].f_measure,2)) +'\t', end= '')
-            print('')
+                if i < 2:
+                    print(str(round(result[i].precise,2)) +'\t&'+ str(round(result[i].recall,2)) + '\t&' +getStrong(result[i].f_measure,result_2[i],1) +'\t&', end= '')
+                else:
+                    print(str(round(result[i].precise,2)) +'\t&'+ str(round(result[i].recall,2)) + '\t&' +getStrong(result[i].f_measure,result_2[i],1) +'\t\\\\', end= '')
+            if(j == 2):
+                print('\\hline')
+            else:
+                print('')
 
     print('')
     print('multi')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
         for j in range(1,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result = getOneFile(filename)
+            print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
-                print(str(round(result[i].multi,2)) +'\t', end= '')
-            print('')
+                if i < 2:
+                    print(str(round(result[i].multi,2)) +'\t&', end= '')
+                else:
+                    print(str(round(result[i].multi,2)) +'\t\\\\', end= '')
+            if(j == 2):
+                print('\\hline')
+            else:
+                print('')
             
     print('')
     print('tested-t-way')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        results = []
         for j in range(1,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
+            result_temp = getOneFile(filename)
+            results.append(result_temp)
+
+        for j in range(1,3):
+            result = results[j-1]
+            result_2 = [ -1, -1, -1]
+            if j == 1:
+                result_2 = [results[j][0].t_cover,results[j][1].t_cover,results[j][2].t_cover,]
+                
+            print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
-                print(str(round(result[i].t_cover,2)) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)) +')'+'\t', end= '')
-            print('')
+                if i < 2:
+                    if(getStrong(result[i].t_cover,result_2[i],1).find("textbf") != -1):
+                        print(getStrong(result[i].t_cover,result_2[i],1) + "\\textbf{" +  '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')' +"}"+'\t&', end= '')
+                    else:
+                        print(getStrong(result[i].t_cover,result_2[i],1) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t&', end= '')
+                else:
+                    if(getStrong(result[i].t_cover,result_2[i],1).find("textbf") != -1):
+                        print(getStrong(result[i].t_cover,result_2[i],1) + "\\textbf{" +  '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')' +"}"+'\t\\\\', end= '')
+                    else:
+                        print(getStrong(result[i].t_cover,result_2[i],1) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t\\\\', end= '')
+                #    print(getStrong(result[i].t_cover,result_2[i],1) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t\\\\', end= '')
+            if(j == 2):
+                print('\\hline')
+            else:
+                print('')
 
 
     print('')
     print('fd test cases')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
         result = []
         for j in range(0,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
             result.append(result_temp)
+        print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
-            print(str(round(result[0][i].numAll,2)) + '(' + str(round(result[0][i].numAll - result[1][i].numAll,2)) + ',' + str(round(result[0][i].numAll - result[2][i].numAll,2))+  ')' +'\t', end= '')
-        print('')
+            if i < 2:
+                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1) + ',' + getStrong(result[0][i].numAll - result[2][i].numAll,0,1)+  ')' +'\t&', end= '')
+            else:
+                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1) + ',' + getStrong(result[0][i].numAll - result[2][i].numAll,0,1)+  ')' +'\t\\\\', end= '')
+        if(k == 4):
+            print('\\hline')
+        else:
+            print('')
 
     print('')
     print('fd identification')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
         result = []
         for j in range(0,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
             result.append(result_temp)
+        print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
-            print(str(round(result[0][i].f_measure,2)) + '(' + str("{:.2%}".format(round(result[0][i].f_measure - result[1][i].f_measure,2))) + ',' + str("{:.2%}".format(round(result[0][i].f_measure - result[2][i].f_measure,2)))+  ')' +'\t', end= '')
+            if i < 2:
+                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t&', end= '')
+            else:
+                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t\\\\', end= '')
         print('')
+        if(k == 4):
+            print('\\hline')
+        else:
+            print('')
 
     print('')
     print('fd tested-t-way')
-    for sub in subject:
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
         result = []
         for j in range(0,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
             result.append(result_temp)
+        print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
-            print(str(round(result[0][i].t_cover,2)) + '(' + str("{:.2%}".format(round(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),2))) + ',' + str("{:.2%}".format(round(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),2)))+  ')' +'\t', end= '')
+            if i < 2:
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t&', end= '')
+            else:
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t\\\\', end= '')
         print('')
+        if(k == 4):
+            print('\\hline')
+        else:
+            print('')
 
 
     print('')
@@ -209,7 +346,7 @@ if __name__ == "__main__":
             filename = folder[1] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].numAll,2)) +',', end= '')
-        print(']')
+        print('],')
 
     print('')
     print('sensity of number of MFS --- f-measure')
@@ -220,7 +357,7 @@ if __name__ == "__main__":
             filename = folder[1] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].f_measure,2)) +',', end= '')
-        print(']')
+        print('],')
         
     print('')
     print('sensity of number of MFS --- t-cover')
@@ -231,7 +368,7 @@ if __name__ == "__main__":
             filename = folder[1] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
-        print(']')
+        print('],')
 
 
 
@@ -244,7 +381,7 @@ if __name__ == "__main__":
             filename = folder[2] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].numAll,2)) +',', end= '')
-        print(']')
+        print('],')
 
     print('')
     print('sensity of number of options --- f-measure')
@@ -255,7 +392,7 @@ if __name__ == "__main__":
             filename = folder[2] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].f_measure,2)) +',', end= '')
-        print(']')
+        print('],')
         
     print('')
     print('sensity of number of options --- t-cover')
@@ -266,5 +403,5 @@ if __name__ == "__main__":
             filename = folder[2] +'\/'+app+syn+sub+txt
             result = getOneFile(filename)
             print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
-        print(']')
+        print('],')
 
