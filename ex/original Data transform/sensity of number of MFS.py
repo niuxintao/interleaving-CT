@@ -31,8 +31,8 @@ DATA = [
 ]
 
 
-out_metric = DATA[f_measure]
-metric = f_measure
+out_metric = DATA[tests]
+metric = tests
 
 
 

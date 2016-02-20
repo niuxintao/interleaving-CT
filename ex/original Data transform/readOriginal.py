@@ -206,6 +206,26 @@ if __name__ == "__main__":
                 print('\\hline')
             else:
                 print('')
+
+    print('')
+    print('time')
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        for j in range(1,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result = getOneFile(filename)
+            print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
+            for i in range(0, 3):
+                if i < 2:
+                    print(str(round(result[i].time,2)) +'\t&', end= '')
+                else:
+                    print(str(round(result[i].time,2)) +'\t\\\\', end= '')
+            if(j == 2):
+                print('\\hline')
+            else:
+                print('')
             
     print('')
     print('tested-t-way')
