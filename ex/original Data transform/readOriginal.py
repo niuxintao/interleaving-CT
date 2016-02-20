@@ -208,6 +208,9 @@ if __name__ == "__main__":
                 print('')
 
 
+
+
+# all the masking effects are obtained by the generated test cases which contain multiple MFS, hence we just let the generated test cases to minus multiple
     print('')
     print('non-maksing tests :  gen - multi')
     for k in range(5):
@@ -220,9 +223,9 @@ if __name__ == "__main__":
             print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
                 if i < 2:
-                    print(str(round(result[i].num_r - result[i].multi,2)) +'\t&', end= '')
+                    print(str(round(result[i].numAll - result[i].multi,2)) +'\t&', end= '')
                 else:
-                    print(str(round(result[i].num_r - result[i].multi,2)) +'\t\\\\', end= '')
+                    print(str(round(result[i].numAll - result[i].multi,2)) +'\t\\\\', end= '')
             if(j == 2):
                 print('\\hline')
             else:
@@ -324,7 +327,7 @@ if __name__ == "__main__":
                 print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t&', end= '')
             else:
                 print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t\\\\', end= '')
-        print('')
+        #print('')
         if(k == 4):
             print('\\hline')
         else:
@@ -347,7 +350,32 @@ if __name__ == "__main__":
                 print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t&', end= '')
             else:
                 print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t\\\\', end= '')
-        print('')
+       # print('')
+        if(k == 4):
+            print('\\hline')
+        else:
+            print('')
+
+
+    print('')
+    print('fd non-maksing tests :  gen - multi')
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        result = []
+        for j in range(0,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result_temp = getOneFile(filename)
+            result.append(result_temp)
+        print(showresultSub[k] + '\t&', end = '')
+         #  print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
+        for i in range(0, 3):
+                if i < 2:
+                    print(str(round(result[0][i].numAll - result[0][i].multi,2)) +'\t&', end= '')
+                else:
+                    print(str(round(result[0][i].numAll - result[0][i].multi,2)) +'\t\\\\', end= '')
+    #    print('')   
         if(k == 4):
             print('\\hline')
         else:
