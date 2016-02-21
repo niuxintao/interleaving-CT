@@ -1533,23 +1533,29 @@ From this table, one observation is that \emph{ict} obtained a better result tha
 
 \begin{table*}[ht]
 \centering
-\caption{Tested-t-way coverage}
+\caption{Masking effects results}
 \label{tested-t-way}
-\begin{tabular}{|ll|lll|}
+\begin{tabular}{|ll|lll|lll|}
 \hline
-Subject & Method & 2-way           & 3-way            & 4-way             \\ \hline
-Tomcat	&ict	&224.0(94.92\%)	&1368.4(96.10\%)	&5467.8(97.64\%)	\\
-	&sct	&228.6(96.86\%)	&1404.0(98.60\%)	&5551.2(99.13\%)	\\\hline
-Hsqldb	&ict	&\textbf{357.0}\textbf{(100.00\%)}	&\textbf{2737.3}\textbf{(99.83\%)}	&\textbf{14097.0}\textbf{(99.72\%)}	\\
-	&sct	&350.9(98.29\%)	&2725.3(99.39\%)	&14068.2(99.52\%)	\\\hline
-Gcc	&ict	&251.4(99.76\%)	&1520.8(99.01\%)	&5959.3(98.53\%)	\\
-	&sct	&251.6(99.84\%)	&1532.2(99.75\%)	&6014.9(99.45\%)	\\\hline
-Jflex	&ict	&473.0(100.00\%)	&4282.0(100.00\%)	&26532.0(100.00\%)	\\
-	&sct	&473.0(100.00\%)	&4282.0(100.00\%)	&26532.0(100.00\%)	\\\hline
-Tcas	&ict	&837.0(100.00\%)	&9158.0(100.00\%)	&64696.0(100.00\%)	\\
-	&sct	&837.0(100.00\%)	&9158.0(100.00\%)	&64696.0(100.00\%)	\\\hline
+\multirow{2}{*}{Subjects} & \multirow{2}{*}{Method}& \multicolumn{3}{c|}{Tested-t-way coverage} & \multicolumn{3}{c|}{non-masked test cases}          \\ \cline{3-8}
+ &  & 2-way           & 3-way            & 4-way       & 2-way           & 3-way            & 4-way           \\ \hline
+Tomcat	&ict	&224.0(94.92\%)	&1368.4(96.10\%)	&5467.8(97.64\%)	&\textbf{14.7}	&\textbf{41.6}	&\textbf{86.9}	\\
+	&sct	&228.6(96.86\%)	&1404.0(98.60\%)	&5551.2(99.13\%)	&12.7	&33.6	&80.4	\\\hline
+Hsqldb	&ict	&\textbf{357.0}\textbf{(100.00\%)}	&\textbf{2737.3}\textbf{(99.83\%)}	&\textbf{14097.0}\textbf{(99.72\%)}	&14.9	&44.0	&116.8	\\
+	&sct	&350.9(98.29\%)	&2725.3(99.39\%)	&14068.2(99.52\%)	&15.2	&45.8	&117.3	\\\hline
+Gcc	&ict	&251.4(99.76\%)	&1520.8(99.01\%)	&5959.3(98.53\%)	&13.8	&48.4	&98.4	\\
+	&sct	&251.6(99.84\%)	&1532.2(99.75\%)	&6014.9(99.45\%)	&14.3	&49.0	&98.6	\\\hline
+Jflex	&ict	&473.0(100.00\%)	&4282.0(100.00\%)	&26532.0(100.00\%)	&15.8	&49.6	&131.8	\\
+	&sct	&473.0(100.00\%)	&4282.0(100.00\%)	&26532.0(100.00\%)	&16.2	&50.8	&133.8	\\\hline
+Tcas	&ict	&837.0(100.00\%)	&9158.0(100.00\%)	&64696.0(100.00\%)	&108.9	&417.5	&\textbf{1545.7}	\\
+	&sct	&837.0(100.00\%)	&9158.0(100.00\%)	&64696.0(100.00\%)	&109.0	&418.0	&1545.0	\\\hline
 \end{tabular}
 \end{table*}
+
+
+
+
+
 
 The \emph{tested-t-way} coverage for each approach is shown in Table \ref{tested-t-way}. Specifically, the number of \emph{t}-degree (\emph{t} = 2, 3, 4) schemas which are \emph{tested} (in the passing test cases or identified as faulty schemas) are gathered, as well as the percentage of the total \emph{t}-degree schemas (in the parentheses followed). There are several observations can be obtained from this result:
 
@@ -1662,6 +1668,21 @@ Jflex	&473.0(0.00\%,0.00\%)	&4282.0(0.00\%,0.00\%)	&26532.0(0.00\%,0.00\%)	\\
 Tcas	&837.0(0.00\%,0.00\%)	&9158.0(0.00\%,0.00\%)	&64696.0(0.00\%,0.00\%)	\\\hline
     \end{tabular}
 \end{table*}
+
+\begin{table*}[ht]
+\caption{Non-masked test cases for \emph{fda-cit}}
+\label{non-mask-fda-cit}
+\centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+Tomcat	&27.4(12.7,14.7)	&60.4(18.8,26.8)	&136.4(49.5,56.0)	\\
+Hsqldb	&27.2(12.3,12.0)	&81.8(37.8,36.0)	&199.0(82.2,81.7)	\\
+Gcc	&20.8(7.0,6.5)	&61.6(13.2,12.6)	&123.2(24.8,24.6)	\\
+Jflex	&20.2(4.4,4.0)	&64.8(15.2,14.0)	&177.8(46.0,44.0)	\\
+Tcas	&109.4(0.5,0.4)	&416.6(\textbf{-0.9},\textbf{-1.4})	&1549.4(3.7,4.4)	\\\hline
+    \end{tabular}
+\end{table*}
+
 
 To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT approach \emph{fda-cit}, our approach works as good as it, even if at reduction of masking effects and making testing adequately which \emph{fda-cit} focuses on addressing. Additionally, our approach supports a better MFS identification than \emph{fda-cit}.
 %    especially on reducing the redundance of test cases and limiting the test cases with multiple MFS. Additionally, both \emph{ict} and \emph{sct} have a good performance on reducing the masking effects.

@@ -210,22 +210,32 @@ if __name__ == "__main__":
 
 
 
-# all the masking effects are obtained by the generated test cases which contain multiple MFS, hence we just let the generated test cases to minus multiple
+# all the masking effects are obtained by the generated test cases which contain multiple MFS, hence we just let the generated test cases to minus multiple, use num_r - multi or numAll - multi
     print('')
     print('non-maksing tests :  gen - multi')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
+        results = []
         for j in range(1,3):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
+           # result = getOneFile(filename)
+            result_temp = getOneFile(filename)
+            results.append(result_temp)
+
+        for j in range(1,3):
+            result = results[j-1]
+            result_2 = [ -1, -1, -1]
+            if j == 1:
+                result_2 = [results[j][0].num_r - results[j][0].multi,results[j][1].num_r - results[j][1].multi,results[j][2].num_r - results[j][2].multi,]
+                
             print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
             for i in range(0, 3):
                 if i < 2:
-                    print(str(round(result[i].numAll - result[i].multi,2)) +'\t&', end= '')
+                    print(getStrong(result[i].num_r - result[i].multi,result_2[i],1) +'\t&', end= '')
                 else:
-                    print(str(round(result[i].numAll - result[i].multi,2)) +'\t\\\\', end= '')
+                    print(getStrong(result[i].num_r - result[i].multi,result_2[i],1) +'\t\\\\', end= '')
             if(j == 2):
                 print('\\hline')
             else:
@@ -372,9 +382,9 @@ if __name__ == "__main__":
          #  print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
         for i in range(0, 3):
                 if i < 2:
-                    print(str(round(result[0][i].numAll - result[0][i].multi,2)) +'\t&', end= '')
+                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0)+ ',' + getStrong((result[0][i].num_r - result[0][i].multi - (result[2][i].num_r - result[2][i].multi)),0, 0)+  ')' +'\t&',  end= '')
                 else:
-                    print(str(round(result[0][i].numAll - result[0][i].multi,2)) +'\t\\\\', end= '')
+                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0)+ ',' + getStrong((result[0][i].num_r - result[0][i].multi - (result[2][i].num_r - result[2][i].multi)),0, 0)+  ')' +'\t\\\\', end= '')
     #    print('')   
         if(k == 4):
             print('\\hline')
