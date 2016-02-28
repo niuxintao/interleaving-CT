@@ -1116,6 +1116,10 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
  In this algorithm, we firstly check each MFS (line 1) to see if it is a $t$-degree schema (line 2). We will set those $t$-degree MFS as covered and remove them from the uncovered schema set $\Omega$ (line 3). This is the first type of schemas --\emph{themselves}. For each $t$-degree super-schema of these MFS, it will also be removed from the uncovered schema set (line 5 - 9), as they are the second type of schemas --  \emph{super-schemas}. The last type, i.e., \emph{implicit forbidden schemas}, is the toughest one. To remove them, we need to search through each potential schema in the uncovered schema set (line 11), and check if it is the implicit forbidden schema (line 12). The checking process involves solving a satisfiability problem. Specifically, if we can not find a test case from  the set ($\mathcal{T}_{all} - \mathcal{T}_{MFS}$) (excluding those that contain MFS), such that it contains the schema under checking, then we can determine the schema is the implicit forbidden schema and it needs to be removed from uncovered schema set (line 13). This is because in this case, the schema under checking can only appear in $\mathcal{T}_{MFS}$, which we will definitely not generate in later iterations.
  In this paper, a SAT solver will be utilized to do this checking process.
 
+
+\subsubsection{constraints handling}
+
+Regarded as failure .
 % Specifically, it checks whether the schema must exists with at least one . Then this schema will be set as \emph{implicit forbidden schemas} and set as covered.and the Constraints must be appeared in one
 %
 % Note that are executed each time a MFS is identified.
@@ -1338,7 +1342,7 @@ Note that these inputs just indicate the combinations of configuration options. 
 %
 %%\emph{\textbf{Q4}:}  Is it possible to combine ICT with FDA-CIT to obtain a better result than both alone?
 
-\subsection{Comparing ICT with SCT}
+\subsection{Comparing ICT with SCT}\label{sec:emprical:CompareSCT}
 %After preparing the subjects software, next we constructed the experiment to evaluate the efficiency and effectiveness of our approach. To this aim, we need to compare our framework with the traditional sequential CT approach to see if interleaving CT approach has any advantage.
 The covering array generating algorithm used in the experiment is AETG \cite{cohen1997aetg}, as it is the most common one-test-case-one-time generation algorithm. Another reason for choosing AETG, which is also the most important, is that the mutation of this algorithm, i.e., AETG\_SAT \cite{cohen2007exploiting,cohen2008constructing} is a rather popular approach to handle constraints in covering array generation, which is the key to our framework. The MFS identifying algorithm is OFOT \cite{nie2011minimal} as discussed before. The constraints handling solver (integrated into AETG\_SAT) is a java SAT solver -- SAT4j \cite{le2010sat4j}.  Note that all the three algorithms or techniques can be easily replaced with other similar approaches. For example, we can use other one-test-one-time covering array generation algorithms, like DDA \cite{bryce2007density}, or other MFS identification techniques \cite{zhang2011characterizing,niu2013identifying}, or other popular SAT solvers \cite{een2004extensible}. However, to select which algorithms for the three components of combinatorial testing is not the key concern of this paper; instead, our work focus on the overall CT process.
 
@@ -1439,7 +1443,7 @@ However, this is not the case for the sequential approach. As discussed before, 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 
-With regard to the quality of the identified MFS, the comparison of the two approaches are listed in Table \ref{cm_elda_fglt}. Based on this table, we find that there is no apparent gap between them. For example, there are 11 cases under which our approach performed better than the traditional one (marked in bold). Among these cases, the maximal gap is just 0.27 (2-way for Tomcat), and the average gap is around 0.1, which is trivial.
+With regard to the quality of the identified MFS, the comparison of the two approaches are listed in Table \ref{cm_elda_fglt}. Based on this table, we find that there is no apparent gap between them. For example, there are 7 cases under which our approach performed better than the traditional one (marked in bold). Among these cases, the maximal gap is just 0.37 (4-way for Gcc), and the average gap is around 0.1, which is trivial.
 % In each of them, the overall test cases (size), precision, recall, and f-measure are listed.
 
 
@@ -1452,12 +1456,12 @@ With regard to the quality of the identified MFS, the comparison of the two appr
 The reason of the similarity between the quality of these two approaches is that both of them have advantages and disadvantages. Specifically, our approach can reduce the impacts when a test case contains multiple MFS. As discussed in section \ref{sec:moti:multi}, multiple MFS in a test case can reduce the accuracy of the MFS identifying algorithms \cite{niu2013identifying}. As a result, our approach can improve the quality of the identified schemas (details are given in the next study). But as a side-effect, if the schemas identified at the early iteration of our approach are not correct, they will significantly impact the following iteration. This is because we will compute the coverage and  forbid schemas based on previously identified MFS.  It was the other way around for the traditional approach. It suffers when a test case contains multiple MFS, but correspondingly, previous identified MFS has little influence on the traditional approach. Note that in the case studies, we do not apply the measures proposed in Section \ref{sec:limit}, which we believe can improve the quality of the MFS identification.
 %This is just the opposite of the traditional First-gen-then-identifying approach.
 
-Additionally, Table \ref{time_needs} shows the millisecond consumed by the two approaches. The experiment is conducted on Machine (Intel Core i5, 2.Hz, 8GB memory).
+Additionally, Table \ref{time_needs} shows the milliseconds consumed by the two approaches on average. The experiment is conducted on Machine HP(Intel Core i5, 2.Hz, 8GB memory). Based on this table, it is obviously that \emph{ict} costed more time than \emph{sct}. This is because \emph{ict} needs to handle the SAT problem (for forbidding the appearance of MFS and constraints), which needs additional computing resources than \emph{sct}.
 
 %As not forbidden them, there is a chance that a test case will contain multiple MFS, which makes the identifying work challenging than single ones.
 \begin{table}[ht]
 \centering
-\caption{Time needs (millisecond) note that, we should give the info of the machine}
+\caption{Time consumes (millisecond)}
 \label{time_needs}
 \begin{tabular}{|ll|lll|}
 \hline
@@ -1475,9 +1479,9 @@ Tcas	&ict	&97.8	&1378.0	&23406.1	\\
 \end{tabular}
 \end{table}
 
-In summary, the answer to \textbf{Q1} is:  our approach needs much fewer test cases than the traditional sequential CT approach, and there is no decline in the quality of the identified MFS when comparing with the traditional approach.
+In summary, the answer to \textbf{Q1} is:  our approach needs much fewer test cases than the traditional sequential CT approach, and there is no decline in the quality of the identified MFS when comparing with the traditional approach, but traditional sequential CT costs less time than our approach.
 
-\subsection{Alleviation of the three problems}
+\subsection{Alleviation of the three problems}\label{sec:emprical:alleviation}
 Section \ref{sec:moti} shows three problems that impact the performance of traditional CT process, which are \emph{redundant test cases generation}, \emph{multiple MFS in the same test case} and \emph{masking effects}, respectively. To learn if ICT can alleviate these problems, we re-use the experiment in the first study, i.e., let SCT and ICT generate test cases to identify the MFS in the five program subjects. Then, we respectively investigate the extent to which ICT and SCT are affected by those impacts.
 
 \subsubsection{Study setup}
@@ -1499,10 +1503,12 @@ Third, we use the \emph{tested-t-way} coverage criteria \cite{yilmaz2013reducing
 \label{ex1_result}
 \end{figure*}
 
-Our result is shown in Figure \ref{ex1_result}. This figure consists of nine sub-figures, one for each subject with specific testing coverage (ranged from 2 - 4 way). For each sub-figure, the x-axis represents the number of times a schema is covered in total, the y-axis represents the number of schemas.  For example in the first sub-figure (2-way for Tomcat), two bars with x-coordinate equal to 2 indicates that \emph{ICT} approach have 2.8 schemas in average which are covered twice and \emph{SCT} have 0.4 schemas.
+Our result is shown in Figure \ref{ex1_result}. This figure consists of nine sub-figures, one for each subject with specific testing coverage (ranged from 2 - 4 way). For each sub-figure, the x-axis represents the number of times a schema is covered in total, the y-axis represents the number of schemas.  For example in the first sub-figure (2-way for Tomcat), two bars with x-coordinate equal to 2 indicates that \emph{ICT} approach have 5.1 schemas in average which are covered twice and \emph{SCT} have 0.4 schemas.
 
 
-As discussed previously, the more schemas that are covered with a low-frequency, the less redundant the generated test cases are. Hence it implies an effective testing if the number of schemas (y-axis) decrease with the increase of the covered times (x-axis). Most of the nine sub-figures indicates that \emph{ict} performs better than \emph{sct}. In fact. for \emph{ict}, the bars decrease rapidly with the increase of x-axis, while for \emph{sct}, the trend is more smooth. See subject tomcat with 4-way coverage for example, \emph{ict} have about 80 schemas which are only covered once,  about 25 schemas covered twice, less than 10 schemas with the covered times more than 8.  For \emph{sct}, however, for most covered times, it has about 10 schemas, which indicates a very low performance.  The interesting exception is subject Tcas, on which \emph{ict} and \emph{sct} show a similar trend. This is because both \emph{ict} and \emph{sct} hardly  detect the high-degree MFS in Tcas, and consequently they are both transformed to normal covering arrays.
+As discussed previously, the more schemas that are covered with a low-frequency, the less redundant the generated test cases are. Hence it implies an effective testing if the number of schemas (y-axis) decrease with the increase of the covered times (x-axis). Most of the nine sub-figures indicates that \emph{ict} performs better than \emph{sct}. In fact. for \emph{ict}, the bars decrease rapidly with the increase of x-axis, while for \emph{sct}, the trend is more smooth. See subject tomcat with 4-way coverage for example, \emph{ict} have about 225.2 schemas which are only covered once,  about 83.8 schemas covered twice, less than 10 schemas with the covered times more than 8.  For \emph{sct}, however, for most covered times, it has about 10 schemas, which indicates a very low performance.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The interesting exception is subject Tcas, on which \emph{ict} and \emph{sct} show a similar trend. This is because both \emph{ict} and \emph{sct} hardly  detect the high-degree MFS in Tcas, and consequently they are both transformed to normal covering arrays.
 
 This result shows that our two modifications of traditional approach, i.e., taking account of the covered schemas by test cases generated in MFS identification and forbidding the appearance of existing MFS to reduce the test cases that are used to identify the same MFS, are useful, especially when the MFS are detected and identified.
 
@@ -1532,7 +1538,7 @@ Tcas	&ict	&0.0	&0.0	&0.0	\\
 
 
 
-From this table, one observation is that \emph{ict} obtained a better result than \emph{sct} at limiting the test cases which contain multiple MFS. For all the subjects except \emph{Gcc}, \emph{ict} eliminated all the test cases which contain multiple MFS. Even if for \emph{Gcc}, the test cases which contain multiple MFS are less than that of \emph{sct}. For \emph{sct}, however, the result is not as good as \emph{ict}. In fact except subjects \emph{Jflex} and \emph{Tcas}, \emph{sct} suffers from generating test cases which contain multiple MFS. This is why even though \emph{sct} generate much more test cases than \emph{ict}, it did not obtain a better MFS identification result than \emph{ict}. Two exceptions are subjects \emph{Jflex} and \emph{Tcas}, on which both \emph{ict} and \emph{sct} did not generate test cases containing multiple MFS. The reason is that \emph{Jflex} has only one MFS (see Table \ref{inputs}) and the MFS of \emph{Tcas} are all high degrees which are hardly detected.
+From this table, one observation is that \emph{ict} obtained a better result than \emph{sct} at limiting the test cases which contain multiple MFS. For all the subjects except \emph{Gcc}, \emph{ict} nearly eliminated all the test cases which contain multiple MFS. Even if for \emph{Gcc}, the test cases which contain multiple MFS are less than that of \emph{sct}. For \emph{sct}, however, the result is not as good as \emph{ict}. In fact except subjects \emph{Jflex} and \emph{Tcas}, \emph{sct} suffers from generating test cases which contain multiple MFS. This is why even though \emph{sct} generate much more test cases than \emph{ict}, it did not obtain a better MFS identification result than \emph{ict}. Two exceptions are subjects \emph{Jflex} and \emph{Tcas}, on which both \emph{ict} and \emph{sct} did not generate test cases containing multiple MFS. The reason is that \emph{Jflex} has only one MFS (see Table \ref{inputs}) and the MFS of \emph{Tcas} are all high degrees which are hardly detected.
 
 
 3) \textbf{Masking effects}.
@@ -1563,19 +1569,19 @@ Tcas	&ict	&837.0(100.00\%)	&9158.0(100.00\%)	&64696.0(100.00\%)	&108.9	&417.5	&\
 
 
 
-The \emph{tested-t-way} coverage for each approach is shown in Table \ref{tested-t-way}. Specifically, the number of \emph{t}-degree (\emph{t} = 2, 3, 4) schemas which are \emph{tested} (in the passing test cases or identified as faulty schemas) are gathered, as well as the percentage of the total \emph{t}-degree schemas (in the parentheses followed). There are several observations can be obtained from this result:
+The results of masking effect for each approach is shown in Table \ref{tested-t-way}. There are two parts in this table, in which the left part shows the \emph{tested-t-way} coverage for each approach. Specifically, the number of \emph{t}-degree (\emph{t} = 2, 3, 4) schemas which are \emph{tested} (in the passing test cases or identified as faulty schemas) are gathered, as well as the percentage of the total \emph{t}-degree schemas (in the parentheses followed). While the right part shows the number of test cases that ignores the masking effects (i.e., the test cases with no multiple MFS) There are several observations can be obtained from this result:
 
 
-First, the extent to which \emph{sct} and \emph{ict} suffered from masking effects is not severe. Actually, the lowest tested-t-way coverage of \emph{ict} is 96.32\% (4-way for Gcc) and \emph{sct} is 97.56\% (2-way for Tomcat). This shows that combining MFS identification with covering array (either in the sequential way or interleaving way) can make testing more adequate than using covering array alone.
+First, the extent to which \emph{sct} and \emph{ict} suffered from masking effects is not severe. Actually, the lowest tested-t-way coverage of \emph{ict} is 94.92\% (2-way for Tomcat) and \emph{sct} is 96.86\% (2-way for Tomcat). This shows that combining MFS identification with covering array (either in the sequential way or interleaving way) can make testing more adequate than using covering array alone. Additionally, the number of test cases that ignores the masking effects accounts for a great proportion of the test cases in \emph{CT generation}, indicating that both approach do not suffer too mach from the masking effects.
 % MFS identification into CT process, the is not very/ may be the subjects we handled are . If there are more than , may very .
 
-Second, there is no apparent gap between \emph{ict} and \emph{sct} at restricting the masking effects. In our case studies, there are four cases (shown in bold) that \emph{ict} are better than \emph{sct}, 6 cases that they are equal (for subjects \emph{Jflex} and \emph{Tcas}) and remaining 5 cases that \emph{sct} is better. This gap is trivial. As we discussed before, \emph{ict} forbids the appearance of identified MFS and can improve the performance at handling masking effects. The results, however, do not show this advantage. One possible explanation for this is that \emph{sct} generates more test cases, of which some are passing test cases that cover more schemas.
+Second, there is no apparent gap between \emph{ict} and \emph{sct} at restricting the masking effects. With respect to \emph{tested-t-way} coverage, there are three cases (shown in bold) that \emph{ict} are better than \emph{sct}, six cases that they are equal (for subjects \emph{Jflex} and \emph{Tcas}) and remaining six cases that \emph{sct} is better. With respect to the number of non-masked test cases,  the gap  between them is also trivial (no more than 10 test cases for all the 15 cases). As we discussed before, \emph{ict} forbids the appearance of identified MFS and can improve the performance at handling masking effects. The results, however, do not show this advantage. One possible explanation for this is that \emph{sct} generates more test cases, of which some are passing test cases that cover more schemas.
 
-Third, if there is only single MFS or MFS is not detected, the tested-t-way coverage is 100\% for both \emph{ict} and \emph{sct} approaches. This can be observed in subjects \emph{Jflex} and \emph{Tcas}, in which all the \emph{t}-degree schemas are covered. For single MFS, as MFS identification is effective, all the other \emph{t}-degree schemas can be determined as irrelevant to the failure. Consequently, the tested-t-way coverage is satisfied.  For the case that MFS cannot be detected (MFS with high degrees), traditional \emph{t}-way covering arrays are enough to obtain adequate testing, as all the test cases will pass if there is no MFS detected.
+Third, if there is only single MFS or MFS is not detected, the tested-t-way coverage is 100\% for both \emph{ict} and \emph{sct} approaches. This can be observed in subjects \emph{Jflex} and \emph{Tcas}, in which all the \emph{t}-degree schemas are covered. For single MFS, as MFS identification is effective, all the other \emph{t}-degree schemas can be determined as irrelevant to the failure. Consequently, the tested-t-way coverage is satisfied.  For the case that MFS cannot be detected (MFS with high degrees), traditional \emph{t}-way covering arraays are enough to obtain adequate testing, as all the test cases will pass if there is no MFS detected.
 
 In summary, the answer to \textbf{Q2} is that our approach can alleviate the three problem discussed in Section \ref{sec:moti}, especially on reducing the redundance of test cases and limiting the test cases with multiple MFS. Additionally, both \emph{ict} and \emph{sct} have a good performance on reducing the masking effects.
 
-\subsection{Comparison with FDA-CIT}
+\subsection{Comparison with FDA-CIT}\label{sec:emprical:CompareFDA}
 \begin{figure}[ht]
  \includegraphics[width=3.4in]{fd-cit.eps}
 \caption{The Framework of fda-cit}
@@ -1614,7 +1620,7 @@ Tcas	&109.4(\textbf{0.5},\textbf{0.4})	&416.6(-2.1,-1.4)	&1549.4(-2.2,-2.8)	\\\h
     \end{tabular}
 \end{table*}
 
-From this table, one observation is that \emph{fda-cit} is better than \emph{sct} at all these cases. Combining the results of previous studies for \emph{sct} and \emph{ict}, we can conclude that \emph{sct} is most inefficient approach at test cases generation. Second, for \emph{ict} and \emph{fda-cit}, there are ups and downs on both sides. In detail, \emph{fda-cit} needs less test cases at lower coverage (mainly for the 2-way coverage), while \emph{ict} performs better at higher coverage (Except \emph{tcas} and \emph{gcc}, \emph{fda-cit} increases by 10\% test cases).
+From this table, one observation is that \emph{fda-cit} is better than \emph{sct} at almost all these cases. Combining the results of previous studies for \emph{sct} and \emph{ict}, we can conclude that \emph{sct} is most inefficient approach at test cases generation. Second, for \emph{ict} and \emph{fda-cit}, there are ups and downs on both sides. In detail, \emph{fda-cit} needs less test cases at lower coverage (mainly for the 2-way coverage), while \emph{ict} performs better at higher coverage.
 
 This result is reasonable. First, \emph{fda-cit} does not need additional test cases to identify the MFS, which will reduce some cost when comparing with \emph{ict}, especially when the coverage is low (For low coverage, the test cases generated by \emph{ict} in the MFS identification stage account for a considerable proportion of the overall test cases). One the other hand, as noted earlier, the coarse grained generation will make fda-cit generate some unnecessary test cases.
 
@@ -1635,11 +1641,11 @@ Tcas	&0.0(0.00\%,0.00\%)	&0.0(0.00\%,0.00\%)	&0.0(0.00\%,0.00\%)	\\\hline
     \end{tabular}
 \end{table*}
 
-This table shows a discernible disparity between \emph{fda-cit} with the other two approaches. In fact, besides subject \emph{Jflex} of which all three approaches accurately identified the single low-degree MFS (with F-measure equal to 1), \emph{ict} leads over \emph{fda-cit} by about 50\%, which is not trivial. The result is similar when comparing \emph{sct} with \emph{fda-cit}. One exception is subject \emph{GCC} for coverage 3-way and 4-way (shown in bold), \emph{fda-cit} performs slightly better than \emph{ict} and \emph{sct} (the gap is not more than 7\%).
+This table shows a discernible disparity between \emph{fda-cit} with the other two approaches. In fact, besides subject \emph{Jflex} of which all three approaches accurately identified the single low-degree MFS (with F-measure equal to 1), and subject \emph{Tcas} of which all these three approaches can hardly detect failures (with F-measure equal to 0), \emph{ict} leads over \emph{fda-cit} by about 10\% to 50\%, which is not trivial. The result is similar when comparing \emph{sct} with \emph{fda-cit}.
 
-Another interesting observation is for subject \emph{Tcas}, which has multiple high degree MFS. We can find that, although very trivial, \emph{sct}  and \emph{ict} have identified some high-degree MFS (F-measures of 3-way and 4-way is not equal to 0). However, fda-cit failed to accurately identify even one high-degree MFS, as all f-measure equal to 0.
+%Another interesting observation is for subject \emph{Tcas}, which has multiple high degree MFS. We can find that, although very trivial, \emph{sct}  and \emph{ict} have identified some high-degree MFS (F-measures of 3-way and 4-way is not equal to 0). However, fda-cit failed to accurately identify even one high-degree MFS, as all f-measure equal to 0.
 
-Overall, this result suggests that the classification tree approach, although very resource-saving (does not needs additional test cases),  is ineffective to accurately MFS identification result, especially when there are multiple MFS with high degrees.
+This result suggests that the classification tree approach, although very resource-saving (does not needs additional test cases),  is ineffective to accurately MFS identification result, especially when there are multiple MFS with high degrees.
 
 
 3)\textbf{Redundant test cases}.
@@ -1651,14 +1657,20 @@ The result is listed in Figure \ref{ex2_result}. The same as Figure \ref{ex1_res
 \label{ex2_result}
 \end{figure*}
 
-From this figure, we can see the trend of the bars that represents \emph{fda-cit} matches pretty well with the curve representing \emph{ict}, which has a significant advantage over the curve of \emph{sct}. This result implies that the test case redundance between \emph{ict} and \emph{fda-cit} are similar, which is not severe when comparing with \emph{sct}.
+From this figure, we can see the trend of the bars that represents \emph{fda-cit} matches pretty well with the curve representing \emph{ict}, which has a significant advantage over the curve of \emph{sct}. More precisely, we can find that for most cases (2, 3, and 4-way for tomcat, hsqldb and gcc), \emph{fda-cit} performs slightly better than \emph{ict}. This is mainly because \emph{fda-cit} consumes less test cases than \emph{ict} and \emph{sct}, which need to generate additional test cases for MFS identification.
+
+%i.e result implies that the test case redundance between \emph{ict} and \emph{fda-cit} are similar, which is not severe when comparing with \emph{sct}.
 
 4)\textbf{Masking effects}.
-The result is listed in Table \ref{tested-t-coverage-fda-cit}, the gaps between \emph{fda-cit} with \emph{ict} and \emph{sct} are listed in the parentheses, respectively (the first one is ict, latter one is sct).
+The result is listed in Table \ref{tested-t-coverage-fda-cit} and Table \ref{non-mask-fda-cit}, of which the first shows the results of \emph{tested-t-way} coverage and the second shows the number of test cases ignores the masking effects. For the two Tables, the gaps between \emph{fda-cit} with \emph{ict} and \emph{sct} are listed in the parentheses, respectively (the first one is ict, latter one is sct).
 
-We can find that except subject Jflex (with single MFS) and Tcas (wit high-degree MFS) which all three approaches work normally without masking effects, the schemas of other subjects does not get completely covered by the three approaches. Additionally, there doesn't exist apparent gaps between the three approaches. For example, \emph{fda-cit} decreased about 4.07\%  and 3.47\% at tested-2-way coverage than \emph{ict} and \emph{sct}, respectively,  for the subject Hsqldb, but also increased about 3.17\% and 0.02\%  at tested-4-way coverage for the subject Gcc. In fact, there are five cases (shown in bold) that \emph{fda-cit} performed better than \emph{ict}, and four cases that \emph{fda-cit} did not. Above all, the gap between the three approaches is very trivial.
+With regard to \emph{tested-t-way} coverage, we can find that except subject Jflex (with single MFS) and Tcas (wit high-degree MFS) which all three approaches work normally without masking effects, the schemas of other subjects does not get completely covered by the three approaches. Additionally, there doesn't exist apparent gaps between the three approaches. For example, \emph{fda-cit} decreased about 5.71\%  and 7.61\% at tested-2-way coverage than \emph{ict} and \emph{sct}, respectively,  for the subject Tomcat, but also increased about 1.68\% at tested-3-way coverage than \emph{ict} for subject Tomcat, and is about 0.18\% better than \emph{sct} at tested-4-way coverage for subject Hsqldb. In fact, there are three cases (shown in bold) that \emph{fda-cit} performed better than \emph{ict}, and six cases that \emph{fda-cit} did not. The gap between the three approaches for \emph{tested-t-way} coverage is very trivial.
 
-This result gives us a confidence that our approach \emph{ict} does reach the same level as \emph{fda-cit} at reducing the masking effects. The conclusion also implies that, to limit the masking effects, only using an adaptive framework to separately identify the MFS is not enough; making MFS identification accurately is more important and should be the key focus in the future studies of masking effects.
+With regard to \emph{the number of test cases which ignore the masking effects}, we find that for almost all the cases (except tested-3-way coverage of Tcas), \emph{fda-cit} performs better than both \emph{ict} and \emph{sct}. This is because for approaches \emph{ict} and \emph{sct}, the  proportion of the test cases for identifying the MFS is not trivial. Considering there is little difference between the overall size of test cases generated by \emph{fda-cit} and \emph{ict}, it is easily to learn that the number of test cases generated for \emph{CT generation} of \emph{fda-cit} is larger than \emph{ict} and \emph{sct}. As a consequence, the number of test cases generated by \emph{ict} that can be counted as ignoring the masking effects is smaller than that of \emph{fda-cit}. In other words, if we take the test cases for identifying the MFS into account for \emph{ict}, \emph{the number of test cases which ignore the masking effects} of \emph{ict} is actually similar to that of \emph{fda-cit}.
+
+%they need to generate test cases for identifying the MFS. These test cases, however, very likely contain multiple MFS (they are ).
+
+Above all, this result gives us a confidence that our approach \emph{ict} does reach the same level as \emph{fda-cit} at reducing the masking effects. The conclusion also implies that, to limit the masking effects, only using an adaptive framework to separately identify the MFS is not enough; making MFS identification accurately is more important and should be the key focus in the future studies of masking effects.
 
 \begin{table*}[ht]
 \caption{The tested-t-way coverage for \emph{fda-cit}}
@@ -1716,19 +1728,51 @@ To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT a
 
 
 % there are two shortcomings for the ELA, first, it needed much more test cases that ours, second, it needs to know the number of MFS and the maximal degree of them, which is usually not available in practice.
-\subsection{Sensitivity of the approaches}
+\subsection{Sensitivity of the approaches}\label{sec:emprical:Sensitivity}
+To in the choice of case studies. More specifically, a very common case in practice which is highly relevant to the suggested framework is that of a test space that contains many MFS of a low degree.
+
+\subsubsection{Study setup}
+
+Syntic studies. In fact, we plan to conduct comprehensive experiments on programs with parameters and MFS under control
+
+
 \subsubsection{Number of MFS}
+The result for the sensitivity of number of MFS is shown in Figure \ref{sen_mfs_f_measure_result} and \ref{sen_mfs_tests_result}, of which the first one it is focus on the quality of MFS identification, while the second one shows the cost.
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sens_mfs_f_measure.eps}
 \caption{F-measure}
 \label{sen_mfs_f_measure_result}
 \end{figure}
+
+One observation from Figure \ref{sen_mfs_f_measure_result} is that with the increase of the number of MFS, the f-measures of all the three approaches decrease rapidly. In fact, when the number of MFS is greater than 50, the f-measures of all the three approaches are nearly to be 0. This is mainly because when there is too many MFS, it is hardly to get a passing test case, and hence, it is challenging to distinguish MFS from those schemas which are not related to the failures.
+%This result shows that the number of MFS in SUT do negatively influence the performance of MFS identification.
+
+Another observation is that for most cases, our approach \emph{ict} performs the best, then follows the approach \emph{sct}, and the last is the \emph{fda-cit}. It is an evidence that\emph{ict} can work well under the condition of multiple MFS, when compared with other two approaches.
+
+%Above all, the result shows that the number of MFS in SUT do negatively influence the performance of MFS identification.
+
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sens_mfs_tests.eps}
 \caption{The redundance of test cases generated by \emph{fda-cit}}
 \label{sen_mfs_tests_result}
 \end{figure}
+
+
+With regarded to the cost, one observation is that with the increase of the number of MFS, all the three approaches need more test cases to identify the MFS. The reason is obvious -- more number of MFS trigger more failing test cases, which needs more additional test cases for MFS identification. For \emph{fda-cit}, even though it does not need additional test cases for MFS identification, more number of MFS will lead to slower convergence of \emph{fda-cit} approach. This is because it is harder to fulfil the \emph{tested-t-way} coverage when there is too many failing test cases, and the slower convergence will surely result in more test cases generated.
+
+Another interesting observation about the cost is that when the number of MFS is relatively small (less than 40), our approach \emph{ict} shows a similar result with \emph{fda-cit}, which is much smaller than that of \emph{sct}. This result is consistent with what we had already obtained in Section \ref{sec:emprical:CompareFDA}. However, when the number of MFS is greater than 50, the cost of \emph{ict} increases rapidly, which exceeds that of \emph{sct} and \emph{fda-cit}.
+%always needs the least number of test cases. This is because \emph{fda-cit} does not needs
+The reason of this decline is that when MFS increases, almost all the test cases fail, and hence, the advantage that \emph{ict} triggers less failing test cases will disapper. On the other hand, the more the failing test cases are generated, the harder \emph{ict} can reach the coverage (because failing test cases does not contribute to the overall coverage). Hence, \emph{ict} has to generate much more test cases than \emph{sct} when the number of MFS occupies a vey large fraction.
+
+Above all, with the increase of number of MFS in the SUT, the performance of all the three approaches decreases, but our approach \emph{ict} still performs better than the other two approaches at most cases.
+
+%A endition condition
+
 \subsubsection{Number of options}
+
+
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sens_options_tests.eps}
@@ -1737,7 +1781,7 @@ To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT a
 \end{figure}
 \subsection{Threats to validity}
 
-There are several threats to validity in our empirical studies. First, our experiments are based on only 5 open-source software. More subject programs are desired to make the results more general. In fact, we plan to conduct comprehensive experiments on programs with parameters and MFS under control, such that the conclusion of our experiment can reduce the impact caused by specific input space and specific degree or location of the MFS.
+There are several threats to validity in our empirical studies. First, our experiments are based on only 5 open-source software. More subject programs are desired to make the results more general, and such that the conclusion of our experiment can reduce the impact caused by specific input space and specific degree or location of the MFS.
 
 Second, there have been many more generation algorithms and MFS identification algorithms. In our empirical studies, we just used AETG \cite{cohen1997aetg} as the test case generation strategy, and OFOT \cite{nie2011minimal} as the MFS identification strategy. As different generation and identification algorithms may affect the performance our proposed CT framework, especially on the number of test cases, some studies using different test case generation and MFS identification approaches are desired.
 %For test cases generation, .     But for OFOT, it can significantly accuracy.
