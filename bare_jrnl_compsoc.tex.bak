@@ -1118,9 +1118,8 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
 
 
 \subsubsection{constraints handling}
-In many systems to be tested, constraints or dependencies
-exist between features
-Regarded as failure .
+In many systems to be tested, constraints or dependencies exist between parameters. These constraints will render certain test cases invalid \cite{cohen2008constructing}. To handle these constraints is important, as we can only examine the schemas with valid test cases \cite{yilmaz2013reducing}. There are two types for constraints handling : 1) static method, that is, by knowing the constraints in prior, approaches will forbidden those invalid schemas appear in the generated test cases \cite{cohen2007exploiting,cohen2008constructing,grindal2006handling,jin2014configurations,yu2015constraint}. 2) dynamic method, that is it does not initially know which are constraints, but identify them as MFS and forbidden them in the latter iteration \cite{yilmaz2013reducing}.  We adapt the second type method for constraints handling, as it can directly applied into our framework. Specifically, when we execute invalid test case which cannot be executed or even complied, we will identify these invalid schemas which trigger this problem. In other word, we will regard the incompatibility exception as one type of failure, and the identify the illegal schemas as MFS. After this, we will forbid these illegal schemas and also some possible implicit illegal schemas to appear in the latter generation (through same way as we do for those identified MFS).
+
 % Specifically, it checks whether the schema must exists with at least one . Then this schema will be set as \emph{implicit forbidden schemas} and set as covered.and the Constraints must be appeared in one
 %
 % Note that are executed each time a MFS is identified.
@@ -1265,21 +1264,21 @@ To evaluate the effectiveness and efficiency of the interleaving CT approach, we
 
 
 \subsection{Subject programs}\label{sec:subject}
-The five subject programs used in our experiments are listed in Table \ref{subject}. Column ``Subjects" indicates the specific software. Column ``Version" indicates the specific version that is used in the following experiments. Column ``LOC" shows the number of source code lines for each software. Column ``Faults" presents the fault ID, which is used as the index to fetch the original fault description from the bug tracker for that software. Column ``Lan" shows the programming language for each software (For subjects written in more than one programming language, only the main programming language is shown).
+The five subject programs used in our experiments are listed in Table \ref{subject}. Column ``Subjects" indicates the specific software. Column ``Version" indicates the specific version that is used in the following experiments. Column ``LOC" shows the number of source code lines for each software. Column ``Faults" presents the fault ID, which is used as the index to fetch the original fault description from the bug tracker for that software. Column ``Cons" shows the constraints for each software. Column ``Lan" shows the programming language for each software (For subjects written in more than one programming language, only the main programming language is shown).
 
 \begin{table}[ht]
 \caption{Subject programs}
 \label{subject}
 \centering
-\begin{tabular}{l|l|l|l|l}
+\begin{tabular}{l|l|l|l|l|l}
 \hline
-Subjects & Version & LOC & Faults &  Lan \\
+Subjects & Version & LOC & Faults & Cons&  Lan \\
 \hline
-Tomcat   &   7.0.40      & 296138    &   \#55905   & java  \\
-Hsqldb   &   2.0rc8  &   139425   &    \#981     & Java \\
-Gcc      &   4.7.2      &  2231564   & \#55459       &  c\\
-Jflex    &    1.4.1     & 10040    &    \#87    & Java \\
-Tcas     & $v_{1}$     &   173  &    \#Seed  & c \\ \hline
+Tomcat   &   7.0.40      & 296138    &   \#55905 &   & java  \\
+Hsqldb   &   2.0rc8  &   139425   &    \#981  &   & Java \\
+Gcc      &   4.7.2      &  2231564   & \#55459 &    &  c\\
+Jflex    &    1.4.1     & 10040    &    \#87  &  - & Java \\
+Tcas     & $v_{1}$     &   173  &    \#Seed  &  - & c \\ \hline
 \end{tabular}
 
 \end{table}
