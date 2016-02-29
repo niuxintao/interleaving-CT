@@ -1115,9 +1115,34 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
 
  In this algorithm, we firstly check each MFS (line 1) to see if it is a $t$-degree schema (line 2). We will set those $t$-degree MFS as covered and remove them from the uncovered schema set $\Omega$ (line 3). This is the first type of schemas --\emph{themselves}. For each $t$-degree super-schema of these MFS, it will also be removed from the uncovered schema set (line 5 - 9), as they are the second type of schemas --  \emph{super-schemas}. The last type, i.e., \emph{implicit forbidden schemas}, is the toughest one. To remove them, we need to search through each potential schema in the uncovered schema set (line 11), and check if it is the implicit forbidden schema (line 12). The checking process involves solving a satisfiability problem. Specifically, if we can not find a test case from  the set ($\mathcal{T}_{all} - \mathcal{T}_{MFS}$) (excluding those that contain MFS), such that it contains the schema under checking, then we can determine the schema is the implicit forbidden schema and it needs to be removed from uncovered schema set (line 13). This is because in this case, the schema under checking can only appear in $\mathcal{T}_{MFS}$, which we will definitely not generate in later iterations.
  In this paper, a SAT solver will be utilized to do this checking process.
+\subsubsection{MFS identification approach mutated}\label{sec:app:ofotMutate}
+This interleaving framework can reduce the likelihood of having multiple MFS in a single test case, which in turn is due to the way the approach operates, i.e., one failure at a time. However, it still does not guarantee to completely forbid the appearance of multiple MFS in one single test case, which has a significant impact on the MFS identification-- OFOT, as we discussed in Section \ref{sec:moti:multi}. Considering this, we need to augment the original OFOT approach, to alleviate the negative influence when facing the test case with multiple MFS.
+
+Inspiring by the interim method proposed by Zhang \cite{zhang2011characterizing}, we find the method \emph{FIC}-- a mutated version of OFOT, can work well under the multiple MFS condition. The mechanism of FIC is very similar to OFOT. Specifically, when identifying the MFS in a failing test case, it also mutates one factor at a time to generate one additional test case. The only difference is that it will not always rollback to the original value it has mutated when it goes on mutating other values (only when a passing test case appears, it will rollback to the original value). This operation will break multiple MFS in one test case and finally remain only one MFS to identify. Take an example, assume a SUT has 4 parameters and each one has 2 values, the MFS is (0, -, -, -) and (- ,-, 1 ,1). Then Table \ref{identify-ofot-fic} shows the process of approaches OFOT and FIC for identifying the MFS of failing test case (0, 0, 1 1)
+
+\begin{table}[h]
+\caption{The difference between FIC and OFOT}
+\label{identify-ofot-fic}
+\centering
+\begin{tabular}{llllll|llllll}
+\hline
+ & \multicolumn{4}{c}{\bfseries \emph{OFOT}}& & \multicolumn{6}{c}{\bfseries \emph{FIC}} \\
+ \hline
+%\multicolumn{5}{c}{\bfseries test case} & \bfseries Outcome \\
+$t_{1}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{1}'$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
+$t_{2}$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{2}'$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
+$t_{3}$ & \multicolumn{4}{l}{0 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail & $t_{3}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail \\
+$t_{4}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 0  \ \ \  1 } & Fail&  $t_{4}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{0}}  \ \ \  1 } & Pass \\
+$t_{5}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  0 } & Fail & $t_{5}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{1}}   \ \ \  \textbf{\emph{0}}   } & Pass \\ \hline
+\multicolumn{5}{l}{ \bfseries{MFS}: $(-, -, - , -)$ }&  & \multicolumn{6}{l}{ \bfseries{MFS}: $(-, -, 1 , 1)$ }  \\
+\hline
+\end{tabular}
+\end{table}
 
 
-\subsubsection{Constraints handling}
+In Table \ref{identify-ofot-fic}, the left part represents OFOT. We can learn that no matter which parameter we mutates, the additional test cases ($t_{2}- t_{5}$) will either contain MFS (0, -, -, -) and (-, -, 1, 1). While for FIC, as it does not rollback to original value when the additional test case fails, the mutated value for $t_{2}'$ and $t_{3}'$ will kept. Hence one MFS (0, -, -, -) will be broken and will not appeared in the latter generated test cases. When the additional test case passes ($t_{4}'$ and $t_{5}'$), the process is completely same as OFOT. At last, FIC will find the MFS (-, -, 1 , 1), as only the changing of last two parameter values result in test case passing.  Note that this mechanism will not always work. For example, if additional test case, such as ,.
+
+\subsubsection{Constraints handling}\label{sec:app:constriants handling}
 In many systems to be tested, constraints or dependencies exist between parameters. These constraints will render certain test cases invalid \cite{cohen2008constructing}. To handle these constraints is important, as we can only examine the schemas with valid test cases \cite{yilmaz2013reducing}. There are two types for constraints handling : 1) static method, that is, by knowing the constraints in prior, approaches will forbidden those invalid schemas appear in the generated test cases \cite{cohen2007exploiting,cohen2008constructing,grindal2006handling,jin2014configurations,yu2015constraint}. 2) dynamic method, that is it does not initially know which are constraints, but identify them as MFS and forbidden them in the latter iteration \cite{yilmaz2013reducing}.  We adapt the second type method for constraints handling, as it can directly applied into our framework. Specifically, when we execute invalid test case which cannot be executed or even complied, we will identify these invalid schemas which trigger this problem. In other word, we will regard the incompatibility exception as one type of failure, and the identify the illegal schemas as MFS. After this, we will forbid these illegal schemas and also some possible implicit illegal schemas to appear in the latter generation (through same way as we do for those identified MFS).
 
 % Specifically, it checks whether the schema must exists with at least one . Then this schema will be set as \emph{implicit forbidden schemas} and set as covered.and the Constraints must be appeared in one
