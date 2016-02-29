@@ -5,5 +5,7 @@ Database file #1: sigproc.bib
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
+Warning--empty journal in grindal2006handling
 
 Done.
+(There was 1 warning)

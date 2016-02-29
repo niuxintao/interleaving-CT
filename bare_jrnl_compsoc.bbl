@@ -152,6 +152,23 @@ M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Constructing interaction test suites
   approach,'' \emph{Software Engineering, IEEE Transactions on}, vol.~34,
   no.~5, pp. 633--650, 2008.
 
+\bibitem{cohen2007exploiting}
+M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Exploiting constraint solving history
+  to construct interaction test suites,'' in \emph{Testing: Academic and
+  Industrial Conference Practice and Research Techniques-MUTATION, 2007.}\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2007, pp. 121--132.
+
+\bibitem{grindal2006handling}
+M.~Grindal, J.~Offutt, and J.~Mellin, ``Handling constraints in the input space
+  when using combination strategies for software testing,'' 2006.
+
+\bibitem{yu2015constraint}
+L.~Yu, F.~Duan, Y.~Lei, R.~N. Kacker, and D.~R. Kuhn, ``Constraint handling in
+  combinatorial test generation using forbidden tuples,'' in \emph{Software
+  Testing, Verification and Validation Workshops (ICSTW), 2015 IEEE Eighth
+  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2015, pp. 1--9.
+
 \bibitem{li2012improved}
 J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
   testing,'' in \emph{Quality Software (QSIC), 2012 12th International
@@ -186,12 +203,6 @@ K.~Shakya, T.~Xie, N.~Li, Y.~Lei, R.~Kacker, and R.~Kuhn, ``Isolating
 D.~R. Kuhn and V.~Okun, ``Pseudo-exhaustive testing for software,'' in
   \emph{Software Engineering Workshop, 2006. SEW'06. 30th Annual
   IEEE/NASA}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2006, pp. 153--158.
-
-\bibitem{cohen2007exploiting}
-M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Exploiting constraint solving history
-  to construct interaction test suites,'' in \emph{Testing: Academic and
-  Industrial Conference Practice and Research Techniques-MUTATION, 2007.}\hskip
-  1em plus 0.5em minus 0.4em\relax IEEE, 2007, pp. 121--132.
 
 \bibitem{le2010sat4j}
 D.~Le~Berre, A.~Parrain \emph{et~al.}, ``The sat4j library, release 2.2, system

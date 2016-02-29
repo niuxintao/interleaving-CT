@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  28 FEB 2016 21:00
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  29 FEB 2016 11:15
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -527,10 +527,10 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
 File: ex2.eps Graphic file (type eps)
- <ex2.eps>
+ <ex2.eps> [15]
 Invalid UTF-8 byte or sequence at line 1714 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 1714 replaced by U+FFFD.
- [15]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -541,9 +541,9 @@ File: sens_mfs_f_measure.eps Graphic file (type eps)
 
 <sens_mfs_f_measure.eps>
 File: sens_mfs_tests.eps Graphic file (type eps)
- <sens_mfs_tests.eps>
+ <sens_mfs_tests.eps> [17]
 File: sens_options_tests.eps Graphic file (type eps)
- <sens_options_tests.eps> [17]
+ <sens_options_tests.eps>
 [18] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [19])
 File: niu.png Graphic file (type QTm)
 
@@ -630,8 +630,9 @@ Underfull \hbox (badness 1418) in paragraph at lines 1945--1947
 r in
  []
 
+[20]
 File: wangyan.png Graphic file (type QTm)
-<use  "wangyan.png" >
+ <use  "wangyan.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1949.
 
@@ -642,18 +643,16 @@ File: wangyan.png Graphic file (type QTm)
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1949.
 
 
-[20] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux)
+[21
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
- 3351 strings out of 430478
- 47810 string characters out of 3191502
- 120308 words of memory out of 3000000
- 6448 multiletter control sequences out of 15000+200000
+ 3353 strings out of 430478
+ 47849 string characters out of 3191502
+ 119793 words of memory out of 3000000
+ 6450 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
  30i,12n,38p,1711b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bare_jrnl_compsoc.pdf (20 pages).
+Output written on bare_jrnl_compsoc.pdf (21 pages).

@@ -1118,7 +1118,8 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
 
 
 \subsubsection{constraints handling}
-
+In many systems to be tested, constraints or dependencies
+exist between features
 Regarded as failure .
 % Specifically, it checks whether the schema must exists with at least one . Then this schema will be set as \emph{implicit forbidden schemas} and set as covered.and the Constraints must be appeared in one
 %
@@ -1729,12 +1730,15 @@ To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT a
 
 % there are two shortcomings for the ELA, first, it needed much more test cases that ours, second, it needs to know the number of MFS and the maximal degree of them, which is usually not available in practice.
 \subsection{Sensitivity of the approaches}\label{sec:emprical:Sensitivity}
-In order to reduce the bias of the choice of case studies. More specifically, a very common case in practice which is highly relevant to the suggested framework is that of a test space that contains many MFS of a low degree.
+In order to reduce the bias of the choice of subjects, and to obtain a more general conclusion, we conducted several experiments on the subjects with variety characteristics in this section.  More specifically, we considered the impacts of different number of MFS in the SUT and different number of options in the SUT on three approaches, i.e., \emph{ict}, \emph{sct} and \emph{fda-cit}.
+%a very common case in practice which is highly relevant to the suggested framework is that of a test space that contains many MFS of a low degree.
 
 \subsubsection{Study setup}
+To vary parameters of interest in a controlled setting in this study, we use synthetic subjects instead of real real programs (which typically represent only one particular parameter setting, and hence it is hard to get software with expected number of options or MFS).
 
-Syntic studies. In fact, we plan to conduct comprehensive experiments on programs with parameters and MFS under control
+Specifically, for the first study, that is, evaluating the performance of approaches under different number of MFS, we use the subject with 8 parameters, and each parameter has 3 values, i.e., the inputs model is ( $3^{8}$ ). Then we consider the following possible number of 2-degree MFS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80 and 90. Then for each run of the experiment, we will first inject the corresponding number of MFS into the synthetic subject, and then run all the three approaches on the subject. At last, the results (MFS identification quality and cost) of each approach for each run is collected and analysed.
 
+The second one is to evaluate the performance of approaches under different number of options. Hence we use synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). Each option has 2 values, and each subject has only one 2-degree MFS. Then for each subject, we will apply the three approaches on it and compare their performance. Details of each subject can be seen in:
 
 \subsubsection{Number of MFS}
 The result for the sensitivity of number of MFS is shown in Figure \ref{sen_mfs_f_measure_result} and \ref{sen_mfs_tests_result}, of which the first one it is focus on the quality of MFS identification, while the second one shows the cost.
