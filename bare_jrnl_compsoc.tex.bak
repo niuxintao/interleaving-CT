@@ -1056,7 +1056,7 @@ In practice, it is impossible to thoroughly search the exhaustive candidate test
 Traditional MFS identification process just selects one test case from $\mathcal{T}_{candidate}$ randomly. However, to adapt the MFS identification process to the new CT framework, this selection should be refined.
 
 %let $\mathcal{T}_{candidate}$ be  the initial candidate test cases as \ref{eq4}. This set collects all the possible test cases by mutating the the part $\Delta$ of the original test case $t_{failing}$.
-Specifically, there are two points to note. First, the additional test case should not contain the currently identified MFS; second, the additional test case is expected to cover as many uncovered schemas as possible. These two goals are similar to CT generation, hence we can directly apply the same selection method on additional test case generation, which can be formulated as \ref{eq5}.  The same as \ref{eq2}, \ref{eq5} excludes the test cases that contain the currently identified MFS from the candidate test cases ($\mathcal{T}_{candidate} - \mathcal{T}_{MFS}$), and selects the additional test case which covers the greatest number of uncovered schemas ($\Omega$).
+Specifically, there are two points to note. First, the additional test case should not contain the currently identified MFS; second, the additional test case is expected to cover as many uncovered schemas as possible. These two goals are similar to CT generation, hence we can directly apply the same selection method on additional test case generation, which can be formulated as \ref{eq5}.  The same as \ref{eq2}, \ref{eq5} excludes the test cases that contain the already identified MFS from the candidate test cases ($\mathcal{T}_{candidate} - \mathcal{T}_{MFS}$), and selects the additional test case which covers the greatest number of uncovered schemas ($\Omega$).
 \begin{displaymath}t \leftarrow  select (\mathcal{T}_{candidate} - \mathcal{T}_{MFS}, \Omega ,  \xi )  \tag{EQ5} \label{eq5} \end{displaymath}
 
 
@@ -1081,7 +1081,7 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
     % $t_{original}$ \Comment{original failing test case}
 
 
-     $\mathcal{S}_{MFS}$ \Comment{currently identified MFS}
+     $\mathcal{S}_{MFS}$ \Comment{already identified MFS}
 
      $\Omega$ \Comment{the schemas that are still uncovered}
 
@@ -1140,7 +1140,7 @@ $t_{5}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  0 } & Fail & $t_{5}'$ & \
 \end{table}
 
 
-In Table \ref{identify-ofot-fic}, the left part represents OFOT. We can learn that no matter which parameter we mutates, the additional test cases ($t_{2}- t_{5}$) will either contain MFS (0, -, -, -) and (-, -, 1, 1). While for FIC, as it does not rollback to original value when the additional test case fails, the mutated value for $t_{2}'$ and $t_{3}'$ will kept. Hence one MFS (0, -, -, -) will be broken and will not appeared in the latter generated test cases. When the additional test case passes ($t_{4}'$ and $t_{5}'$), the process is completely same as OFOT. At last, FIC will find the MFS (-, -, 1 , 1), as only the changing of last two parameter values result in test case passing.  Note that this approach still does not .
+In Table \ref{identify-ofot-fic}, the left part represents OFOT. We can learn that no matter which parameter we mutates, the additional test cases ($t_{2}- t_{5}$) will either contain MFS (0, -, -, -) and (-, -, 1, 1). While for FIC, as it does not rollback to original value when the additional test case fails, hence, the mutated value for $t_{2}'$ and $t_{3}'$ will kept in the latter iterations. As a result, the first MFS (0, -, -, -) will be broken and will not appear in the latter generated test cases. When the additional test case passes ($t_{4}'$ and $t_{5}'$), the process is completely the same as OFOT. At last, FIC will find the MFS (-, -, 1 , 1), as only when changing of last two parameter values, additional  test cases will pass.  Note that this mechanism will not always work. For example, if additional test case, e.g., $t_{4}'$, import new MFS, e.g., (1, -, 0, -), then we cannot get the correct MFS. The newly introduced MFS problem has already been discussed in our previous paper \cite{niu2013identifying}, in which we find that more test cases are needed to be generated to alleviate the impacts caused by the newly introduced MFS. This point is, however, beyond the scope of this paper.  What's more, as we will find in the our empirical studies, the mutated OFOT approach, i.e., FIC, is  good enough to handle the multiple MFS in one test case than original OFOT.
 
 \subsubsection{Constraints handling}\label{sec:app:constriants handling}
 In many systems to be tested, constraints or dependencies exist between parameters. These constraints will render certain test cases invalid \cite{cohen2008constructing}. To handle these constraints is important, as we can only examine the schemas with valid test cases \cite{yilmaz2013reducing}. There are two types for constraints handling : 1) static method, that is, by knowing the constraints in prior, approaches will forbidden those invalid schemas appear in the generated test cases \cite{cohen2007exploiting,cohen2008constructing,grindal2006handling,jin2014configurations,yu2015constraint}. 2) dynamic method, that is it does not initially know which are constraints, but identify them as MFS and forbidden them in the latter iteration \cite{yilmaz2013reducing}.  We adapt the second type method for constraints handling, as it can directly applied into our framework. Specifically, when we execute invalid test case which cannot be executed or even complied, we will identify these invalid schemas which trigger this problem. In other word, we will regard the incompatibility exception as one type of failure, and the identify the illegal schemas as MFS. After this, we will forbid these illegal schemas and also some possible implicit illegal schemas to appear in the latter generation (through same way as we do for those identified MFS).
@@ -1191,26 +1191,26 @@ Applying the new framework to the scenario of Section \ref{sec:moti},  we can ge
 %\multicolumn{5}{c}{\bfseries test case} & \bfseries Outcome \\
 $t_{1}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 0  \ \ \  0 } & Fail & \multicolumn{6}{l}{}\\
 \multicolumn{5}{l}{}& & $t_{2}$* &\multicolumn{4}{l}{1  \ \ \  0 \ \ \  0 \ \ \  0 }& Fail \\
-\multicolumn{5}{l}{}& &$t_{3}$* &\multicolumn{4}{l}{0  \ \ \   1 \ \ \  0 \ \ \  0} & Pass \\
-\multicolumn{5}{l}{}& &$t_{4}$* &\multicolumn{4}{l}{0  \ \ \   0 \ \ \   1 \ \ \  0} & Fail \\
-\multicolumn{5}{l}{}& &$t_{5}$* &\multicolumn{4}{l}{0  \ \ \   0 \ \ \   0 \ \ \   1} & Fail \\
+\multicolumn{5}{l}{}& &$t_{3}$* &\multicolumn{4}{l}{1  \ \ \   1 \ \ \  0 \ \ \  0} & Pass \\
+\multicolumn{5}{l}{}& &$t_{4}$* &\multicolumn{4}{l}{1  \ \ \   0 \ \ \   1 \ \ \  0} & Fail \\
+\multicolumn{5}{l}{}& &$t_{5}$* &\multicolumn{4}{l}{1  \ \ \   0 \ \ \   1 \ \ \   1} & Fail \\
 \multicolumn{5}{l}{}& &\multicolumn{6}{l}{ \bfseries{MFS}: $(-, 0, - , -)$ }  \\
-$t_{6}$ &\multicolumn{4}{l}{1 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Pass & \multicolumn{6}{l}{}\\
-$t_{7}$ &\multicolumn{4}{l}{0 \ \ \ 2 \ \ \ 1  \ \ \  1 } & Pass & \multicolumn{6}{l}{}\\
-$t_{8}$ &\multicolumn{4}{l}{0  \ \ \ 1 \ \ \ 0  \ \ \  1 } & Fail & \multicolumn{6}{l}{}\\
-\multicolumn{5}{l}{}& & $t_{9}$* &\multicolumn{4}{l}{1  \ \ \  1 \ \ \  0 \ \ \  1 }& Fail \\
-\multicolumn{5}{l}{}& &$t_{10}$* &\multicolumn{4}{l}{0  \ \ \  2 \ \ \  0 \ \ \  0} & Fail \\
-\multicolumn{5}{l}{}& &$t_{11}$* &\multicolumn{4}{l}{0  \ \ \  1 \ \ \  1 \ \ \  0} & Pass \\
-\multicolumn{5}{l}{}& &$t_{12}$* &\multicolumn{4}{l}{0  \ \ \  1 \ \ \  0 \ \ \  0} & Pass \\
+$t_{6}$ &\multicolumn{4}{l}{0 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Pass & \multicolumn{6}{l}{}\\
+$t_{7}$ &\multicolumn{4}{l}{0 \ \ \ 2 \ \ \ 0  \ \ \  0 } & Pass & \multicolumn{6}{l}{}\\
+$t_{8}$ &\multicolumn{4}{l}{1  \ \ \ 2 \ \ \ 0  \ \ \  1 } & Fail & \multicolumn{6}{l}{}\\
+\multicolumn{5}{l}{}& & $t_{9}$* &\multicolumn{4}{l}{2  \ \ \  2 \ \ \  0 \ \ \  1 }& Fail \\
+\multicolumn{5}{l}{}& &$t_{10}$* &\multicolumn{4}{l}{2  \ \ \  1 \ \ \  0 \ \ \  1} & Fail \\
+\multicolumn{5}{l}{}& &$t_{11}$* &\multicolumn{4}{l}{2  \ \ \  1 \ \ \  1 \ \ \  1} & Pass \\
+\multicolumn{5}{l}{}& &$t_{12}$* &\multicolumn{4}{l}{2  \ \ \  1 \ \ \  0 \ \ \  0} & Pass \\
 \multicolumn{5}{l}{}& &\multicolumn{6}{l}{ \bfseries{MFS}: $(-, -, 0, 1)$ }  \\
-$t_{13}$ &\multicolumn{4}{l}{1  \ \ \  2 \ \ \ 0 \ \ \ 0 } & Pass & \multicolumn{6}{l}{}\\
-$t_{14}$ &\multicolumn{4}{l}{2  \ \ \   1 \ \ \ 0  \ \ \  0 } & Pass & \multicolumn{6}{l}{}\\
-$t_{15}$ &\multicolumn{4}{l}{2  \ \ \   2 \ \ \ 1  \ \ \  1 } & Pass & \multicolumn{6}{l}{}\\
+$t_{13}$ &\multicolumn{4}{l}{1  \ \ \  2 \ \ \ 1 \ \ \ 0 } & Pass & \multicolumn{6}{l}{}\\
+$t_{14}$ &\multicolumn{4}{l}{2  \ \ \   2 \ \ \ 0  \ \ \  0 } & Pass & \multicolumn{6}{l}{}\\
+$t_{15}$ &\multicolumn{4}{l}{1  \ \ \   2 \ \ \ 1  \ \ \  1 } & Pass & \multicolumn{6}{l}{}\\
 \hline
 \end{tabular}
 \end{table}
 
-This table consists of two main columns, in which the left column indicates the generation part while the right indicates the identification process. We can find that, after identifying the MFS (-, 0, -, -) for $t_{1}$, the following test cases ($t_{6}$ to $t_{15}$) will not contain this schema. Correspondingly, all the 2-degree schemas that are related to this schema, e.g. (0, 0, -, -), (-, 0, 1, -), etc, will also not appear in the following test cases. Additionally, the passing test case $t_{3}$ generated in the identification process cover six \emph{2}-degree schemas, i.e., (0, 1, -, -), (0, -, 0, -), (0, -, -, 0), (-, 1, 0, -), (-, 1, -, 0), and (-, -, 0, 0) respectively, so that it is not necessary to generate more test cases to cover them. We later found that $t_{8}$ failed, which only contain one MFS as expected, and we easily identified it (-, -, 0, 1) with four extra-generated test cases. This schema is 2-degree MFS, which will be forbidden in the following test cases and set to be covered.
+This table consists of two main columns, in which the left column indicates the generation part while the right indicates the identification process. We can find that, after identifying the MFS (-, 0, -, -) for $t_{1}$, the following test cases ($t_{6}$ to $t_{15}$) will not contain this schema. Correspondingly, all the 2-degree schemas that are related to this schema, e.g. (0, 0, -, -), (-, 0, 1, -), etc, will also not appear in the following test cases. Additionally, the passing test case $t_{3}$ generated in the identification process cover six \emph{2}-degree schemas, i.e., (1, 1, -, -), (1, -, 0, -), (1, -, -, 0), (-, 1, 0, -), (-, 1, -, 0), and (-, -, 0, 0) respectively, so that it is not necessary to generate more test cases to cover them. We later found that $t_{8}$ failed, which only contain one MFS as expected, and we easily identified it (-, -, 0, 1) with four extra-generated test cases. This schema is 2-degree MFS, which will be forbidden in the following test cases and set to be covered.
 
 Above all, when using the interleaving CT approach,  the overall generated test case are 8 less than that of the traditional sequential CT approach in Table \ref{tradition-gi}, and the new approach identified the expected MFS (-, -, 0, 1) which SCT fails to identify.
 

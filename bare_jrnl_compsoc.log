@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  29 FEB 2016 23:07
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  1 MAR 2016 12:30
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -500,117 +500,124 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4] [5]
 File: baicOutline.eps Graphic file (type eps)
- <baicOutline.eps> [6]
+ <baicOutline.eps> [6] [7]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1118.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1120.
 
 Requested font "phvro7t" at 9.53561pt
  -> phvro7t
- [7] [8] [9]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1329
-.
+ [8]
 
-(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1pcr.fd
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1331
+.
+ (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Requested font "pcrr7t" at 9.53561pt
  -> pcrr7t
- [10] [11] [12]
+ [10] [11]
+Missing character: There is no ¡ in font pplr7t!
+Missing character: There is no ¯ in font pplr7t!
+
+Underfull \vbox (badness 4108) has occurred while \output is active []
+
+ [12]
 File: ex1.eps Graphic file (type eps)
- <ex1.eps> [13]
-Underfull \vbox (badness 4518) has occurred while \output is active []
 
+<ex1.eps> [13] [14]
 File: fd-cit.eps Graphic file (type eps)
-
-<fd-cit.eps> [14]
+ <fd-cit.eps> [15]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1634.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1640.
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
- [15]
 File: ex2.eps Graphic file (type eps)
  <ex2.eps>
-Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1745 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1745 replaced by U+FFFD.
  [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [17]
 File: sens_mfs_f_measure.eps Graphic file (type eps)
 
-<sens_mfs_f_measure.eps> [17]
+<sens_mfs_f_measure.eps>
 File: sens_mfs_tests.eps Graphic file (type eps)
  <sens_mfs_tests.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 File: sens_options_tests.eps Graphic file (type eps)
- <sens_options_tests.eps>
-[18] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [19]
-Underfull \vbox (badness 1859) has occurred while \output is active []
 
-)
+<sens_options_tests.eps> [19]
+(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [20])
 File: niu.png Graphic file (type QTm)
 
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1947.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1953.
 
 
 File: niu.png Graphic file (type QTm)
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1947.
-
-
-[20]
-File: nie.png Graphic file (type QTm)
- <use  "nie.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1953.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1960.
+
+
+File: nie.png Graphic file (type QTm)
+<use  "nie.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1960.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1958.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1964.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1958.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1964.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1962.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1968.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1962.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1968.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1966.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1972.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1966.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1972.
 
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1966--1968
+Underfull \hbox (badness 1622) in paragraph at lines 1972--1974
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -618,17 +625,17 @@ g
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1970.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1976.
 
 
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1970.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1976.
 
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 1970--1972
+Underfull \hbox (badness 1418) in paragraph at lines 1976--1978
 []\OT1/phv/b/n/8.03 Jiaxi X-u \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-nee
 r in
  []
@@ -636,23 +643,23 @@ r in
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1974.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1980.
 
 
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1974.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1980.
 
 
 [21] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
  3356 strings out of 430478
  47918 string characters out of 3191502
- 117957 words of memory out of 3000000
+ 119061 words of memory out of 3000000
  6453 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 30i,12n,38p,1711b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,12n,38p,1780b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_jrnl_compsoc.pdf (21 pages).
