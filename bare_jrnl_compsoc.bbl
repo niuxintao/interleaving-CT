@@ -55,6 +55,41 @@ C.~Nie and H.~Leung, ``The minimal failure-causing schema of combinatorial
   testing,'' \emph{ACM Transactions on Software Engineering and Methodology
   (TOSEM)}, vol.~20, no.~4, p.~15, 2011.
 
+\bibitem{zhang2011characterizing}
+Z.~Zhang and J.~Zhang, ``Characterizing failure-causing parameter interactions
+  by adaptive testing,'' in \emph{Proceedings of the 2011 International
+  Symposium on Software Testing and Analysis}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2011, pp. 331--341.
+
+\bibitem{ghandehari2012identifying}
+L.~S.~G. Ghandehari, Y.~Lei, T.~Xie, R.~Kuhn, and R.~Kacker, ``Identifying
+  failure-inducing combinations in a combinatorial test set,'' in
+  \emph{Software Testing, Verification and Validation (ICST), 2012 IEEE Fifth
+  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2012, pp. 370--379.
+
+\bibitem{niu2013identifying}
+X.~Niu, C.~Nie, Y.~Lei, and A.~T. Chan, ``Identifying failure-inducing
+  combinations using tuple relationship,'' in \emph{Software Testing,
+  Verification and Validation Workshops (ICSTW), 2013 IEEE Sixth International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, pp.
+  271--280.
+
+\bibitem{yilmaz2006covering}
+C.~Yilmaz, M.~B. Cohen, and A.~A. Porter, ``Covering arrays for efficient fault
+  characterization in complex configuration spaces,'' \emph{Software
+  Engineering, IEEE Transactions on}, vol.~32, no.~1, pp. 20--34, 2006.
+
+\bibitem{fouche2009incremental}
+S.~Fouch{\'e}, M.~B. Cohen, and A.~Porter, ``Incremental covering array failure
+  characterization in large configuration spaces,'' in \emph{Proceedings of the
+  eighteenth international symposium on Software testing and analysis}.\hskip
+  1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 177--188.
+
+\bibitem{nie2011survey}
+C.~Nie and H.~Leung, ``A survey of combinatorial testing,'' \emph{ACM Computing
+  Surveys (CSUR)}, vol.~43, no.~2, p.~11, 2011.
+
 \bibitem{cohen1997aetg}
 D.~M. Cohen, S.~R. Dalal, M.~L. Fredman, and G.~C. Patton, ``The aetg system:
   An approach to testing based on combinatorial design,'' \emph{Software
@@ -121,24 +156,11 @@ C.~Song, A.~Porter, and J.~S. Foster, ``itree: Efficiently discovering
   of the 2012 International Conference on Software Engineering}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE Press, 2012, pp. 903--913.
 
-\bibitem{zhang2011characterizing}
-Z.~Zhang and J.~Zhang, ``Characterizing failure-causing parameter interactions
-  by adaptive testing,'' in \emph{Proceedings of the 2011 International
-  Symposium on Software Testing and Analysis}.\hskip 1em plus 0.5em minus
-  0.4em\relax ACM, 2011, pp. 331--341.
-
 \bibitem{wang2010adaptive}
 Z.~Wang, B.~Xu, L.~Chen, and L.~Xu, ``Adaptive interaction fault location based
   on combinatorial testing,'' in \emph{Quality Software (QSIC), 2010 10th
   International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2010, pp. 495--502.
-
-\bibitem{niu2013identifying}
-X.~Niu, C.~Nie, Y.~Lei, and A.~T. Chan, ``Identifying failure-inducing
-  combinations using tuple relationship,'' in \emph{Software Testing,
-  Verification and Validation Workshops (ICSTW), 2013 IEEE Sixth International
-  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, pp.
-  271--280.
 
 \bibitem{cohen2007interaction}
 M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Interaction testing of
@@ -175,18 +197,6 @@ J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
   Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp.
   102--105.
 
-\bibitem{ghandehari2012identifying}
-L.~S.~G. Ghandehari, Y.~Lei, T.~Xie, R.~Kuhn, and R.~Kacker, ``Identifying
-  failure-inducing combinations in a combinatorial test set,'' in
-  \emph{Software Testing, Verification and Validation (ICST), 2012 IEEE Fifth
-  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2012, pp. 370--379.
-
-\bibitem{yilmaz2006covering}
-C.~Yilmaz, M.~B. Cohen, and A.~A. Porter, ``Covering arrays for efficient fault
-  characterization in complex configuration spaces,'' \emph{Software
-  Engineering, IEEE Transactions on}, vol.~32, no.~1, pp. 20--34, 2006.
-
 \bibitem{tomcatconnector}
 K.~Kolinko, ``{The HTTP Connector},''
   \url{http://tomcat.apache.org/tomcat-7.0-doc/config/http.html}, 2014,
@@ -214,6 +224,12 @@ N.~E{\'e}n and N.~S{\"o}rensson, ``An extensible sat-solver,'' in \emph{Theory
   and applications of satisfiability testing}.\hskip 1em plus 0.5em minus
   0.4em\relax Springer, 2004, pp. 502--518.
 
+\bibitem{zhang2012faulty}
+J.~Zhang, F.~Ma, and Z.~Zhang, ``Faulty interaction identification via
+  constraint solving and optimization,'' in \emph{Theory and Applications of
+  Satisfiability Testing--SAT 2012}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2012, pp. 186--199.
+
 \bibitem{kuhn2010practical}
 D.~R. Kuhn, R.~N. Kacker, and Y.~Lei, ``Practical combinatorial testing,''
   \emph{NIST Special Publication}, vol. 800, p. 142, 2010.
@@ -222,12 +238,6 @@ D.~R. Kuhn, R.~N. Kacker, and Y.~Lei, ``Practical combinatorial testing,''
 M.~B. Cohen, J.~Snyder, and G.~Rothermel, ``Testing across configurations:
   implications for combinatorial testing,'' \emph{ACM SIGSOFT Software
   Engineering Notes}, vol.~31, no.~6, pp. 1--9, 2006.
-
-\bibitem{fouche2009incremental}
-S.~Fouch{\'e}, M.~B. Cohen, and A.~Porter, ``Incremental covering array failure
-  characterization in large configuration spaces,'' in \emph{Proceedings of the
-  eighteenth international symposium on Software testing and analysis}.\hskip
-  1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 177--188.
 
 \bibitem{borazjany2012combinatorial}
 M.~N. Borazjany, L.~Yu, Y.~Lei, R.~Kacker, and R.~Kuhn, ``Combinatorial testing
@@ -240,10 +250,6 @@ B.~Garn and D.~E. Simos, ``Eris: A tool for combinatorial testing of the linux
   system call interface,'' in \emph{Software Testing, Verification and
   Validation Workshops (ICSTW), 2014 IEEE Seventh International Conference
   on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 58--67.
-
-\bibitem{nie2011survey}
-C.~Nie and H.~Leung, ``A survey of combinatorial testing,'' \emph{ACM Computing
-  Surveys (CSUR)}, vol.~43, no.~2, p.~11, 2011.
 
 \bibitem{bryce2006prioritized}
 R.~C. Bryce and C.~J. Colbourn, ``Prioritized interaction testing for pair-wise
