@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  29 FEB 2016 16:14
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  29 FEB 2016 23:07
 entering extended mode
 **bare_jrnl_compsoc.tex
-(C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.tex
+(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\Users\xintao\Documents\GitHub\interleaving-CT\IEEEtran.cls
+(C:\Users\xintao\Desktop\interleaving-CT\IEEEtran.cls
 Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -370,7 +370,7 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box35
 \fn@width=\dimen142
 )
-(C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.aux)
+(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 403.
 LaTeX Font Info:    ... okay on input line 403.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 403.
@@ -528,30 +528,28 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
+ [15]
 File: ex2.eps Graphic file (type eps)
- <ex2.eps> [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ <ex2.eps>
+Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
  [16]
-Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1739 replaced by U+FFFD.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: sens_mfs_f_measure.eps Graphic file (type eps)
 
-<sens_mfs_f_measure.eps>
+<sens_mfs_f_measure.eps> [17]
 File: sens_mfs_tests.eps Graphic file (type eps)
- <sens_mfs_tests.eps> [17]
+ <sens_mfs_tests.eps>
 File: sens_options_tests.eps Graphic file (type eps)
  <sens_options_tests.eps>
-Underfull \vbox (badness 1776) has occurred while \output is active []
+[18] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [19]
+Underfull \vbox (badness 1859) has occurred while \output is active []
 
- [18]
-(C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.bbl
-[19])
+)
 File: niu.png Graphic file (type QTm)
- <use  "niu.png" >
+
+<use  "niu.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1947.
 
@@ -562,21 +560,21 @@ File: niu.png Graphic file (type QTm)
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1947.
 
 
-File: nie.png Graphic file (type QTm)
-<use  "nie.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
-
-
-File: nie.png Graphic file (type QTm)
-<use  "nie.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
-
-
 [20]
+File: nie.png Graphic file (type QTm)
+ <use  "nie.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
+
+
+File: nie.png Graphic file (type QTm)
+<use  "nie.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 1954.
+
+
 File: hare.png Graphic file (type QTm)
- <use  "hare.png" >
+<use  "hare.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1958.
 
@@ -647,13 +645,11 @@ File: wangyan.png Graphic file (type QTm)
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1974.
 
 
-[21
-
-] (C:\Users\xintao\Documents\GitHub\interleaving-CT\bare_jrnl_compsoc.aux) ) 
+[21] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
  3356 strings out of 430478
- 47963 string characters out of 3191501
- 116891 words of memory out of 3000000
+ 47918 string characters out of 3191502
+ 117957 words of memory out of 3000000
  6453 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
