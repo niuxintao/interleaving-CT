@@ -964,6 +964,8 @@ For example in Table \ref{tradition-gi}, $t_{1}$ contained a single MFS (-, 0, -
 
 When a failing test case has \textbf{multiple} MFS, however, SCT fails to meet that criterion. As discussed previously, SCT cannot properly work on test cases with multiple MFS--and even cannot obtain a valid schema. With this in mind, we cannot determine which schemas in this failing test case are MFS or not, consequently, we cannot ensure we have examined all the $t$-degree schemas in this failing test case. For example, $t_{4}$ has two MFS--(-, 0, -, -), (-, -, 0, 1), which can not be identified with OFOT approach (In fact, there is no passing extra-generated test case). As a result, there are two 2-degree schemas (1, 0, -, -) (-, -, 0, 1) in this test case that are neither contained in a passing test case nor determined as MFS or faulty schemas.  Hence, \emph{tested t-way interaction criterion} is not satisfied.  Since multiple MFS in a test case can introduce masking effects, SCT must be negatively affected as it lacks mechanisms to avoid the appearance of multiple MFS in failing test cases.
 
+Note that the \emph{masking effects} is actually caused by the \emph{multiple MFS problem} we discussed previously. But these two problems focus on different aspects of combinatorial testing. The \emph{masking effects} mainly focus on the test sufficiency of CT, which can be regarded as a metric to evaluate how many schemas are actually tested \cite{yilmaz2013reducing}. While for \emph{multiple MFS problem}, it mainly focus on the quality of MFS identification. To be convenient, we separately discuss these two problems later in this paper.
+
 %\begin{table}[h]
 %\caption{The satisfaction of tested t-way interaction criterion}
 %\label{ofot-proof}

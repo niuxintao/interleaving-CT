@@ -19,16 +19,17 @@ constraints说明  （方法 和   ok
 
 实验那个图要重新换一下 （redundancy ）
  
+￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
+constraints说明     实验）  这个还要加强
+￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
 
-constraints说明  实验）
 
-
-方法的说明 (改变了  变成了 fic, mutated ofot), 包括例子
+方法的说明 (改变了  变成了 fic, mutated ofot), 包括例子  ok
 
 
 related works 说明
 
 
-test-aware- covering array 说明
+test-aware- covering array 说明 ok
 
-为什么f-measure结果不好说明
+为什么f-measure结果不好说明 ok
