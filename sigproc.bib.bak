@@ -538,3 +538,139 @@ ISSN={0098-5589}
   year={2005},
   publisher={Springer}
 }
+@article{kobayashi2002design,
+  title={Design and evaluation of automatic test generation strategies for functional testing of software},
+  author={Kobayashi, Noritaka},
+  journal={Osaka, Japan, Osaka Univ},
+  year={2002}
+}
+@incollection{williams2000determination,
+  title={Determination of test configurations for pair-wise interaction coverage},
+  author={Williams, Alan W},
+  booktitle={Testing of Communicating Systems},
+  pages={59--74},
+  year={2000},
+  publisher={Springer}
+}
+@incollection{williams2002formulation,
+  title={Formulation of the interaction test coverage problem as an integer program},
+  author={Williams, Alan W and Probert, Robert L},
+  booktitle={Testing of Communicating Systems XIV},
+  pages={283--298},
+  year={2002},
+  publisher={Springer}
+}
+@inproceedings{bryce2007one,
+  title={One-test-at-a-time heuristic search for interaction test suites},
+  author={Bryce, Ren{\'e}e C and Colbourn, Charles J},
+  booktitle={Proceedings of the 9th annual conference on Genetic and evolutionary computation},
+  pages={1082--1089},
+  year={2007},
+  organization={ACM}
+}
+@inproceedings{ghazi2003pair,
+  title={Pair-wise test coverage using genetic algorithms},
+  author={Ghazi, Syed A and Ahmed, Moataz A},
+  booktitle={Evolutionary Computation, 2003. CEC'03. The 2003 Congress on},
+  volume={2},
+  pages={1420--1424},
+  year={2003},
+  organization={IEEE}
+}
+@inproceedings{shiba2004using,
+  title={Using artificial life techniques to generate test cases for combinatorial testing},
+  author={Shiba, Toshiaki and Tsuchiya, Tatsuhiro and Kikuno, Tohru},
+  booktitle={Computer Software and Applications Conference, 2004. COMPSAC 2004. Proceedings of the 28th Annual International},
+  pages={72--77},
+  year={2004},
+  organization={IEEE}
+}
+@article{wu2015discrete,
+  title={A Discrete Particle Swarm Optimization for Covering Array Generation},
+  author={Wu, Huayao and Nie, Changhai and Kuo, Fei-Ching and Leung, Hareton and Colbourn, Charles J},
+  journal={Evolutionary Computation, IEEE Transactions on},
+  volume={19},
+  number={4},
+  pages={575--591},
+  year={2015},
+  publisher={IEEE}
+}
+@inproceedings{schroeder2004comparing,
+  title={Comparing the fault detection effectiveness of n-way and random test suites},
+  author={Schroeder, Patrick J and Bolaki, Pankaj and Gopu, Vijayram},
+  booktitle={Empirical Software Engineering, 2004. ISESE'04. Proceedings. 2004 International Symposium on},
+  pages={49--59},
+  year={2004},
+  organization={IEEE}
+}
+@article{nie2015combinatorial,
+  title={Combinatorial testing, random testing, and adaptive random testing for detecting interaction triggered failures},
+  author={Nie, Changhai and Wu, Huayao and Niu, Xintao and Kuo, Fei-Ching and Leung, Hareton and Colbourn, Charles J},
+  journal={Information and Software Technology},
+  volume={62},
+  pages={198--213},
+  year={2015},
+  publisher={Elsevier}
+}
+@inproceedings{robetaler2012isolating,
+  title={Isolating failure causes through test case generation},
+  author={R{\"o}$\beta$ler, Jeremias and Fraser, Gordon and Zeller, Andreas and Orso, Alessandro},
+  booktitle={Proceedings of the 2012 International Symposium on Software Testing and Analysis},
+  pages={309--319},
+  year={2012},
+  organization={ACM}
+}
+@inproceedings{jones2002visualization,
+  title={Visualization of test information to assist fault localization},
+  author={Jones, James A and Harrold, Mary Jean and Stasko, John},
+  booktitle={Proceedings of the 24th international conference on Software engineering},
+  pages={467--477},
+  year={2002},
+  organization={ACM}
+}
+@article{liblit2003bug,
+  title={Bug isolation via remote program sampling},
+  author={Liblit, Ben and Aiken, Alex and Zheng, Alice X and Jordan, Michael I},
+  journal={ACM SIGPLAN Notices},
+  volume={38},
+  number={5},
+  pages={141--154},
+  year={2003},
+  publisher={ACM}
+}
+@inproceedings{liu2005sober,
+  title={SOBER: statistical model-based bug localization},
+  author={Liu, Chao and Yan, Xifeng and Fei, Long and Han, Jiawei and Midkiff, Samuel P},
+  booktitle={ACM SIGSOFT Software Engineering Notes},
+  volume={30},
+  number={5},
+  pages={286--295},
+  year={2005},
+  organization={ACM}
+}
+@inproceedings{zeller1999yesterday,
+  title={Yesterday, my program worked. Today, it does not. Why?},
+  author={Zeller, Andreas},
+  booktitle={Software Engineering¡ªESEC/FSE¡¯99},
+  pages={253--267},
+  year={1999},
+  organization={Springer}
+}
+@inproceedings{misherghi2006hdd,
+  title={HDD: hierarchical delta debugging},
+  author={Misherghi, Ghassan and Su, Zhendong},
+  booktitle={Proceedings of the 28th international conference on Software engineering},
+  pages={142--151},
+  year={2006},
+  organization={ACM}
+}
+@article{henard2014bypassing,
+  title={Bypassing the combinatorial explosion: Using similarity to generate and prioritize t-wise test configurations for software product lines},
+  author={Henard, Christopher and Papadakis, Mike and Perrouin, Gilles and Klein, John and Heymans, Patrick and Le Traon, Yves},
+  journal={Software Engineering, IEEE Transactions on},
+  volume={40},
+  number={7},
+  pages={650--670},
+  year={2014},
+  publisher={IEEE}
+}

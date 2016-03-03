@@ -334,4 +334,76 @@ C.~Nie, H.~Leung, and K.-Y. Cai, ``Adaptive combinatorial testing,'' in
   \emph{Quality Software (QSIC), 2013 13th International Conference on}.\hskip
   1em plus 0.5em minus 0.4em\relax IEEE, 2013, pp. 284--287.
 
+\bibitem{robetaler2012isolating}
+J.~R{\"o}$\beta$ler, G.~Fraser, A.~Zeller, and A.~Orso, ``Isolating failure
+  causes through test case generation,'' in \emph{Proceedings of the 2012
+  International Symposium on Software Testing and Analysis}.\hskip 1em plus
+  0.5em minus 0.4em\relax ACM, 2012, pp. 309--319.
+
+\bibitem{jones2002visualization}
+J.~A. Jones, M.~J. Harrold, and J.~Stasko, ``Visualization of test information
+  to assist fault localization,'' in \emph{Proceedings of the 24th
+  international conference on Software engineering}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2002, pp. 467--477.
+
+\bibitem{liblit2003bug}
+B.~Liblit, A.~Aiken, A.~X. Zheng, and M.~I. Jordan, ``Bug isolation via remote
+  program sampling,'' \emph{ACM SIGPLAN Notices}, vol.~38, no.~5, pp. 141--154,
+  2003.
+
+\bibitem{liu2005sober}
+C.~Liu, X.~Yan, L.~Fei, J.~Han, and S.~P. Midkiff, ``Sober: statistical
+  model-based bug localization,'' in \emph{ACM SIGSOFT Software Engineering
+  Notes}, vol.~30, no.~5.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2005, pp.
+  286--295.
+
+\bibitem{zeller2002simplifying}
+A.~Zeller and R.~Hildebrandt, ``Simplifying and isolating failure-inducing
+  input,'' \emph{Software Engineering, IEEE Transactions on}, vol.~28, no.~2,
+  pp. 183--200, 2002.
+
+\bibitem{zeller1999yesterday}
+A.~Zeller, ``Yesterday, my program worked. today, it does not. why?'' in
+  \emph{Software Engineering¡ªESEC/FSE¡¯99}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 1999, pp. 253--267.
+
+\bibitem{misherghi2006hdd}
+G.~Misherghi and Z.~Su, ``Hdd: hierarchical delta debugging,'' in
+  \emph{Proceedings of the 28th international conference on Software
+  engineering}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2006, pp. 142--151.
+
+\bibitem{ghandehari2013fault}
+L.~S. Ghandehari, Y.~Lei, D.~Kung, R.~Kacker, and R.~Kuhn, ``Fault localization
+  based on failure-inducing combinations,'' in \emph{Software Reliability
+  Engineering (ISSRE), 2013 IEEE 24th International Symposium on}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2013, pp. 168--177.
+
+\bibitem{henard2014bypassing}
+C.~Henard, M.~Papadakis, G.~Perrouin, J.~Klein, P.~Heymans, and Y.~Le~Traon,
+  ``Bypassing the combinatorial explosion: Using similarity to generate and
+  prioritize t-wise test configurations for software product lines,''
+  \emph{Software Engineering, IEEE Transactions on}, vol.~40, no.~7, pp.
+  650--670, 2014.
+
+\bibitem{perrouin2010automated}
+G.~Perrouin, S.~Sen, J.~Klein, B.~Baudry, and Y.~Le~Traon, ``Automated and
+  scalable t-wise test case generation strategies for software product lines,''
+  in \emph{Software Testing, Verification and Validation (ICST), 2010 Third
+  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2010, pp. 459--468.
+
+\bibitem{lopez2014parallel}
+R.~E. Lopez-Herrejon, J.~Javier~Ferrer, F.~Chicano, E.~N. Haslinger, A.~Egyed,
+  and E.~Alba, ``A parallel evolutionary algorithm for prioritized pairwise
+  testing of software product lines,'' in \emph{Proceedings of the 2014
+  conference on Genetic and evolutionary computation}.\hskip 1em plus 0.5em
+  minus 0.4em\relax ACM, 2014, pp. 1255--1262.
+
+\bibitem{lopez2015first}
+R.~E. Lopez-Herrejon, S.~Fischer, R.~Ramler, and A.~Egyed, ``A first systematic
+  mapping study on combinatorial interaction testing for software product
+  lines,'' in \emph{Software Testing, Verification and Validation Workshops
+  (ICSTW), 2015 IEEE Eighth International Conference on}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2015, pp. 1--10.
+
 \end{thebibliography}
