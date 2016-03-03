@@ -251,6 +251,79 @@ B.~Garn and D.~E. Simos, ``Eris: A tool for combinatorial testing of the linux
   Validation Workshops (ICSTW), 2014 IEEE Seventh International Conference
   on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 58--67.
 
+\bibitem{bryce2005framework}
+R.~C. Bryce, C.~J. Colbourn, and M.~B. Cohen, ``A framework of greedy methods
+  for constructing interaction test suites,'' in \emph{Proceedings of the 27th
+  international conference on Software engineering}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2005, pp. 146--155.
+
+\bibitem{hartman2005software}
+A.~Hartman, ``Software and hardware testing using combinatorial covering
+  suites,'' in \emph{Graph theory, combinatorics and algorithms}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2005, pp. 237--266.
+
+\bibitem{kobayashi2002design}
+N.~Kobayashi, ``Design and evaluation of automatic test generation strategies
+  for functional testing of software,'' \emph{Osaka, Japan, Osaka Univ}, 2002.
+
+\bibitem{williams2000determination}
+A.~W. Williams, ``Determination of test configurations for pair-wise
+  interaction coverage,'' in \emph{Testing of Communicating Systems}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2000, pp. 59--74.
+
+\bibitem{williams2002formulation}
+A.~W. Williams and R.~L. Probert, ``Formulation of the interaction test
+  coverage problem as an integer program,'' in \emph{Testing of Communicating
+  Systems XIV}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2002, pp.
+  283--298.
+
+\bibitem{bryce2007one}
+R.~C. Bryce and C.~J. Colbourn, ``One-test-at-a-time heuristic search for
+  interaction test suites,'' in \emph{Proceedings of the 9th annual conference
+  on Genetic and evolutionary computation}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2007, pp. 1082--1089.
+
+\bibitem{cohen2003constructing}
+M.~B. Cohen, P.~B. Gibbons, W.~B. Mugridge, and C.~J. Colbourn, ``Constructing
+  test suites for interaction testing,'' in \emph{Software Engineering, 2003.
+  Proceedings. 25th International Conference on}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2003, pp. 38--48.
+
+\bibitem{ghazi2003pair}
+S.~A. Ghazi and M.~A. Ahmed, ``Pair-wise test coverage using genetic
+  algorithms,'' in \emph{Evolutionary Computation, 2003. CEC'03. The 2003
+  Congress on}, vol.~2.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2003, pp.
+  1420--1424.
+
+\bibitem{shiba2004using}
+T.~Shiba, T.~Tsuchiya, and T.~Kikuno, ``Using artificial life techniques to
+  generate test cases for combinatorial testing,'' in \emph{Computer Software
+  and Applications Conference, 2004. COMPSAC 2004. Proceedings of the 28th
+  Annual International}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2004, pp.
+  72--77.
+
+\bibitem{wu2015discrete}
+H.~Wu, C.~Nie, F.-C. Kuo, H.~Leung, and C.~J. Colbourn, ``A discrete particle
+  swarm optimization for covering array generation,'' \emph{Evolutionary
+  Computation, IEEE Transactions on}, vol.~19, no.~4, pp. 575--591, 2015.
+
+\bibitem{schroeder2004comparing}
+P.~J. Schroeder, P.~Bolaki, and V.~Gopu, ``Comparing the fault detection
+  effectiveness of n-way and random test suites,'' in \emph{Empirical Software
+  Engineering, 2004. ISESE'04. Proceedings. 2004 International Symposium
+  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2004, pp. 49--59.
+
+\bibitem{nie2015combinatorial}
+C.~Nie, H.~Wu, X.~Niu, F.-C. Kuo, H.~Leung, and C.~J. Colbourn, ``Combinatorial
+  testing, random testing, and adaptive random testing for detecting
+  interaction triggered failures,'' \emph{Information and Software Technology},
+  vol.~62, pp. 198--213, 2015.
+
+\bibitem{shi2005software}
+L.~Shi, C.~Nie, and B.~Xu, ``A software debugging method based on pairwise
+  testing,'' in \emph{Computational Science--ICCS 2005}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 2005, pp. 1088--1091.
+
 \bibitem{bryce2006prioritized}
 R.~C. Bryce and C.~J. Colbourn, ``Prioritized interaction testing for pair-wise
   coverage with seeding and constraints,'' \emph{Information and Software

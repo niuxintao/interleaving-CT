@@ -854,6 +854,8 @@ $t_{3}$ &\multicolumn{4}{l}{1  \ \ \ \  1 \ \ \ \  0 } & Fail \\
 
 This identification process mutate one factor of the original test case at a time to generate extra test cases. Then according to the outcome of the test cases execution result, it will identify the MFS of the original failing test cases. It is called the OFOT method \cite{nie2011minimal}, which is a well-known MFS identification method in CT. In this paper, we will focus on this identification method. It should be noted that the following proposed CT framework can be easily applied to other MFS identification methods.
 
+Note that all the existed MFS identification approaches just give approximation solutions for MFS identification. In fact, to exactly identify the MFS (without any assumptions), it needs exponential number of test cases \cite{niu2013identifying}, which is impossible in practice. Hence, all the existed MFS identification approaches, as well as the approach we will proposed in this paper, need additional assumptions or just identify the likely failure-inducing interactions.
+
 
 \section{Motivating example}\label{sec:moti}
 In this section, a motivating example is presented to show how traditional CT works as well as its limitations. This example is derived from our attempt to test a real-world software--HSQLDB, which is a pure-java relational database engine with large and complex configuration space. To extract and manipulate valid configurations of this highly-configurable system is important, as different configuration can result in significantly different behaviours of the system \cite{jin2014configurations,qu2008configuration,song2012itree} (HSQLDB may normally works under some properly configurations, but crashes or throws exceptions under some other configurations).
@@ -961,6 +963,8 @@ One obvious insight is that if there is only \textbf{single} MFS in each failing
 For example in Table \ref{tradition-gi}, $t_{1}$ contained a single MFS (-, 0, -, -), and we identified this MFS by generating four extra test cases ($t_{10}$ to $t_{13}$). As for $t_{1}$, the schema (-, 0, -, -) is determined to be MFS, but since the target of that testing is $2$-way coverage, i.e., to cover all the 2-degree schemas, this $1$-degree schema do not contribute any more coverage. Based on the fact that (-, 0, -, -) is MFS, all the test cases containing this schema will fail by definition, and surely the super-schemas of (-, 0, -, -) in this test case -- (0, 0, -, -), (-, 0, 0, -) and (-, 0, -, 0) are also faulty schemas as all the test cases containing these schemas must contain the MFS (-, 0, -, -), which will fail after execution. The remaining 2-degree schemas (0, -, 0, -), (0, -, -, 0), (-, -, 0, 0) are contained in the extra-generated test case $t_{11}$ (0, 1, 0, 0) (Note that for single MFS, there will be at least one passing extra-generated test case ), which are of course non-faulty schemas.  After all, all the 2-degree schemas in the failing test case $t_{1}$ satisfied the \emph{tested t-way interaction criterion}.
 
 When a failing test case has \textbf{multiple} MFS, however, SCT fails to meet that criterion. As discussed previously, SCT cannot properly work on test cases with multiple MFS--and even cannot obtain a valid schema. With this in mind, we cannot determine which schemas in this failing test case are MFS or not, consequently, we cannot ensure we have examined all the $t$-degree schemas in this failing test case. For example, $t_{4}$ has two MFS--(-, 0, -, -), (-, -, 0, 1), which can not be identified with OFOT approach (In fact, there is no passing extra-generated test case). As a result, there are two 2-degree schemas (1, 0, -, -) (-, -, 0, 1) in this test case that are neither contained in a passing test case nor determined as MFS or faulty schemas.  Hence, \emph{tested t-way interaction criterion} is not satisfied.  Since multiple MFS in a test case can introduce masking effects, SCT must be negatively affected as it lacks mechanisms to avoid the appearance of multiple MFS in failing test cases.
+
+Note that the \emph{masking effects} is actually caused by the \emph{multiple MFS problem} we discussed previously. But these two problems focus on different aspects of combinatorial testing. The \emph{masking effects} mainly focus on the test sufficiency of CT, which can be regarded as a metric to evaluate how many schemas are actually tested \cite{yilmaz2013reducing}. While for \emph{multiple MFS problem}, it mainly focus on the quality of MFS identification. To be convenient, we separately discuss these two problems later in this paper.
 
 %\begin{table}[h]
 %\caption{The satisfaction of tested t-way interaction criterion}
@@ -1676,7 +1680,7 @@ This table shows a discernible disparity between \emph{fda-cit} with the other t
 
 %Another interesting observation is for subject \emph{Tcas}, which has multiple high degree MFS. We can find that, although very trivial, \emph{sct}  and \emph{ict} have identified some high-degree MFS (F-measures of 3-way and 4-way is not equal to 0). However, fda-cit failed to accurately identify even one high-degree MFS, as all f-measure equal to 0.
 
-This result suggests that the classification tree approach, although very resource-saving (does not needs additional test cases),  is ineffective to accurately MFS identification result, especially when there are multiple MFS with high degrees. 
+This result suggests that the classification tree approach, although very resource-saving (does not needs additional test cases),  is ineffective to accurately MFS identification result, especially when there are multiple MFS with high degrees.
 
 Note that \emph{fda-cit}'s primary concern is to avoid masking effects and to give every $t$-degree schema a fair chance to be tested, not to perform fault characterization. On the other hand for classification tree method, when only a very small set of test cases fail, it will result in the input data for CTA is highly unbalanced \cite{zhang2012faulty}. Another point is that all the MFS identified by the classification tree method should contain the same parameter value on the root, which will result in the schemas identified by \emph{fda-cit} tend to be super-schema of the real MFS. Although this leads to the f-measure of MFS identification lower than that of \emph{ict}, it does not have much negative influence on the masking effects reduction. This because to forbid the appearance of super-schema of real MFS will not reduce the number of schemas that is not MFS to be tested. As a result, the \emph{tested-t-way} coverage is not changed (This coincides well with the experimental results).
 
@@ -1702,7 +1706,7 @@ With regard to \emph{the number of test cases which ignore the masking effects},
 
 %they need to generate test cases for identifying the MFS. These test cases, however, very likely contain multiple MFS (they are ).
 
-Above all, this result gives us a confidence that our approach \emph{ict} does reach the same level as \emph{fda-cit} at reducing the masking effects. The conclusion also implies that, to limit the masking effects, only using an adaptive framework to separately identify the MFS is not enough; making MFS identification accurately is more important and should be the key focus in the future studies of masking effects. 
+Above all, this result gives us a confidence that our approach \emph{ict} does reach the same level as \emph{fda-cit} at reducing the masking effects. The conclusion also implies that, to limit the masking effects, only using an adaptive framework to separately identify the MFS is not enough; making MFS identification accurately is more important and should be the key focus in the future studies of masking effects.
 
 \begin{table*}[ht]
 \caption{The tested-t-way coverage for \emph{fda-cit}}
@@ -1737,7 +1741,7 @@ Tcas	&109.4(0.5,0.4)	&416.6(\textbf{-0.9},\textbf{-1.4})	&1549.4(3.7,4.4)	\\\hli
 To summarize, the answer to \textbf{Q3} is that when comparing the adaptive CT approach \emph{fda-cit}, our approach works as good as it, even if at reduction of masking effects and making testing adequately which \emph{fda-cit} focuses on addressing. Additionally, our approach supports a better MFS identification than \emph{fda-cit}.
 
 
-Note that one reason that \emph{ict} performs better than \emph{fda-cit} is that all the subjects just has one test case for each test case \emph{fda-cit} is designed to be better worked for subjects of which one configuration has multiple test cases. Under that condition, \emph{cit} should separately handle each of them as different test cases may contain different MFS. As a result, the number of additional configurations needed will grow linearly the number of failing test cases. Under this case, FDA-CIT is a better choice, as it does not need additional test cases for MFS identification and can handle the multiple test cases, i.e., test case-aware condition.
+Note that one reason that \emph{ict} performs better than \emph{fda-cit} is that all the subjects we used in the experiments just has one test file for each test configuration. Here test configuration equals to the test case we discussed throughout the paper.    \emph{fda-cit} is designed to be better worked for subjects of which one configuration has multiple test files. Under that condition, \emph{cit} should separately handle each of them as different test files may contain different MFS. As a result, the number of additional configurations needed will grow linearly with the number of failing test files. Under this case, FDA-CIT is a better choice, as it does not need additional test cases for MFS identification and can handle the multiple test files, i.e., test case-aware condition \cite{yilmaz2013reducing}.
 
 %    especially on reducing the redundance of test cases and limiting the test cases with multiple MFS. Additionally, both \emph{ict} and \emph{sct} have a good performance on reducing the masking effects.
 
@@ -1836,6 +1840,7 @@ Second, there have been many more generation algorithms and MFS identification a
 \section{related works}\label{sec:related}
 Combinatorial testing has been widely applied in practice \cite{kuhn2010practical}, especially on domains like configuration testing \cite{yilmaz2006covering,cohen2006testing,fouche2009incremental} and software inputs testing \cite{cohen1997aetg,borazjany2012combinatorial,garn2014eris}. A recent survey \cite{nie2011survey} comprehensively studied existing works in CT and classified those works into eight categories according to the testing procedure. Based on this study, we learn that test cases generation and MFS identification are two most important parts in CT studies.
 
+
 %###################qu2008configuration, ghandehari2013applying,
 
 %took a survey on the studies about different aspects of combinatorial testing, and based on which, we can learn that many works in CT focus on separately aspects, i.e. either focus on generation, or on evaluation or on fault localization, or on building models .
@@ -1853,6 +1858,15 @@ S.Fouch{\'e}  et al., \cite{fouche2009incremental} introduced the notion of incr
 combinatorial testing approach that can assist traditional covering in avoiding the masking effects between multiple failures. Yilmaz \cite{yilmaz2013reducing} extended that work by refining the MFS diagnosing method. Specifically, this feedback driven approach firstly generate a $t$-way covering array, and after executing them, the MFS will be identified by utilizing a classification tree method. It then forbids these MFS and generates additional test cases to cover the interactions that are masked by the MFS. This process continues until all the interactions are covered. Additionally, Nie \cite{nie2013adaptive} constructed an adaptive combinatorial testing framework, which can dynamically adjust the inputs model, strength $t$ of covering array, and generation strategy during CT process.
 
 Our work differs from them mainly in that we proposed a highly interactive framework for test case generation and MFS identification. Specifically, we do not generate a complete $t$-way covering array at first; instead, when a failure is triggered by a test case, we immediately terminate test cases generation and turn to MFS identification. After the MFS is identified, the coverage will be updated and the test cases generation process continues.
+
+Besides the works from combinatorial testing, there also exists code-based fault localization approach. 
+
+
+From these works. Zeller's paper is. As it is the first one to . where our work shares similar idea with this work.
+
+
+Besides the works of code-based fault localization, the works of SPL is also very correlated to the Combinatorial testing.
+
 %focus on combining two important techniques in CT, i.e., test cases generation and MFS identification, such that the overall cost of CT will be reduced and the identified MFS will be of higher quality.
 %
 
