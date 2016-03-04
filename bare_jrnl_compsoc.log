@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  3 MAR 2016 17:28
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  4 MAR 2016 02:19
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -554,19 +554,12 @@ File: sens_mfs_tests.eps Graphic file (type eps)
  <sens_mfs_tests.eps> [18]
 File: sens_options_tests.eps Graphic file (type eps)
  <sens_options_tests.eps>
-[19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl
-Underfull \vbox (badness 1859) has occurred while \output is active []
-
- [21]
+[19] [20] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl
+[21]
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¯ in font pplri7t!
 )
-[22]
 File: niu.png Graphic file (type QTm)
  <use  "niu.png" >
 
@@ -579,8 +572,9 @@ File: niu.png Graphic file (type QTm)
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1973.
 
 
+[22]
 File: nie.png Graphic file (type QTm)
-<use  "nie.png" >
+ <use  "nie.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 1980.
 
@@ -671,7 +665,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3382 strings out of 430478
  48435 string characters out of 3191502
- 120200 words of memory out of 3000000
+ 120460 words of memory out of 3000000
  6479 multiletter control sequences out of 15000+200000
  36498 words of font info for 96 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
