@@ -1295,26 +1295,27 @@ To evaluate the effectiveness and efficiency of the interleaving CT approach, we
 
 
 \subsection{Subject programs}\label{sec:subject}
-The five subject programs used in our experiments are listed in Table \ref{subject}. Column ``Subjects" indicates the specific software. Column ``Version" indicates the specific version that is used in the following experiments. Column ``LOC" shows the number of source code lines for each software. Column ``Faults" presents the fault ID, which is used as the index to fetch the original fault description from the bug tracker for that software. Column ``Cons" shows the constraints for each software. Column ``Lan" shows the programming language for each software (For subjects written in more than one programming language, only the main programming language is shown).
+The five subject programs used in our experiments are listed in Table \ref{subject}. Column ``Subjects" indicates the specific software. Column ``Version" indicates the specific version that is used in the following experiments. Column ``LOC" shows the number of source code lines for each software. Column ``Faults" presents the fault ID, which is used as the index to fetch the original fault description from the bug tracker for that software. Column ``Lan" shows the programming language for each software (For subjects written in more than one programming language, only the main programming language is shown).
 
 \begin{table}[ht]
 \caption{Subject programs}
 \label{subject}
 \centering
-\begin{tabular}{l|l|l|l|l|l}
+\begin{tabular}{l|l|l|l|l}
 \hline
-Subjects & Version & LOC & Faults & Cons&  Lan \\
+Subjects & Version & LOC & Faults &  Lan \\
 \hline
-Tomcat   &   7.0.40      & 296138    &   \#55905 &   & java  \\
-Hsqldb   &   2.0rc8  &   139425   &    \#981  &   & Java \\
-Gcc      &   4.7.2      &  2231564   & \#55459 &    &  c\\
-Jflex    &    1.4.1     & 10040    &    \#87  &  - & Java \\
-Tcas     & $v_{1}$     &   173  &    \#Seed  &  - & c \\ \hline
+Tomcat   &   7.0.40      & 296138    &   \#55905  & java  \\
+Hsqldb   &   2.0rc8  &   139425   &    \#981  & Java \\
+Gcc      &   4.7.2      &  2231564   & \#55459   &  c\\
+Jflex    &    1.4.1     & 10040    &    \#87   & Java \\
+Tcas     & $v_{1}$     &   173  &    \#Seed   & c \\ \hline
 \end{tabular}
 
 \end{table}
 
-Among these subjects, Tomcat is a web server for java servlet; Hsqldb is a pure-java relational database engine; Gcc is a programming language compiler; Jflex is a lexical analyzer generator; and Tcas is a module of an aircraft collision avoidance system. We select these software as subjects because their behaviours are influenced by various combinations of configuration options or inputs. For example, the component \emph{connector} of Tomcat is influenced by more than 151 attributes \cite{tomcatconnector}. For program Tcas, although with a relatively small size (only 173 lines), it also has 12 parameters with their values ranged from 2 to 10. As a result, the overall input space for Tcas can reach 460800 \cite{shakya2012isolating,kuhn2006pseudo}.
+Among these subjects, Tomcat is a web server for java servlet; Hsqldb is a pure-java relational database engine; Gcc is a programming language compiler; Jflex is a lexical analyzer generator; and Tcas is a module of an aircraft collision avoidance system. We select these software as subjects because their behaviours are influenced by various combinations of configuration options or inputs. For example, the component \emph{connector} of Tomcat is influenced by more than 151 attributes \cite{tomcatconnector}. For program Tcas, although with a relatively small size (only 173 lines), it also has 12 parameters with their values ranged from 2 to 10. As a result, the overall input space for Tcas can reach 460800 \cite{shakya2012isolating,kuhn2006pseudo}. 
+
 
 As the target of our empirical studies is to compare the ability of fault defection between our approach with traditional ones, we firstly must know these faults and their corresponding MFS in prior, so that we can determine whether the schemas identified by those approaches are accurate or not.  For this, we looked through the bug tracker of each software and focused on the bugs which are caused by the interaction of configuration options. Then for each such bug, we derive its MFS by analysing the bug description report and the associated test file which can reproduce the bug. For Tcas, as it does not contain any fault for the original source file, we took an mutation version for that file with injected fault. The mutation was the same as that in \cite{kuhn2006pseudo}, which is used as a experimental object for the fault detection studies.
 
@@ -1355,7 +1356,7 @@ Tcas     &  $2^{7} \times 3^{2} \times 4^{1} \times 10^{2} $ &9(16)\ 10(8)\ 11(1
 \end{table}
 In this table, Column ``inputs" depicts the input model for each version of the software, presented in the abbreviated form $\#values^{\#number\ of\ parameters} \times ...$, e.g., $2^{9} \times 3^{2} \times 4^{1}$ indicates the software has 9 parameters that can take on 2 values, 2 parameters can take on 3 values, and only one parameter that can take on 4 values. Column ``MFS" shows the degrees of each MFS and the number of MFS (in the parentheses) with that corresponding degree.
 
-Note that these inputs just indicate the combinations of configuration options. To conduct the experiments, some other files are also needed. For example, besides the XML configuration file, we need a prepared HTML web page and a java program to control the startup of the tomcat to see whether exceptions will be triggered. Other subjects also need some corresponding auxiliary files (e.g., c source files for GCC, SQL commands for Hsqldb, some text for Jflex).
+Note that these inputs just indicate the combinations of configuration options. To conduct the experiments, some other files are also needed. For example, besides the XML configuration file, we need a prepared HTML web page and a java program to control the startup of the tomcat to see whether exceptions will be triggered. Other subjects also need some corresponding auxiliary files (e.g., c source files for GCC, SQL commands for Hsqldb, some text for Jflex). Additionally, there are two constraints among the subjects. The first constraint is from Tomcat, of which the should not, . The second one is from Hsqldb, of which you can only process with the ``\emph{next()}'' method in a non-scrollable result set.
 %
 %\subsubsection{testing}
 
