@@ -191,6 +191,14 @@ L.~Yu, F.~Duan, Y.~Lei, R.~N. Kacker, and D.~R. Kuhn, ``Constraint handling in
   International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2015, pp. 1--9.
 
+\bibitem{Berkelaar2004}
+\BIBentryALTinterwordspacing
+M.~Berkelaar, K.~Eikland, and P.~Notebaert, ``{lp\_solve} 5.5, open source
+  (mixed-integer) linear programming system,'' Software, May 1 2004, last
+  accessed Dec, 18 2009. [Online]. Available:
+  \url{http://lpsolve.sourceforge.net/5.5/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{li2012improved}
 J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
   testing,'' in \emph{Quality Software (QSIC), 2012 12th International
