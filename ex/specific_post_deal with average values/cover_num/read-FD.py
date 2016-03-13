@@ -7,7 +7,7 @@ def readFile(ax, inputFile):
     inf = open(inputFile)
     line = inf.readline()
     bar_inc = [0, 0.35, 0.7];
-    a = ['ICT','SCT','FD']
+    a = ['ICT','SCT','FD-CIT']
     color = ['k','k','w']
     dot = ['-', '-.']
     mark = ['o','d']

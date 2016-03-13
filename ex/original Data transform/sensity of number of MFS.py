@@ -65,7 +65,7 @@ line_2, = axmetricn.plot(x, out_metric[1], ls="--", marker="d",   color="k")
 line_3, = axmetricn1.plot(x, out_metric[2], ls=":", marker="o", mfc="None",   color="k")
 
 #configure legend
-fig.legend([line_1, line_2, line_3], ['fic-fda', 'ict', 'sct'],'upper left',
+fig.legend([line_1, line_2, line_3], ['fda-cit', 'ict', 'sct'],'upper left',
            ncol=3,prop={'size':10})
 
 
