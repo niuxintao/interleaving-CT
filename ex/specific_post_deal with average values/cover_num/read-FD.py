@@ -158,7 +158,7 @@ if __name__ == "__main__":
     ax.set_ylabel('number of schemas', fontsize=20)
     ax.yaxis.set_label_coords(-0.03, 0.5)
 
-    fig.legend([rectc1, rectc2, rectc3], ['ICT', 'SCT', 'FD'], (0.06, 0.96),
+    fig.legend([rectc1, rectc2, rectc3], ['ICT', 'SCT', 'FD-CIT'], (0.06, 0.96),
            ncol = 3, prop={'size':10})
     plt.tight_layout()
     plt.show()
