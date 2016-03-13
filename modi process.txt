@@ -17,22 +17,22 @@ fda 比我们多，是因为    粒度问题， 我们的粒度较小  ok
 constraints说明  （方法 和   ok
 
 
-实验那个图要重新换一下 （redundancy ）
+实验那个图要重新换一下 （redundancy ）ok
 
 
 shorten the approach 说明
 
-why constribute more
+why constribute more ok
  
 ￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
-constraints说明     实验）  这个还要加强
+constraints说明     实验）  这个还要加强                               ok
 ￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
 
 
 方法的说明 (改变了  变成了 fic, mutated ofot), 包括例子  ok
 
 
-related works 说明
+related works 说明         ok
 
 
 test-aware- covering array 说明 ok
