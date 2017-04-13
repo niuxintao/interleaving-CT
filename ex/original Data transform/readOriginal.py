@@ -18,6 +18,8 @@ class item:
         self.t_cover = 0
         self.all_cover = 0
         self.CoverNUM = ''
+        self.wcheck = 0
+        self.widen = 0
 
 def getOneFile(inputFile):
     result_2way = item()
@@ -67,6 +69,10 @@ def dealLine(result, strs):
             result.t_cover = float(strlist[1])
         elif strs.find('all_cover')>=0:
             result.all_cover = float(strlist[1])
+        elif strs.find('w check')>=0:
+            result.wcheck = float(strlist[1])
+        elif strs.find('w iden')>=0:
+            result.widen = float(strlist[1])
     elif strs.find('(') >= 0 and strs.find('[') < 0:
         result.CoverNUM = strs
     return result
@@ -128,9 +134,12 @@ if __name__ == "__main__":
     senMFS = ['1','2','3','4','5','6','7','8','9','10','20','30','40','50','60','70','80','90']
     senOptions = ['8','9','10','12','16','20','30','40','50','60','70','80','90','100']
 
+    senSafe = ['8-4', '10-4', '16-4', '20-4', '30-4', '40-4', '50-4', '60-4', '70-4', '80-4', '90-4']
+    senUnden = ['0.01', '0.05', '0.1', '0.15', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '0.98']
+
     txt = '.txt'
 
-    folder = ['five', 'mfs', 'op']
+    folder = ['five', 'mfs', 'op', 'und', 'safe']
 
     print('test Cases')
     for k in range(5):
@@ -344,6 +353,51 @@ if __name__ == "__main__":
             print('')
 
     print('')
+    print('fd multi')
+    for k in range(5):
+        sub = subject[k]
+        ssub = [showresultSub[k], '', '']
+        result = []
+        for j in range(0,3):
+            app = approach[j]
+            filename = folder[0] +'\/'+app+sub+txt
+            result_temp = getOneFile(filename)
+            result.append(result_temp)
+        print(showresultSub[k] + '\t&', end = '')
+        for i in range(0, 3):
+            if i < 2:
+                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrong(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t&', end= '')
+            else:
+                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrong(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t\\\\', end= '')
+        if(k == 4):
+            print('\\hline')
+        else:
+            print('')
+
+#    print('')
+#    print('fd multi')
+#    for k in range(5):
+#        sub = subject[k]
+#        ssub = [showresultSub[k], '', '']
+#        result = []
+#        for j in range(0,3):
+#            app = approach[j]
+#            filename = folder[0] +'\/'+app+sub+txt
+#            result_temp = getOneFile(filename)
+#            result.append(result_temp)
+#        print(showresultSub[k] + '\t&', end = '')
+#        for i in range(0, 3):
+#            if i < 2:
+#               print(str(round(result[0][i].multi,2)) + '(' + getStrongPerCent(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrongPerCent(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t&', end= '')
+#           else:
+#               print(str(round(result[0][i].multi,2)) + '(' + getStrongPerCent(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrongPerCent(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t\\\\', end= '')
+#        #print('')
+#        if(k == 4):
+#            print('\\hline')
+#       else:
+#           print('')
+
+    print('')
     print('fd tested-t-way')
     for k in range(5):
         sub = subject[k]
@@ -509,4 +563,209 @@ if __name__ == "__main__":
 
     print('],')
 
+    print(']')
+
+    print('')
+    print('sensity of undetermine --- test cases')
+    print('sensity of undetermine --- f-measure')
+    print('sensity of undetermine --- t-cover')
+
+
+
+
+
+    print('[')
+
+
+    print('[')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senUnden:
+            app = approach[j]
+            filename = folder[3] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].numAll,2)) +',', end= '')
+        print('],')
+
+    print('],')
+
+    print('[')
+  
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senUnden:
+            app = approach[j]
+            filename = folder[3] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].f_measure,2)) +',', end= '')
+        print('],')
+        
+        
+    print('],')
+
+    print('[')
+
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senUnden:
+            app = approach[j]
+            filename = folder[3] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
+        print('],')
+
+    print('],')
+
     print(']') 
+
+
+
+    print('sensity of undetermine --- w iden')
+
+    print('[', end = '')
+    for sub in senUnden:
+        app = approach[1]
+        filename = folder[3] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        print(str(round(result[0].widen,2)) +',', end= '')
+    print('],')
+
+
+    print('sensity of undetermine --- w check')
+
+    print('[', end = '')
+    for sub in senUnden:
+        app = approach[1]
+        filename = folder[3] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        print(str(round(result[0].wcheck,2)) +',', end= '')
+    print('],')
+
+
+
+    print('')
+    print('show wcheck and widen')
+
+    print('fixed'+'\t&', end = '')
+    for sub in senUnden:
+        app = approach[1]
+        filename = folder[3] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        if sub == senUnden[len(senUnden) - 1]:
+            print(str(round(result[0].wcheck,2)) +'\t\\\\', end= '')    
+        else:
+            print(str(round(result[0].wcheck,2)) +'\t&', end= '')
+    print('\\hline')
+
+    print('unfixed'+'\t&', end = '')
+    for sub in senUnden:
+        app = approach[1]
+        filename = folder[3] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        if sub == senUnden[len(senUnden) - 1]:
+            print(str(round(result[0].widen,2)) +'\t\\\\', end= '')    
+        else:
+            print(str(round(result[0].widen,2)) +'\t&', end= '')
+            
+    print('\\hline')
+            
+    
+
+
+    print('')
+    print('sensity of safe --- test cases')
+    print('sensity of safe --- f-measure')
+    print('sensity of safe --- t-cover')
+
+
+    print('[')
+
+
+    print('[')
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senSafe:
+            app = approach[j]
+            filename = folder[4] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].numAll,2)) +',', end= '')
+        print('],')
+
+    print('],')
+
+    print('[')
+  
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senSafe:
+            app = approach[j]
+            filename = folder[4] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].f_measure,2)) +',', end= '')
+        print('],')
+        
+        
+    print('],')
+
+    print('[')
+
+    for j in range(0,3):
+        print('[', end = '')
+        for sub in senSafe:
+            app = approach[j]
+            filename = folder[4] +'\/'+app+syn+sub+txt
+            result = getOneFile(filename)
+            print(str(round(result[0].t_cover/result[0].all_cover,2)) +',', end= '')
+        print('],')
+
+    print('],')
+
+    print(']')
+
+    print('sensity of safe --- w iden')
+
+    print('[', end = '')
+    for sub in senSafe:
+        app = approach[1]
+        filename = folder[4] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        print(str(round(result[0].widen,2)) +',', end= '')
+    print('],')
+
+
+    print('sensity of safe --- w check')
+
+    print('[', end = '')
+    for sub in senSafe:
+        app = approach[1]
+        filename = folder[4] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        print(str(round(result[0].wcheck,2)) +',', end= '')
+    print('],')
+
+    print('')
+    print('show wcheck and widen')
+
+    print('fixed'+'\t&', end = '')
+    for sub in senSafe:
+        app = approach[1]
+        filename = folder[4] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        if sub == senSafe[len(senSafe) - 1]:
+            print(str(round(result[0].wcheck,2)) +'\t\\\\', end= '')    
+        else:
+            print(str(round(result[0].wcheck,2)) +'\t&', end= '')
+    print('\\hline')
+
+    print('unfixed'+'\t&', end = '')
+    for sub in senSafe:
+        app = approach[1]
+        filename = folder[4] +'\/'+app+syn+sub+txt
+        result = getOneFile(filename)
+        if sub == senSafe[len(senSafe) - 1]:
+            print(str(round(result[0].widen,2)) +'\t\\\\', end= '')    
+        else:
+            print(str(round(result[0].widen,2)) +'\t&', end= '')
+            
+    print('\\hline')
+

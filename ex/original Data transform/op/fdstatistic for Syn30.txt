@@ -1,31 +1,31 @@
 2-way for Syn30
 ###############################################
 ###############################################
-average fd num :16.2
+average fd num :38.3
 
-average fd num_r :16.2
+average fd num_r :38.3
 
 average fd num_i :0.0
 
-average fd recall :1.0
+average fd recall :0.29999999999999993
 
-average fd precise :1.0
+average fd precise :0.05855555555555555
 
-average fd f-measure :1.0
+average fd f-measure :0.09608058608058609
 
-average fd multi :0.0
+average fd multi :7.9
 
-average fd time :442.4
+average fd time :4211.8
 
-average fd time_r :429.6
+average fd time_r :4009.3
 
-average fd time_i :0.2
+average fd time_i :6.5
 
-average fd t_cover :1740.0
+average fd t_cover :1630.7
 
 average fd all_cover :1740.0
 
 average fd CoverNUM
-(1 : 41.6)  (2 : 104.0)  (3 : 99.2)  (4 : 50.0)  (5 : 36.6)  (6 : 19.0)  (7 : 2.6)  (8 : 0.2)  
+(1 : 28.8)  (2 : 38.8)  (3 : 42.5)  (4 : 24.9)  (5 : 20.9)  (6 : 12.4)  (7 : 7.4)  (8 : 4.4)  (9 : 1.7)  (10 : 4.6)  (11 : 2.9)  (12 : 1.4)  (13 : 0.2)  (14 : 0.1)  (16 : 0.1)  
 average fd CoverNUM
-([ 0 , - , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  
+([ - , - , 0 , - , - , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.1)  ([ - , 0 , - , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.3)  ([ 0 , - , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.5)  
