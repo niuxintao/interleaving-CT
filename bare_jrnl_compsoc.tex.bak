@@ -602,6 +602,14 @@ Based on the idea, we propose a new CT framework, which instead of dividing the 
 
 We remodel the test case generation and failure-inducing interactions identification modules to make them better adapt to this new framework. Specifically, for the generation part of our framework, we augment it by forbidding the appearance of test cases which contain the identified failure-inducing interactions. This is because those test cases containing a failure-inducing interaction will fail as expected, so that it makes no sense for the further failure detection. For the failure-inducing identification module, we augment it by achieving higher coverage.  More specifically, we refine the additional test case generation in this module, so that it can not only help to identify the failure-inducing interactions, but also cover as many uncovered interactions as possible. As a result, our new CT framework needs fewer test cases than traditional CT.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The new framework requires a high quality of the results of the failure-inducing interaction.
+Our new framework has strict requirements in accuracy of the identified failure-inducing interactions. This is mainly because it forbids the appearance of test cases which contain the identified interactions. Hence, if these interactions are not failure-inducing, they will never be covered again and an adequate testing will not be reached.
+%Considering that existing approaches actually obtain approximation solution to the real . to percent , and existed failure-inducing interaction identification approach just give .
+To improve the accuracy of the failure-inducing interaction identification results, we propose a novel feed-back checking mechanism which aims at checking whether the interactions identified by our framework are accurate or not. Particularly, if these interactions do not pass the checking process, we will restart the failure-inducing identification module to re-identify other interactions.
+%This process is important as it can significantly improve the quality of our results.
+
 %the generation part of our framework adopts the one-test-one-time strategy, i.e., generate and execute one test case in one iteration. Rather than generating all the needed test cases at one time, this strategy is more flexible so that it allows terminating at any time during generation, no matter whether the coverage is reached or not. With this strategy, we can let the generation stops at the point we detect some failures, and then after identification we can utilize the diagnosing result to change the coverage  Then, based on the new coverage criteria, the generation process goes on.
 
 %To adapt, we modified the traditional generation and MFS identification process.
@@ -619,6 +627,7 @@ The main contributions of this paper are as follows.
  \begin{enumerate}
  \item  We propose a new CT framework which combines the test case generation and fault localization more closely.
  \item  We augment the traditional CT test case generation and failure-inducing interactions identification process to make them adapt to the new framework.
+ \item  We give a novel feed-back checking mechanism which can check whether the interaction identified by our approach is failure-inducing or not, and it significantly improve the accuracy of the results of the failure-inducing interaction identification approach.
  \item We perform a series of comparisons with traditional CT and Feedback-driven CT. The result of the empirical studies are discussed.
 \end{enumerate}
 
@@ -634,99 +643,6 @@ The rest of the paper is organised as follows: Section \ref{sec:back} presents t
 \end{figure}
 
 % An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex,
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-% However, the Computer Society has been known to put floats at the bottom.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table
-% captions serve much like titles, are usually capitalized except for words
-% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
-% and up, which are usually not capitalized unless they are the first or
-% last word of the caption. Table text will default to \footnotesize as
-% IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it
-% is allowed and encouraged for Computer Society conferences (but
-% not Computer Society journals). Most IEEE journals/conferences use
-% top floats exclusively.
-% Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the
-% \fnbelowfloat command of the stfloats package.
 
 
 
@@ -772,7 +688,9 @@ If all test cases that contain a schema, say $c$, trigger a particular fault, sa
 %Based on this, if a test case $t$ hit such a failure-inducing combination, say $c(F)$, it should trigger the fault $F$, for which the test case can be put as $t(F)$
 \end{definition}
 
-Note that MFS is identical to the failure-inducing interaction discussed previously. In this paper, the terms \emph{failure-inducing interactions} and \emph{MFS} are used interchangeably. Figuring the MFS out helps to identify the root cause of a failure and thus facilitate the debugging process.  Note that failures discussed are assumed to be deterministic in this paper. This assumption is a common assumption of CT\cite{zhang2011characterizing,ghandehari2012identifying,niu2013identifying}. It indicates that the outcome of executing a test case is reproducible and will not be affected by some random events. Some approaches have already proposed measures to handle this problem \cite{yilmaz2006covering,fouche2009incremental}.
+Note that MFS is identical to the failure-inducing interaction discussed previously. In this paper, the terms \emph{failure-inducing interactions} and \emph{MFS} are used interchangeably. Figuring the MFS out helps to identify the root cause of a failure and thus facilitate the debugging process.
+
+% Note that failures discussed are assumed to be deterministic in this paper. This assumption is a common assumption of CT\cite{zhang2011characterizing,ghandehari2012identifying,niu2013identifying}. It indicates that the outcome of executing a test case is reproducible and will not be affected by some random events. Some approaches have already proposed measures to handle this problem \cite{yilmaz2006covering,fouche2009incremental}.
 
 
 \subsection{CT Test Case Generation}\label{sec:back:gen}
@@ -854,8 +772,18 @@ $t_{3}$ &\multicolumn{4}{l}{1  \ \ \ \  1 \ \ \ \  0 } & Fail \\
 
 This identification process mutate one factor of the original test case at a time to generate extra test cases. Then according to the outcome of the test cases execution result, it will identify the MFS of the original failing test cases. It is called the OFOT method \cite{nie2011minimal}, which is a well-known MFS identification method in CT. In this paper, we will focus on this identification method. It should be noted that the following proposed CT framework can be easily applied to other MFS identification methods.
 
-Note that all the existing MFS identification approaches just give approximation solutions for MFS identification. In fact, to exactly identify the MFS (without any assumptions), it needs exponential number of test cases \cite{niu2013identifying}, which is impossible in practice. Hence, all the existing MFS identification approaches, as well as the approach we will proposed in this paper, need additional assumptions or just identify the likely failure-inducing interactions. For example, approach proposed in \cite{zhang2011characterizing} needs the \emph{safe value} assumption, i.e., it assumes that the additional test cases do not introduce new MFS. And \cite{ghandehari2012identifying} just gives a rank of possible suspicious MFS.
+Note that all the existing MFS identification approaches just give approximation solutions for MFS identification. In fact, to exactly identify the MFS (without any assumptions), it needs exponential number of test cases \cite{niu2013identifying}, which is impossible in practice. Hence, all the existing MFS identification approaches, as well as the approach we will proposed in this paper, need additional assumptions or just identify the likely failure-inducing interactions. For example, the OFOT approach is based on the following two assumptions:
+\newtheorem{assumption}{Assumption}
+\begin{assumption}  The execution result of a test case is deterministic.
+\end{assumption}
 
+This assumption is a common assumption of CT\cite{zhang2011characterizing,ghandehari2012identifying,niu2013identifying}. It indicates that the outcome of executing a test case is reproducible and will not be affected by some random events.
+
+\begin{assumption}
+Given a failing test case $t$, when we identify the MFS in $t$, any newly generated test case will not introduce new MFS that is not in $t$.
+\end{assumption}
+
+The second assumption is identical to the assumption proposed in \cite{zhang2011characterizing,martinez2008algorithms,martinez2009locating}, which is called the safe value assumption. Based on this assumption, when the additional test case generated by OFOT fails, e.g., $t_{2}$ in Table \ref{ofot-identify}, we can determine that the additional test case contains the same MFS in the original failing test case, e.g., $t$ in Table \ref{ofot-identify}.
 
 \section{Motivating example}\label{sec:moti}
 In this section, a motivating example is presented to show how traditional CT works as well as its limitations. This example is derived from our attempt to test a real-world software--HSQLDB, which is a pure-java relational database engine with large and complex configuration space. To extract and manipulate valid configurations of this highly-configurable system is important, as different configurations can result in significantly different behaviours of the system \cite{jin2014configurations,qu2008configuration,song2012itree} (HSQLDB works normally under some proper configurations, but crashes or throws exceptions under some other configurations).
@@ -944,6 +872,7 @@ The first shortcoming of SCT is that it may generate redundant test cases, such 
 
 2)The identified MFS should not appear in the following generated test cases.  This is because according to the definition of MFS, each test case containing this schema will trigger a failure, i.e., to generate and execute more than one test case contained the MFS makes no sense for the failure detection. Taking the example in Table \ref{tradition-gi}, after identifying the MFS -- (-, 0, -, -) of $t_{1}$, we should not generate the test case $t_{4}$ and $t_{7}$. This is because they also contain the identified MFS (-, 0, -, -), which will result in them failing as expected. Since the expected failure caused by MFS (-, 0, -, -) makes $t_{7}$ and $t_{9}$ superfluous for error-detection, the additional test cases ($t_{14}$ to $t_{21}$) generated for identifying the MFS in $t_{4}$ and $t_{7}$ are also not necessary.
 
+
 \subsection{Multiple MFS in the same test case}\label{sec:moti:multi}
 When there are multiple MFS in the same test case, MFS identification will be negatively affected. Particularly, some MFS identification approaches can not identify a valid schema in this case. For example, there are two MFS in $t_{4}$ in Table \ref{tradition-gi}, i.e., (-, 0, -, -) and (-, -, 0, 1) (shown in bold). When we use OFOT method, we found all the additionally generated test cases ($t_{14}$ to $t_{17}$) failed. These outcomes give OFOT a false indication that all the failure-inducing factors are not broken by mutating those four parameter values.  As a result, OFOT cannot determine which schemas are MFS, which is denoted as (-, -, -, -).
 
@@ -996,6 +925,59 @@ Note that the \emph{masking effects} are actually caused by the \emph{multiple M
 %
 %Based on these observations, a more effective and efficient framework is desired.
 
+
+\subsection{Augmentation of the SCT}
+
+Considering the fact that we do not necessarily to repeatedly identify the same MFS, we can reduce the number of test cases by checking the already identified MFS and removing it from the MFS identification process. For example in Table \ref{tradition-gi}, we do not need to generate 4 additional test cases ($t_{18}$ to $t_{21}$) to figure out the failure-cause of $t_{7}$ is indeed (-, 0, -, -), which has already been identified in previous iteration ($t_{10}$ to $t_{13}$). Therefore, we only need to check whether there is any MFS other than (-, 0, -, -) in $t_{7}$ or not. When applying this augmentation, the overall SCT process for the example in Table \ref{tradition-gi} will derive to Table \ref{tradition-gi-aug}.
+
+
+\begin{table}[h]
+\caption{Augmented Sequential CT process}
+\label{tradition-gi-aug}
+\centering
+\begin{tabular}{lllllll}
+%\cline{2-7}
+                                       & \multicolumn{6}{c}{\bfseries \emph{Generation (Execution)}}                                                                                                                                                                                                                                  \\ \cline{2-7}
+                                       & \multicolumn{5}{c|}{\bfseries test case}                                                                                                                                                                                                              & \bfseries Outcome \\
+                                       & &$o_{1}$ & $o_{2}$& $o_{3}$& \multicolumn{1}{c|}{$o_{4}$}&  \\    \cline{2-7}
+                                       & \multicolumn{1}{l|}{$t_{1}$}   & 0& \textbf{0}& 0& \multicolumn{1}{l|}{0}     & Fail              \\
+                                       & \multicolumn{1}{l|}{$t_{2}$}   & 0& 1& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{3}$}   & 0& 2& 1& \multicolumn{1}{l|}{0}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{4}$}   & 1& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}}     & Fail              \\
+                                       & \multicolumn{1}{l|}{$t_{5}$}   & 1& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Fail              \\
+                                       & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{8}$}   & 2& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{9}$}   & 2& 2& 0& \multicolumn{1}{l|}{0}     & Fail              \\ \cline{2-7}
+                                       \multicolumn{6}{c}{} \\
+                                       & \multicolumn{6}{c}{\bfseries \emph{Identification}}                                                                                                                                                                                                                              \\ \cline{2-7}
+\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{1}$ (0,0,0,0)}}} & \multicolumn{1}{l|}{$t_{10}$*} & 1& 0& 0& \multicolumn{1}{l|}{0} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{11}$*} & 0& 1& 0& \multicolumn{1}{l|}{0} & Pass              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{12}$*} & 0& 0& 1& \multicolumn{1}{l|}{0} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{13}$*} & 0& 0& 0& \multicolumn{1}{l|}{1} & Fail              \\ \cline{2-7}
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{\bfseries MFS} & \multicolumn{5}{c}{\bfseries   (-, 0, -, -)}                                                                                                                                                                                                                 \\  \cline{2-7}
+                                   %    \multicolumn{6}{c}{} \\
+                                       %\cline{2-7}
+\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{4}$ (1,0,0,1)}}} & \multicolumn{1}{l|}{$t_{14}$*} & 2& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{15}$*} & 1& 1& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{16}$*} & 1& \textbf{0}& 1& \multicolumn{1}{l|}{1} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{17}$*} & 1& \textbf{0}& 0& \multicolumn{1}{l|}{0} & Fail              \\ \cline{2-7}
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{\bfseries MFS} & \multicolumn{5}{c}{\bfseries   (-, -, -, -)}                                                                                                                                                                                                                 \\  \cline{2-7}
+                                      %  \multicolumn{6}{c}{} \\
+                                %        \cline{2-7}
+\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{7}$ (2,0,1,1)}}} & \multicolumn{1}{l|}{$t_{18}$*} & 2& 1 & 1& \multicolumn{1}{l|}{1} & Pass              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\  \cline{2-7}
+\end{tabular}
+\end{table}
+
+In Table \ref{tradition-gi-aug}, the only difference from Table \ref{tradition-gi} is that for $t_{7}$, we only generate one test case $t_{18}$, which mutates the value of the second parameter of $t_{7}$ to 1, and hence the already identified MFS (-, 0, -, -) is removed. The pass of $t_{18}$ indicates that there is no other MFS in this test case, and we do no need to generate additional test cases. As a result, we have reduced 3 test cases in total by using the augmented SCT.
+
+Although the augmented SCT can reduce the redundancy of test cases to some extent, there still remain some issues, e.g., multiple MFS, and masking effects, it cannot handle properly.
+
+
 \section{Interleaving Approach}\label{sec:app}
 
 Considering these deficiencies of traditional sequential CT, we do not need to cover all t-wise interactions before moving to the debugging phase. As an alternative, it is better to make test case generation and MFS identification more closely cooperated with each other. Hence, we propose a new CT generation-identification framework -- \emph{\textbf{Interleaving CT}} (ICT). Our new framework aims at enhancing the interaction of generation and identification to reduce the unnecessary and invalid test cases discussed previously. In other word, the ultimate goal of this framework is to better support MFS identification and test case generation, such that both of them can alleviate the three problems we discussed in Section \ref{sec:moti}.
@@ -1039,7 +1021,7 @@ As discussed in Section \ref{sec:moti}, we should make the MFS not appear in the
 
 In this formula, the only difference from \ref{eq1} is that the candidate test cases that can be selected are changed to $\mathcal{T}_{all} - \mathcal{T}_{MFS}$, which excludes $\mathcal{T}_{MFS}$ from candidate test cases.
 
-In practice, it is impossible to thoroughly search the exhaustive candidate test cases $\mathcal{T}_{all}$ to get a specific test case $t$. Hence, some heuristic methods are used to simplify the selection. For example, AETG \cite{cohen1997aetg} successively assigns the value to each parameter to form a test case (in random order). The value to be assigned is the one that appears in the greatest number of uncovered schemas. Correspondingly, to exclude the test cases in $\mathcal{T}_{MFS}$, it is common to utilize a constraint solver to avoid the forbidden schemas \cite{cohen2007interaction,cohen2008constructing}.
+%In practice, it is impossible to thoroughly search the exhaustive candidate test cases $\mathcal{T}_{all}$ to get a specific test case $t$. Hence, some heuristic methods are used to simplify the selection. For example, AETG \cite{cohen1997aetg} successively assigns the value to each parameter to form a test case (in random order). The value to be assigned is the one that appears in the greatest number of uncovered schemas. Correspondingly, to exclude the test cases in $\mathcal{T}_{MFS}$, it is common to utilize a constraint solver to avoid the forbidden schemas \cite{cohen2007interaction,cohen2008constructing}.
 
 %Our test case generation with consideration for constraints is inspired by the  based on which we give an more general approach that can be applied on more one-test-one-time generation methods.  The detail of how to generate one test case is described in Algorithm 1.
 
@@ -1064,6 +1046,8 @@ Traditional MFS identification process just selects one test case from $\mathcal
 %let $\mathcal{T}_{candidate}$ be  the initial candidate test cases as \ref{eq4}. This set collects all the possible test cases by mutating the the part $\Delta$ of the original test case $t_{failing}$.
 Specifically, there are two points to note. First, the additional test case should not contain the already identified MFS; second, the additional test case is expected to cover as many uncovered schemas as possible. These two goals are similar to CT generation, hence we can directly apply the same selection method on additional test case generation, which can be formulated as \ref{eq5}.  The same as \ref{eq2}, \ref{eq5} excludes the test cases that contain the already identified MFS from the candidate test cases ($\mathcal{T}_{candidate} - \mathcal{T}_{MFS}$), and selects the additional test case which covers the greatest number of uncovered schemas ($\Omega$).
 \begin{displaymath}t \leftarrow  select (\mathcal{T}_{candidate} - \mathcal{T}_{MFS}, \Omega ,  \xi )  \tag{EQ5} \label{eq5} \end{displaymath}
+
+
 
 
 %The identification process should also . From Figure \ref{new-life}, we can find some part of this process to identify the MFS is similar to that of the $generation$
@@ -1092,7 +1076,7 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
      $\Omega$ \Comment{the schemas that are still uncovered}
 
 
-     $\mathcal{T}_{all}$ \Comment{all the possible test cases}
+     $\mathcal{T}_{all}$ \Comment{all the possible valid test cases}
 
      $\mathcal{T}_{MFS}$ \Comment{all the test cases that contain the MFS}
 
@@ -1121,32 +1105,98 @@ After the MFS are identified, some related $t$-degree schemas, i.e., \emph{MFS t
 
  In this algorithm, we firstly check each MFS (line 1) to see if it is a $t$-degree schema (line 2). We will set those $t$-degree MFS as covered and remove them from the uncovered schema set $\Omega$ (line 3). This is the first type of schemas --\emph{themselves}. For each $t$-degree super-schema of these MFS, it will also be removed from the uncovered schema set (line 5 - 9), as they are the second type of schemas --  \emph{super-schemas}. The last type, i.e., \emph{implicit forbidden schemas}, is the toughest one. To remove them, we need to search through each potential schema in the uncovered schema set (line 11), and check if it is the implicit forbidden schema (line 12). The checking process involves solving a satisfiability problem. Specifically, if we can not find a test case from  the set ($\mathcal{T}_{all} - \mathcal{T}_{MFS}$) (excluding those that contain MFS), such that it contains the schema under checking, then we can determine the schema is the implicit forbidden schema and it needs to be removed from the uncovered schema set (line 13). This is because in this case, the schema under checking can appear only in $\mathcal{T}_{MFS}$, which we will definitely not generate in later iterations.
  In this paper, a SAT solver will be utilized to do this checking process.
+
 \subsubsection{MFS identification approach mutated}\label{sec:app:ofotMutate}
-This interleaving framework can reduce the likelihood of having multiple MFS in a single test case, which in turn is due to the way the approach operates, i.e., one failure at a time. However, it still does not guarantee to completely forbid the appearance of multiple MFS in one single test case, which has a significant impact on the MFS identification-- OFOT, as we discussed in Section \ref{sec:moti:multi}. Considering this, we need to augment the original OFOT approach, to alleviate the negative influence when facing the test case with multiple MFS.
+%This interleaving framework can reduce the likelihood of having multiple MFS in a single test case, which in turn is due to the way the approach operates, i.e., one failure at a time. However, it still does not guarantee to completely forbid the appearance of multiple MFS in one single test case, which has a significant impact on the MFS identification-- OFOT, as we discussed in Section \ref{sec:moti:multi}. Considering this, we need to augment the original OFOT approach, to alleviate the negative influence when facing the test case with multiple MFS.
 
-Inspired by the interim method proposed by Zhang \cite{zhang2011characterizing}, we find the method \emph{FIC}-- a mutated version of OFOT, can work well under the multiple MFS condition. The mechanism of FIC is very similar to OFOT. Specifically, when identifying the MFS in a failing test case, it also mutates one factor at a time to generate one additional test case. The only difference is that it will not always rollback to the original value it has mutated when it goes on mutating other values (only when a passing test case appears, it will rollback to the original value). This operation will break multiple MFS in one test case and finally there remains only one MFS to identify. For example, assume a SUT has 4 parameters and each one has 2 values, the MFS are (0, -, -, -) and (- ,-, 1 ,1). Then Table \ref{identify-ofot-fic} shows the process of approaches OFOT and FIC for identifying the MFS of failing test case (0, 0, 1 1)
+%Inspired by the interim method proposed by Zhang \cite{zhang2011characterizing}, we find the method \emph{FIC}-- a mutated version of OFOT, can work well under the multiple MFS condition. The mechanism of FIC is very similar to OFOT. Specifically, when identifying the MFS in a failing test case, it also mutates one factor at a time to generate one additional test case. The only difference is that it will not always rollback to the original value it has mutated when it goes on mutating other values (only when a passing test case appears, it will rollback to the original value). This operation will break multiple MFS in one test case and finally there remains only one MFS to identify. For example, assume a SUT has 4 parameters and each one has 2 values, the MFS are (0, -, -, -) and (- ,-, 1 ,1). Then Table \ref{identify-ofot-fic} shows the process of approaches OFOT and FIC for identifying the MFS of failing test case (0, 0, 1 1)
+%
+%\begin{table}[h]
+%\caption{The difference between FIC and OFOT}
+%\label{identify-ofot-fic}
+%\centering
+%\begin{tabular}{llllll|llllll}
+%\hline
+% & \multicolumn{4}{c}{\bfseries \emph{OFOT}}& & \multicolumn{6}{c}{\bfseries \emph{FIC}} \\
+% \hline
+%%\multicolumn{5}{c}{\bfseries test case} & \bfseries Outcome \\
+%$t_{1}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{1}'$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
+%$t_{2}$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{2}'$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
+%$t_{3}$ & \multicolumn{4}{l}{0 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail & $t_{3}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail \\
+%$t_{4}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 0  \ \ \  1 } & Fail&  $t_{4}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{0}}  \ \ \  1 } & Pass \\
+%$t_{5}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  0 } & Fail & $t_{5}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{1}}   \ \ \  \textbf{\emph{0}}   } & Pass \\ \hline
+%\multicolumn{5}{l}{ \bfseries{MFS}: $(-, -, - , -)$ }&  & \multicolumn{6}{l}{ \bfseries{MFS}: $(-, -, 1 , 1)$ }  \\
+%\hline
+%\end{tabular}
+%\end{table}
+%
+%
+%In Table \ref{identify-ofot-fic}, the left part represents OFOT. We can learn that no matter which parameter we mutate, the additional test cases ($t_{2}- t_{5}$) will either contain MFS (0, -, -, -) or (-, -, 1, 1). While for FIC, as it does not rollback to the original value when the additional test case fails, hence, the mutated value for $t_{2}'$ and $t_{3}'$ will kept in the latter iterations. As a result, the first MFS (0, -, -, -) will be broken and will not appear in the later generated test cases. When the additional test case passes ($t_{4}'$ and $t_{5}'$), the process is completely the same as OFOT. At last, FIC will find the MFS (-, -, 1 , 1), as only when changing of last two parameter values, additional  test cases will pass.  Note that this mechanism will not always work. For example, if additional test case, e.g., $t_{4}'$, import new MFS, e.g., (1, -, 0, -), then we cannot get the correct MFS. The newly introduced MFS problem has already been discussed in our previous paper \cite{niu2013identifying}, in which we find that more test cases need to be generated to alleviate the impacts caused by the newly introduced MFS. This point is, however, beyond the scope of this paper.  What's more, as we found in the our empirical studies, the mutated OFOT approach, i.e., FIC, is  good enough to handle the multiple MFS in one test case than the original OFOT.
 
-\begin{table}[h]
-\caption{The difference between FIC and OFOT}
-\label{identify-ofot-fic}
-\centering
-\begin{tabular}{llllll|llllll}
-\hline
- & \multicolumn{4}{c}{\bfseries \emph{OFOT}}& & \multicolumn{6}{c}{\bfseries \emph{FIC}} \\
- \hline
-%\multicolumn{5}{c}{\bfseries test case} & \bfseries Outcome \\
-$t_{1}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{1}'$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
-$t_{2}$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail & $t_{2}'$ & \multicolumn{4}{l}{1 \ \ \ 0 \ \ \ 1  \ \ \  1 } & Fail\\
-$t_{3}$ & \multicolumn{4}{l}{0 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail & $t_{3}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ 1  \ \ \  1 } & Fail \\
-$t_{4}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 0  \ \ \  1 } & Fail&  $t_{4}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{0}}  \ \ \  1 } & Pass \\
-$t_{5}$ & \multicolumn{4}{l}{0 \ \ \ 0 \ \ \ 1  \ \ \  0 } & Fail & $t_{5}'$ & \multicolumn{4}{l}{1 \ \ \ 1 \ \ \ \textbf{\emph{1}}   \ \ \  \textbf{\emph{0}}   } & Pass \\ \hline
-\multicolumn{5}{l}{ \bfseries{MFS}: $(-, -, - , -)$ }&  & \multicolumn{6}{l}{ \bfseries{MFS}: $(-, -, 1 , 1)$ }  \\
-\hline
-\end{tabular}
-\end{table}
 
 
-In Table \ref{identify-ofot-fic}, the left part represents OFOT. We can learn that no matter which parameter we mutate, the additional test cases ($t_{2}- t_{5}$) will either contain MFS (0, -, -, -) or (-, -, 1, 1). While for FIC, as it does not rollback to the original value when the additional test case fails, hence, the mutated value for $t_{2}'$ and $t_{3}'$ will kept in the latter iterations. As a result, the first MFS (0, -, -, -) will be broken and will not appear in the later generated test cases. When the additional test case passes ($t_{4}'$ and $t_{5}'$), the process is completely the same as OFOT. At last, FIC will find the MFS (-, -, 1 , 1), as only when changing of last two parameter values, additional  test cases will pass.  Note that this mechanism will not always work. For example, if additional test case, e.g., $t_{4}'$, import new MFS, e.g., (1, -, 0, -), then we cannot get the correct MFS. The newly introduced MFS problem has already been discussed in our previous paper \cite{niu2013identifying}, in which we find that more test cases need to be generated to alleviate the impacts caused by the newly introduced MFS. This point is, however, beyond the scope of this paper.  What's more, as we found in the our empirical studies, the mutated OFOT approach, i.e., FIC, is  good enough to handle the multiple MFS in one test case than the original OFOT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+To forbid identified MFS in the later generated test cases is efficient for CT, because it will reduce many unnecessary test cases. On the other hand, our framework has strict requirements in accuracy of the identified MFS. This is obvious, because if the schema identified is not a MFS, later generated test cases will forbid a non-MFS schema, which will have two impacts: (1) If this non-MFS schema is the sub-schema of some actual MFS, then the corresponding MFS will never appear and surely we will not detect and identify it. (2) If this non-MFS schema is a sub-schema of some $t$-degree uncovered schemas, then these schemas will never be covered and an adequate testing will not be reached.
+
+%For example, suppose we incorrectly regard (-, -, 0, -) as MFS of the failing test case $t_{1}$ in Table \ref{new-gi}, then we will never generate test cases containing the real MFS (-, -, 0, 1) ($t_{8}$ in Table \ref{new-gi}, for example). Hence, (-, -, 0, 1) will never be detected and identified. Additionally, the uncovered 2-degree schemas like (1, -, 0, -) (-, 2, 0, -), (-, 1, 0, -), etc, will never be covered in the later generated test cases.
+
+To exactly identify the correct MFS in one failing test case, if possible, however, is not practical due to the cost of testing \cite{nie2011minimal,colbourn2008locating}. This is because for any test case with $n$ parameter values, there are $2^{n} - 1$ possible schemas which are the candidate MFS. For example, the possible candidate schemas of failing test case (1, 1, 1) are  (1,-, -), (-, 1, -), (-, -, 1), (1, 1, -), (1, -, 1), (-, 1, 1) and (1, 1, 1). According to the definition of MFS, we need to individually determine whether these $2^{n} - 1$ are faulty schemas or not. In fact, even to determine whether a schema is faulty schema or not is not easy, as we must figure out whether all the test cases containing this schema will fail or not. So the complexity to correctly obtain a real MFS is surely exponential. As a result, existing MFS identification approaches actually obtain \emph{approximation} solution through a relatively small size of additionally generated test cases \cite{nie2011minimal,niu2013identifying,zhang2011characterizing,colbourn2008locating,li2012improved,martinez2008algorithms,ghandehari2012identifying}.
+
+Based on this insight, to improve the accuracy of the identified MFS, we propose a novel MFS-checking mechanism to assist with MFS identification, which is detailed in Algorithm 2.
+
+\begin{algorithm}
+  \caption{Checking the MFS}
+  \begin{algorithmic}[1]
+     \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $candi$ \Comment{MFS that needs to be checked}
+
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Repeat$  \Comment{The number of repeating times}
+
+     $\Omega$ \Comment{the schemas that are still uncovered}
+
+     $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+     $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $candi\ is\ MFS\ or\ not $
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $\mathcal{T}_{Executed} \leftarrow \emptyset$
+       \While{$Repeat > 0$}
+         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
+         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
+         \If {$execute(t_{new}$) == PASS}
+          \State update($t_{new}, \Omega$)
+          \State \Return   False
+      %   \Else
+         \EndIf
+         \State  $Repeat \leftarrow Repeat -1 $
+         \State $\mathcal{T}_{Executed}.append(t_{new}) $
+       \EndWhile
+    \State \Return   True
+  \end{algorithmic}
+\end{algorithm}
+
+
+Specifically, when a schema $candi$ needs to be verified to be MFS or not, we will check if it is indeed MFS or not (line 2 - 11). The input variable $Repeat$ indicates the checking strength, that is, the number of iterations that schema $candi$ is checked.  In each iteration, we will generate a new test case $t_{new}$ to which contains this schema and execute it. If the newly generated test case fails, which , then we labeled this shema as the MFS; otherwise, .
+
+The new test case should be as different as , this is because it increases the possible that , as inspired by. Hence, the
+
+dissimilar test suites have a higher fault
+detection power than similar ones
+
+
+
+Note that our checking process just increases the possibilites that .
 
 \subsubsection{Constraints handling}\label{sec:app:constriants handling}
 In many systems to be tested, constraints or dependencies exist between parameters. These constraints will render certain test cases invalid \cite{cohen2008constructing}. To handle these constraints is important, as we should examine the schemas only with valid test cases \cite{yilmaz2013reducing}. There are two types of method for constraints handling : 1) static method, that is, by knowing the constraints in prior, approaches will forbidden those invalid schemas appear in the generated test cases \cite{cohen2007exploiting,cohen2008constructing,grindal2006handling,jin2014configurations,yu2015constraint}. 2) dynamic method, that is, it does not initially know which are constraints, but identify them as MFS and forbidden them in the latter iteration \cite{yilmaz2013reducing}.  We adapt the second method for constraints handling, as it can directly applied into our framework.
@@ -1187,7 +1237,7 @@ This is mainly because we forbid the appearance of MFS that has been identified.
 As discussed in Section \ref{sec:moti}, SCT suffers from masking effects when there are multiple MFS in one failing test case. Since our approach theoretically reduces the probability that multiple MFS appear in the same test case, we believe our framework can alleviate the masking effects. In fact, our framework conforms to \emph{tested t-way interaction criterion} because we only update t-way coverage for two types of schemas : (1) $t$-degree schemas in those passing test cases and (2) $t$-degree schemas \emph{related} to MFS. Hence, our \emph{\textbf{Interleaving CT}} framework supports a better adequate testing than SCT.
 
  \end{enumerate}
-\subsection{Demonstration on An Example}\label{sec:app:example}
+\subsection{Demonstration on an example}\label{sec:app:example}
 
 Applying the new framework to the scenario of Section \ref{sec:moti},  we can get the result listed in Table \ref{new-gi}.
 \begin{table}[h]
@@ -1236,26 +1286,26 @@ Above all, when using the interleaving CT approach,  the overall generated test 
 %\subsection{A case study}
 
 
-\subsection{Discussion}\label{sec:limit}
-%Although our approach provides a more adaptive and flexible framework for CT, there are several issues that needs to be concerned.
-To forbid identified MFS in the later generated test cases is efficient for CT, as it will reduce many unnecessary test cases. On the other hand, our framework has strict requirements in accuracy of the identified MFS. This is obvious, because if the schema identified is not a MFS, later generated test cases will forbid a non-MFS schema, which will have two impacts: (1) If this non-MFS schema is the sub-schema of some actual MFS, then the corresponding MFS will never appear and surely we will not detect and identify it. (2) If this non-MFS schema is a sub-schema of some $t$-degree uncovered schemas, then these schemas will never be covered and an adequate testing will not be reached.
-
-For example, suppose we incorrectly regard (-, -, 0, -) as MFS of the failing test case $t_{1}$ in Table \ref{new-gi}, then we will never generate test cases containing the real MFS (-, -, 0, 1) ($t_{8}$ in Table \ref{new-gi}, for example). Hence, (-, -, 0, 1) will never be detected and identified. Additionally, the uncovered 2-degree schemas like (1, -, 0, -) (-, 2, 0, -), (-, 1, 0, -), etc, will never be covered in the later generated test cases.
-
-To exactly identify the correct MFS in one failing test case, if possible, however, is not practical due to the cost of testing \cite{nie2011minimal,colbourn2008locating}. This is because for any test case with $n$ parameter values, there are $2^{n} - 1$ possible schemas which are the candidate MFS. For example, the possible candidate schemas of failing test case (1, 1, 1) are  (1,-, -), (-, 1, -), (-, -, 1), (1, 1, -), (1, -, 1), (-, 1, 1) and (1, 1, 1). According to the definition of MFS, we need to individually determine whether these $2^{n} - 1$ are faulty schemas or not. In fact, even to determine whether a schema is faulty schema or not is not easy, as we must figure out whether all the test cases containing this schema will fail or not. So the complexity to correctly obtain a real MFS is surely exponential. As a result, existing MFS identification approaches actually obtain \emph{approximation} solution through a relatively small size of additionally generated test cases \cite{nie2011minimal,niu2013identifying,zhang2011characterizing,colbourn2008locating,li2012improved,martinez2008algorithms,ghandehari2012identifying}.
-
-Based on the insight that incorrect identification of MFS is inevitable, our approach surely suffer from the two problems discussed previously, but the following measures can help to alleviate such impacts:
-
-1) \textbf{Combining MFS identification approaches}:  Utilizing different approaches is appealing for our framework, as it can improve the robustness of the MFS identification and hence render a more reliable result. Specifically, when a failure is triggered by a test case, instead of only using OFOT, we apply multiple MFS identification approaches (FIC\_BS \cite{zhang2011characterizing}, classification tree \cite{yilmaz2006covering}, for example) to identify the MFS. Subsequently, we filter out obtained schemas unless at least two identification approaches produce them as MFS.  This simple voting mechanism can improve both precision and robustness of identified MFS. Particularly, the incorrectly identified MFS can be eliminated if it is obtained by only one identification approach, and MFS that are omitted by one approach can be identified by other approaches.
-%We refer to this mutation version of ICT as \emph{ICT\_CB} later.
-%There are two levels of approaches combination granularity. The first one is ``MFS identification level ", i.e., utilizing multiple MFS identification approaches to obtain a more comprehensive identified schema (adopting a voting system) , such that the MFS is more reliable that of these MFS identification approaches alone and the later generated test cases are less affected by the incorrect MFS.  Second one is ``Framework level", i.e., we directly take the results of different CT frameworks (SCT and ICT, for example) into account, such that, even though we have forbidden a non-MFS in the ICT, it can re-appear in the test cases generated by other CT frameworks, which supports a more robustness result. In fact, as we will see later in the the empirical study, both these two types can enhance the quality of the result of CT and make the testing more adequate.
-
-
-2) \textbf{Tolerating mechanism (Weak forbidden)}: Unlike our basic \emph{ICT} framework that rigorously forbids the identified MFS, we can permit some identified MFS to appear in the later generated test cases incidentally. This extension can make ICT tolerant of incorrectly identifying MFS to some extent, as it increases the chance that the covering array checks them again and re-identify whether they are MFS or not. When to let the identified MFS re-appear in a test case is important, as it affects the efficiency of our framework (If they re-appear too many times, many test cases will fail and MFS identification will repeat again and again, which is inefficient). It is worthwhile to obtain a balance between the appearance of existing MFS and the cost of overall testing.
-%In this paper, our implementation of this tolerating mechanism is to inject one identified MFS (The one that has been selected more than twice will be excluded) with a small probability. Later, we refer to this extension version of ICT as \emph{ICT\_TL}.
-
-3) \textbf{More rigorous validation}
-This approach needs cooperation from developers of the SUT. Specifically, when a MFS is identified, not only should we send it to developers of the SUT, but also we need to get the feedback from them to see whether this MFS is the root cause of failure or not. Although this process may be time-consuming and delay the testing for the remaining bugs, it is the most effective way to determine the correct MFS.
+%\subsection{Discussion}\label{sec:limit}
+%%Although our approach provides a more adaptive and flexible framework for CT, there are several issues that needs to be concerned.
+%To forbid identified MFS in the later generated test cases is efficient for CT, as it will reduce many unnecessary test cases. On the other hand, our framework has strict requirements in accuracy of the identified MFS. This is obvious, because if the schema identified is not a MFS, later generated test cases will forbid a non-MFS schema, which will have two impacts: (1) If this non-MFS schema is the sub-schema of some actual MFS, then the corresponding MFS will never appear and surely we will not detect and identify it. (2) If this non-MFS schema is a sub-schema of some $t$-degree uncovered schemas, then these schemas will never be covered and an adequate testing will not be reached.
+%
+%For example, suppose we incorrectly regard (-, -, 0, -) as MFS of the failing test case $t_{1}$ in Table \ref{new-gi}, then we will never generate test cases containing the real MFS (-, -, 0, 1) ($t_{8}$ in Table \ref{new-gi}, for example). Hence, (-, -, 0, 1) will never be detected and identified. Additionally, the uncovered 2-degree schemas like (1, -, 0, -) (-, 2, 0, -), (-, 1, 0, -), etc, will never be covered in the later generated test cases.
+%
+%To exactly identify the correct MFS in one failing test case, if possible, however, is not practical due to the cost of testing \cite{nie2011minimal,colbourn2008locating}. This is because for any test case with $n$ parameter values, there are $2^{n} - 1$ possible schemas which are the candidate MFS. For example, the possible candidate schemas of failing test case (1, 1, 1) are  (1,-, -), (-, 1, -), (-, -, 1), (1, 1, -), (1, -, 1), (-, 1, 1) and (1, 1, 1). According to the definition of MFS, we need to individually determine whether these $2^{n} - 1$ are faulty schemas or not. In fact, even to determine whether a schema is faulty schema or not is not easy, as we must figure out whether all the test cases containing this schema will fail or not. So the complexity to correctly obtain a real MFS is surely exponential. As a result, existing MFS identification approaches actually obtain \emph{approximation} solution through a relatively small size of additionally generated test cases \cite{nie2011minimal,niu2013identifying,zhang2011characterizing,colbourn2008locating,li2012improved,martinez2008algorithms,ghandehari2012identifying}.
+%
+%Based on the insight that incorrect identification of MFS is inevitable, our approach surely suffer from the two problems discussed previously, but the following measures can help to alleviate such impacts:
+%
+%1) \textbf{Combining MFS identification approaches}:  Utilizing different approaches is appealing for our framework, as it can improve the robustness of the MFS identification and hence render a more reliable result. Specifically, when a failure is triggered by a test case, instead of only using OFOT, we apply multiple MFS identification approaches (FIC\_BS \cite{zhang2011characterizing}, classification tree \cite{yilmaz2006covering}, for example) to identify the MFS. Subsequently, we filter out obtained schemas unless at least two identification approaches produce them as MFS.  This simple voting mechanism can improve both precision and robustness of identified MFS. Particularly, the incorrectly identified MFS can be eliminated if it is obtained by only one identification approach, and MFS that are omitted by one approach can be identified by other approaches.
+%%We refer to this mutation version of ICT as \emph{ICT\_CB} later.
+%%There are two levels of approaches combination granularity. The first one is ``MFS identification level ", i.e., utilizing multiple MFS identification approaches to obtain a more comprehensive identified schema (adopting a voting system) , such that the MFS is more reliable that of these MFS identification approaches alone and the later generated test cases are less affected by the incorrect MFS.  Second one is ``Framework level", i.e., we directly take the results of different CT frameworks (SCT and ICT, for example) into account, such that, even though we have forbidden a non-MFS in the ICT, it can re-appear in the test cases generated by other CT frameworks, which supports a more robustness result. In fact, as we will see later in the the empirical study, both these two types can enhance the quality of the result of CT and make the testing more adequate.
+%
+%
+%2) \textbf{Tolerating mechanism (Weak forbidden)}: Unlike our basic \emph{ICT} framework that rigorously forbids the identified MFS, we can permit some identified MFS to appear in the later generated test cases incidentally. This extension can make ICT tolerant of incorrectly identifying MFS to some extent, as it increases the chance that the covering array checks them again and re-identify whether they are MFS or not. When to let the identified MFS re-appear in a test case is important, as it affects the efficiency of our framework (If they re-appear too many times, many test cases will fail and MFS identification will repeat again and again, which is inefficient). It is worthwhile to obtain a balance between the appearance of existing MFS and the cost of overall testing.
+%%In this paper, our implementation of this tolerating mechanism is to inject one identified MFS (The one that has been selected more than twice will be excluded) with a small probability. Later, we refer to this extension version of ICT as \emph{ICT\_TL}.
+%
+%3) \textbf{More rigorous validation}
+%This approach needs cooperation from developers of the SUT. Specifically, when a MFS is identified, not only should we send it to developers of the SUT, but also we need to get the feedback from them to see whether this MFS is the root cause of failure or not. Although this process may be time-consuming and delay the testing for the remaining bugs, it is the most effective way to determine the correct MFS.
 
 %As we will see in the empirical studies in the next section, although both these two augmentation increase the cost of ICT (i.e., more test cases), they significantly enhance the performance of our framework, especially at the accuracy of MFS identification. Have shown that can quickly shoulian
 %In this paper,
@@ -1294,6 +1344,8 @@ To evaluate the effectiveness and efficiency of the interleaving CT approach, we
 
 \emph{\textbf{Q4}:} What is the sensibility of our approach to different number of MFS and different number of options in SUT?
 
+
+\emph{\textbf{Q5}:} How well does our approach perform when the two assumptions listed in Section \ref{sec:back} do not hold?
 %\emph{\textbf{Q4}:}  Is it possible to combine ICT with FDA-CIT to obtain a better result than both alone?
 
 

@@ -674,3 +674,35 @@ ISSN={0098-5589}
   year={2014},
   publisher={IEEE}
 }
+@inproceedings{perrouin2010automated,
+  title={Automated and scalable t-wise test case generation strategies for software product lines},
+  author={Perrouin, Gilles and Sen, Sagar and Klein, Jacques and Baudry, Benoit and Le Traon, Yves},
+  booktitle={Software Testing, Verification and Validation (ICST), 2010 Third International Conference on},
+  pages={459--468},
+  year={2010},
+  organization={IEEE}
+}
+@inproceedings{lopez2014parallel,
+  title={A parallel evolutionary algorithm for prioritized pairwise testing of software product lines},
+  author={Lopez-Herrejon, Roberto Erick and Javier Ferrer, Javier and Chicano, Francisco and Haslinger, Evelyn Nicole and Egyed, Alexander and Alba, Enrique},
+  booktitle={Proceedings of the 2014 conference on Genetic and evolutionary computation},
+  pages={1255--1262},
+  year={2014},
+  organization={ACM}
+}
+@inproceedings{lopez2015first,
+  title={A first systematic mapping study on combinatorial interaction testing for software product lines},
+  author={Lopez-Herrejon, Roberto E and Fischer, Stefan and Ramler, Rudolf and Egyed, Alexander},
+  booktitle={Software Testing, Verification and Validation Workshops (ICSTW), 2015 IEEE Eighth International Conference on},
+  pages={1--10},
+  year={2015},
+  organization={IEEE}
+}
+@inproceedings{lei2007ipog,
+  title={IPOG: A general strategy for t-way software testing},
+  author={Lei, Yu and Kacker, Raghu and Kuhn, D Richard and Okun, Vadim and Lawrence, James},
+  booktitle={Engineering of Computer-Based Systems, 2007. ECBS'07. 14th Annual IEEE International Conference and Workshops on the},
+  pages={549--556},
+  year={2007},
+  organization={IEEE}
+}

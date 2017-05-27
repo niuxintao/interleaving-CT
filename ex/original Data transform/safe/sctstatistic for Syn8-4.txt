@@ -1,0 +1,35 @@
+2-way for Syn8-4
+###############################################
+###############################################
+average sct num :81.7
+
+average sct num_r :28.7
+
+average sct num_i :53.2
+
+average sct recall :0.8
+
+average sct precise :0.3269047619047619
+
+average sct f-measure :0.4594444444444445
+
+average sct multi :0.0
+
+average sct time :53.7
+
+average sct time_r :52.1
+
+average sct time_i :1.6
+
+average sct t_cover :439.1
+
+average sct all_cover :448.0
+
+average sct w check :0.0
+
+average sct w iden :0.0
+
+average sct CoverNUM
+(1 : 7.8)  (2 : 7.0)  (3 : 5.9)  (4 : 4.9)  (5 : 3.7)  (6 : 3.2)  (7 : 3.9)  (8 : 3.1)  (9 : 4.0)  (10 : 2.4)  (11 : 1.8)  (12 : 2.3)  (13 : 2.1)  (14 : 1.8)  (15 : 1.7)  (16 : 1.4)  (17 : 1.1)  (18 : 0.8)  (19 : 0.6)  (20 : 0.6)  (21 : 0.5)  (22 : 0.6)  (23 : 0.2)  (24 : 0.2)  (25 : 0.5)  (27 : 0.1)  (30 : 0.1)  
+average sct CoverNUM
+([ 0 , - , - , - , 1 , - , - , - ] : 0.6)  ([ - , 1 , - , 0 , - , - , - , - ] : 1.0)  
