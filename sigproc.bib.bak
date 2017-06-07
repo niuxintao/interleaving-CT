@@ -698,11 +698,3 @@ ISSN={0098-5589}
   year={2015},
   organization={IEEE}
 }
-@inproceedings{lei2007ipog,
-  title={IPOG: A general strategy for t-way software testing},
-  author={Lei, Yu and Kacker, Raghu and Kuhn, D Richard and Okun, Vadim and Lawrence, James},
-  booktitle={Engineering of Computer-Based Systems, 2007. ECBS'07. 14th Annual IEEE International Conference and Workshops on the},
-  pages={549--556},
-  year={2007},
-  organization={IEEE}
-}

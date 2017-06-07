@@ -55,37 +55,6 @@ C.~Nie and H.~Leung, ``The minimal failure-causing schema of combinatorial
   testing,'' \emph{ACM Transactions on Software Engineering and Methodology
   (TOSEM)}, vol.~20, no.~4, p.~15, 2011.
 
-\bibitem{zhang2011characterizing}
-Z.~Zhang and J.~Zhang, ``Characterizing failure-causing parameter interactions
-  by adaptive testing,'' in \emph{Proceedings of the 2011 International
-  Symposium on Software Testing and Analysis}.\hskip 1em plus 0.5em minus
-  0.4em\relax ACM, 2011, pp. 331--341.
-
-\bibitem{ghandehari2012identifying}
-L.~S.~G. Ghandehari, Y.~Lei, T.~Xie, R.~Kuhn, and R.~Kacker, ``Identifying
-  failure-inducing combinations in a combinatorial test set,'' in
-  \emph{Software Testing, Verification and Validation (ICST), 2012 IEEE Fifth
-  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2012, pp. 370--379.
-
-\bibitem{niu2013identifying}
-X.~Niu, C.~Nie, Y.~Lei, and A.~T. Chan, ``Identifying failure-inducing
-  combinations using tuple relationship,'' in \emph{Software Testing,
-  Verification and Validation Workshops (ICSTW), 2013 IEEE Sixth International
-  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, pp.
-  271--280.
-
-\bibitem{yilmaz2006covering}
-C.~Yilmaz, M.~B. Cohen, and A.~A. Porter, ``Covering arrays for efficient fault
-  characterization in complex configuration spaces,'' \emph{Software
-  Engineering, IEEE Transactions on}, vol.~32, no.~1, pp. 20--34, 2006.
-
-\bibitem{fouche2009incremental}
-S.~Fouch{\'e}, M.~B. Cohen, and A.~Porter, ``Incremental covering array failure
-  characterization in large configuration spaces,'' in \emph{Proceedings of the
-  eighteenth international symposium on Software testing and analysis}.\hskip
-  1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 177--188.
-
 \bibitem{nie2011survey}
 C.~Nie and H.~Leung, ``A survey of combinatorial testing,'' \emph{ACM Computing
   Surveys (CSUR)}, vol.~43, no.~2, p.~11, 2011.
@@ -138,6 +107,26 @@ C.~Mart{\'\i}nez, L.~Moura, D.~Panario, and B.~Stevens, ``Locating errors using
   elas, covering arrays, and adaptive testing algorithms,'' \emph{SIAM Journal
   on Discrete Mathematics}, vol.~23, no.~4, pp. 1776--1799, 2009.
 
+\bibitem{niu2013identifying}
+X.~Niu, C.~Nie, Y.~Lei, and A.~T. Chan, ``Identifying failure-inducing
+  combinations using tuple relationship,'' in \emph{Software Testing,
+  Verification and Validation Workshops (ICSTW), 2013 IEEE Sixth International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, pp.
+  271--280.
+
+\bibitem{zhang2011characterizing}
+Z.~Zhang and J.~Zhang, ``Characterizing failure-causing parameter interactions
+  by adaptive testing,'' in \emph{Proceedings of the 2011 International
+  Symposium on Software Testing and Analysis}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2011, pp. 331--341.
+
+\bibitem{ghandehari2012identifying}
+L.~S.~G. Ghandehari, Y.~Lei, T.~Xie, R.~Kuhn, and R.~Kacker, ``Identifying
+  failure-inducing combinations in a combinatorial test set,'' in
+  \emph{Software Testing, Verification and Validation (ICST), 2012 IEEE Fifth
+  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2012, pp. 370--379.
+
 \bibitem{jin2014configurations}
 D.~Jin, X.~Qu, M.~B. Cohen, and B.~Robinson, ``Configurations everywhere:
   Implications for testing and debugging in practice,'' in \emph{Companion
@@ -167,6 +156,25 @@ M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Interaction testing of
   highly-configurable systems in the presence of constraints,'' in
   \emph{Proceedings of the 2007 international symposium on Software testing and
   analysis}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2007, pp. 129--139.
+
+\bibitem{li2012improved}
+J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
+  testing,'' in \emph{Quality Software (QSIC), 2012 12th International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp.
+  102--105.
+
+\bibitem{henard2014bypassing}
+C.~Henard, M.~Papadakis, G.~Perrouin, J.~Klein, P.~Heymans, and Y.~Le~Traon,
+  ``Bypassing the combinatorial explosion: Using similarity to generate and
+  prioritize t-wise test configurations for software product lines,''
+  \emph{Software Engineering, IEEE Transactions on}, vol.~40, no.~7, pp.
+  650--670, 2014.
+
+\bibitem{henard2016comparing}
+C.~Henard, M.~Papadakis, M.~Harman, Y.~Jia, and Y.~Le~Traon, ``Comparing
+  white-box and black-box test prioritization,'' in \emph{Proceedings of the
+  38th International Conference on Software Engineering}.\hskip 1em plus 0.5em
+  minus 0.4em\relax ACM, 2016, pp. 523--534.
 
 \bibitem{cohen2008constructing}
 M.~B. Cohen, M.~B. Dwyer, and J.~Shi, ``Constructing interaction test suites
@@ -198,12 +206,6 @@ M.~Berkelaar, K.~Eikland, and P.~Notebaert, ``{lp\_solve} 5.5, open source
   accessed Dec, 18 2009. [Online]. Available:
   \url{http://lpsolve.sourceforge.net/5.5/}
 \BIBentrySTDinterwordspacing
-
-\bibitem{li2012improved}
-J.~Li, C.~Nie, and Y.~Lei, ``Improved delta debugging based on combinatorial
-  testing,'' in \emph{Quality Software (QSIC), 2012 12th International
-  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp.
-  102--105.
 
 \bibitem{tomcatconnector}
 K.~Kolinko, ``{The HTTP Connector},''
@@ -242,10 +244,21 @@ J.~Zhang, F.~Ma, and Z.~Zhang, ``Faulty interaction identification via
 D.~R. Kuhn, R.~N. Kacker, and Y.~Lei, ``Practical combinatorial testing,''
   \emph{NIST Special Publication}, vol. 800, p. 142, 2010.
 
+\bibitem{yilmaz2006covering}
+C.~Yilmaz, M.~B. Cohen, and A.~A. Porter, ``Covering arrays for efficient fault
+  characterization in complex configuration spaces,'' \emph{Software
+  Engineering, IEEE Transactions on}, vol.~32, no.~1, pp. 20--34, 2006.
+
 \bibitem{cohen2006testing}
 M.~B. Cohen, J.~Snyder, and G.~Rothermel, ``Testing across configurations:
   implications for combinatorial testing,'' \emph{ACM SIGSOFT Software
   Engineering Notes}, vol.~31, no.~6, pp. 1--9, 2006.
+
+\bibitem{fouche2009incremental}
+S.~Fouch{\'e}, M.~B. Cohen, and A.~Porter, ``Incremental covering array failure
+  characterization in large configuration spaces,'' in \emph{Proceedings of the
+  eighteenth international symposium on Software testing and analysis}.\hskip
+  1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 177--188.
 
 \bibitem{borazjany2012combinatorial}
 M.~N. Borazjany, L.~Yu, Y.~Lei, R.~Kacker, and R.~Kuhn, ``Combinatorial testing
@@ -385,13 +398,6 @@ L.~S. Ghandehari, Y.~Lei, D.~Kung, R.~Kacker, and R.~Kuhn, ``Fault localization
   based on failure-inducing combinations,'' in \emph{Software Reliability
   Engineering (ISSRE), 2013 IEEE 24th International Symposium on}.\hskip 1em
   plus 0.5em minus 0.4em\relax IEEE, 2013, pp. 168--177.
-
-\bibitem{henard2014bypassing}
-C.~Henard, M.~Papadakis, G.~Perrouin, J.~Klein, P.~Heymans, and Y.~Le~Traon,
-  ``Bypassing the combinatorial explosion: Using similarity to generate and
-  prioritize t-wise test configurations for software product lines,''
-  \emph{Software Engineering, IEEE Transactions on}, vol.~40, no.~7, pp.
-  650--670, 2014.
 
 \bibitem{perrouin2010automated}
 G.~Perrouin, S.~Sen, J.~Klein, B.~Baudry, and Y.~Le~Traon, ``Automated and
