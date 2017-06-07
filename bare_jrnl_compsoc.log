@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  7 JUN 2017 11:50
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  7 JUN 2017 17:09
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -531,23 +531,23 @@ File: ex1.eps Graphic file (type eps)
 File: fd-cit.eps Graphic file (type eps)
 
 <fd-cit.eps>
-Underfull \vbox (badness 4886) has occurred while \output is active []
+Underfull \vbox (badness 1448) has occurred while \output is active []
 
  [15]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1734.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1738.
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
 File: ex2.eps Graphic file (type eps)
 
 <ex2.eps> [16] [17]
-Invalid UTF-8 byte or sequence at line 1865 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1865 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1869 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1869 replaced by U+FFFD.
 File: sens_mfs_f_measure.eps Graphic file (type eps)
- <sens_mfs_f_measure.eps> [18]
+ <sens_mfs_f_measure.eps>
 File: sens_mfs_tests.eps Graphic file (type eps)
- <sens_mfs_tests.eps>
+ <sens_mfs_tests.eps> [18]
 File: sens_options_f_measure.eps Graphic file (type eps)
 
 <sens_options_f_measure.eps>
@@ -572,42 +572,36 @@ File: niu.png Graphic file (type QTm)
 
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2157.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2161.
 
 
 File: niu.png Graphic file (type QTm)
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2157.
-
-
-[23]
-File: nie.png Graphic file (type QTm)
- <use  "nie.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2164.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2161.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2164.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2168.
 
 
-File: hare.png Graphic file (type QTm)
-<use  "hare.png" >
+File: nie.png Graphic file (type QTm)
+<use  "nie.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 2168.
 
 
+[23]
+File: hare.png Graphic file (type QTm)
+ <use  "hare.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2172.
+
+
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2168.
-
-
-File: lei.jpg Graphic file (type QTm)
-<use  "lei.jpg" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 2172.
 
@@ -615,11 +609,11 @@ Package xetex.def Warning: No clipping support in XeTeX yet on input line 2172.
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2172.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2176.
 
 
-File: xy.png Graphic file (type QTm)
-<use  "xy.png" >
+File: lei.jpg Graphic file (type QTm)
+<use  "lei.jpg" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 2176.
 
@@ -627,11 +621,17 @@ Package xetex.def Warning: No clipping support in XeTeX yet on input line 2176.
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2176.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2180.
+
+
+File: xy.png Graphic file (type QTm)
+<use  "xy.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2180.
 
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 2176--2178
+Underfull \hbox (badness 1622) in paragraph at lines 2180--2182
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -639,17 +639,17 @@ g
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2180.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2184.
 
 
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2180.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2184.
 
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 2180--2182
+Underfull \hbox (badness 1418) in paragraph at lines 2184--2186
 []\OT1/phv/b/n/8.03 Jiaxi X-u \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-nee
 r in
  []
@@ -657,23 +657,25 @@ r in
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2184.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2188.
 
 
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2184.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2188.
 
 
-[24] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
+[24
+
+] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
  3431 strings out of 430478
  49259 string characters out of 3191502
- 119617 words of memory out of 3000000
+ 119577 words of memory out of 3000000
  6520 multiletter control sequences out of 15000+200000
  36925 words of font info for 97 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 30i,12n,38p,1744b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,12n,38p,1714b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_jrnl_compsoc.pdf (24 pages).
