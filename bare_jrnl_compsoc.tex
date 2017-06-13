@@ -1960,29 +1960,31 @@ The result for the sensitivity of number of options in the SUT is shown in Fig. 
 
 With regard to the quality of MFS identification, it is clear that \emph{ict} performs the best, then follows \emph{sct}, and the last is \emph{fda-cit}. In fact, for all the subjects, \emph{ict} scored 1.0 of f-measure, which indicates that \emph{ict} accurately identified all the MFS. On the other hand, \emph{sct} scored around 0.5 to 0.9, and \emph{fda-cit} only scored around 0.1.  This result is consistent to the previous study, indicating that \emph{ict} can accurately identify the MFS, even though when the number of options is large.
 
-Another observation about to the MFS identification is that there is no clear correlation between the MFS quality and the number of options. In fact, there is no clear regularities for the curves representing the f-measures of \emph{sct} and \emph{fda-cit} with the increasing of number of options. It shows that the number of options in the SUT does not influence the quality of MFS identification.
+Another observation about to the MFS identification is that there is no clear correlation between the MFS quality and the number of options. In fact, there is no clear regularities for the curves representing the f-measures of \emph{sct} and \emph{fda-cit} with the increasing of number of options. It shows that the number of options in the SUT does not have influence on the quality of MFS identification.
 
 With regard to the number of test cases, there is a clear trend that \emph{fda-cit} performs the best, of which the number of needed test cases grows slowly. This is mainly because it does not generate additional test cases for MFS identification. The second best is \emph{ict}, as the number of test cases increases linearly with the number of options in the SUT. This is due to the mechanism of the MFS identification approach applied in the \emph{ict} framework, i.e., we must always generate the same number of test cases as the number of options in the SUT to identify the MFS. The complexity can be further reduced (O(log N)\cite{zhang2011characterizing,li2012improved,niu2013identifying}). The last one is \emph{sct}, of which the number of test cases is always larger than that of \emph{ict}.
 
 Therefore, the number of options in the SUT does not influence the quality of MFS identification; and although generating more test cases than  \emph{fda-cit}, \emph{ict} is still a better choice when considering the precision and recall in MFS identification.
 
 In summary, the answer to Q4 is:
-\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not have clear influence. Additionally, \emph{ict} performs best among the three approaches for various number of MFS and options.}
+\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not. Additionally, \emph{ict} performs best among the three approaches for various number of MFS and options.}
 
 \subsection{The ability of handling assumptions}
-The last study is designed to evaluate the performances of the three approaches when the two assumptions proposed on Section \ref{} do not hold. 
+The last study is designed to evaluate the performances of the three approaches when the two assumptions proposed on Section \ref{sec:back:iden}, i.e., deterministic failures and existence of safe values,  do not hold.
 %a very common case in practice which is highly relevant to the suggested framework is that of a test space that contains many MFS of a low degree.
 
 \subsubsection{Study setup}
-To vary parameters of interest in a controlled setting in this study, we use synthetic subjects instead of real programs (which typically represent only one particular parameter setting, and hence it is hard to get software with the expected number of options or MFS).
+The same as previous study, to make the characteristics of the SUT under control, we decided to use synthetic subjects instead of real programs in this case study. Particularly, synthetic subjects can be injected with various types of faults, e.g., the nondeterministic failures with various probabilities that can be triggered during testing, such that it helps us to evaluate the performance of these approaches for various extent to which these two assumptions do not hold. As a result, we can obtain a more general conclusion instead of those results based on some specific programs.
 
-Specifically, for the first study, that is, evaluating the performance of approaches under different number of MFS, we use the subject with 11 parameters, and each parameter has 5 values, i.e., the inputs model is ( $5^{11}$ ). Then we consider the following possible number of 2-degree MFS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80 and 90. Then for each run of the experiment, we will first inject the corresponding number of MFS into the synthetic subject, and then run all the three approaches on the subject. At last, the results (MFS identification quality and cost) of each approach for each run is collected and analysed.
+Specifically, for the first assumption, we decided to inject two MFS, of which one is deterministic (the test case which contains it always fails after execution), and the other is nondeterministic (the test case which contains it may fail or may not after execution). Then we considered the following possible probabilities that the nondeterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject, and recorded their the results (MFS identification quality and cost).
 
-The second study is to evaluate the performance of approaches under different number of options. Hence we use synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). Each option has two values, and each subject has three 2-degree MFS. Then for each subject, we will apply the three approaches and compare their performance.
+The second study is to evaluate the performance of approaches when the safe value assumption do not hold. In fact, in our previous studies, the safe value assumption were not always hold. For example, in the first study, we did not list any safe value in prior for our approach \emph{ict}, instead, we just generated additional test cases contain the schemas under test. As a result, we did not always reach to the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is no safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with the following number of options: 8,  10, 16, 20, 30, 40, 50, 60, 70, 80, and 90. Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
 %Details of each subject can be seen
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Undetermine failures}
+\subsubsection{Nondeterministic failures}
+The results of evaluating the approaches on nondeterministic failures are shown in Fig. \ref{sen_und_f_measure_result} and Fig. \ref{sen_opts_tests_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the nondeterministic failures are triggered, while the second figure shows the number of test cases needed.
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_und_f_measure.eps}
 \caption{F-measure for various probability of un-determining failure}
@@ -1996,6 +1998,14 @@ The second study is to evaluate the performance of approaches under different nu
 \label{sen_und_tests_result}
 \end{figure}
 
+There are two observations in these two figures. First, when compared with previous study (all are determinsitic failure), all the
+three approaches decreased the performance. For example, our icts around 0.4 to 0.8 which decreases about 0.1 to the results with (See figure as a comparsion.).
+
+The scond is that \emph{ict} stills performs best (there are 10 among 13 cases that \emph{ict} better than sct, and both ict and sct works better than fda-cit on all the conditions). This indicates that even faced with nondeterminestic, \emph{ict} still works better.
+
+With regarded to the test cases, our conlusion is similar to prevoios study, that is \emph{fda-cit} needs the smallest amount of test cases, then follows the ict, and the last is sct.
+
+Above all, do effects, but ict still works best.
 
 %\begin{table*}[ht]
 %\caption{Number of test cases contain multiple MFS for \emph{fda-cit}}
@@ -2013,7 +2023,9 @@ The second study is to evaluate the performance of approaches under different nu
 
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Safe values}
+\subsubsection{Non Safe values}
+
+The results of evaluating the approaches on non-safe values are shown in Fig. Fig. \ref{sen_safe_f_measure_result} and Fig. \ref{sen_safe_tests_result}.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}
@@ -2028,6 +2040,7 @@ The second study is to evaluate the performance of approaches under different nu
 \label{sen_safe_tests_result}
 \end{figure}
 
+Similar to previous study, non-safe value do affect to approaches. And for the non-safe value, our approach \emph{ict} has a more clear advantage than the three approaches. 
 
 %\begin{table*}[ht]
 %\caption{Detected and fixed \emph{fda-cit}}
@@ -2041,6 +2054,8 @@ The second study is to evaluate the performance of approaches under different nu
 %\end{table*}
 
 Above, the answer to the question 5 is:
+
+\textbf{Without assumptions, do affects the results of three approches, but our approach works the best among them.}
 
 
 \subsection{Threats to validity}
