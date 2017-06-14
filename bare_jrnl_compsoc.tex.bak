@@ -1978,11 +1978,13 @@ The same as previous study, to make the characteristics of the SUT under control
 
 Specifically, for the first assumption, we decided to inject two MFS, of which one is deterministic (the test case which contains it always fails after execution), and the other is nondeterministic (the test case which contains it may fail or may not after execution). Then we considered the following possible probabilities that the nondeterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject, and recorded their the results (MFS identification quality and cost).
 
-The second study is to evaluate the performance of approaches when the safe value assumption do not hold. In fact, in our previous studies, the safe value assumption were not always hold. For example, in the first study, we did not list any safe value in prior for our approach \emph{ict} (we just generate additional test cases contain the schemas under test). As a result, we did not always reach to a 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the conditions that there is no safe value, i.e., every parameter value is contained in at least one MFS. Specifically, we decided inject , such that each parameter value is at least .   Hence we use synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). Each option has two values, and each subject has three 2-degree MFS. Then for each subject, we will apply the three approaches and compare their performance.
+The second study is to evaluate the performance of approaches when the safe value assumption do not hold. In fact, in our previous studies, the safe value assumption were not always hold. For example, in the first study, we did not list any safe value in prior for our approach \emph{ict}, instead, we just generated additional test cases contain the schemas under test. As a result, we did not always reach to the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is no safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with the following number of options: 8,  10, 16, 20, 30, 40, 50, 60, 70, 80, and 90. Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
 %Details of each subject can be seen
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Nondeterministic failures}
+The results of evaluating the approaches on nondeterministic failures are shown in Fig. \ref{sen_und_f_measure_result} and Fig. \ref{sen_opts_tests_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the nondeterministic failures are triggered, while the second figure shows the number of test cases.
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_und_f_measure.eps}
 \caption{F-measure for various probability of un-determining failure}
@@ -1996,6 +1998,16 @@ The second study is to evaluate the performance of approaches when the safe valu
 \label{sen_und_tests_result}
 \end{figure}
 
+With regard to MFS identification, there are two observations. First, if the probability is too small (little than 0.15) or too high (large than 0.9), all the three approaches performed relatively well. This is reasonable, because if the probability of triggering MFS is too small, we can hardly detect the failure. As a result, the MFS is similar to a non-failure inducing schema, and hence it has little influence on the MFS identification. On the other hand, if the probability is too high, which indicates that we can easily detect it. Under this condition, the failure is similar to a deterministic failure, which also has little influence on the MFS identification. The worst condition is in between (the probability is around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappears at the next time. These two statues exchanged frequently, and result in a negative influence on the MFS identification.
+
+
+The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} better than sct, and both ict and sct works better than fda-cit on all the conditions). This indicates that even faced with nondeterminestic, \emph{ict} still works better.
+
+Consdiering that \emph{fda-cit} proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
+
+With regarded to the test cases, our conclusion is similar to prevoios study, that is \emph{fda-cit} needs the smallest amount of test cases, then follows the ict, and the last is sct.
+
+Above all, do effects, but ict still works best.
 
 %\begin{table*}[ht]
 %\caption{Number of test cases contain multiple MFS for \emph{fda-cit}}
@@ -2015,6 +2027,8 @@ The second study is to evaluate the performance of approaches when the safe valu
 
 \subsubsection{Non Safe values}
 
+The results of evaluating the approaches on non-safe values are shown in Fig. Fig. \ref{sen_safe_f_measure_result} and Fig. \ref{sen_safe_tests_result}.
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}
 \caption{F-measure for various number of un-safe values}
@@ -2028,6 +2042,7 @@ The second study is to evaluate the performance of approaches when the safe valu
 \label{sen_safe_tests_result}
 \end{figure}
 
+Similar to previous study, non-safe value do affect to approaches. And for the non-safe value, our approach \emph{ict} has a more clear advantage than the three approaches.
 
 %\begin{table*}[ht]
 %\caption{Detected and fixed \emph{fda-cit}}
@@ -2041,6 +2056,8 @@ The second study is to evaluate the performance of approaches when the safe valu
 %\end{table*}
 
 Above, the answer to the question 5 is:
+
+\textbf{Without assumptions, do affects the results of three approches, but our approach works the best among them.}
 
 
 \subsection{Threats to validity}
