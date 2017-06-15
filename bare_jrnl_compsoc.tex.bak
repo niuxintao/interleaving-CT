@@ -2001,13 +2001,12 @@ The results of evaluating the approaches on nondeterministic failures are shown 
 With regard to MFS identification, there are two observations. First, if the probability is too small (little than 0.15) or too high (large than 0.9), all the three approaches performed relatively well. This is reasonable, because if the probability of triggering MFS is too small, we can hardly detect the failure. As a result, the MFS is similar to a non-failure inducing schema, and hence it has little influence on the MFS identification. On the other hand, if the probability is too high, which indicates that we can easily detect it. Under this condition, the failure is similar to a deterministic failure, which also has little influence on the MFS identification. The worst condition is in between (the probability is around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappears at the next time. These two statues exchanged frequently, and result in a negative influence on the MFS identification.
 
 
-The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} better than sct, and both ict and sct works better than fda-cit on all the conditions). This indicates that even faced with nondeterminestic, \emph{ict} still works better.
+The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} performed better than \emph{sct}, and both \emph{ict} and \emph{sct} obtained higher f-measures than \emph{fda-cit} on all the conditions). This result indicates that \emph{ict} can handle the non-deterministic failures properly.
+%Note that the low f-measures of \emph{fda-cit} do not indicate that \emph{fda-cit} cannot deal with non-deterministic failures, instead, it is caused of the proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
 
-Consdiering that \emph{fda-cit} proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
+With regarded to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needs the smallest amount of test cases, then follows the \emph{ict}, and the last is \emph{sct}.
 
-With regarded to the test cases, our conclusion is similar to prevoios study, that is \emph{fda-cit} needs the smallest amount of test cases, then follows the ict, and the last is sct.
-
-Above all, do effects, but ict still works best.
+Above all, we can learn that the non-deterministic failures do effects the MFS quality of the three approaches, but \emph{ict} can handle it well, and perform the best among three approaches.
 
 %\begin{table*}[ht]
 %\caption{Number of test cases contain multiple MFS for \emph{fda-cit}}
@@ -2027,7 +2026,7 @@ Above all, do effects, but ict still works best.
 
 \subsubsection{Non Safe values}
 
-The results of evaluating the approaches on non-safe values are shown in Fig. Fig. \ref{sen_safe_f_measure_result} and Fig. \ref{sen_safe_tests_result}.
+The results of evaluating the approaches on non-safe values are shown in Fig. \ref{sen_safe_f_measure_result} and Fig. \ref{sen_safe_tests_result}.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}
@@ -2042,7 +2041,7 @@ The results of evaluating the approaches on non-safe values are shown in Fig. Fi
 \label{sen_safe_tests_result}
 \end{figure}
 
-Similar to previous study, non-safe value do affect to approaches. And for the non-safe value, our approach \emph{ict} has a more clear advantage than the three approaches.
+There are several obserations about these two figures., non-safe value do affect to approaches. And for the non-safe value, our approach \emph{ict} has a more clear advantage than the three approaches.
 
 %\begin{table*}[ht]
 %\caption{Detected and fixed \emph{fda-cit}}

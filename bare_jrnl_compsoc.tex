@@ -2001,7 +2001,7 @@ The results of evaluating the approaches on nondeterministic failures are shown 
 With regard to MFS identification, there are two observations. First, if the probability is too small (little than 0.15) or too high (large than 0.9), all the three approaches performed relatively well. This is reasonable, because if the probability of triggering MFS is too small, we can hardly detect the failure. As a result, the MFS is similar to a non-failure inducing schema, and hence it has little influence on the MFS identification. On the other hand, if the probability is too high, which indicates that we can easily detect it. Under this condition, the failure is similar to a deterministic failure, which also has little influence on the MFS identification. The worst condition is in between (the probability is around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappears at the next time. These two statues exchanged frequently, and result in a negative influence on the MFS identification.
 
 
-The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} performed better than \emph{sct}, and both \emph{ict} and \emph{sct} obtained higher f-measures than \emph{fda-cit} on all the conditions). This result indicates that \emph{ict} can handle the non-deterministic failures properly.  
+The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} performed better than \emph{sct}, and both \emph{ict} and \emph{sct} obtained higher f-measures than \emph{fda-cit} on all the conditions). This result indicates that \emph{ict} can handle the non-deterministic failures properly.
 %Note that the low f-measures of \emph{fda-cit} do not indicate that \emph{fda-cit} cannot deal with non-deterministic failures, instead, it is caused of the proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
 
 With regarded to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needs the smallest amount of test cases, then follows the \emph{ict}, and the last is \emph{sct}.
@@ -2041,7 +2041,8 @@ The results of evaluating the approaches on non-safe values are shown in Fig. \r
 \label{sen_safe_tests_result}
 \end{figure}
 
-Similar to previous study, non-safe value do affect to approaches. And for the non-safe value, our approach \emph{ict} has a more clear advantage than the three approaches.
+There are several observations about these two figures. First, the non-safe values do affect the MFS identification quality of all the approaches. Comparing to Fig. \ref{sen_opts_f_measure_result} of which the characteristics of subjects are similar this study, we can learn that the f-measures of all the three approaches are lower than that of Fig .\ref{sen_opts_f_measure_result}. Specifically, \emph{ict} decreased from 1.0 to about 0.65, \emph{sct} decreased from about 0.62 to about 0.48, and \emph{fda-cit} decreased from about 0.1 to about 0.05. Based on these data, we can conclude our second observation, that is, \emph{ict} also performed best under the condition that there is no safe values. We believe this is due to our feed-back checking process, which significantly improves the quality of MFS identification, and reduces the negative effects caused by non-safe values. At last, with regard to the number of test cases, \emph{fda-cit} still generated the fewest, however, this also leads to the low f-measure of MFS identification.
+%These results show that the non-safe value have  negative effects on the MFS identification.
 
 %\begin{table*}[ht]
 %\caption{Detected and fixed \emph{fda-cit}}
@@ -2054,9 +2055,9 @@ Similar to previous study, non-safe value do affect to approaches. And for the n
 %    \end{tabular}
 %\end{table*}
 
-Above, the answer to the question 5 is:
+Above, the answer to the Q5 is:
 
-\textbf{Without assumptions, do affects the results of three approches, but our approach works the best among them.}
+\textbf{The non-deterministic failures and non-safe values do negatively affects the results of all the three approaches, but due to the feedback checking process, \emph{ict} can alleviate these impacts, and hence performs better the other two approaches.}
 
 
 \subsection{Threats to validity}
@@ -2106,9 +2107,9 @@ Another work which shares similar ideas comes from the Software Product Lines (S
 
 
 \section{Conclusion and Future works}\label{sec:conclusion}
-Combinatorial testing is an effective testing technique at detecting and diagnosis of the failure-inducing interactions in the SUT. Traditional CT separately studies test case generation and MFS identification. In this paper, we proposed a new CT framework, i.e., \emph{interleaving CT}, that integrates these two important stages, which allows for both generation and identification better share each other's information. As a result, the interleaving CT approach can provide a more efficient testing than traditional sequential CT.
+Combinatorial testing is an effective testing technique at detecting and diagnosis of the failure-inducing interactions in the SUT. Traditional CT separately studies test case generation and MFS identification. In this paper, we proposed a new CT framework, i.e., \emph{interleaving CT}, that integrates these two important stages, which allows for both generation and identification better share each other's information. As a result, the interleaving CT approach can provide a more efficient testing than augmented sequential CT.
 
-Empirical studies were conducted on five open-source software subjects. The results show that with our new CT framework, there is a significant reduction on the number of generated test cases when compared to the traditional sequential CT approach, while there is no decline in the quality of the identified MFS. Further, when comparing with another adaptive CT framework  \emph{fda-cit} \cite{dumlu2011feedback,yilmaz2013reducing}, our approach also performed better, especially with better quality of the MFS identification.
+Empirical studies were conducted on five open-source software subjects. The results show that with our new CT framework, there is a reduction on the number of generated test cases when compared to the augmented sequential CT approach, while there is a significant improve in the quality of the identified MFS. Further, when comparing with another adaptive CT framework  \emph{fda-cit} \cite{dumlu2011feedback,yilmaz2013reducing}, our approach also performed better, especially with better quality of the MFS identification. At last, we showed that our approach \emph{ict} can still perform well on the subjects with various number of options, MFS, and on the conditions that there are non-deterministic failures and non-safe values.
 
 As a future work, we plan to extend our interleaving CT approach with more test case generation and MFS identification algorithms, to see the extent on which our new CT framework can enhance those different CT-based algorithms. Another interesting work is to combine the interleaving CT approach with the masking effects technique \emph{fda-cit}\cite{yilmaz2013reducing}. By this, we believe the impacts of masking effects can be further reduced and it can support a better quality of MFS identification.
 
