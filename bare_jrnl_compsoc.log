@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  15 JUN 2017 13:11
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  15 JUN 2017 19:18
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -365,27 +365,59 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \Urlmuskip=\muskip11
 Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
 )
+(C:\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+
+(C:\CTEX\MiKTeX\tex\latex\colortbl\colortbl.sty
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+(C:\CTEX\MiKTeX\tex\latex\tools\array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen142
+\extrarowheight=\dimen143
+\NC@list=\toks25
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+\everycr=\toks26
+\minrowclearance=\skip59
+)
+\rownum=\count121
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
 (C:\CTEX\MiKTeX\tex\latex\mdwtools\footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box35
-\fn@width=\dimen142
+\fn@width=\dimen144
 )
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
 
 -- Lines per column: 61 (exact).
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 534.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 535.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -397,17 +429,17 @@ Requested font "phvr7t" at 9.53561pt
 Requested font "phvr7t" at 11.04124pt
  -> phvr7t
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 534.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 535.
 Requested font "phvro7t" at 11.04124pt
  -> phvro7t
 Requested font "phvr7t" at 8.03pt
  -> phvr7t
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 534.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 535.
 Requested font "phvb7t" at 8.03pt
  -> phvb7t
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 53
-4.
+5.
 Requested font "cmr10" at 10.95pt
  -> cmr10
 Requested font "cmr8" at 8.0pt
@@ -432,14 +464,14 @@ Requested font "cmex7" at 7.72884pt
  -> cmex7
 Requested font "cmex7" at 5.52061pt
  -> cmex7
-LaTeX Font Info:    Try loading font information for U+pzd on input line 534.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 535.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 Requested font "pzdr" at 11.0pt
  -> pzdr
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 534.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 535.
 Requested font "cmex8" at 8.0pt
  -> cmex8
 Requested font "cmex7" at 5.62097pt
@@ -447,12 +479,12 @@ Requested font "cmex7" at 5.62097pt
 Requested font "cmex7" at 4.015pt
  -> cmex7
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 562.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 563.
 Requested font "phvb7t" at 11.04124pt
  -> phvb7t
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 562.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 563.
 Requested font "phvbc7t" at 11.04124pt
  -> phvbc7t
 Requested font "pplr7t" at 19.39743pt
@@ -463,7 +495,7 @@ Requested font "pplrc7t" at 9.53561pt
  -> pplrc7t
 Requested font "phvr7t" at 7.02625pt
  -> phvr7t
-LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 600
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 601
 .
 Requested font "cmex7" at 7.02625pt
  -> cmex7
@@ -479,20 +511,20 @@ Requested font "phvr7t" at 4.91833pt
 ]
 File: CT_lifecircle.eps Graphic file (type eps)
  <CT_lifecircle.eps>
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 656
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 657
 .
 Requested font "cmex7" at 6.6749pt
  -> cmex7
 Requested font "cmex7" at 4.7678pt
  -> cmex7
-\c@definition=\count121
+\c@definition=\count122
  [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 697.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 698.
 Requested font "phvb7t" at 9.53561pt
  -> phvb7t
  [3]
-\c@assumption=\count122
+\c@assumption=\count123
 Requested font "pplr7t" at 6.6749pt
  -> pplr7t
 
@@ -500,24 +532,24 @@ Requested font "pplr7t" at 6.6749pt
 File: baicOutline.eps Graphic file (type eps)
  <baicOutline.eps> [7] [8]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1110.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1112.
 
 Requested font "phvro7t" at 9.53561pt
  -> phvro7t
 Requested font "pplr7t" at 4.7678pt
  -> pplr7t
  [9]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 1209
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 1211
 .
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1209.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1211.
 
  [10]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1414
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1416
 .
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1pcr.fd
@@ -528,34 +560,34 @@ Requested font "pcrr7t" at 9.53561pt
  [11] [12] [13]
 File: ex1.eps Graphic file (type eps)
  <ex1.eps> [14]
+Underfull \vbox (badness 4886) has occurred while \output is active []
+
 File: fd-cit.eps Graphic file (type eps)
 
-<fd-cit.eps>
-Underfull \vbox (badness 1448) has occurred while \output is active []
-
- [15]
+<fd-cit.eps> [15]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1738.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1740.
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
+ [16]
 File: ex2.eps Graphic file (type eps)
-
-<ex2.eps> [16] [17]
-Invalid UTF-8 byte or sequence at line 1875 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1875 replaced by U+FFFD.
+ <ex2.eps> [17]
+Invalid UTF-8 byte or sequence at line 1877 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1877 replaced by U+FFFD.
+ [18]
 File: sens_mfs_f_measure.eps Graphic file (type eps)
- <sens_mfs_f_measure.eps> [18]
+ <sens_mfs_f_measure.eps>
 File: sens_mfs_tests.eps Graphic file (type eps)
- <sens_mfs_tests.eps>
+
+<sens_mfs_tests.eps>
 File: sens_options_f_measure.eps Graphic file (type eps)
-
-<sens_options_f_measure.eps>
+ <sens_options_f_measure.eps>
 File: sens_options_tests.eps Graphic file (type eps)
- <sens_options_tests.eps> [19]
+ <sens_options_tests.eps>
+[19]
 File: sen_und_f_measure.eps Graphic file (type eps)
-
-<sen_und_f_measure.eps>
+ <sen_und_f_measure.eps>
 File: sen_und_tests.eps Graphic file (type eps)
  <sen_und_tests.eps> [20]
 File: sen_safe_f_measure.eps Graphic file (type eps)
@@ -567,71 +599,70 @@ File: sen_safe_tests.eps Graphic file (type eps)
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¯ in font pplri7t!
-)
+) [24]
 File: niu.png Graphic file (type QTm)
 
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2207.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2209.
 
 
 File: niu.png Graphic file (type QTm)
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2207.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2209.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2214.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2216.
 
 
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2214.
-
-
-[24]
-File: hare.png Graphic file (type QTm)
- <use  "hare.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2218.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2216.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2218.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2220.
+
+
+File: hare.png Graphic file (type QTm)
+<use  "hare.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2220.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2222.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2224.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2222.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2224.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2226.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2228.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2226.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2228.
 
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 2226--2228
+Underfull \hbox (badness 1622) in paragraph at lines 2228--2230
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -639,17 +670,17 @@ g
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2230.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2232.
 
 
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2230.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2232.
 
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 2230--2232
+Underfull \hbox (badness 1418) in paragraph at lines 2232--2234
 []\OT1/phv/b/n/8.03 Jiaxi X-u \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-nee
 r in
  []
@@ -657,25 +688,23 @@ r in
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2234.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2236.
 
 
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2234.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2236.
 
 
-[25
-
-] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
+[25] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
- 3431 strings out of 430478
- 49259 string characters out of 3191502
- 119615 words of memory out of 3000000
- 6520 multiletter control sequences out of 15000+200000
+ 3987 strings out of 430478
+ 55304 string characters out of 3191502
+ 130322 words of memory out of 3000000
+ 7065 multiletter control sequences out of 15000+200000
  36925 words of font info for 97 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 30i,12n,38p,1714b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,38p,1714b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_jrnl_compsoc.pdf (25 pages).
