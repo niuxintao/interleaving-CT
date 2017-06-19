@@ -391,6 +391,7 @@
 \usepackage{subfigure}
 \usepackage{multirow}
  \usepackage{url}
+\usepackage[table]{xcolor}
 
 \usepackage{footnote}
 \makesavenoteenv{tabular}
@@ -833,7 +834,7 @@ After testing with the 9 test cases ($t_{1}$ to $t_{9}$),  we found $t_{1}$, $t_
                                        & \multicolumn{1}{l|}{$t_{2}$}   & 0& 1& 1& \multicolumn{1}{l|}{1}     & Pass              \\
                                        & \multicolumn{1}{l|}{$t_{3}$}   & 0& 2& 1& \multicolumn{1}{l|}{0}     & Pass              \\
                                        & \multicolumn{1}{l|}{$t_{4}$}   & 1& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}}     & Fail              \\
-                                       & \multicolumn{1}{l|}{$t_{5}$}   & 1& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{5}$}   & 1& 1& 0& \multicolumn{1}{l|}{0}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Pass              \\
                                        & \multicolumn{1}{l|}{$t_{8}$}   & 2& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
@@ -929,7 +930,7 @@ Note that the \emph{masking effects} are actually caused by the \emph{multiple M
 
 \subsection{Augmentation of the SCT}
 
-Considering the fact that we do not necessarily to repeatedly identify the same MFS, we can reduce the number of test cases by checking the already identified MFS and removing it from the MFS identification process. For example in Table \ref{tradition-gi}, we do not need to generate 4 additional test cases ($t_{18}$ to $t_{21}$) to figure out the failure-cause of $t_{7}$ is indeed (-, 0, -, -), which has already been identified in previous iteration ($t_{10}$ to $t_{13}$). Therefore, we only need to check whether there is any MFS other than (-, 0, -, -) in $t_{7}$ or not. When applying this augmentation, the overall SCT process for the example in Table \ref{tradition-gi} will derive to Table \ref{tradition-gi-aug}.
+Considering the fact that we do not necessarily to repeatedly identify the same MFS, we can reduce the number of test cases by checking the already identified MFS and removing it from the MFS identification process. For example in Table \ref{tradition-gi}, we do not need to generate 4 additional test cases ($t_{18}$ to $t_{21}$) to figure out the failure-cause of $t_{7}$ is indeed (-, 0, -, -), which has already been identified in previous iteration ($t_{10}$ to $t_{13}$). Therefore, we only need to check whether there is any MFS other than (-, 0, -, -) in $t_{7}$ or not. When applying this augmentation, the overall SCT process for the example in Table \ref{tradition-gi} will evolve into the process shown in Table \ref{tradition-gi-aug}.
 
 
 \begin{table}[h]
@@ -959,15 +960,15 @@ Considering the fact that we do not necessarily to repeatedly identify the same 
 \multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{\bfseries MFS} & \multicolumn{5}{c}{\bfseries   (-, 0, -, -)}                                                                                                                                                                                                                 \\  \cline{2-7}
                                    %    \multicolumn{6}{c}{} \\
                                        %\cline{2-7}
-\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{4}$ (1,0,0,1)}}} & \multicolumn{1}{l|}{$t_{14}$*} & 2& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}} & Fail              \\
-\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{15}$*} & 1& 1& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}} & Fail              \\
-\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{15}$*} & 1& 1& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}} & Fail              \\
-\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{16}$*} & 1& \textbf{0}& 1& \multicolumn{1}{l|}{1} & Fail              \\
-\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{17}$*} & 1& \textbf{0}& 0& \multicolumn{1}{l|}{0} & Fail              \\ \cline{2-7}
-\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{\bfseries MFS} & \multicolumn{5}{c}{\bfseries   (-, -, -, -)}                                                                                                                                                                                                                 \\  \cline{2-7}
+\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{4}$ (1,0,0,1)}}} & \multicolumn{1}{l|}{\cellcolor{black!25}$t_{14}$*} & \cellcolor{black!25}1& \cellcolor{black!25}1 & \cellcolor{black!25}0& \multicolumn{1}{l|}{\cellcolor{black!25}1} & \cellcolor{black!25}Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{15}$*} & 2& 1& 0& \multicolumn{1}{l|}{1} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{16}$*} & 1& 2& 0& \multicolumn{1}{l|}{1} & Fail              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{17}$*} & 1& 1& 1& \multicolumn{1}{l|}{1} & Pass              \\
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{$t_{18}$*} & 1& 1& 0& \multicolumn{1}{l|}{0} & Pass              \\ \cline{2-7}
+\multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{\bfseries MFS} & \multicolumn{5}{c}{\bfseries   (-, -, 0, 1)}                                                                                                                                                                                                                 \\  \cline{2-7}
                                       %  \multicolumn{6}{c}{} \\
                                 %        \cline{2-7}
-\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{7}$ (2,0,1,1)}}} & \multicolumn{1}{l|}{$t_{18}$*} & 2& 1 & 1& \multicolumn{1}{l|}{1} & Pass              \\
+\multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{7}$ (2,0,1,1)}}} & \multicolumn{1}{l|}{\cellcolor{black!25}$t_{19}$*} & \cellcolor{black!25}2& \cellcolor{black!25}1 & \cellcolor{black!25}1& \multicolumn{1}{l|}{\cellcolor{black!25}1} & \cellcolor{black!25}Pass              \\
 \multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
 \multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
 \multicolumn{1}{l|}{}                  & \multicolumn{1}{l|}{} & & & & \multicolumn{1}{l|}{} &               \\
@@ -975,9 +976,9 @@ Considering the fact that we do not necessarily to repeatedly identify the same 
 \end{tabular}
 \end{table}
 
-In Table \ref{tradition-gi-aug}, the only difference from Table \ref{tradition-gi} is that for $t_{7}$, we only generate one test case $t_{18}$, which mutates the value of the second parameter of $t_{7}$ to 1, and hence the already identified MFS (-, 0, -, -) is removed. The pass of $t_{18}$ indicates that there is no other MFS in this test case, and we do no need to generate additional test cases. As a result, we have reduced 3 test cases in total by using the augmented SCT.
+In Table \ref{tradition-gi-aug}, the only difference from Table \ref{tradition-gi} is that for test case $t4$ and $t_{7}$, we first checked whether there is any MFS other than the already identified MFS (-, 0, -, -). Hence we generated two additional test cases $t_{14}$ and $t_{19}$ (highlighted), which exclude the MFS (-, 0, -, -) from the original failing test cases $t4$ and $t_{7}$. We found that $t_{14}$ still failed after execution, which indicates that $t_{14}$ contains other different MFS, and we continued to use OFOT to identify the MFS of $t_{14}$ and obtained the second MFS (-, -, 0, 1). With respect to $t_{19}$, we found it passed after execution, and hence there is no other MFS in this test case, and we do no need to generate additional test cases. As a result, we have reduced 2 test cases in total by using the augmented SCT.
 
-Although the augmented SCT can reduce the redundancy of test cases to some extent, there still remain some issues, e.g., multiple MFS, and masking effects, it cannot handle properly.
+Although the augmented SCT can reduce the redundancy of test cases to some extent, there still remain some issues, e.g., multiple MFS, and masking effects, that it cannot deal with.
 
 
 \section{Interleaving Approach}\label{sec:app}
@@ -1294,7 +1295,7 @@ After we determining (-, 0, -, -) to be MFS, the following test cases ($t_{8}$ t
 
 %This table consists of two main columns, in which the left column indicates the generation part while the right indicates the identification process. We can find that, after identifying the MFS (-, 0, -, -) for $t_{1}$, the following test cases ($t_{6}$ to $t_{15}$) will not contain this schema. Correspondingly, all the 2-degree schemas that are related to this schema, e.g. (0, 0, -, -), (-, 0, 1, -), etc, will also not appear in the following test cases. Additionally, the passing test case $t_{3}$ generated in the identification process covers six \emph{2}-degree schemas, i.e., (1, 1, -, -), (1, -, 0, -), (1, -, -, 0), (-, 1, 0, -), (-, 1, -, 0), and (-, -, 0, 0) respectively, so that it is not necessary to generate more test cases to cover them. We later found that $t_{8}$ failed, which only contain one MFS as expected, and we easily identified it (-, -, 0, 1) with four additionally generated test cases. This schema is 2-degree MFS, which will be forbidden in the following test cases and set to be covered.
 
-Above all, when using the interleaving CT approach,  the overall generated test case are 2 less than that of the traditional sequential CT approach in Table \ref{tradition-gi}, and only one more test case than the augmented sequential CT approach in Table \ref{tradition-gi-aug}. Additionally, the new approach identified the expected MFS (-, -, 0, 1) which both traditional SCT and augmented SCT fail to identify.
+Above all, when using the interleaving CT approach,  the overall generated test case are 2 less than that of the traditional sequential CT approach in Table \ref{tradition-gi}, and equal to the augmented sequential CT approach in Table \ref{tradition-gi-aug}. In fact, if we exclude the test cases from the checking process, the interleaving CT approach can reduce even more test cases (6 less than that of the traditional sequential CT approach, and 4 less than the augmented sequential CT approach). However, these additional test cases generated in the checking process will ensure a high quality of MFS identification for interleaving CT approach. In this simple example, both interleaving CT and augmented sequential CT  correctly identified all the MFS (better than that of traditional sequential CT), but given more complex subjects with more MFS, we believe interleaving CT can outperform the augmented sequential CT at MFS identification.
 
 %Note that this example only lists the condition of a single MFS, under which some \emph{super-schemas} or \emph{themselves} will not need to be covered.  When there are multiple MFS, additional \emph{implicit forbidden} schemas will be computed and set as covered.
 

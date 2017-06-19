@@ -835,10 +835,10 @@ After testing with the 9 test cases ($t_{1}$ to $t_{9}$),  we found $t_{1}$, $t_
                                        & \multicolumn{1}{l|}{$t_{3}$}   & 0& 2& 1& \multicolumn{1}{l|}{0}     & Pass              \\
                                        & \multicolumn{1}{l|}{$t_{4}$}   & 1& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{5}$}   & 1& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
-                                       & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Fail              \\
-                                       & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{8}$}   & 2& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
-                                       & \multicolumn{1}{l|}{$t_{9}$}   & 2& 2& 0& \multicolumn{1}{l|}{0}     & Fail              \\ \cline{2-7}
+                                       & \multicolumn{1}{l|}{$t_{9}$}   & 2& 2& 0& \multicolumn{1}{l|}{0}     & Pass              \\ \cline{2-7}
                                        \multicolumn{6}{c}{} \\
                                        & \multicolumn{6}{c}{\bfseries \emph{Identification}}                                                                                                                                                                                                                              \\ \cline{2-7}
 \multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{1}$ (0,0,0,0)}}} & \multicolumn{1}{l|}{$t_{10}$*} & 1& 0& 0& \multicolumn{1}{l|}{0} & Fail              \\
@@ -947,10 +947,10 @@ Considering the fact that we do not necessarily to repeatedly identify the same 
                                        & \multicolumn{1}{l|}{$t_{3}$}   & 0& 2& 1& \multicolumn{1}{l|}{0}     & Pass              \\
                                        & \multicolumn{1}{l|}{$t_{4}$}   & 1& \textbf{0}& \textbf{0}& \multicolumn{1}{l|}{\textbf{1}}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{5}$}   & 1& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
-                                       & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Fail              \\
-                                       & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{6}$}   & 1& 2& 1& \multicolumn{1}{l|}{1}     & Pass              \\
+                                       & \multicolumn{1}{l|}{$t_{7}$}   & 2& \textbf{0}& 1& \multicolumn{1}{l|}{1}     & Fail              \\
                                        & \multicolumn{1}{l|}{$t_{8}$}   & 2& 1& 0& \multicolumn{1}{l|}{0}     & Pass              \\
-                                       & \multicolumn{1}{l|}{$t_{9}$}   & 2& 2& 0& \multicolumn{1}{l|}{0}     & Fail              \\ \cline{2-7}
+                                       & \multicolumn{1}{l|}{$t_{9}$}   & 2& 2& 0& \multicolumn{1}{l|}{0}     & Pass              \\ \cline{2-7}
                                        \multicolumn{6}{c}{} \\
                                        & \multicolumn{6}{c}{\bfseries \emph{Identification}}                                                                                                                                                                                                                              \\ \cline{2-7}
 \multicolumn{1}{l|}{\multirow{5}{*}{\rotatebox{90}{$t_{1}$ (0,0,0,0)}}} & \multicolumn{1}{l|}{$t_{10}$*} & 1& 0& 0& \multicolumn{1}{l|}{0} & Fail              \\
@@ -978,7 +978,7 @@ Considering the fact that we do not necessarily to repeatedly identify the same 
 
 In Table \ref{tradition-gi-aug}, the only difference from Table \ref{tradition-gi} is that for test case $t4$ and $t_{7}$, we first checked whether there is any MFS other than the already identified MFS (-, 0, -, -). Hence we generated two additional test cases $t_{14}$ and $t_{19}$ (highlighted), which exclude the MFS (-, 0, -, -) from the original failing test cases $t4$ and $t_{7}$. We found that $t_{14}$ still failed after execution, which indicates that $t_{14}$ contains other different MFS, and we continued to use OFOT to identify the MFS of $t_{14}$ and obtained the second MFS (-, -, 0, 1). With respect to $t_{19}$, we found it passed after execution, and hence there is no other MFS in this test case, and we do no need to generate additional test cases. As a result, we have reduced 2 test cases in total by using the augmented SCT.
 
-Although the augmented SCT can reduce the redundancy of test cases to some extent, there still remain some issues, e.g., multiple MFS, and masking effects, it cannot handle properly.
+Although the augmented SCT can reduce the redundancy of test cases to some extent, there still remain some issues, e.g., multiple MFS, and masking effects, that it cannot deal with.
 
 
 \section{Interleaving Approach}\label{sec:app}
