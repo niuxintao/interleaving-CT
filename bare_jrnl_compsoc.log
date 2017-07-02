@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  29 JUN 2017 00:08
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.10)  1 JUL 2017 23:06
 entering extended mode
 **bare_jrnl_compsoc.tex
 (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.tex
@@ -557,64 +557,65 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Requested font "pcrr7t" at 9.53561pt
  -> pcrr7t
- [11] [12] [13]
+ [11]
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [12]
+[13]
 File: ex1.eps Graphic file (type eps)
  <ex1.eps> [14]
-Underfull \vbox (badness 4886) has occurred while \output is active []
-
 File: fd-cit.eps Graphic file (type eps)
+ <fd-cit.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<fd-cit.eps> [15]
+ [15]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1740.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1743.
 
 Requested font "phvro7t" at 8.03pt
  -> phvro7t
- [16]
-File: ex2.eps Graphic file (type eps)
- <ex2.eps> [17]
-Invalid UTF-8 byte or sequence at line 1880 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 1880 replaced by U+FFFD.
- [18]
-File: sens_mfs_f_measure.eps Graphic file (type eps)
- <sens_mfs_f_measure.eps>
-File: sens_mfs_tests.eps Graphic file (type eps)
 
-<sens_mfs_tests.eps>
+[16]
+File: ex2.eps Graphic file (type eps)
+ <ex2.eps>
+Invalid UTF-8 byte or sequence at line 1887 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1887 replaced by U+FFFD.
+ [17]
+File: sens_mfs_f_measure.eps Graphic file (type eps)
+ <sens_mfs_f_measure.eps> [18]
+File: sens_mfs_tests.eps Graphic file (type eps)
+ <sens_mfs_tests.eps>
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
 File: sens_options_f_measure.eps Graphic file (type eps)
- <sens_options_f_measure.eps>
+
+<sens_options_f_measure.eps>
 File: sens_options_tests.eps Graphic file (type eps)
- <sens_options_tests.eps>
-[19]
+ <sens_options_tests.eps> [19]
 File: sen_und_f_measure.eps Graphic file (type eps)
- <sen_und_f_measure.eps>
+
+<sen_und_f_measure.eps>
 File: sen_und_tests.eps Graphic file (type eps)
  <sen_und_tests.eps> [20]
 File: sen_safe_f_measure.eps Graphic file (type eps)
  <sen_safe_f_measure.eps>
 File: sen_safe_tests.eps Graphic file (type eps)
 
-<sen_safe_tests.eps> [21] [22]
-(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [23]
+<sen_safe_tests.eps> [21]
+(C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.bbl [22] [23]
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¡ in font pplri7t!
 Missing character: There is no ¯ in font pplri7t!
-) [24]
+)
 File: niu.png Graphic file (type QTm)
 
 <use  "niu.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2212.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2219.
 
 
 File: niu.png Graphic file (type QTm)
 <use  "niu.png" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2212.
-
-
-File: nie.png Graphic file (type QTm)
-<use  "nie.png" >
 
 Package xetex.def Warning: No clipping support in XeTeX yet on input line 2219.
 
@@ -622,47 +623,54 @@ Package xetex.def Warning: No clipping support in XeTeX yet on input line 2219.
 File: nie.png Graphic file (type QTm)
 <use  "nie.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2219.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2226.
+
+
+File: nie.png Graphic file (type QTm)
+<use  "nie.png" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2226.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2223.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2230.
 
 
 File: hare.png Graphic file (type QTm)
 <use  "hare.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2223.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2230.
+
+
+[24]
+File: lei.jpg Graphic file (type QTm)
+ <use  "lei.jpg" >
+
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2234.
 
 
 File: lei.jpg Graphic file (type QTm)
 <use  "lei.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2227.
-
-
-File: lei.jpg Graphic file (type QTm)
-<use  "lei.jpg" >
-
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2227.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2234.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2231.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2238.
 
 
 File: xy.png Graphic file (type QTm)
 <use  "xy.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2231.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2238.
 
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 2231--2233
+Underfull \hbox (badness 1622) in paragraph at lines 2238--2240
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -670,17 +678,17 @@ g
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2235.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2242.
 
 
 File: xujiaxi.jpg Graphic file (type QTm)
 <use  "xujiaxi.jpg" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2235.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2242.
 
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 2235--2237
+Underfull \hbox (badness 1418) in paragraph at lines 2242--2244
 []\OT1/phv/b/n/8.03 Jiaxi X-u \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-nee
 r in
  []
@@ -688,23 +696,25 @@ r in
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2239.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2246.
 
 
 File: wangyan.png Graphic file (type QTm)
 <use  "wangyan.png" >
 
-Package xetex.def Warning: No clipping support in XeTeX yet on input line 2239.
+Package xetex.def Warning: No clipping support in XeTeX yet on input line 2246.
 
 
-[25] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
+[25
+
+] (C:\Users\xintao\Desktop\interleaving-CT\bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
  3987 strings out of 430478
- 55304 string characters out of 3191502
- 130267 words of memory out of 3000000
+ 55310 string characters out of 3191502
+ 131142 words of memory out of 3000000
  7065 multiletter control sequences out of 15000+200000
  36925 words of font info for 97 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 41i,14n,38p,1712b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,38p,1712b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_jrnl_compsoc.pdf (25 pages).

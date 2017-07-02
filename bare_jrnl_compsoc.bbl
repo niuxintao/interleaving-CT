@@ -234,6 +234,11 @@ N.~E{\'e}n and N.~S{\"o}rensson, ``An extensible sat-solver,'' in \emph{Theory
   and applications of satisfiability testing}.\hskip 1em plus 0.5em minus
   0.4em\relax Springer, 2004, pp. 502--518.
 
+\bibitem{cohen2008constructing2}
+M.~B. Cohen, C.~J. Colbourn, and A.~C. Ling, ``Constructing strength three
+  covering arrays with augmented annealing,'' \emph{Discrete Mathematics}, vol.
+  308, no.~13, pp. 2709--2722, 2008.
+
 \bibitem{zhang2012faulty}
 J.~Zhang, F.~Ma, and Z.~Zhang, ``Faulty interaction identification via
   constraint solving and optimization,'' in \emph{Theory and Applications of
