@@ -57,7 +57,7 @@ def dealLine(result, strs):
             result.precise  = float(strlist[1])
         elif strs.find('f-measure')>=0:
             result.f_measure = float(strlist[1])
-        elif strs.find('multi')>=0:
+        elif strs.find('multi ')>=0:
             result.multi = float(strlist[1])
         elif strs.find('time ')>=0:
             result.time = float(strlist[1])
