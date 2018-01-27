@@ -1,0 +1,165 @@
+2-way for Gcc
+###############################################
+###############################################
+average sct num :49.0
+
+average sct num_r :15.0
+
+average sct num_i :34.0
+
+average sct recall :0.0
+
+average sct precise :0.0
+
+average sct f-measure :0.0
+
+average sct multi :0.0
+
+average sct time :1.0
+
+average sct time_r :1.0
+
+average sct time_i :0.0
+
+average sct t_cover :250.0
+
+average sct all_cover :252.0
+
+average sct CoverNUM
+(1 : 62.0)  (2 : 5.0)  (3 : 15.0)  (4 : 6.0)  (5 : 12.0)  (6 : 9.0)  (7 : 9.0)  (8 : 11.0)  (9 : 10.0)  (10 : 15.0)  (11 : 8.0)  (12 : 8.0)  (13 : 11.0)  (14 : 11.0)  (15 : 17.0)  (16 : 10.0)  (17 : 4.0)  (18 : 8.0)  (19 : 8.0)  (20 : 3.0)  (21 : 1.0)  (22 : 2.0)  (23 : 2.0)  (24 : 3.0)  (28 : 2.0)  
+average sct CoverNUM
+
+average sct multi_recall :NaN
+
+average sct multi_precise :0.0
+
+average sct multi_f_measure :NaN
+
+average sct multi_found :0.0
+
+average sct multi_found_percent :NaN
+
+average sct multi_helped_later :0.0
+
+average sct multi_helped_later_pecent :NaN
+
+average sct negative_checked :0.0
+
+average sct negative_imporved :0.0
+
+average sct postive_checked :0.0
+
+average sct postive_imporved :0.0
+
+average sct feedback_times :0.0
+
+3-way for Gcc
+###############################################
+###############################################
+average sct num :91.0
+
+average sct num_r :58.0
+
+average sct num_i :33.0
+
+average sct recall :0.25
+
+average sct precise :0.3333333333333333
+
+average sct f-measure :0.28571428571428575
+
+average sct multi :2.0
+
+average sct time :94.0
+
+average sct time_r :94.0
+
+average sct time_i :0.0
+
+average sct t_cover :1518.0
+
+average sct all_cover :1536.0
+
+average sct CoverNUM
+(1 : 152.0)  (2 : 211.0)  (3 : 192.0)  (4 : 109.0)  (5 : 98.0)  (6 : 91.0)  (7 : 79.0)  (8 : 74.0)  (9 : 64.0)  (10 : 61.0)  (11 : 68.0)  (12 : 59.0)  (13 : 52.0)  (14 : 61.0)  (15 : 27.0)  (16 : 31.0)  (17 : 27.0)  (18 : 22.0)  (19 : 15.0)  (20 : 12.0)  (21 : 9.0)  (22 : 7.0)  (23 : 9.0)  (24 : 2.0)  (25 : 3.0)  (27 : 1.0)  
+average sct CoverNUM
+([ 3 , - , - , 1 , - , - , - , - , - , 0 ] : 1.0)  
+average sct multi_recall :0.0
+
+average sct multi_precise :0.0
+
+average sct multi_f_measure :0.0
+
+average sct multi_found :0.0
+
+average sct multi_found_percent :0.0
+
+average sct multi_helped_later :1.0
+
+average sct multi_helped_later_pecent :0.25
+
+average sct negative_checked :0.0
+
+average sct negative_imporved :0.0
+
+average sct postive_checked :0.0
+
+average sct postive_imporved :0.0
+
+average sct feedback_times :0.0
+
+4-way for Gcc
+###############################################
+###############################################
+average sct num :127.0
+
+average sct num_r :96.0
+
+average sct num_i :31.0
+
+average sct recall :0.25
+
+average sct precise :0.5
+
+average sct f-measure :0.3333333333333333
+
+average sct multi :3.0
+
+average sct time :312.0
+
+average sct time_r :312.0
+
+average sct time_i :0.0
+
+average sct t_cover :5907.0
+
+average sct all_cover :6048.0
+
+average sct CoverNUM
+(1 : 802.0)  (2 : 1520.0)  (3 : 971.0)  (4 : 522.0)  (5 : 323.0)  (6 : 350.0)  (7 : 403.0)  (8 : 364.0)  (9 : 275.0)  (10 : 188.0)  (11 : 131.0)  (12 : 91.0)  (13 : 57.0)  (14 : 28.0)  (15 : 14.0)  (16 : 7.0)  (18 : 2.0)  
+average sct CoverNUM
+([ 3 , - , - , 1 , - , - , - , - , - , 0 ] : 1.0)  
+average sct multi_recall :0.0
+
+average sct multi_precise :0.0
+
+average sct multi_f_measure :0.0
+
+average sct multi_found :0.0
+
+average sct multi_found_percent :0.0
+
+average sct multi_helped_later :2.0
+
+average sct multi_helped_later_pecent :0.3333333333333333
+
+average sct negative_checked :0.0
+
+average sct negative_imporved :0.0
+
+average sct postive_checked :0.0
+
+average sct postive_imporved :0.0
+
+average sct feedback_times :0.0
+

@@ -1733,6 +1733,11 @@ In summary, the answer to \textbf{Q2} is that \textbf{our approach \emph{ict} ca
 In this section, we need to find how benefits of our feedback checking schemas. For this, we design the experiment as follows: ICT with feedback and ICT without feedback. And then show how they are work on the five experiments objects
 
 
+
+\subsection{set up}
+
+\subsection{}
+
 }
 
 \subsection{Comparison with FDA-CIT}\label{sec:emprical:CompareFDA}
@@ -2058,22 +2063,18 @@ There are several observations in the experiments with multiple defeats:
 2) With respect to the quality of MFS identification, these three approaches satisfied the following relationship: \emph{ict} obtained the highest score at MFS identification, following by \emph{sct} and \emph{fda-cit}. In fact, except for the 2-way coverage at which \emph{ict} and \emph{sct} obtained almost the same f-measure on average, \emph{ict} increased the f-measure at least by 30\% and 32\% on average, respectively, at 3-way and 4-way coverage when compared with other two approaches.
 
 
-3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS, and the second best approach is \emph{fda-cit}, while the last one is \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated similar number of test cases that containing multiple schemas at 2-way coverage).
+3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS, and the second best approach was \emph{fda-cit}, while the last one was \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated similar number of test cases that containing multiple schemas at 2-way coverage).
 
 
-4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: 
-
+4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{fda-cit} covered the most number of tested-t-way schemas, following by approaches \emph{sct} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{fda-cit} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{fda-cit} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{fda-cit} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{sct}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 %For example.
-
 %2) \emph{ict} still perform the best among the three approaches
 %f-measure fenbu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 Above all, the answer to Q5 is:
 
-\textbf{Most results matched pretty well with the results obtained from the experiments of single defeat.}
+\textbf{Most results matched pretty well with the results obtained from the experiments of single defeat. Particularly, \emph{ict} performed better at MFS identification and reducing of number of test cases that containing multiple MFS, while \emph{fda-cit} generated the least number of test cases and covered the most number of tested-t-way schemas.
+}
 }
 
 

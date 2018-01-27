@@ -123,378 +123,23 @@ def getStrongPerCent(num, numTobeCompared, biggerOrSmall):
 if __name__ == "__main__":
 
 
-    showresultApp = ['ict','sct', 'fd']
-    showresultSub =['hsqldb 2.0rc', 'hsqldb 2.25', 'hsqldb 2.29', 'Jflex 1.4.1', 'Jflex 1.4.2']
-
-    approach = ['ICT_FB_MUOFOTstatistic', 'sctstatistic', 'fdstatistic']
-    subject = [' for hsqldb 2.0rc',' for hsqldb 2.25', ' for hsqldb 2.29', ' for jflex 1.4.1', ' for jflex 1.4.2' ]
+    showresultApp = ['ict-non-fb', 'ict']
+    approach = ['iststatistic', 'ICT_FB_MUOFOTstatistic']
+    showresultSub =['Tomcat', 'Hsqldb', 'Gcc', 'Jflex', 'Tcas']
+    subject = [' for Tomcat',' for HSQLDB', ' for Gcc', ' for JFlex', ' for Tcas' ]
 
     txt = '.txt'
 
-    folder = ['multipleDefects']
-
-    print('test Cases')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-            
-        for j in range(0, 3):
-            result = results[j]
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                    print(str(round(result[i].numAll,2)) +'\t&', end= '')
-                else:
-                    print(str(round(result[i].numAll,2)) +'\t\\\\', end= '')
-            if(j == 2):
-                print('\\hline')
-            else:
-                print('')
-
-
-    print('test Cases reduction')
-    decreasek = []
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        decreasek.append([])
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-        #methods
-        u = -1
-        for j in range(0, 3):
-            result = results[j]
-            for h in range(0, 3):
-                if h > j:
-                    decreasek[k].append([])
-                    u = u+1
-                    #print('compare' + ssub[j] + '' + ssub[h])
-                    result2 = results[h]
-                    #degree
-                    for i in range(0, 3):
-                        #print(str(i+2)+'way')
-                        decreasek[k][u].append(result[i].numAll - result2[i].numAll)
-    decreseAvg = []
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                u = u+1
-                decreseAvg.append([])
-                for i in range (0, 3):
-                    avg = 0
-                    for k in range(5):
-                        avg += decreasek[k][u][i]
-                    avg /= 5
-                    decreseAvg[u].append(avg)
-            
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                 print('compare' + showresultApp[j] + '' + showresultApp[h])
-                 u = u+1
-                 for i in range (0, 3):
-                     print(str(round(decreseAvg[u][i], 2)) + '\t', end= '' )
-                 print('')
-
-    print('')
-    print('identification quality')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-            
-        for j in range(0,3):
-            result = results[j]
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                    print(str(round(result[i].f_measure, 2)) +'\t&', end= '')
-                else:
-                    print(str(round(result[i].f_measure, 2)) +'\t\\\\', end= '')
-            if(j == 3):
-                print('\\hline')
-            else:
-                print('')
-
-
-    print('MFS identification increasing')
-    decreasek = []
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        decreasek.append([])
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-        #methods
-        u = -1
-        for j in range(0, 3):
-            result = results[j]
-            for h in range(0, 3):
-                if h > j:
-                    decreasek[k].append([])
-                    u = u+1
-                    #print('compare' + ssub[j] + '' + ssub[h])
-                    result2 = results[h]
-                    #degree
-                    for i in range(0, 3):
-                        #print(str(i+2)+'way')
-                        decreasek[k][u].append(result[i].f_measure - result2[i].f_measure)
-    decreseAvg = []
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                u = u+1
-                decreseAvg.append([])
-                for i in range (0, 3):
-                    avg = 0
-                    for k in range(5):
-                        avg += decreasek[k][u][i]
-                    avg /= 5
-                    decreseAvg[u].append(avg)
-            
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                 print('compare' + showresultApp[j] + ' ' + showresultApp[h])
-                 u = u+1
-                 for i in range (0, 3):
-                     print(str(round(decreseAvg[u][i], 2)) + '\t', end= '' )
-                 print('')
-
-    print('')
-    print('multi')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                    print(str(round(result[i].multi,2)) +'\t&', end= '')
-                else:
-                    print(str(round(result[i].multi,2)) +'\t\\\\', end= '')
-            if(j == 3):
-                print('\\hline')
-            else:
-                print('')
-
-    print('multi increasing')
-    decreasek = []
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        decreasek.append([])
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-        #methods
-        u = -1
-        for j in range(0, 3):
-            result = results[j]
-            for h in range(0, 3):
-                if h > j:
-                    decreasek[k].append([])
-                    u = u+1
-                    #print('compare' + ssub[j] + '' + ssub[h])
-                    result2 = results[h]
-                    #degree
-                    for i in range(0, 3):
-                        #print(str(i+2)+'way')
-                        decreasek[k][u].append(result[i].multi - result2[i].multi)
-    decreseAvg = []
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                u = u+1
-                decreseAvg.append([])
-                for i in range (0, 3):
-                    avg = 0
-                    for k in range(5):
-                        avg += decreasek[k][u][i]
-                    avg /= 5
-                    decreseAvg[u].append(avg)
-            
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                 print('compare' + showresultApp[j] + ' ' + showresultApp[h])
-                 u = u+1
-                 for i in range (0, 3):
-                     print(str(round(decreseAvg[u][i], 2)) + '\t', end= '' )
-                 print('')
-
-
-
-# all the masking effects are obtained by the generated test cases which contain multiple MFS, hence we just let the generated test cases to minus multiple, use num_r - multi or numAll - multi
-    print('')
-    print('non-maksing tests :  gen - multi')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-           # result = getOneFile(filename)
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-
-        for j in range(0,3):
-            result = results[j-1]
-            result_2 = [ -1, -1, -1]
-            if j == 1:
-                result_2 = [results[j][0].num_r - results[j][0].multi,results[j][1].num_r - results[j][1].multi,results[j][2].num_r - results[j][2].multi,]
-                
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                    print(getStrong(result[i].num_r - result[i].multi,result_2[i],1) +'\t&', end= '')
-                else:
-                    print(getStrong(result[i].num_r - result[i].multi,result_2[i],1) +'\t\\\\', end= '')
-            if(j == 3):
-                print('\\hline')
-            else:
-                print('')
-
-
+    folder = ['withoutFb']
 
 
     print('')
-    print('time')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result = getOneFile(filename)
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                    print(str(round(result[i].time,2)) +'\t&', end= '')
-                else:
-                    print(str(round(result[i].time,2)) +'\t\\\\', end= '')
-            if(j == 3):
-                print('\\hline')
-            else:
-                print('')
-            
-    print('')
-    print('tested-t-way')
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-
-        for j in range(0,3):
-            result = results[j]
-            print(ssub[j] + '\t&' + showresultApp[j]+'\t&', end = '')
-            for i in range(0, 3):
-                if i < 2:
-                        print(str(round(result[i].t_cover, 2)) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t&', end= '')
-                else:
-                        print(str(round(result[i].t_cover, 2)) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t\\\\', end= '')
-                #    print(getStrong(result[i].t_cover,result_2[i],1) + '(' + str("{:.2%}".format(result[i].t_cover/result[i].all_cover)).replace('%','\%') +')'+'\t\\\\', end= '')
-            if(j == 3):
-                print('\\hline')
-            else:
-                print('')
-
-    print('t-cover increasing')
-    decreasek = []
-    for k in range(5):
-        sub = subject[k]
-        ssub = [showresultSub[k], '', '']
-        results = []
-        decreasek.append([])
-        for j in range(0,3):
-            app = approach[j]
-            filename = folder[0] +'\/'+app+sub+txt
-            result_temp = getOneFile(filename)
-            results.append(result_temp)
-        #methods
-        u = -1
-        for j in range(0, 3):
-            result = results[j]
-            for h in range(0, 3):
-                if h > j:
-                    decreasek[k].append([])
-                    u = u+1
-                    #print('compare' + ssub[j] + '' + ssub[h])
-                    result2 = results[h]
-                    #degree
-                    for i in range(0, 3):
-                        #print(str(i+2)+'way')
-                        decreasek[k][u].append((result[i].t_cover - result2[i].t_cover)/max(result[i].t_cover,  result2[i].t_cover))
-    decreseAvg = []
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                u = u+1
-                decreseAvg.append([])
-                for i in range (0, 3):
-                    avg = 0
-                    for k in range(5):
-                        avg += decreasek[k][u][i]
-                    avg /= 5
-                    decreseAvg[u].append(avg)
-            
-    u = -1
-    for j in range(0, 3):
-        for h in range(0, 3):
-            if h > j:
-                 print('compare' + showresultApp[j] + ' ' + showresultApp[h])
-                 u = u+1
-                 for i in range (0, 3):
-                     print(str(round(decreseAvg[u][i], 2)) + '\t', end= '' )
-                 print('')
-
-
-
-    print('')
-    print('fd test cases')
+    print('wofb test cases')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
         result = []
-        for j in range(0,3):
+        for j in range(0,2):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
@@ -502,21 +147,21 @@ if __name__ == "__main__":
         print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
             if i < 2:
-                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1) + ',' + getStrong(result[0][i].numAll - result[2][i].numAll,0,1)+  ')' +'\t&', end= '')
+                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1)+ ')' +'\t&', end= '')
             else:
-                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1) + ',' + getStrong(result[0][i].numAll - result[2][i].numAll,0,1)+  ')' +'\t\\\\', end= '')
+                print(str(round(result[0][i].numAll,2)) + '(' + getStrong(result[0][i].numAll - result[1][i].numAll,0,1)+')' +'\t\\\\', end= '')
         if(k == 4):
             print('\\hline')
         else:
             print('')
 
     print('')
-    print('fd identification')
+    print('wofb identification')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
         result = []
-        for j in range(0,3):
+        for j in range(0,2):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
@@ -524,9 +169,9 @@ if __name__ == "__main__":
         print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
             if i < 2:
-                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t&', end= '')
+                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1)  +  ')' +'\t&', end= '')
             else:
-                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1) + ',' + getStrongPerCent(result[0][i].f_measure - result[2][i].f_measure,0,1)+  ')' +'\t\\\\', end= '')
+                print(str(round(result[0][i].f_measure,2)) + '(' + getStrongPerCent(result[0][i].f_measure - result[1][i].f_measure,0,1)  +  ')' +'\t\\\\', end= '')
         #print('')
         if(k == 4):
             print('\\hline')
@@ -534,12 +179,12 @@ if __name__ == "__main__":
             print('')
 
     print('')
-    print('fd multi')
+    print('wofb multi')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
         result = []
-        for j in range(0,3):
+        for j in range(0,2):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
@@ -547,21 +192,21 @@ if __name__ == "__main__":
         print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
             if i < 2:
-                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrong(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t&', end= '')
+                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) +  ')' +'\t&', end= '')
             else:
-                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) + ',' + getStrong(result[0][i].multi - result[2][i].multi,0,1)+  ')' +'\t\\\\', end= '')
+                print(str(round(result[0][i].multi,2)) + '(' + getStrong(result[0][i].multi - result[1][i].multi,0,1) +  ')' +'\t\\\\', end= '')
         if(k == 4):
             print('\\hline')
         else:
             print('')
 
     print('')
-    print('fd tested-t-way')
+    print('wofb tested-t-way')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
         result = []
-        for j in range(0,3):
+        for j in range(0,2):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
@@ -569,9 +214,9 @@ if __name__ == "__main__":
         print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
             if i < 2:
-                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t&', end= '')
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) +  ')' +'\t&', end= '')
             else:
-                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) + ',' + getStrongPerCent(((result[0][i].t_cover - result[2][i].t_cover)/max(result[0][i].t_cover , result[2][i].t_cover)),0,1)+  ')' +'\t\\\\', end= '')
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) +  ')' +'\t\\\\', end= '')
        # print('')
         if(k == 4):
             print('\\hline')
@@ -580,12 +225,12 @@ if __name__ == "__main__":
 
 
     print('')
-    print('fd non-maksing tests :  gen - multi')
+    print('wofb non-maksing tests :  gen - multi')
     for k in range(5):
         sub = subject[k]
         ssub = [showresultSub[k], '', '']
         result = []
-        for j in range(0,3):
+        for j in range(0,2):
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result_temp = getOneFile(filename)
@@ -594,9 +239,9 @@ if __name__ == "__main__":
          #  print(ssub[j-1] + '\t&' + showresultApp[j]+'\t&', end = '')
         for i in range(0, 3):
                 if i < 2:
-                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0)+ ',' + getStrong((result[0][i].num_r - result[0][i].multi - (result[2][i].num_r - result[2][i].multi)),0, 0)+  ')' +'\t&',  end= '')
+                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0) +  ')' +'\t&',  end= '')
                 else:
-                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0)+ ',' + getStrong((result[0][i].num_r - result[0][i].multi - (result[2][i].num_r - result[2][i].multi)),0, 0)+  ')' +'\t\\\\', end= '')
+                    print(str(round(result[0][i].num_r - result[0][i].multi,2)) + '(' + getStrong((result[0][i].num_r - result[0][i].multi - (result[1][i].num_r - result[1][i].multi)),0, 0)+  ')' +'\t\\\\', end= '')
     #    print('')   
         if(k == 4):
             print('\\hline')
@@ -605,7 +250,7 @@ if __name__ == "__main__":
 
 
     print('')
-    print('covered num')
+    print('wofb covered num')
     for sub in subject:
         filesNames = ['cover_num\/2-way' + sub + txt,'cover_num\/3-way' + sub + txt,'cover_num\/4-way' + sub + txt]
         files = []
@@ -613,7 +258,7 @@ if __name__ == "__main__":
             f = open(filesNames[k], 'w')
             f.write('')
             files.append(f)
-        for j in [1,2,0]:
+        for j in [0, 1]:
             app = approach[j]
             filename = folder[0] +'\/'+app+sub+txt
             result = getOneFile(filename)
