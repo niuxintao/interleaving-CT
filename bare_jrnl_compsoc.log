@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  27 JAN 2018 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  28 JAN 2018 20:13
 entering extended mode
 **./bare_jrnl_compsoc.tex
 (bare_jrnl_compsoc.tex
@@ -519,11 +519,10 @@ Package pdftex.def Info: ex1-eps-converted-to.pdf  used on input line 1640. on
 input line 1640.
 Package pdftex.def Info: Requested size: 505.89pt x 221.9037pt on input line 16
 40.
- [14]
+ [14] [15 <./ex1-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1742.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1744.
 
- [15 <./ex1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fd-cit.eps>
 (epstopdf)                    date: 2015-05-22 17:14:57
 (epstopdf)                    size: 291970 bytes
@@ -532,16 +531,16 @@ Package epstopdf Info: Source file: <fd-cit.eps>
 (epstopdf)                    size: 20989 bytes
 (epstopdf)             Command: <epstopdf --outfile=fd-cit-eps-converted-to.pdf
  fd-cit.eps>
-(epstopdf)             \includegraphics on input line 1808.
+(epstopdf)             \includegraphics on input line 1823.
 Package epstopdf Info: Output file is already uptodate.
 <fd-cit-eps-converted-to.pdf, id=105, pagebox=cropbox, 341.275pt x 427.5975pt>
 File: fd-cit-eps-converted-to.pdf Graphic file (type pdf)
 <use fd-cit-eps-converted-to.pdf>
-Package pdftex.def Info: fd-cit-eps-converted-to.pdf  used on input line 1808. 
-on input line 1808.
+Package pdftex.def Info: fd-cit-eps-converted-to.pdf  used on input line 1823. 
+on input line 1823.
 Package pdftex.def Info: Requested size: 245.71754pt x 307.87648pt on input lin
-e 1808.
- [16]
+e 1823.
+ [16] [17 <./fd-cit-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ex2.eps>
 (epstopdf)                    date: 2017-06-03 18:08:18
 (epstopdf)                    size: 1465759 bytes
@@ -550,22 +549,16 @@ Package epstopdf Info: Source file: <ex2.eps>
 (epstopdf)                    size: 263648 bytes
 (epstopdf)             Command: <epstopdf --outfile=ex2-eps-converted-to.pdf ex
 2.eps>
-(epstopdf)             \includegraphics on input line 1881.
+(epstopdf)             \includegraphics on input line 1896.
 Package epstopdf Info: Output file is already uptodate.
-<ex2-eps-converted-to.pdf, id=109, pagebox=cropbox, 1453.43pt x 929.4725pt>
+<ex2-eps-converted-to.pdf, id=123, pagebox=cropbox, 1453.43pt x 929.4725pt>
 File: ex2-eps-converted-to.pdf Graphic file (type pdf)
 <use ex2-eps-converted-to.pdf>
-Package pdftex.def Info: ex2-eps-converted-to.pdf  used on input line 1881. on 
-input line 1881.
+Package pdftex.def Info: ex2-eps-converted-to.pdf  used on input line 1896. on 
+input line 1896.
 Package pdftex.def Info: Requested size: 505.89pt x 323.51906pt on input line 1
-881.
- [17 <./fd-cit-eps-converted-to.pdf>]
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
- [18 <./ex2-eps-converted-to.pdf>] [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
+896.
+ [18] [19 <./ex2-eps-converted-to.pdf>] [20]
 Package epstopdf Info: Source file: <sens_mfs_f_measure.eps>
 (epstopdf)                    date: 2017-06-03 18:12:57
 (epstopdf)                    size: 69964 bytes
@@ -574,16 +567,16 @@ Package epstopdf Info: Source file: <sens_mfs_f_measure.eps>
 (epstopdf)                    size: 38552 bytes
 (epstopdf)             Command: <epstopdf --outfile=sens_mfs_f_measure-eps-conv
 erted-to.pdf sens_mfs_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2162.
+(epstopdf)             \includegraphics on input line 2177.
 Package epstopdf Info: Output file is already uptodate.
 <sens_mfs_f_measure-eps-converted-to.pdf, id=141, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sens_mfs_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_mfs_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sens_mfs_f_measure-eps-converted-to.pdf  used on input
- line 2162. on input line 2162.
+ line 2177. on input line 2177.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2162.
+e 2177.
 Package epstopdf Info: Source file: <sens_mfs_tests.eps>
 (epstopdf)                    date: 2017-06-03 18:17:15
 (epstopdf)                    size: 69697 bytes
@@ -592,16 +585,17 @@ Package epstopdf Info: Source file: <sens_mfs_tests.eps>
 (epstopdf)                    size: 38083 bytes
 (epstopdf)             Command: <epstopdf --outfile=sens_mfs_tests-eps-converte
 d-to.pdf sens_mfs_tests.eps>
-(epstopdf)             \includegraphics on input line 2176.
+(epstopdf)             \includegraphics on input line 2191.
 Package epstopdf Info: Output file is already uptodate.
 <sens_mfs_tests-eps-converted-to.pdf, id=142, pagebox=cropbox, 589.20125pt x 30
 0.12125pt>
 File: sens_mfs_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_mfs_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sens_mfs_tests-eps-converted-to.pdf  used on input lin
-e 2176. on input line 2176.
+e 2191. on input line 2191.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2176.
+e 2191.
+ [21 <./sens_mfs_f_measure-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <sens_options_f_measure.eps>
 (epstopdf)                    date: 2017-06-03 18:16:11
 (epstopdf)                    size: 65942 bytes
@@ -611,16 +605,16 @@ f>
 (epstopdf)                    size: 37631 bytes
 (epstopdf)             Command: <epstopdf --outfile=sens_options_f_measure-eps-
 converted-to.pdf sens_options_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2210.
+(epstopdf)             \includegraphics on input line 2225.
 Package epstopdf Info: Output file is already uptodate.
-<sens_options_f_measure-eps-converted-to.pdf, id=143, pagebox=cropbox, 589.2012
+<sens_options_f_measure-eps-converted-to.pdf, id=198, pagebox=cropbox, 589.2012
 5pt x 300.12125pt>
 File: sens_options_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_options_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sens_options_f_measure-eps-converted-to.pdf  used on i
-nput line 2210. on input line 2210.
+nput line 2225. on input line 2225.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2210.
+e 2225.
 Package epstopdf Info: Source file: <sens_options_tests.eps>
 (epstopdf)                    date: 2017-06-03 18:14:49
 (epstopdf)                    size: 66297 bytes
@@ -629,19 +623,19 @@ Package epstopdf Info: Source file: <sens_options_tests.eps>
 (epstopdf)                    size: 36224 bytes
 (epstopdf)             Command: <epstopdf --outfile=sens_options_tests-eps-conv
 erted-to.pdf sens_options_tests.eps>
-(epstopdf)             \includegraphics on input line 2217.
+(epstopdf)             \includegraphics on input line 2232.
 Package epstopdf Info: Output file is already uptodate.
-<sens_options_tests-eps-converted-to.pdf, id=144, pagebox=cropbox, 589.20125pt 
+<sens_options_tests-eps-converted-to.pdf, id=199, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sens_options_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_options_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sens_options_tests-eps-converted-to.pdf  used on input
- line 2217. on input line 2217.
+ line 2232. on input line 2232.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2217.
+e 2232.
 
-[21 <./sens_mfs_f_measure-eps-converted-to.pdf> <./sens_mfs_tests-eps-converted
--to.pdf>]
+[22 <./sens_mfs_tests-eps-converted-to.pdf> <./sens_options_f_measure-eps-conve
+rted-to.pdf> <./sens_options_tests-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <sen_und_f_measure.eps>
 (epstopdf)                    date: 2017-06-05 11:04:08
 (epstopdf)                    size: 68436 bytes
@@ -650,16 +644,16 @@ Package epstopdf Info: Source file: <sen_und_f_measure.eps>
 (epstopdf)                    size: 38794 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_f_measure-eps-conve
 rted-to.pdf sen_und_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2250.
+(epstopdf)             \includegraphics on input line 2265.
 Package epstopdf Info: Output file is already uptodate.
-<sen_und_f_measure-eps-converted-to.pdf, id=247, pagebox=cropbox, 589.20125pt x
+<sen_und_f_measure-eps-converted-to.pdf, id=348, pagebox=cropbox, 589.20125pt x
  300.12125pt>
 File: sen_und_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_und_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sen_und_f_measure-eps-converted-to.pdf  used on input 
-line 2250. on input line 2250.
+line 2265. on input line 2265.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2250.
+e 2265.
 Package epstopdf Info: Source file: <sen_und_tests.eps>
 (epstopdf)                    date: 2017-06-05 11:03:14
 (epstopdf)                    size: 69255 bytes
@@ -668,18 +662,16 @@ Package epstopdf Info: Source file: <sen_und_tests.eps>
 (epstopdf)                    size: 38049 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_tests-eps-converted
 -to.pdf sen_und_tests.eps>
-(epstopdf)             \includegraphics on input line 2257.
+(epstopdf)             \includegraphics on input line 2272.
 Package epstopdf Info: Output file is already uptodate.
-<sen_und_tests-eps-converted-to.pdf, id=248, pagebox=cropbox, 589.20125pt x 300
+<sen_und_tests-eps-converted-to.pdf, id=349, pagebox=cropbox, 589.20125pt x 300
 .12125pt>
 File: sen_und_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_und_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sen_und_tests-eps-converted-to.pdf  used on input line
- 2257. on input line 2257.
+ 2272. on input line 2272.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2257.
- [22 <./sens_options_f_measure-eps-converted-to.pdf> <./sens_options_tests-eps-
-converted-to.pdf>]
+e 2272.
 Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
 (epstopdf)                    date: 2017-06-05 11:22:35
 (epstopdf)                    size: 64460 bytes
@@ -688,19 +680,16 @@ Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
 (epstopdf)                    size: 37015 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_f_measure-eps-conv
 erted-to.pdf sen_safe_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2293.
+(epstopdf)             \includegraphics on input line 2308.
 Package epstopdf Info: Output file is already uptodate.
 <sen_safe_f_measure-eps-converted-to.pdf, id=350, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sen_safe_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_f_measure-eps-converted-to.pdf  used on input
- line 2293. on input line 2293.
+ line 2308. on input line 2308.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2293.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+e 2308.
 Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    date: 2017-06-05 11:21:46
 (epstopdf)                    size: 61211 bytes
@@ -709,19 +698,20 @@ Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    size: 35421 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_tests-eps-converte
 d-to.pdf sen_safe_tests.eps>
-(epstopdf)             \includegraphics on input line 2300.
+(epstopdf)             \includegraphics on input line 2315.
 Package epstopdf Info: Output file is already uptodate.
 <sen_safe_tests-eps-converted-to.pdf, id=351, pagebox=cropbox, 624.3325pt x 300
 .12125pt>
 File: sen_safe_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_tests-eps-converted-to.pdf  used on input lin
-e 2300. on input line 2300.
+e 2315. on input line 2315.
 Package pdftex.def Info: Requested size: 252.94499pt x 121.58965pt on input lin
-e 2300.
+e 2315.
  [23 <./sen_und_f_measure-eps-converted-to.pdf> <./sen_und_tests-eps-converted-
-to.pdf> <./sen_safe_f_measure-eps-converted-to.pdf> <./sen_safe_tests-eps-conve
-rted-to.pdf>] [24] [25] (bare_jrnl_compsoc.bbl [26]
+to.pdf>] [24 <./sen_safe_f_measure-eps-converted-to.pdf> <./sen_safe_tests-eps-
+converted-to.pdf>]
+[25] (bare_jrnl_compsoc.bbl [26] [27]
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
@@ -734,66 +724,66 @@ Missing character: There is no ½ in font pplri7t!
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
-) [27]
+)
 <niu.png, id=568, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2554. on input line 2554.
+Package pdftex.def Info: niu.png  used on input line 2569. on input line 2569.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2554.
+2569.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2554. on input line 2554.
+Package pdftex.def Info: niu.png  used on input line 2569. on input line 2569.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2554.
+2569.
 <nie.png, id=572, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2561. on input line 2561.
+Package pdftex.def Info: nie.png  used on input line 2576. on input line 2576.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-561.
+576.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2561. on input line 2561.
+Package pdftex.def Info: nie.png  used on input line 2576. on input line 2576.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-561.
+576.
 <hare.png, id=575, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2565. on input line 2565.
+Package pdftex.def Info: hare.png  used on input line 2580. on input line 2580.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2565.
+2580.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2565. on input line 2565.
+Package pdftex.def Info: hare.png  used on input line 2580. on input line 2580.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2565.
+2580.
 <lei.jpg, id=578, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2569. on input line 2569.
+Package pdftex.def Info: lei.jpg  used on input line 2584. on input line 2584.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2569.
+2584.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2569. on input line 2569.
+Package pdftex.def Info: lei.jpg  used on input line 2584. on input line 2584.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2569.
+2584.
 <xy.png, id=581, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2573. on input line 2573.
+Package pdftex.def Info: xy.png  used on input line 2588. on input line 2588.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2573.
+ 2588.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2573. on input line 2573.
+Package pdftex.def Info: xy.png  used on input line 2588. on input line 2588.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2573.
+ 2588.
 
-Underfull \hbox (badness 1622) in paragraph at lines 2573--2575
+Underfull \hbox (badness 1622) in paragraph at lines 2588--2590
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -801,36 +791,39 @@ g
 <xujiaxi.jpg, id=584, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2577. on input line 25
-77.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2592. on input line 25
+92.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2577.
+ 2592.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2577. on input line 25
-77.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2592. on input line 25
+92.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2577.
+ 2592.
 
-Underfull \hbox (badness 1418) in paragraph at lines 2577--2579
+Underfull \hbox (badness 1418) in paragraph at lines 2592--2594
 []\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
  in
  []
 
-<wangyan.png, id=587, 93.951pt x 136.5903pt>
-File: wangyan.png Graphic file (type png)
-<use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2581. on input line 25
-81.
-Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-581.
-File: wangyan.png Graphic file (type png)
-<use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2581. on input line 25
-81.
-Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-581.
 [28 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg> <./xy.png> <./xujiaxi.jpg>
+]
+<wangyan.png, id=600, 93.951pt x 136.5903pt>
+File: wangyan.png Graphic file (type png)
+<use wangyan.png>
+Package pdftex.def Info: wangyan.png  used on input line 2596. on input line 25
+96.
+Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
+596.
+File: wangyan.png Graphic file (type png)
+<use wangyan.png>
+Package pdftex.def Info: wangyan.png  used on input line 2596. on input line 25
+96.
+Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
+596.
+ [29
+
  <./wangyan.png>] (bare_jrnl_compsoc.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -839,7 +832,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  5016 strings out of 493312
  73979 string characters out of 3143321
- 171671 words of memory out of 3000000
+ 171513 words of memory out of 3000000
  8430 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -860,9 +853,9 @@ nts/type1/urw/palatino/uplb8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/u
 plbi8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MikT
 ex2.9/fonts/type1/urw/palatino/uplri8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/z
 apfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc.pdf (28 pages, 7197188 bytes).
+Output written on bare_jrnl_compsoc.pdf (29 pages, 7200261 bytes).
 PDF statistics:
- 668 PDF objects out of 1000 (max. 8388607)
+ 671 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

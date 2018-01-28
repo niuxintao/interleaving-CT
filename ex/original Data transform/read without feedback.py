@@ -214,9 +214,9 @@ if __name__ == "__main__":
         print(showresultSub[k] + '\t&', end = '')
         for i in range(0, 3):
             if i < 2:
-                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) +  ')' +'\t&', end= '')
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrong((result[0][i].t_cover - result[1][i].t_cover),0,1) +  ')' +'\t&', end= '')
             else:
-                print(str(round(result[0][i].t_cover,2)) + '(' + getStrongPerCent(((result[0][i].t_cover - result[1][i].t_cover)/max(result[0][i].t_cover , result[1][i].t_cover)),0,1) +  ')' +'\t\\\\', end= '')
+                print(str(round(result[0][i].t_cover,2)) + '(' + getStrong((result[0][i].t_cover - result[1][i].t_cover),0,1) +  ')' +'\t\\\\', end= '')
        # print('')
         if(k == 4):
             print('\\hline')
