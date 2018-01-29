@@ -1,0 +1,55 @@
+2-way for Syn2
+###############################################
+###############################################
+average sct num :82.6
+
+average sct num_r :50.8
+
+average sct num_i :31.8
+
+average sct recall :1.0
+
+average sct precise :1.0
+
+average sct f-measure :1.0
+
+average sct multi :5.5
+
+average sct time :78.2
+
+average sct time_r :78.2
+
+average sct time_i :0.0
+
+average sct t_cover :1366.5
+
+average sct all_cover :1375.0
+
+average sct CoverNUM
+(1 : 42.9)  (2 : 36.8)  (3 : 22.1)  (4 : 12.4)  (5 : 4.3)  (6 : 5.1)  (7 : 4.3)  (8 : 4.5)  (9 : 4.4)  (10 : 3.3)  (11 : 2.4)  (12 : 2.2)  (13 : 1.9)  (14 : 1.4)  (15 : 1.5)  (16 : 1.1)  (17 : 1.4)  (18 : 1.0)  (19 : 1.1)  (20 : 0.6)  (21 : 0.9)  (22 : 0.8)  (23 : 0.5)  (24 : 0.4)  (25 : 0.5)  (26 : 0.2)  (27 : 0.6)  (28 : 0.2)  (29 : 0.2)  (30 : 0.2)  (31 : 0.1)  (32 : 0.2)  (33 : 0.1)  
+average sct CoverNUM
+([ 0 , - , 0 , - , - , - , - , - , - , - , - ] : 1.0)  ([ 0 , 0 , - , - , - , - , - , - , - , - , - ] : 1.0)  
+average sct multi_recall :0.03916666666666666
+
+average sct multi_precise :0.4
+
+average sct multi_f_measure :0.07117327117327117
+
+average sct multi_found :0.4
+
+average sct multi_found_percent :0.03916666666666666
+
+average sct multi_helped_later :8.9
+
+average sct multi_helped_later_pecent :0.8
+
+average sct negative_checked :0.0
+
+average sct negative_imporved :0.0
+
+average sct postive_checked :0.0
+
+average sct postive_imporved :0.0
+
+average sct feedback_times :0.0
+
