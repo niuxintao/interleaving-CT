@@ -2202,9 +2202,21 @@ Another observation about the cost is that \emph{ict} generated the smallest siz
 
 
 {\color{blue}
-It is also very interesting to observe the performance for the approaches on the test cases that contained multiple MFS. We list them in Table
-With respect to Table , we find that
+Considering that approaches \emph{ict} and \emph{sct} need to identify the MFS in each of the failing test cases which may contain single MFS or multiple MFS, it is very interesting to observe the performance for these two approaches on the test cases that containing multiple MFS only. Hence, we filtered the results obtained from those failing test cases that only contain single MFS, and focused on those test cases that contain multiple MFS. The MFS identification results (multiple MFS) are listed in Figure \ref{sen_mfs_multi_tests_result}. Additionally, we attached the decrease of f-measure of these two approaches when compared with the results on the test cases that are  not distinguished by containing single MFS and multiple MFS in Figure \ref{decrease_sen_mfs_multi_tests_result}. Note that there is no data at 1 on the x axis, because there is no test case containing multiple MFS in this condition (the SUT only contains one MFS).
 
+\begin{figure}[htbp]
+ \includegraphics[width=3.5in]{fmeasuremulti.eps}
+\caption{F-measure (multiple MFS in one test case) for various number of MFS}
+\label{sen_mfs_multi_tests_result}
+\end{figure}
+
+\begin{figure}[htbp]
+ \includegraphics[width=3.5in]{decreasingoffmeasure.eps}
+\caption{The decrease of F-measure (multiple MFS in one test case) for various number of MFS}
+\label{decrease_sen_mfs_multi_tests_result}
+\end{figure}
+
+We can first observe that approach \emph{ict} outperformed \emph{sct} on MFS identification on test cases that containing multiple MFS. In fact, for all the cases listed in Figure \ref{sen_mfs_multi_tests_result}, \emph{ict} obtained higher scores of f-measure than \emph{sct} (note that for all the cases, the f-measure of \emph{sct} is under 0.1). The gaps between them are ranged from 0.05 to 0.69, which is not trivial. Second, the condition that multiple MFS appear in one test case has large negative effects on \emph{sct}, while only has a relatively slight influence on \emph{ict}. Specifically, the decrease of f-measure of \emph{sct} (when compared with the f-measure obtained by \emph{sct} on test cases that are not distinguished by single MFS and multiple MFS) is ranged from 0.01 to 0.73, while the decrease of f-measure of \emph{ict} is no more than 0.32. In fact, there are three cases (x-axis of 6, 80, and 90) on which \emph{ict} even performed better than before.
 }
 
 % which is much smaller cost than that of \emph{sct}. This result is consistent with what we had already obtained in Section \ref{sec:emprical:CompareFDA}.
