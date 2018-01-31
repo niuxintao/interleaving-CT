@@ -1257,7 +1257,7 @@ As discussed in Section \ref{sec:moti}, SCT suffers from masking effects when th
 \subsection{Demonstration on an example}\label{sec:app:example}
 
 Applying the new framework to the scenario of Section \ref{sec:moti},  we can get the result listed in Table \ref{new-gi}.
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Interleaving CT case study}
 \label{new-gi}
 \centering
@@ -2202,21 +2202,21 @@ Another observation about the cost is that \emph{ict} generated the smallest siz
 
 
 {\color{blue}
-It is also very interesting to observe the performance for the approaches on the test cases that contained multiple MFS. We list them in Table
-With respect to Table , we find that in Figure \ref{sen_mfs_multi_tests_result}.
+Considering that approaches \emph{ict} and \emph{sct} need to identify the MFS in each of the failing test cases which may contain single MFS or multiple MFS, it is very interesting to observe the performance for these two approaches on the test cases that containing multiple MFS only. Hence, we filtered the results obtained from those failing test cases that only contain single MFS, and focused on those test cases that contain multiple MFS. The MFS identification results (multiple MFS) are listed in Figure \ref{sen_mfs_multi_tests_result}. Additionally, we attached the decrease of f-measure of these two approaches when compared with the results on the test cases that are  not distinguished by containing single MFS and multiple MFS in Figure \ref{decrease_sen_mfs_multi_tests_result}. Note that there is no data at 1 on the x axis, because there is no test case containing multiple MFS in this condition (the SUT only contains one MFS).
+
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{fmeasuremulti.eps}
-\caption{F-measure (multi MFS in one test case) for various number of MFS}
-\label{sen_mfs_multi_tests_result}
-\end{figure}
-Additionally, we attached the gaps between the f-measure and the original f-measure in Figure 
-\begin{figure}[htbp]
- \includegraphics[width=3.5in]{fmeasuremulti.eps}
-\caption{F-measure (multi MFS in one test case) for various number of MFS}
+\caption{F-measure (multiple MFS in one test case) for various number of MFS}
 \label{sen_mfs_multi_tests_result}
 \end{figure}
 
+\begin{figure}[htbp]
+ \includegraphics[width=3.5in]{decreasingoffmeasure.eps}
+\caption{The decrease of F-measure (multiple MFS in one test case) for various number of MFS}
+\label{decrease_sen_mfs_multi_tests_result}
+\end{figure}
 
+We can first observe that approach \emph{ict} outperformed \emph{sct} on MFS identification on test cases that containing multiple MFS. In fact, for all the cases listed in Figure \ref{sen_mfs_multi_tests_result}, \emph{ict} obtained higher scores of f-measure than \emph{sct} (note that for all the cases, the f-measure of \emph{sct} is under 0.1). The gaps between them are ranged from 0.05 to 0.69, which is not trivial. Second, the condition that multiple MFS appear in one test case has large negative effects on \emph{sct}, while only has a relatively slight influence on \emph{ict}. Specifically, the decrease of f-measure of \emph{sct} (when compared with the f-measure obtained by \emph{sct} on test cases that are not distinguished by single MFS and multiple MFS) is ranged from 0.01 to 0.73, while the decrease of f-measure of \emph{ict} is no more than 0.32. In fact, there are three cases (x-axis of 6, 80, and 90) on which \emph{ict} even performed better than before.
 }
 
 % which is much smaller cost than that of \emph{sct}. This result is consistent with what we had already obtained in Section \ref{sec:emprical:CompareFDA}.
@@ -2264,7 +2264,7 @@ The last study is designed to evaluate the performances of the three approaches 
 \subsubsection{Study setup}
 The same as previous study, in order to make the characteristics of the SUT under control, we decided to use synthetic subjects instead of real programs in this case study. Particularly, synthetic subjects can be injected with various types of faults, e.g., the nondeterministic failures with various probabilities that can be triggered during testing, such that it helps us to evaluate the performance of these approaches for various extent to which these two assumptions do not hold. As a result, we can obtain a more general conclusion instead of those results based on some specific programs.
 
-Specifically, for the first assumption, we decided to inject two MFS, of which one is deterministic (the test case which contains it always fails after execution), and the other one is nondeterministic (the test case which contains it may fail or may not after execution). Then we considered the following possible probabilities that the nondeterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98, respectively. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject, and recorded their the results (MFS identification quality and cost).
+Specifically, for the first assumption, we decided to inject {\color{blue} the MFS that is nondeterministic (the test case which contains it may fail or may not after execution).} Then we considered the following possible probabilities that the nondeterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98, respectively. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject, and recorded their the results (MFS identification quality and cost).
 
 The second study is to evaluate the performance of approaches when the safe value assumption does not hold. In fact, in our previous studies, the safe value assumption was also not always hold. For example, in the first study, we did not give any safe value to our approach \emph{ict}, instead, we just generated additional test cases containing the schemas under test. As a result, we did not always reach the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is none safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with the following number of options: 8,  10, 16, 20, 30, 40, 50, 60, 70, 80, and 90. Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
 %Details of each subject can be seen
@@ -2286,15 +2286,26 @@ The results of evaluating the approaches on nondeterministic failures are shown 
 \label{sen_und_tests_result}
 \end{figure}
 
-With regard to MFS identification, there are two observations. First, if the probability was too small (below 0.15) or too high (above 0.9), all the three approaches performed relatively well. This is reasonable, because if the probability of triggering MFS was too small, approaches could hardly detect the failure. As a result, the MFS was similar to a non-failure inducing schema, and hence it had little influence on the MFS identification. On the other hand, if the probability was too high, which indicated that approaches could easily detect it. Under this condition, the failure was similar to a deterministic failure, which also had little influence on the MFS identification. The worst condition was in between (the probability was around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification.
+With regard to MFS identification, there are two observations. {\color{blue}First, if the probability was below 0.5, all the three approaches did  not identify any MFS at all (with f-measure of 0). We believe there are two possible reasons for the low f-measure of all the three approaches. The first one is that if the probability of triggering MFS was too small (below 0.2), approaches could hardly detect the failure, and hence could not identify the MFS. Another one is that if the probability of triggering MFS is around 0.5, then the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification. }
+%As a result, the MFS was similar to a non-failure inducing schema, and hence it had little influence on the MFS identification. On the other hand, if the probability was too high, which indicated that approaches could easily detect it. Under this condition, the failure was similar to a deterministic failure, which also had little influence on the MFS identification. The worst condition was in between (the probability was around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification.
 
 
-The second observation is that \emph{ict} still performed best among the three approaches (there are 10 among 13 cases that \emph{ict} performed better than \emph{sct}, and both \emph{ict} and \emph{sct} obtained higher f-measures than \emph{fda-cit} on all the conditions). This result indicates that \emph{ict} can handle the non-deterministic failures properly.
+The second observation is that \emph{ict} performed better than the other two approaches when the probability of triggering MFS was relatively higher. In fact, when the the probability of triggering MFS was larger than 0.5,  there are 4 out of 5 cases (the probability of0.7, 0.8, 0.9, and 0.98) at which \emph{ict} performed better than \emph{sct} and \emph{fda-cit}.
+
+{\color{blue}This result indicates that \emph{ict} can handle the non-deterministic failures properly.}
 %Note that the low f-measures of \emph{fda-cit} do not indicate that \emph{fda-cit} cannot deal with non-deterministic failures, instead, it is caused of the proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
 
-With regard to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needed the smallest amount of test cases, then followed the \emph{ict}, and the last was \emph{sct}.
+With regard to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needed the smallest amount of test cases, then followed the \emph{ict} and \emph{sct}.
 
-Above all, we can learn that the non-deterministic failures do affect the MFS quality of the three approaches, but \emph{ict} can handle it well, and perform the best among three approaches.
+Above all, we can learn that the non-deterministic failures do affect the MFS quality of the three approaches,  but  {\color{blue}\emph{ict} can handle it well, and perform the best among three approaches.}
+
+{\color{blue}Considering that the underterministic failures can such huge negative effects, we conider to redundance to elimiate the bad effect. Specifically, we will repeat run one test case to check whether it fails or not instead of just one time. Figure \ref{sen_und_f_measure_result_reduncy} shows the results that reduncey of 5 (5 times). From this figure, we can easily learn that for all these three approaches, there was a significant improvement on the qualtiy of MFS identification. It indicates that the reduncey is one potential approach to handle the undetereministic problem.
+\begin{figure}[htbp]
+ \includegraphics[width=3.5in]{sen_und_f_measure.eps}
+\caption{F-measure for various probability of un-determining failure}
+\label{sen_und_f_measure_result_reduncy}
+\end{figure}
+}
 
 %\begin{table*}[ht]
 %\caption{Number of test cases contain multiple MFS for \emph{fda-cit}}

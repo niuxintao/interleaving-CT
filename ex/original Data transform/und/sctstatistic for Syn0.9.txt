@@ -1,27 +1,27 @@
 2-way for Syn0.9
 ###############################################
 ###############################################
-average sct num :70.1
+average sct num :62.0
 
-average sct num_r :32.0
+average sct num_r :33.3
 
-average sct num_i :38.1
+average sct num_i :28.7
 
-average sct recall :0.85
+average sct recall :0.45
 
-average sct precise :0.6733333333333333
+average sct precise :0.5499999999999999
 
-average sct f-measure :0.7371428571428571
+average sct f-measure :0.4699999999999999
 
-average sct multi :0.9
+average sct multi :0.5
 
-average sct time :28.6
+average sct time :31.3
 
-average sct time_r :28.6
+average sct time_r :29.8
 
 average sct time_i :0.0
 
-average sct t_cover :710.9
+average sct t_cover :714.3
 
 average sct all_cover :720.0
 
@@ -30,6 +30,6 @@ average sct w check :0.0
 average sct w iden :0.0
 
 average sct CoverNUM
-(1 : 13.6)  (2 : 14.5)  (3 : 13.3)  (4 : 7.1)  (5 : 7.3)  (6 : 5.2)  (7 : 5.1)  (8 : 3.7)  (9 : 3.1)  (10 : 2.8)  (11 : 2.1)  (12 : 2.3)  (13 : 1.5)  (14 : 1.2)  (15 : 0.9)  (16 : 1.0)  (17 : 1.2)  (18 : 1.0)  (19 : 0.7)  (20 : 0.3)  (21 : 0.4)  (22 : 0.2)  (23 : 0.1)  (25 : 0.1)  
+(1 : 16.2)  (2 : 17.7)  (3 : 12.9)  (4 : 9.3)  (5 : 5.1)  (6 : 5.5)  (7 : 4.2)  (8 : 2.6)  (9 : 2.6)  (10 : 2.4)  (11 : 1.8)  (12 : 1.4)  (13 : 1.1)  (14 : 0.7)  (15 : 0.8)  (16 : 0.6)  (17 : 0.4)  (18 : 0.3)  (19 : 0.5)  
 average sct CoverNUM
-([ - , 1 , - , - , - , - , - , - , - , - ] : 1.0)  ([ 0 , - , - , 0 , - , - , - , - , - , - ] : 0.7)  
+([ - , 1 , - , - , - , - , - , - , - , - ] : 0.9)  

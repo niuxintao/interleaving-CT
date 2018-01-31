@@ -1,0 +1,39 @@
+2-way for Syn0.7
+###############################################
+###############################################
+average ICT_FB_MUOFOT num :43.9
+
+average ICT_FB_MUOFOT num_r :30.9
+
+average ICT_FB_MUOFOT num_i :13.0
+
+average ICT_FB_MUOFOT recall :1.0
+
+average ICT_FB_MUOFOT precise :1.0
+
+average ICT_FB_MUOFOT f-measure :1.0
+
+average ICT_FB_MUOFOT multi :0.0
+
+average ICT_FB_MUOFOT time :496.2
+
+average ICT_FB_MUOFOT time_r :183.3
+
+average ICT_FB_MUOFOT time_i :208.3
+
+average ICT_FB_MUOFOT t_cover :720.0
+
+average ICT_FB_MUOFOT all_cover :720.0
+
+average ICT_FB_MUOFOT w check :0.0
+
+average ICT_FB_MUOFOT w iden :0.0
+
+average ICT_FB_MUOFOT CoverNUM
+(1 : 32.0)  (2 : 24.2)  (3 : 11.4)  (4 : 5.0)  (5 : 2.2)  (6 : 2.0)  (7 : 1.3)  (8 : 1.0)  (9 : 0.8)  (10 : 0.5)  (11 : 0.1)  
+average ICT_FB_MUOFOT CoverNUM
+([ - , 1 , - , - , - , - , - , - , - , - ] : 1.0)  
+average ICT_FB_MUOFOT w check :0.0
+
+average ICT_FB_MUOFOT w iden :0.0
+
