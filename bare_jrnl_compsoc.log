@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  31 JAN 2018 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  1 FEB 2018 15:22
 entering extended mode
 **./bare_jrnl_compsoc.tex
 (bare_jrnl_compsoc.tex
@@ -674,17 +674,12 @@ Package epstopdf Info: Source file: <sen_und_f_measure.eps>
 (epstopdf)                    date: 2018-01-31 15:36:19
 (epstopdf)                    size: 68384 bytes
 (epstopdf)             Output file: <sen_und_f_measure-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-01-31 09:42:36
-(epstopdf)                    size: 38514 bytes
+(epstopdf)                    date: 2018-01-31 15:36:24
+(epstopdf)                    size: 38334 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_f_measure-eps-conve
 rted-to.pdf sen_und_f_measure.eps>
 (epstopdf)             \includegraphics on input line 2277.
-runsystem(epstopdf --outfile=sen_und_f_measure-eps-converted-to.pdf sen_und_f_m
-easure.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <sen_und_f_measure-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-01-31 15:36:24
-(epstopdf)                    size: 38334 bytes.
+Package epstopdf Info: Output file is already uptodate.
 <sen_und_f_measure-eps-converted-to.pdf, id=347, pagebox=cropbox, 589.20125pt x
  300.12125pt>
 File: sen_und_f_measure-eps-converted-to.pdf Graphic file (type pdf)
@@ -739,16 +734,16 @@ Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
 (epstopdf)                    size: 37015 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_f_measure-eps-conv
 erted-to.pdf sen_safe_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2331.
+(epstopdf)             \includegraphics on input line 2333.
 Package epstopdf Info: Output file is already uptodate.
 <sen_safe_f_measure-eps-converted-to.pdf, id=452, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sen_safe_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_f_measure-eps-converted-to.pdf  used on input
- line 2331. on input line 2331.
+ line 2333. on input line 2333.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2331.
+e 2333.
 Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    date: 2017-06-05 11:21:46
 (epstopdf)                    size: 61211 bytes
@@ -757,19 +752,25 @@ Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    size: 35421 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_tests-eps-converte
 d-to.pdf sen_safe_tests.eps>
-(epstopdf)             \includegraphics on input line 2338.
+(epstopdf)             \includegraphics on input line 2340.
 Package epstopdf Info: Output file is already uptodate.
 <sen_safe_tests-eps-converted-to.pdf, id=453, pagebox=cropbox, 624.3325pt x 300
 .12125pt>
 File: sen_safe_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_tests-eps-converted-to.pdf  used on input lin
-e 2338. on input line 2338.
+e 2340. on input line 2340.
 Package pdftex.def Info: Requested size: 252.94499pt x 121.58965pt on input lin
-e 2338.
+e 2340.
  [24 <./sen_und_tests-eps-converted-to.pdf> <./sen_und_redundancy-eps-converted
 -to.pdf> <./sen_safe_f_measure-eps-converted-to.pdf> <./sen_safe_tests-eps-conv
-erted-to.pdf>] [25] [26] (bare_jrnl_compsoc.bbl [27]
+erted-to.pdf>] [25]
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+ [26]
+(bare_jrnl_compsoc.bbl [27]
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
@@ -782,66 +783,66 @@ Missing character: There is no ½ in font pplri7t!
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
-) [28]
+ [28])
 <niu.png, id=670, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2592. on input line 2592.
+Package pdftex.def Info: niu.png  used on input line 2594. on input line 2594.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2592.
+2594.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2592. on input line 2592.
+Package pdftex.def Info: niu.png  used on input line 2594. on input line 2594.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2592.
+2594.
 <nie.png, id=674, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2599. on input line 2599.
+Package pdftex.def Info: nie.png  used on input line 2601. on input line 2601.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-599.
+601.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2599. on input line 2599.
+Package pdftex.def Info: nie.png  used on input line 2601. on input line 2601.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-599.
+601.
 <hare.png, id=677, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2603. on input line 2603.
+Package pdftex.def Info: hare.png  used on input line 2605. on input line 2605.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2603.
+2605.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2603. on input line 2603.
+Package pdftex.def Info: hare.png  used on input line 2605. on input line 2605.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2603.
+2605.
 <lei.jpg, id=680, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2607. on input line 2607.
+Package pdftex.def Info: lei.jpg  used on input line 2609. on input line 2609.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2607.
+2609.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2607. on input line 2607.
+Package pdftex.def Info: lei.jpg  used on input line 2609. on input line 2609.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2607.
+2609.
 <xy.png, id=683, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2611. on input line 2611.
+Package pdftex.def Info: xy.png  used on input line 2613. on input line 2613.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2611.
+ 2613.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2611. on input line 2611.
+Package pdftex.def Info: xy.png  used on input line 2613. on input line 2613.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2611.
+ 2613.
 
-Underfull \hbox (badness 1622) in paragraph at lines 2611--2613
+Underfull \hbox (badness 1622) in paragraph at lines 2613--2615
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -849,18 +850,18 @@ g
 <xujiaxi.jpg, id=686, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2615. on input line 26
-15.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2617. on input line 26
+17.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2615.
+ 2617.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2615. on input line 26
-15.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2617. on input line 26
+17.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2615.
+ 2617.
 
-Underfull \hbox (badness 1418) in paragraph at lines 2615--2617
+Underfull \hbox (badness 1418) in paragraph at lines 2617--2619
 []\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
  in
  []
@@ -868,16 +869,16 @@ Underfull \hbox (badness 1418) in paragraph at lines 2615--2617
 <wangyan.png, id=689, 93.951pt x 136.5903pt>
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2619. on input line 26
-19.
+Package pdftex.def Info: wangyan.png  used on input line 2621. on input line 26
+21.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-619.
+621.
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2619. on input line 26
-19.
+Package pdftex.def Info: wangyan.png  used on input line 2621. on input line 26
+21.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-619.
+621.
 [29 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg> <./xy.png> <./xujiaxi.jpg>
  <./wangyan.png>] (bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
@@ -887,7 +888,7 @@ Here is how much of TeX's memory you used:
  8445 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,14n,38p,1714b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,38p,1714b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MikTex2.9/fonts/enc/dvips/b
 ase/8r.enc}<C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTE
 X/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/CTEX/MikTex2.9/fonts/t
@@ -904,7 +905,7 @@ elvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
 CTEX/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/ty
 pe1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a
 .pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc.pdf (29 pages, 7314920 bytes).
+Output written on bare_jrnl_compsoc.pdf (29 pages, 7315446 bytes).
 PDF statistics:
  770 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -2286,23 +2286,23 @@ The results of evaluating the approaches on nondeterministic failures are shown 
 \label{sen_und_tests_result}
 \end{figure}
 
-With regard to MFS identification, there are two observations. {\color{blue}First, if the probability was below 0.5, all the three approaches did  not identify any MFS at all (with f-measure of 0). We believe there are two possible reasons for the low f-measure of all the three approaches. The first one is that if the probability of triggering MFS was too small (below 0.2), approaches could hardly detect the failure, and hence could not identify the MFS. Another one is that if the probability of triggering MFS is around 0.5, then the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification. }
+With regard to MFS identification, there are two observations. {\color{blue}First, if the probability was below 0.5, all the three approaches did  not identify any MFS at all (with f-measure of 0). We believe there are two possible reasons for the low f-measure of all the three approaches. The first one is that if the probability of triggering MFS was too small (below 0.2), approaches could hardly detect the failure, and hence could not identify the MFS. Another one is that if the probability of triggering MFS is around 0.5, then the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification.
 %As a result, the MFS was similar to a non-failure inducing schema, and hence it had little influence on the MFS identification. On the other hand, if the probability was too high, which indicated that approaches could easily detect it. Under this condition, the failure was similar to a deterministic failure, which also had little influence on the MFS identification. The worst condition was in between (the probability was around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification.
 
 
-The second observation is that \emph{ict} performed better than the other two approaches when the probability of triggering MFS was relatively higher. In fact, when the the probability of triggering MFS was larger than 0.5,  there are 4 out of 5 cases (the probability of0.7, 0.8, 0.9, and 0.98) at which \emph{ict} performed better than \emph{sct} and \emph{fda-cit}.
+The second observation is that when the probability of triggering MFS was larger than 0.5, the f-measure of all the three approaches increased. In fact, when the the probability of triggering MFS was larger than 0.9,  the f-measure of all the three approaches was more than 0.4. }
+%{\color{blue}This result indicates that \emph{ict} can handle the non-deterministic failures properly.}
 
-{\color{blue}This result indicates that \emph{ict} can handle the non-deterministic failures properly.}
 %Note that the low f-measures of \emph{fda-cit} do not indicate that \emph{fda-cit} cannot deal with non-deterministic failures, instead, it is caused of the proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
 
 With regard to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needed the smallest amount of test cases, then followed the \emph{ict} and \emph{sct}.
 
 Above all, we can learn that the non-deterministic failures do affect the MFS quality of the three approaches,  but  {\color{blue}\emph{ict} can handle it well, and perform the best among three approaches.}
 
-{\color{blue}Considering that the underterministic failures can such huge negative effects, we conider to redundance to elimiate the bad effect. Specifically, we will repeat run one test case to check whether it fails or not instead of just one time. Figure \ref{sen_und_f_measure_result_reduncy} shows the results that reduncey of 5 (5 times). From this figure, we can easily learn that for all these three approaches, there was a significant improvement on the qualtiy of MFS identification. It indicates that the reduncey is one potential approach to handle the undetereministic problem.
+{\color{blue}Since the non-deterministic failures have negative effects on MFS identification, it is appealing to . In this paper, we consider the test case execution redundancy, i.e.,  will repeat run one test case to check whether it fails or not instead of just one time. Figure \ref{sen_und_f_measure_result_reduncy} shows the results that redundancy of 5 (5 times). From this figure, we can easily learn that for all these three approaches, there was a significant improvement on the qualtiy of MFS identification. It indicates that the reduncey is one potential approach to handle the undetereministic problem.
 \begin{figure}[htbp]
- \includegraphics[width=3.5in]{sen_und_f_measure.eps}
-\caption{F-measure for various probability of un-determining failure}
+ \includegraphics[width=3.5in]{sen_und_redundancy.eps}
+\caption{F-measure for various probability of un-determining failure (redundancy of 5)}
 \label{sen_und_f_measure_result_reduncy}
 \end{figure}
 }
