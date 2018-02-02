@@ -1,0 +1,45 @@
+2-way for Syn20-3
+###############################################
+###############################################
+average ICT_FB_MUOFOT num :430.7
+
+average ICT_FB_MUOFOT num_r :29.0
+
+average ICT_FB_MUOFOT num_i :403.1
+
+average ICT_FB_MUOFOT recall :0.4833333333333333
+
+average ICT_FB_MUOFOT precise :0.737902097902098
+
+average ICT_FB_MUOFOT f-measure :0.582647385984427
+
+average ICT_FB_MUOFOT multi :2.2
+
+average ICT_FB_MUOFOT time :60164.1
+
+average ICT_FB_MUOFOT time_r :1808.6
+
+average ICT_FB_MUOFOT time_i :56709.8
+
+average ICT_FB_MUOFOT t_cover :2893.4
+
+average ICT_FB_MUOFOT all_cover :3040.0
+
+average ICT_FB_MUOFOT w check :4.4
+
+average ICT_FB_MUOFOT w iden :3.1
+
+average ICT_FB_MUOFOT CoverNUM
+(1 : 67.2)  (2 : 61.4)  (3 : 49.3)  (4 : 34.7)  (5 : 25.9)  (6 : 18.2)  (7 : 12.1)  (8 : 10.1)  (9 : 7.4)  (10 : 5.5)  (11 : 4.4)  (12 : 3.8)  (13 : 3.5)  (14 : 3.4)  (15 : 2.8)  (16 : 2.6)  (17 : 1.9)  (18 : 2.2)  (19 : 2.3)  (20 : 1.4)  (21 : 1.2)  (22 : 1.0)  (23 : 1.1)  (24 : 1.0)  (25 : 0.7)  (26 : 0.6)  (27 : 0.3)  (28 : 0.3)  (29 : 0.2)  (30 : 0.2)  (31 : 0.3)  (32 : 0.1)  (33 : 0.1)  (34 : 0.3)  (36 : 0.1)  
+average ICT_FB_MUOFOT CoverNUM
+([ - , - , - , - , - , - , - , - , - , 2 , 2 , - , - , - , - , - , - , - , - , - ] : 0.7)  ([ 0 , - , - , - , 1 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , - , - , - , - , - , - , - , - , - ] : 0.4)  ([ - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , 1 , 1 , - , - ] : 1.0)  ([ - , - , 3 , 3 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , 1 , 1 ] : 0.6)  ([ - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , 0 , 0 ] : 0.3)  ([ - , 1 , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.4)  ([ 0 , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ 3 , 3 , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.9)  ([ - , - , - , - , - , - , - , - , - , - , - , 0 , 0 , 0 , 0 , 0 , 0 , 0 , - , - ] : 0.4)  ([ - , - , - , - , - , - , - , 2 , 2 , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  
+average ICT_FB_MUOFOT w check :4.4
+
+average ICT_FB_MUOFOT w iden :3.1
+
+average ICT_FB_MUOFOT encounter unsafe values  :171.8
+
+average ICT_FB_MUOFOT trigger unsafe values  :171.8
+
+average ICT_FB_MUOFOT identification times  :9.4
+

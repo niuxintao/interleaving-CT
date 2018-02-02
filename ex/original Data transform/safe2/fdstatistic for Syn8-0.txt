@@ -1,0 +1,35 @@
+2-way for Syn8-0
+###############################################
+###############################################
+average fd num :82.1
+
+average fd num_r :82.1
+
+average fd num_i :0.0
+
+average fd recall :0.4800000000000001
+
+average fd precise :0.04645788418865931
+
+average fd f-measure :0.08439258641075484
+
+average fd multi :8.3
+
+average fd time :797.5
+
+average fd time_r :730.7
+
+average fd time_i :31.2
+
+average fd t_cover :435.2
+
+average fd all_cover :448.0
+
+average fd w check :0.0
+
+average fd w iden :0.0
+
+average fd CoverNUM
+(1 : 17.9)  (2 : 13.2)  (3 : 8.0)  (4 : 4.7)  (5 : 2.3)  (6 : 2.1)  (7 : 1.6)  (8 : 1.6)  (9 : 0.9)  (10 : 0.7)  (11 : 0.2)  (12 : 0.2)  (13 : 0.1)  
+average fd CoverNUM
+([ 0 , - , - , - , 1 , - , - , - ] : 0.8)  ([ - , 1 , - , 0 , - , - , - , - ] : 0.7)  ([ 0 , 0 , - , - , - , - , - , - ] : 0.7)  ([ 2 , 2 , - , - , - , - , - , - ] : 0.9)  ([ - , - , - , - , - , - , 1 , 1 ] : 0.8)  ([ - , - , - , - , - , - , 3 , 3 ] : 0.9)  

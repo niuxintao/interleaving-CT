@@ -1,0 +1,45 @@
+2-way for Syn12-2
+###############################################
+###############################################
+average ICT_FB_MUOFOT num :222.2
+
+average ICT_FB_MUOFOT num_r :22.7
+
+average ICT_FB_MUOFOT num_i :200.9
+
+average ICT_FB_MUOFOT recall :0.47142857142857136
+
+average ICT_FB_MUOFOT precise :0.7985569985569986
+
+average ICT_FB_MUOFOT f-measure :0.5908014304536043
+
+average ICT_FB_MUOFOT multi :1.9
+
+average ICT_FB_MUOFOT time :10797.9
+
+average ICT_FB_MUOFOT time_r :462.5
+
+average ICT_FB_MUOFOT time_i :9991.2
+
+average ICT_FB_MUOFOT t_cover :994.7
+
+average ICT_FB_MUOFOT all_cover :1056.0
+
+average ICT_FB_MUOFOT w check :5.1
+
+average ICT_FB_MUOFOT w iden :1.7
+
+average ICT_FB_MUOFOT CoverNUM
+(1 : 25.5)  (2 : 12.6)  (3 : 9.1)  (4 : 8.9)  (5 : 9.0)  (6 : 8.1)  (7 : 7.2)  (8 : 6.1)  (9 : 5.3)  (10 : 3.7)  (11 : 4.3)  (12 : 2.6)  (13 : 2.4)  (14 : 2.6)  (15 : 1.2)  (16 : 1.1)  (17 : 1.0)  (18 : 1.0)  (19 : 0.8)  (20 : 0.3)  (21 : 0.9)  (22 : 0.4)  (23 : 0.4)  (24 : 0.7)  (25 : 0.7)  (26 : 0.2)  (27 : 0.3)  (28 : 0.2)  (29 : 0.6)  (30 : 0.1)  (31 : 0.2)  (32 : 0.3)  (33 : 0.3)  (34 : 0.3)  (36 : 0.3)  (37 : 0.2)  (38 : 0.1)  (39 : 0.1)  (42 : 0.1)  
+average ICT_FB_MUOFOT CoverNUM
+([ - , - , - , - , - , - , - , 1 , 1 , 1 , - , - ] : 0.4)  ([ 2 , 2 , 2 , - , - , - , - , - , - , - , - , - ] : 0.2)  ([ 0 , - , - , - , 1 , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , - , 2 , 2 , - , - , - , - , - , - , - ] : 0.9)  ([ - , 1 , - , 0 , - , - , - , - , - , - , - , - ] : 0.3)  ([ 0 , 0 , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , - , - , - , - , - , - , - , - , 1 , 1 ] : 1.0)  ([ 3 , 3 , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , 0 , 0 , 0 , 0 , 0 , 0 , 0 , - , - , - ] : 0.2)  ([ - , - , - , - , - , - , - , - , - , 3 , 3 , 3 ] : 0.2)  ([ - , - , - , - , - , - , - , - , - , 0 , 0 , 0 ] : 0.4)  
+average ICT_FB_MUOFOT w check :5.1
+
+average ICT_FB_MUOFOT w iden :1.7
+
+average ICT_FB_MUOFOT encounter unsafe values  :92.2
+
+average ICT_FB_MUOFOT trigger unsafe values  :92.2
+
+average ICT_FB_MUOFOT identification times  :7.3
+

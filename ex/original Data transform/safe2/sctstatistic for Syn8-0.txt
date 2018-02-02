@@ -1,0 +1,41 @@
+2-way for Syn8-0
+###############################################
+###############################################
+average sct num :96.2
+
+average sct num_r :29.2
+
+average sct num_i :67.2
+
+average sct recall :0.4600000000000001
+
+average sct precise :0.6603174603174603
+
+average sct f-measure :0.5408668730650154
+
+average sct multi :2.0
+
+average sct time :28.1
+
+average sct time_r :26.5
+
+average sct time_i :1.6
+
+average sct t_cover :422.8
+
+average sct all_cover :448.0
+
+average sct w check :0.0
+
+average sct w iden :0.0
+
+average sct CoverNUM
+(1 : 6.4)  (2 : 6.8)  (3 : 6.7)  (4 : 4.6)  (5 : 5.0)  (6 : 4.4)  (7 : 5.2)  (8 : 3.0)  (9 : 2.7)  (10 : 2.9)  (11 : 2.3)  (12 : 2.2)  (13 : 1.9)  (14 : 1.7)  (15 : 1.8)  (16 : 1.2)  (17 : 1.0)  (18 : 0.8)  (19 : 0.8)  (20 : 0.7)  (21 : 0.4)  (22 : 0.3)  (23 : 0.5)  (24 : 0.2)  (25 : 0.1)  (26 : 0.2)  (27 : 0.1)  (28 : 0.1)  (30 : 0.1)  (32 : 0.1)  
+average sct CoverNUM
+([ 0 , - , - , - , 1 , - , - , - ] : 0.8)  ([ - , 1 , - , 0 , - , - , - , - ] : 0.2)  ([ 0 , 0 , - , - , - , - , - , - ] : 1.0)  ([ 2 , 2 , - , - , - , - , - , - ] : 0.9)  ([ - , - , - , - , - , - , 1 , 1 ] : 0.6)  ([ - , - , - , - , - , - , 3 , 3 ] : 0.8)  ([ 1 , 1 , 1 , 1 , 1 , 1 , - , - ] : 0.3)  
+average sct encounter unsafe values  :21.5
+
+average sct trigger unsafe values  :21.5
+
+average sct identification times  :12.2
+

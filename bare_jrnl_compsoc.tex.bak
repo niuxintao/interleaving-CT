@@ -1441,7 +1441,7 @@ To apply CT on the selected software, we need to firstly model their input param
 \hline
 Subjects & Inputs & MFS \\
 \hline
-Tomcat   &  $2^{8} \times 3^{1} \times 4^{1}$       & 1(1) 2(2)  \\
+Tomcat   &  $2^{8} \times 3^{1} \times 4^{1}$       & 1(1)\ 2(2)  \\
 Hsqldb   &   $2^{9} \times 3^{2} \times 4^{1}$      &  3(3) \\
 Gcc      &   $2^{9} \times 6^{1}$      &    3(4)  \\
 Jflex    & $2^{10} \times 3^{2} \times 4^{1} $        &   2(1)   \\
@@ -2020,10 +2020,10 @@ The software subjects with multiple bugs used in this experiment are listed in T
 Software&  Version & Loc & Classes & Bug \# & Input Model & MFS\\ \hline
 
 Hsqldb& 2.0rc8 & 139425 & 495 &  \#981 \& \#1005 & $2^{9}\times 3^{2} \times 4^{1}$ & 3(5)\\
-	  &2.2.5 & 156066 & 508 & \#1173 \&  \#1179 & $2^{8} \times 3^{3}$ & 2(1)1(1)\\
-	    &2.2.9 & 162784 &525 & \#1286 \& \#1280 & $2^{8} \times 3^{3}$ & 3(2) 2(1) 1(1)\\ \hline
+	  &2.2.5 & 156066 & 508 & \#1173 \&  \#1179 & $2^{8} \times 3^{3}$ & 2(1)\ 1(1)\\
+	    &2.2.9 & 162784 &525 & \#1286 \& \#1280 & $2^{8} \times 3^{3}$ & 3(2)\ 2(1)\ 1(1)\\ \hline
 Jflex& 1.4.1 &  10040 &58 & \#87 \& \#80  & $2^{10} \times 3^{2} \times 4^{1}$ & 1(2)\\
-    &  1.4.2 &  10745 &61 &  \#98 \& \#93 & $2^{11} \times 3^{2} \times 4^{1}$ & 2(1) 1(1)\\ \hline
+    &  1.4.2 &  10745 &61 &  \#98 \& \#93 & $2^{11} \times 3^{2} \times 4^{1}$ & 2(1)\ 1(1)\\ \hline
 \end{tabular}
 \end{table*}
 
@@ -2266,7 +2266,30 @@ The same as previous study, in order to make the characteristics of the SUT unde
 
 Specifically, for the first assumption, we decided to inject {\color{blue} the MFS that is nondeterministic (the test case which contains it may fail or may not after execution).} Then we considered the following possible probabilities that the nondeterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98, respectively. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject, and recorded their the results (MFS identification quality and cost).
 
-The second study is to evaluate the performance of approaches when the safe value assumption does not hold. In fact, in our previous studies, the safe value assumption was also not always hold. For example, in the first study, we did not give any safe value to our approach \emph{ict}, instead, we just generated additional test cases containing the schemas under test. As a result, we did not always reach the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is none safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with the following number of options: 8,  10, 16, 20, 30, 40, 50, 60, 70, 80, and 90. Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
+The second study is to evaluate the performance of approaches when the safe value assumption does not hold. In fact, in our previous studies, the safe value assumption was also not always hold. For example, in the first study, we did not give any safe value to our approach \emph{ict}, instead, we just generated additional test cases containing the schemas under test. As a result, we did not always reach the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is none safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with {\color{blue} the input model and the information of MFS are listed in Table \ref{inputs_non_safe}. The same as previous, input model for each version of the software, presented in the abbreviated form $\#values^{\#number\ of\ parameters} \times ...$, e.g., $2^{9} \times 3^{2} \times 4^{1}$ indicates the software has 9 parameters that can take on 2 values, 2 parameters taking on 3 values and only one parameter taking on 4 values. Column ``MFS" shows the degrees of each MFS and the number of MFS (in the parentheses) with that corresponding degree.
+} Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
+
+\begin{table}[ht]
+\caption{Inputs model for experiments of non-safe value}
+\label{inputs_non_safe}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+Subjects & Inputs & MFS \\
+\hline
+Syn1   &  $4^{8}$       & 2(6)\ 6(4)  \\
+Syn2   &   $4^{10} $      &  2(10)\ 6(4) \\
+Syn3     &   $4^{12} $      &    2(6)\ 3(4)\ 7(4)  \\
+Syn4    & $4^{16}$        &  2(2)\ 3(4)\ 5(4)\ 8(4)   \\
+Syn5     &  $4^{20}  $ &2(10)\ 7(4)\ 9(4) \\
+Syn6   &  $4^{25}$       & 2(10)\ 9(4)\ 12(4)  \\
+Syn7   &   $4^{30}$      &  2(6)\ 3(4)\ 10(4)\ 15(4) \\
+Syn8     &   $4^{35} $      & 2(6)\ 6(4)\ 10(4)\ 17(4)  \\
+Syn9    & $4^{40} $        &   2(6)\ 8(4)\ 13(4)\ 17(4)   \\
+Syn10     &  $4^{50} $ &2(6)\ 13(4)\ 15(4)\ 20(4) \\ \hline
+\end{tabular}
+
+\end{table}
 %Details of each subject can be seen
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2290,22 +2313,24 @@ With regard to MFS identification, there are two observations. {\color{blue}Firs
 %As a result, the MFS was similar to a non-failure inducing schema, and hence it had little influence on the MFS identification. On the other hand, if the probability was too high, which indicated that approaches could easily detect it. Under this condition, the failure was similar to a deterministic failure, which also had little influence on the MFS identification. The worst condition was in between (the probability was around 0.3 to 0.8). Under such condition, the failure may appear at one testing, but disappear at the next time. These two statues exchanged frequently, and resulted in a negative influence on the MFS identification.
 
 
-The second observation is that when the probability of triggering MFS was larger than 0.5, the f-measure of all the three approaches increased. In fact, when the the probability of triggering MFS was larger than 0.9,  the f-measure of all the three approaches was more than 0.4. }
+The second observation is that when the probability of triggering MFS was larger than 0.5, the f-measure of all the three approaches increased. In fact, when the the probability of triggering MFS was larger than 0.9,  the f-measure of all the three approaches was more than 0.4. We believe if the probability was relatively high, then all the three approaches could easily detect it. Under this condition, the failure was similar to a deterministic failure, which also had little influence on the MFS identification. }
 %{\color{blue}This result indicates that \emph{ict} can handle the non-deterministic failures properly.}
 
 %Note that the low f-measures of \emph{fda-cit} do not indicate that \emph{fda-cit} cannot deal with non-deterministic failures, instead, it is caused of the proosed meachm to handle the non-determineistic, for example, . There is only one reason, that is the MFS identniciton CTA is not suitable for fault localziotn in combaintoeiatl testing.
 
 With regard to the test cases, our conclusion is similar to previous study, that is, \emph{fda-cit} needed the smallest amount of test cases, then followed the \emph{ict} and \emph{sct}.
 
-Above all, we can learn that the non-deterministic failures do affect the MFS quality of the three approaches,  but  {\color{blue}\emph{ict} can handle it well, and perform the best among three approaches.}
+{\color{blue}Since the non-deterministic failures have negative effects on MFS identification, it is desirable to alleviate the effects. In this paper, we consider the redundancy of test case execution, i.e., we repeatedly run one test case to check whether it fails or not instead of just one time. We conducted an additional experiment to evaluate the performance of this strategy. Specifically, all the experimental set-ups are as the same as the previous experiment on non-deterministic failures, except that we set the redundancy of test execution to be 5 (run 5 times for each test case).
 
-{\color{blue}Since the non-deterministic failures have negative effects on MFS identification, it is appealing to . In this paper, we consider the test case execution redundancy, i.e.,  will repeat run one test case to check whether it fails or not instead of just one time. Figure \ref{sen_und_f_measure_result_reduncy} shows the results that redundancy of 5 (5 times). From this figure, we can easily learn that for all these three approaches, there was a significant improvement on the qualtiy of MFS identification. It indicates that the reduncey is one potential approach to handle the undetereministic problem.
+Figure \ref{sen_und_f_measure_result_reduncy} shows the results. From this figure, we can easily learn that for all these three approaches, there was a significant improvement on the quality of MFS identification. In fact, all these three approaches start to identify at least one MFS among 30 times even the probability of triggering MFS was as low as 0.2. Additionally, when the probability was larger than 0.4, the f-measure of all the three approaches was larger than 0.4. What's more, the f-measure of all the three approaches was close to 1 when  the probability was larger than 0.5.  There results indicated that the redundancy of test case execution is one potential approach to handle the non-deterministic failures problem.
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_und_redundancy.eps}
-\caption{F-measure for various probability of un-determining failure (redundancy of 5)}
+\caption{F-measure for various probability of un-determining failure (test execution redundancy of 5)}
 \label{sen_und_f_measure_result_reduncy}
 \end{figure}
 }
+
+%Above all, we can learn that the non-deterministic failures do affect the MFS quality of the three approaches,  but  {\color{blue}\emph{ict} can handle it well, and perform the best among three approaches.}
 
 %\begin{table*}[ht]
 %\caption{Number of test cases contain multiple MFS for \emph{fda-cit}}

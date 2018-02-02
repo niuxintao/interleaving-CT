@@ -1,0 +1,45 @@
+2-way for Syn16-2
+###############################################
+###############################################
+average ICT_FB_MUOFOT num :217.6
+
+average ICT_FB_MUOFOT num_r :30.9
+
+average ICT_FB_MUOFOT num_i :187.7
+
+average ICT_FB_MUOFOT recall :0.3857142857142857
+
+average ICT_FB_MUOFOT precise :0.9523809523809523
+
+average ICT_FB_MUOFOT f-measure :0.5468504594820385
+
+average ICT_FB_MUOFOT multi :1.3
+
+average ICT_FB_MUOFOT time :19301.3
+
+average ICT_FB_MUOFOT time_r :839.5
+
+average ICT_FB_MUOFOT time_i :17893.5
+
+average ICT_FB_MUOFOT t_cover :1902.0
+
+average ICT_FB_MUOFOT all_cover :1920.0
+
+average ICT_FB_MUOFOT w check :2.2
+
+average ICT_FB_MUOFOT w iden :0.3
+
+average ICT_FB_MUOFOT CoverNUM
+(1 : 47.4)  (2 : 54.5)  (3 : 39.9)  (4 : 20.0)  (5 : 10.9)  (6 : 9.0)  (7 : 6.4)  (8 : 5.9)  (9 : 3.6)  (10 : 1.9)  (11 : 1.7)  (12 : 1.4)  (13 : 2.4)  (14 : 0.9)  (15 : 0.9)  (16 : 2.1)  (17 : 1.4)  (18 : 2.5)  (19 : 1.1)  (20 : 0.9)  (21 : 0.9)  (22 : 0.2)  (23 : 0.2)  (24 : 0.6)  (25 : 0.1)  (26 : 0.1)  
+average ICT_FB_MUOFOT CoverNUM
+([ 3 , 3 , 3 , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.2)  ([ - , - , - , - , - , - , - , - , - , - , - , 0 , 0 , 0 , 0 , 0 ] : 0.5)  ([ 0 , - , - , - , 1 , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , - , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , - , - , - , - , - ] : 0.6)  ([ - , - , - , - , - , - , - , - , - , - , - , - , - , 1 , 1 , 1 ] : 0.8)  ([ - , 1 , - , 0 , - , - , - , - , - , - , - , - , - , - , - , - ] : 0.9)  ([ - , - , - , - , - , - , - , - , - , - , - , 3 , 3 , 3 , 3 , 3 ] : 0.1)  ([ 0 , 0 , 0 , - , - , - , - , - , - , - , - , - , - , - , - , - ] : 1.0)  ([ - , - , - , - , - , 2 , 2 , 2 , - , - , - , - , - , - , - , - ] : 0.3)  
+average ICT_FB_MUOFOT w check :2.2
+
+average ICT_FB_MUOFOT w iden :0.3
+
+average ICT_FB_MUOFOT encounter unsafe values  :73.6
+
+average ICT_FB_MUOFOT trigger unsafe values  :73.6
+
+average ICT_FB_MUOFOT identification times  :5.3
+
