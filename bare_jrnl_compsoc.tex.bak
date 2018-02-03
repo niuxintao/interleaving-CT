@@ -2372,7 +2372,7 @@ At last, with regard to the number of test cases, \emph{fda-cit} still generated
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{enNonSafe.eps}
-\caption{The times of non-safe MFS are triggered}
+\caption{The times of non-safe MFS are triggered in total for each subject}
 \label{sen_safe_NonTrigger}
 \end{figure}
 
@@ -2383,6 +2383,7 @@ At last, with regard to the number of test cases, \emph{fda-cit} still generated
 \label{sen_safe_NonTriggerAvg}
 \end{figure}
 
+Based on these two figures (Figure \ref{sen_safe_NonTrigger} and \ref{sen_safe_NonTriggerAvg}), we can learn that for both of two approaches, the number of times that non-safe MFS are triggered was not trivial. In fact, except for the first subject, the number of  non-safe MFS was triggered in total for each software subject was  beyond 73.6 times, and the number of non-safe MFS was triggered was beyond 4.93 times for each time that MFS identification was proceeded in our testing.
 }
 %\begin{table*}[ht]
 %\caption{Detected and fixed \emph{fda-cit}}
@@ -2397,7 +2398,7 @@ At last, with regard to the number of test cases, \emph{fda-cit} still generated
 
 Above all, the answer to the Q7 is:
 
-\textbf{The non-deterministic failures and non-safe values do negatively affect the results of all the three approaches, but due to the feedback checking process, \emph{ict} can alleviate these impacts, and hence can perform better the other two approaches.}
+\textbf{The non-deterministic failures and non-safe values do negatively affect the results of all the three approaches.  Due to the feedback checking process, \emph{ict} can alleviate impacts of the non-safe values. While for non-deterministic failures, one potential solution is the redundancy of test case execution}
 
 
 
