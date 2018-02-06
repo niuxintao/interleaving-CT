@@ -1305,6 +1305,9 @@ After we determine (-, 0, -, -) to be MFS, the following test cases ($t_{8}$ to 
 
 Above all, when using the interleaving CT approach,  the overall generated test cases are 2 less than that of the traditional sequential CT approach in Table \ref{tradition-gi}, and equal to the augmented sequential CT approach in Table \ref{tradition-gi-aug}. In fact, if we exclude the test cases from the checking process, the interleaving CT approach can reduce even more test cases (6 less than that of the traditional sequential CT approach, and 4 less than the augmented sequential CT approach). However, these additional test cases generated in the checking process will ensure a high quality of MFS identification for interleaving CT approach. In this simple example, both interleaving CT and augmented sequential CT  correctly identified all the MFS (better than that of traditional sequential CT), but given more complex subjects with more MFS, we believe interleaving CT can outperform the augmented sequential CT at MFS identification.
 
+{\color{\blue}Note that in this demo example, we did not show how we handles.  that if Algorithm 2 returns false (i.e., if one passing test case is found containing the previously identified MFS), the original failing test case is retested. Next we use a simple example to show how it works.}
+
+
 %Note that this example only lists the condition of a single MFS, under which some \emph{super-schemas} or \emph{themselves} will not need to be covered.  When there are multiple MFS, additional \emph{implicit forbidden} schemas will be computed and set as covered.
 
 %Besides the cost reducing, our new CT framework actually provide a stronger coverage criteria than traditional covering array. This is because
