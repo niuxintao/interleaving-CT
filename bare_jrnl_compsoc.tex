@@ -2598,7 +2598,143 @@ As a future work, we plan to extend our interleaving CT approach with more test 
 
 
 \appendices
-%\section{Proof of the First Zonklar Equation}
+{\color{blue}
+\section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
+
+\begin{algorithm}
+  \caption{The overall procedure of SCT}
+  \begin{algorithmic}[1]
+     \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+    
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Constraints$  \Comment{The constraints of SUT}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $MFS \leftarrow \emptyset$
+       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+       \ForAll  {$t_{fail} \in T_{fail}$}
+         \State  $mfs \leftarrow OFOT(t_{fail}) $
+         \State $MFS.append(mfs) $
+       \EndFor
+    \State \Return   MFS
+  \end{algorithmic}
+\end{algorithm}
+
+The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
+
+\begin{algorithm}
+  \caption{The overall procedure of augmented SCT}
+  \begin{algorithmic}[1]
+     \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+     
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Constraints$  \Comment{The constraints of SUT}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $MFS \leftarrow \emptyset$
+       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+       \ForAll  {$t_{fail} \in T_{fail}$}
+          \State $t_{mutated} \leftarrow t_{fail}$
+          \ForAll  {$s \in MFS$}
+         \If {$s \in t_{mutated}$}
+          \State $t_{mutated} \leftarrow remove(t_{mutated}, s)$
+         \EndIf
+         \If {$t_{fail} == t_{mutated}$}
+            \State  $mfs \leftarrow OFOT(t_{fail}) $
+            \State $MFS.append(mfs) $
+         \Else
+            \If{$execute(t_{mutated}$) == FAIL}
+                \State  $mfs \leftarrow OFOT(t_{mutated}) $
+                \State $MFS.append(mfs) $
+            \EndIf
+         \EndIf
+          \EndFor
+       \EndFor
+    \State \Return   MFS
+  \end{algorithmic}
+\end{algorithm}
+
+Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case detected, the augmented SCT needs to 
+
+\begin{algorithm}
+  \caption{The overall procedure of ICT}
+  \begin{algorithmic}[1]
+         \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+    
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Constraints$  \Comment{The constraints of SUT}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $\mathcal{T}_{Executed} \leftarrow \emptyset$
+       \While{$Repeat > 0$}
+         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
+         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
+         \If {$execute(t_{new}$) == PASS}
+          \State update($t_{new}, \Omega$)
+          \State \Return   False
+      %   \Else
+         \EndIf
+         \State  $Repeat \leftarrow Repeat -1 $
+         \State $\mathcal{T}_{Executed}.append(t_{new}) $
+       \EndWhile
+    \State \Return   True
+  \end{algorithmic}
+\end{algorithm}
+
+}
 %Appendix one text goes here.
 %
 %% you can choose not to have a title for an appendix
