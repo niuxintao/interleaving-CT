@@ -2690,7 +2690,7 @@ The inputs of Algorithm 3 are information of parameters of the SUT, the strength
   \end{algorithmic}
 \end{algorithm}
 
-Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case that was detected, the augmented SCT needs to
+Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case (line 6), the augmented SCT first needs to  check whether there exists any existing MFS contained in it (line 6 - 7). If so, the augmented SCT needs to remove the existing MFS in it (line 8) by mutating the corresponding parameter values of the test case to any values other than the ones contained in the MFS. Note that if we have removed some MFS in the original failing test case (line 14), we need to execute the newly generated test case $t_{mutated}$ to see if it fails again (line 14). If it fails, which means that $t_{mutated}$ contained some MFS other than the previously identified MFS, the augmented SCT needs to take OFOT to identify the MFS in $t_{mutated}$. On the other hand, if we did not find any previously identified schema (line 10), the augmented SCT just needs to directly take OFOT to identify the MFS in the original failing test case. At last, the same as SCT, the augmented SCT needs to return all the identified MFS (line 21).
 
 \begin{algorithm}
   \caption{The overall procedure of ICT}
@@ -2718,8 +2718,17 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
    %  \ForAll  {$s \in S_{identified}$}
 %       \State $S_{MFS}.append(s)$
     % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+
        \State $\mathcal{T}_{Executed} \leftarrow \emptyset$
-       \While{$Repeat > 0$}
+       \While{$non-covered > 0$}
+         \State $gen\ one\ test$
+         \State $execute $
+         \State $if pass$
+         \State $update coverage$
+         \State $else$
+         \State $identifiy$
+         \State $checking$
+         \State $updating$
          \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
          \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
          \If {$execute(t_{new}$) == PASS}

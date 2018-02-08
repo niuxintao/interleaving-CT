@@ -2705,6 +2705,8 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
     % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
 
      $Constraints$  \Comment{The constraints of SUT}
+     
+     $CheckMAX$ \Comment{The strength of checking mechanism}
 
  %    $\Omega$ \Comment{the schemas that are still uncovered}
 
@@ -2718,28 +2720,54 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
    %  \ForAll  {$s \in S_{identified}$}
 %       \State $S_{MFS}.append(s)$
     % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
-
-   %    \State $\mathcal{T}_{Executed} \leftarrow \emptyset$
-       \While{$non-covered > 0$}
-         \State $gen\ one\ test$
-         \State $execute $
-         \State $if pass$
-         \State $update coverage$
-         \State $else$
-         \State $identifiy$
-         \State $checking$
-         \State $updating$
-         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
-         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
-         \If {$execute(t_{new}$) == PASS}
-          \State update($t_{new}, \Omega$)
-          \State \Return   False
-      %   \Else
-         \EndIf
-         \State  $Repeat \leftarrow Repeat -1 $
-         \State $\mathcal{T}_{Executed}.append(t_{new}) $
+       \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
+       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, constraints)$  \Comment{the uncovered schemas}
+       \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
+       \While{$\Omega$ is not empty}
+         \State $test \leftarrow Greedy\_Gen(\Omega, constraints, S_{{MFS}})$
+           \If{$execute(test$) == PASS}
+                \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
+            \Else  \Comment{Start OFOT to identify the MFS, and checking process}
+                \State $S_{mfs\_candi} \leftarrow \emptyset$
+                \State $T_{history} \leftarrow \emptyset$
+                \While{true}
+                \State $T_{for\_MFS} \leftarrow \emptyset$
+                \ForAll  {$\Delta \in test$}
+                \State $t_{for\_MFS} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Constraints, T_{history}) $
+                \State $T_{for\_MFS}.append(t_{for\_MFS})$
+                \If{$execute(t_{for\_MFS}$) == PASS}
+                   \State  $\Omega \leftarrow Update(\Omega, t_{for\_MFS}, \tau) $
+                \EndIf
+                \EndFor
+                \State $T_{history}.append(T_{for\_MFS})$
+                \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
+             
+                \ForAll  {$i < CheckMax$} \Comment{checking process}
+                    \State $t_{check} \leftarrow GreedyGen(S_{mfs\_candi}, \Omega, S_{MFS}, Constraints, T_{history}$
+                    \If{$execute(t_{check}$) == PASS}
+                        \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
+                        \State break, and reidifty
+                    \EndIf
+                \EndFor
+                
+                \EndWhile
+                \State $S_{current} \leftarrow S_{mfs\_candi}$
+                \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
+                \State $S_{MFS}.append(S_{current})$
+           \EndIf
+%         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
+%         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
+%         \If {$execute(t_{new}$) == PASS}
+%          \State update($t_{new}, \Omega$)
+%          \State \Return   False
+%      %   \Else
+%         \EndIf
+%         \State  $Repeat \leftarrow Repeat -1 $
+%         \State $\mathcal{T}_{Executed}.append(t_{new}) $
        \EndWhile
-    \State \Return   True
+       
+    \State $MFS \leftarrow S_{MFS}$
+    \State \Return   MFS
   \end{algorithmic}
 \end{algorithm}
 
