@@ -2704,7 +2704,9 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
      $\tau$ \Comment{the strength of the covering array}
     % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
 
-     $Constraints$  \Comment{The constraints of SUT}
+     $Cons$  \Comment{The constraints of SUT}
+
+     $CheckMAX$ \Comment{The strength of checking mechanism}
 
  %    $\Omega$ \Comment{the schemas that are still uncovered}
 
@@ -2718,31 +2720,64 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
    %  \ForAll  {$s \in S_{identified}$}
 %       \State $S_{MFS}.append(s)$
     % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
-
-       \State $\mathcal{T}_{Executed} \leftarrow \emptyset$
-       \While{$non-covered > 0$}
-         \State $gen\ one\ test$
-         \State $execute $
-         \State $if pass$
-         \State $update coverage$
-         \State $else$
-         \State $identifiy$
-         \State $checking$
-         \State $updating$
-         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
-         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
-         \If {$execute(t_{new}$) == PASS}
-          \State update($t_{new}, \Omega$)
-          \State \Return   False
-      %   \Else
-         \EndIf
-         \State  $Repeat \leftarrow Repeat -1 $
-         \State $\mathcal{T}_{Executed}.append(t_{new}) $
+       \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
+       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, Cons)$  \Comment{the uncovered schemas}
+       \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
+       \While{$\Omega$ is not empty}
+         \State $test \leftarrow Greedy\_Gen(\Omega, Cons, S_{{MFS}})$
+           \If{$execute(test$) == PASS}
+                \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
+            \Else  \Comment{start OFOT, and checking process}
+                \State $S_{mfs\_candi} \leftarrow \emptyset$
+                \State $T_{history} \leftarrow \emptyset$
+                \While{true}
+                \State $T_{for\_MFS} \leftarrow \emptyset$
+                \ForAll  {$\Delta \in test$}
+                \State $t_{\Delta} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Cons, T_{history}) $
+                \State $T_{for\_MFS}.append(t_{\Delta})$
+                \If{$execute(t_{for\_MFS}$) == PASS}
+                   \State  $\Omega \leftarrow Update(\Omega, t_{\Delta}, \tau) $
+                \EndIf
+                \EndFor
+                \State $T_{history}.append(T_{for\_MFS})$
+                \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
+                \State $isRealMFS \leftarrow true$
+                \For  {$i = 0; i <= CheckMAX; i++$}
+                    \State $t_{check} \leftarrow Gen(S_{mfs\_candi}, \Omega, S_{MFS}, Cons, T_{history})$
+                    \If{$execute(t_{check}$) == PASS}
+                        \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
+                        \State $isRealMFS \leftarrow false$
+                        \State  break
+                    \EndIf
+                \EndFor
+                \If{$isRealMFS == true$}
+                   \State  break
+                \EndIf
+                \EndWhile
+                \State $S_{current} \leftarrow S_{mfs\_candi}$
+                \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
+                \State $S_{MFS}.append(S_{current})$
+           \EndIf
+%         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
+%         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
+%         \If {$execute(t_{new}$) == PASS}
+%          \State update($t_{new}, \Omega$)
+%          \State \Return   False
+%      %   \Else
+%         \EndIf
+%         \State  $Repeat \leftarrow Repeat -1 $
+%         \State $\mathcal{T}_{Executed}.append(t_{new}) $
        \EndWhile
-    \State \Return   True
+
+    \State $MFS \leftarrow S_{MFS}$
+    \State \Return   MFS
   \end{algorithmic}
 \end{algorithm}
+The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism). 
 
+This algorithm consists of two main loops. The outer loop  (line 4 - 39) focus on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+
+There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before. In this inner loop, 
 }
 %Appendix one text goes here.
 %

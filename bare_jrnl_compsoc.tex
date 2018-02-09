@@ -2601,6 +2601,7 @@ As a future work, we plan to extend our interleaving CT approach with more test 
 {\color{blue}
 \section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
 
+\subsection{the algorithm of SCT}
 \begin{algorithm}
   \caption{The overall procedure of SCT}
   \begin{algorithmic}[1]
@@ -2640,6 +2641,7 @@ As a future work, we plan to extend our interleaving CT approach with more test 
 
 The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
 
+\subsection{the algorithm of the augmented SCT}
 \begin{algorithm}
   \caption{The overall procedure of augmented SCT}
   \begin{algorithmic}[1]
@@ -2692,6 +2694,7 @@ The inputs of Algorithm 3 are information of parameters of the SUT, the strength
 
 Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case (line 6), the augmented SCT first needs to  check whether there exists any existing MFS contained in it (line 6 - 7). If so, the augmented SCT needs to remove the existing MFS in it (line 8) by mutating the corresponding parameter values of the test case to any values other than the ones contained in the MFS. Note that if we have removed some MFS in the original failing test case (line 14), we need to execute the newly generated test case $t_{mutated}$ to see if it fails again (line 14). If it fails, which means that $t_{mutated}$ contained some MFS other than the previously identified MFS, the augmented SCT needs to take OFOT to identify the MFS in $t_{mutated}$. On the other hand, if we did not find any previously identified schema (line 10), the augmented SCT just needs to directly take OFOT to identify the MFS in the original failing test case. At last, the same as SCT, the augmented SCT needs to return all the identified MFS (line 21).
 
+\subsection{the algorithm of ICT}
 \begin{algorithm}
   \caption{The overall procedure of ICT}
   \begin{algorithmic}[1]
@@ -2704,8 +2707,8 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
      $\tau$ \Comment{the strength of the covering array}
     % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
 
-     $Constraints$  \Comment{The constraints of SUT}
-     
+     $Cons$  \Comment{The constraints of SUT}
+
      $CheckMAX$ \Comment{The strength of checking mechanism}
 
  %    $\Omega$ \Comment{the schemas that are still uncovered}
@@ -2721,56 +2724,60 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
 %       \State $S_{MFS}.append(s)$
     % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
        \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
-       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, constraints)$  \Comment{the uncovered schemas}
+       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, Cons)$  \Comment{the uncovered schemas}
        \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
        \While{$\Omega$ is not empty}
-         \State $test \leftarrow Greedy\_Gen(\Omega, constraints, S_{{MFS}})$
+         \State $test \leftarrow Greedy\_Gen(\Omega, Cons, S_{{MFS}})$
            \If{$execute(test$) == PASS}
                 \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
-            \Else  \Comment{Start OFOT to identify the MFS, and checking process}
+            \Else  \Comment{start OFOT, and checking process}
                 \State $S_{mfs\_candi} \leftarrow \emptyset$
                 \State $T_{history} \leftarrow \emptyset$
                 \While{true}
                 \State $T_{for\_MFS} \leftarrow \emptyset$
                 \ForAll  {$\Delta \in test$}
-                \State $t_{for\_MFS} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Constraints, T_{history}) $
-                \State $T_{for\_MFS}.append(t_{for\_MFS})$
+                \State $t_{\Delta} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Cons, T_{history}) $
+                \State $T_{for\_MFS}.append(t_{\Delta})$
                 \If{$execute(t_{for\_MFS}$) == PASS}
-                   \State  $\Omega \leftarrow Update(\Omega, t_{for\_MFS}, \tau) $
+                   \State  $\Omega \leftarrow Update(\Omega, t_{\Delta}, \tau) $
                 \EndIf
                 \EndFor
                 \State $T_{history}.append(T_{for\_MFS})$
                 \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
-             
-                \ForAll  {$i < CheckMax$} \Comment{checking process}
-                    \State $t_{check} \leftarrow GreedyGen(S_{mfs\_candi}, \Omega, S_{MFS}, Constraints, T_{history}$
+                \State $isRealMFS \leftarrow true$
+                \For  {$i = 0; i <= CheckMAX; i++$}
+                    \State $t_{check} \leftarrow Gen(S_{mfs\_candi}, \Omega, S_{MFS}, Cons, T_{history})$
                     \If{$execute(t_{check}$) == PASS}
                         \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
-                        \State break, and reidifty
+                        \State $isRealMFS \leftarrow false$
+                        \State  break
                     \EndIf
                 \EndFor
-                
+                \If{$isRealMFS == true$}
+                   \State  break
+                \EndIf
                 \EndWhile
                 \State $S_{current} \leftarrow S_{mfs\_candi}$
                 \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
                 \State $S_{MFS}.append(S_{current})$
            \EndIf
-%         \State $\mathcal{T}_{possible} \leftarrow (\mathcal{T}_{candi} \backslash \mathcal{T}_{MFS}) \backslash \mathcal{T}_{Executed} $
-%         \State $t_{new} \leftarrow select\_dissimilar(\mathcal{T}_{possible}, \mathcal{T}_{Executed})$
-%         \If {$execute(t_{new}$) == PASS}
-%          \State update($t_{new}, \Omega$)
-%          \State \Return   False
-%      %   \Else
-%         \EndIf
-%         \State  $Repeat \leftarrow Repeat -1 $
-%         \State $\mathcal{T}_{Executed}.append(t_{new}) $
        \EndWhile
-       
+
     \State $MFS \leftarrow S_{MFS}$
     \State \Return   MFS
   \end{algorithmic}
 \end{algorithm}
+The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism). 
 
+This algorithm consists of two main loops. The outer loop  (line 4 - 39) focus on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+
+There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before. 
+
+In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21). Different from the original OFOT algorithm, for each test case $t_{\Delta}$, \emph{ict} needs to consider the following facts: 1) cover as more un-covered schemas $\Omega$ as possible, 2)do not contain existing identified MFS $S_{MFS}$,  and constraints, 3) do not generate the  test cases generated in previous iteration (line 14).  It is noted that in this paper, we use the same greedy method as used in AETG to generate such test case. Specifically, for the parameter value that is  needed to select, \emph{ict} selects the parameter value has the most un-covered schemas that contain this parameter value. Additionally, we use SAT solver to ensure that the selected parameter value will not introduce any constraint, any MFS, nor any test case that have already generated.  After $t_{\Delta}$ is generated, \emph{ict} will execute it (line 16), and if it passes, \emph{ict} will update the un-covered schemas set (line 17). \emph{ict} then identifies the candidate MFS $S_{mfs\_candi}$ according to the corresponding test cases generated by OFOT (line 21).
+
+The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indiates that $S_{mfs\_candi}$ is note the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).  
+
+At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there is no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
 }
 %Appendix one text goes here.
 %
