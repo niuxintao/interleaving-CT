@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  10 FEB 2018 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  11 FEB 2018 22:24
 entering extended mode
 **./bare_jrnl_compsoc.tex
 (bare_jrnl_compsoc.tex
@@ -458,11 +458,7 @@ Missing character: There is no ¡ in font pplb7t!
 Missing character: There is no ° in font pplb7t!
 Missing character: There is no ¡ in font pplb7t!
 Missing character: There is no ± in font pplb7t!
- [4] [5]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
+ [4] [5] [6]
 Package epstopdf Info: Source file: <baicOutline.eps>
 (epstopdf)                    date: 2015-01-20 04:29:37
 (epstopdf)                    size: 298573 bytes
@@ -481,7 +477,8 @@ Package pdftex.def Info: baicOutline-eps-converted-to.pdf  used on input line 9
 95. on input line 995.
 Package pdftex.def Info: Requested size: 245.71754pt x 288.45624pt on input lin
 e 995.
- [7 <./baicOutline-eps-converted-to.pdf>] [8]
+
+[7 <./baicOutline-eps-converted-to.pdf>] [8]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1115.
 
@@ -937,7 +934,7 @@ Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
 Here is how much of TeX's memory you used:
  5065 strings out of 493312
  75467 string characters out of 3143321
- 170381 words of memory out of 3000000
+ 170379 words of memory out of 3000000
  8474 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -958,7 +955,7 @@ elvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
 CTEX/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/ty
 pe1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a
 .pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc.pdf (32 pages, 7395709 bytes).
+Output written on bare_jrnl_compsoc.pdf (32 pages, 7395803 bytes).
 PDF statistics:
  860 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
