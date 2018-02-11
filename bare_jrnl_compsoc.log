@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  11 FEB 2018 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  11 FEB 2018 23:33
 entering extended mode
 **./bare_jrnl_compsoc.tex
 (bare_jrnl_compsoc.tex
@@ -938,7 +938,7 @@ Here is how much of TeX's memory you used:
  8474 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,14n,38p,1901b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,38p,1903b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MikTex2.9/fonts/enc/dvips/b
 ase/8r.enc}<C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTE
 X/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/CTEX/MikTex2.9/fonts/t
@@ -955,7 +955,7 @@ elvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
 CTEX/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/ty
 pe1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a
 .pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc.pdf (32 pages, 7395803 bytes).
+Output written on bare_jrnl_compsoc.pdf (32 pages, 7395782 bytes).
 PDF statistics:
  860 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
