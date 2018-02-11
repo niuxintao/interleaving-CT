@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  12 FEB 2018 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  12 FEB 2018 01:19
 entering extended mode
 **./bare_jrnl_compsoc.tex
 (bare_jrnl_compsoc.tex
@@ -671,6 +671,10 @@ e 2284.
 [23 <./sens_mfs_tests-eps-converted-to.pdf> <./fmeasuremulti-eps-converted-to.p
 df> <./decreasingoffmeasure-eps-converted-to.pdf> <./sens_options_f_measure-eps
 -converted-to.pdf>]
+Underfull \hbox (badness 4647) in paragraph at lines 2336--2337
+\OT1/ppl/m/n/9.53561 The re-sults of eval-u-at-ing the ap-proaches on non-
+ []
+
 Package epstopdf Info: Source file: <sen_und_f_measure.eps>
 (epstopdf)                    date: 2018-01-31 15:36:19
 (epstopdf)                    size: 68384 bytes
@@ -707,7 +711,7 @@ Package pdftex.def Info: sen_und_tests-eps-converted-to.pdf  used on input line
  2346. on input line 2346.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
 e 2346.
- [24 <./sens_options_tests-eps-converted-to.pdf>]
+[24 <./sens_options_tests-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <sen_und_redundancy.eps>
 (epstopdf)                    date: 2018-01-31 15:19:49
 (epstopdf)                    size: 68397 bytes
@@ -934,7 +938,7 @@ Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
 Here is how much of TeX's memory you used:
  5065 strings out of 493312
  75467 string characters out of 3143321
- 170379 words of memory out of 3000000
+ 171379 words of memory out of 3000000
  8474 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -955,7 +959,7 @@ elvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
 CTEX/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/ty
 pe1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a
 .pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc.pdf (32 pages, 7395766 bytes).
+Output written on bare_jrnl_compsoc.pdf (32 pages, 7396079 bytes).
 PDF statistics:
  860 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
