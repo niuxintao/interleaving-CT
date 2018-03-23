@@ -2182,7 +2182,7 @@ There are several observations in the experiments with multiple defeats:
 
 {\color{red}4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{sct} covered the most number of tested-t-way schemas, following by approaches \emph{fda-cit} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{sct} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{sct} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{sct} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{fda-cit}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 
-The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defeats (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA})is that, the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defeats, \emph{ict} labeled the test cases which failed with the defeats other than the defeat under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defeat, but these test cases which failed with other defeats cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
+The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defeats (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA}) is that, the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defeats, \emph{ict} labeled the test cases which failed with the defeats other than the defeat under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defeat, but these test cases which failed with other defeats cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
 }
 %4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{fda-cit} covered the most number of tested-t-way schemas, following by approaches \emph{sct} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{fda-cit} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{fda-cit} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{fda-cit} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{sct}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 %For example.
@@ -2780,6 +2780,20 @@ In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21
 The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indicates that $S_{mfs\_candi}$ is not the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).
 
 At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there are no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
+
+{\color{red}
+
+\section{The details of the inputs modeling and information of the MFS for the synthetic software}
+In this section, we use the form of (p1:x1, p2:x2, ....) to represents the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0.
+\subsection{For evaluating the number of MFS}
+
+\subsection{For evaluating the number of options}
+
+\subsection{For evaluating the  probabilities of triggering MFS}
+
+\subsection{For evaluating the safe values}
+
+}
 
 %Appendix one text goes here.
 %

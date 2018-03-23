@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  22 MAR 2018 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  23 MAR 2018 16:31
 entering extended mode
 **./bare_jrnl_compsoc-nocolor.tex
 (bare_jrnl_compsoc-nocolor.tex
@@ -824,7 +824,7 @@ Overfull \hbox (39.53995pt too wide) in paragraph at lines 2751--2752
 \OML/cmm/m/it/10 ; S[]; Cons; T[]\OT1/cmr/m/n/10 )$ 
  []
 
-[29] (bare_jrnl_compsoc-nocolor.bbl [30] [31]
+[29] [30] (bare_jrnl_compsoc-nocolor.bbl [31]
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
@@ -841,111 +841,111 @@ Missing character: There is no ½ in font pplri7t!
 <niu.png, id=760, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2854. on input line 2854.
+Package pdftex.def Info: niu.png  used on input line 2868. on input line 2868.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2854.
+2868.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 2854. on input line 2854.
+Package pdftex.def Info: niu.png  used on input line 2868. on input line 2868.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-2854.
+2868.
 <nie.png, id=764, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2861. on input line 2861.
+Package pdftex.def Info: nie.png  used on input line 2875. on input line 2875.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-861.
+875.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 2861. on input line 2861.
+Package pdftex.def Info: nie.png  used on input line 2875. on input line 2875.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 2
-861.
-<hare.png, id=767, 1214.136pt x 1402.038pt>
+875.
+ [32 <./niu.png> <./nie.png>]
+<hare.png, id=774, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2865. on input line 2865.
+Package pdftex.def Info: hare.png  used on input line 2879. on input line 2879.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2865.
+2879.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 2865. on input line 2865.
+Package pdftex.def Info: hare.png  used on input line 2879. on input line 2879.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-2865.
-<lei.jpg, id=770, 242.1045pt x 327.3831pt>
+2879.
+<lei.jpg, id=777, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2869. on input line 2869.
+Package pdftex.def Info: lei.jpg  used on input line 2883. on input line 2883.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2869.
+2883.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 2869. on input line 2869.
+Package pdftex.def Info: lei.jpg  used on input line 2883. on input line 2883.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-2869.
- [32 <./niu.png> <./nie.png> <./hare.png>]
-<xy.png, id=782, 925.95938pt x 1489.81593pt>
+2883.
+<xy.png, id=780, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2873. on input line 2873.
+Package pdftex.def Info: xy.png  used on input line 2887. on input line 2887.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2873.
+ 2887.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 2873. on input line 2873.
+Package pdftex.def Info: xy.png  used on input line 2887. on input line 2887.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 2873.
+ 2887.
 
-Underfull \hbox (badness 1622) in paragraph at lines 2873--2875
+Underfull \hbox (badness 1622) in paragraph at lines 2887--2889
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
 
-<xujiaxi.jpg, id=785, 2080.02094pt x 3120.4078pt>
+<xujiaxi.jpg, id=783, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2877. on input line 28
-77.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2891. on input line 28
+91.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2877.
+ 2891.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 2877. on input line 28
-77.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 2891. on input line 28
+91.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 2877.
+ 2891.
 
-Underfull \hbox (badness 1418) in paragraph at lines 2877--2879
+Underfull \hbox (badness 1418) in paragraph at lines 2891--2893
 []\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
  in
  []
 
-<wangyan.png, id=788, 93.951pt x 136.5903pt>
+<wangyan.png, id=786, 93.951pt x 136.5903pt>
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2881. on input line 28
-81.
+Package pdftex.def Info: wangyan.png  used on input line 2895. on input line 28
+95.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-881.
+895.
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 2881. on input line 28
-81.
+Package pdftex.def Info: wangyan.png  used on input line 2895. on input line 28
+95.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 2
-881.
+895.
 [33
 
- <./lei.jpg> <./xy.png> <./xujiaxi.jpg> <./wangyan.png>]
+ <./hare.png> <./lei.jpg> <./xy.png> <./xujiaxi.jpg> <./wangyan.png>]
 (bare_jrnl_compsoc-nocolor.aux) ) 
 Here is how much of TeX's memory you used:
  5066 strings out of 493312
  75588 string characters out of 3143321
- 171404 words of memory out of 3000000
+ 171339 words of memory out of 3000000
  8475 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,14n,38p,1911b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,38p,1911b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MikTex2.9/fonts/enc/dvips/base/8r.enc
 }<C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MikTex2.
 9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/CTEX/MikTex2.9/fonts/type1/publi
@@ -962,7 +962,7 @@ vro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/CTEX/MikTe
 x2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/pa
 latino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a.pfb><C:/C
 TEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc-nocolor.pdf (33 pages, 7397887 bytes).
+Output written on bare_jrnl_compsoc-nocolor.pdf (33 pages, 7398422 bytes).
 PDF statistics:
  863 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

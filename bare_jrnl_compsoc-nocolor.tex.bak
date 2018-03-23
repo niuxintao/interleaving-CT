@@ -2180,17 +2180,22 @@ There are several observations in the experiments with multiple defeats:
 
 3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS, and the second best approach was \emph{fda-cit}, while the last one was \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated a similar number of test cases that containing multiple schemas at 2-way coverage).
 
+{\color{red}4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{sct} covered the most number of tested-t-way schemas, following by approaches \emph{fda-cit} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{sct} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{sct} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{sct} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{fda-cit}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 
-4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{fda-cit} covered the most number of tested-t-way schemas, following by approaches \emph{sct} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{fda-cit} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{fda-cit} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{fda-cit} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{sct}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
+The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defeats (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA}) is that, the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defeats, \emph{ict} labeled the test cases which failed with the defeats other than the defeat under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defeat, but these test cases which failed with other defeats cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
+}
+%4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{fda-cit} covered the most number of tested-t-way schemas, following by approaches \emph{sct} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{fda-cit} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{fda-cit} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{fda-cit} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{sct}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 %For example.
 %2) \emph{ict} still perform the best among the three approaches
 %f-measure fenbu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Above all, the answer to Q5 is:
 
-\textbf{Most results matched pretty well with the results obtained from the experiments of a single defeat. Particularly, \emph{ict} performed better at MFS identification and reducing the number of test cases that containing multiple MFS, while \emph{fda-cit} generated the least number of test cases and covered the most number of tested-t-way schemas.
-}
+\textbf{{\color{red}Except for the masking effects, other results matched well with the results obtained from the experiments of a single defeat. Specifically, \emph{ict} obtained the best MFS identification results and generated the least number of test cases containing multiple MFS, \emph{sct} obtained the most tested-t-way coverage, and \emph{fda-cit} generated the smallest number of test cases.
+}}
 
+%\textbf{Most results matched pretty well with the results obtained from the experiments of a single defeat. Particularly, \emph{ict} performed better at MFS identification and reducing the number of test cases that containing multiple MFS, while \emph{fda-cit} generated the least number of test cases and covered the most number of tested-t-way schemas.}
 
 
 
@@ -2293,7 +2298,7 @@ Therefore, the number of options in the SUT did not have influence on the qualit
 In summary, the answer to Q6 is:
 \textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not. Additionally, \emph{ict} performs best among the three approaches for various number of MFS and options.}
 
-\subsection{The ability of handling assumptions}
+\subsection{The ability of handling assumptions}\label{sec:emprical:Assumption}
 The last study is designed to evaluate the performances of the three approaches when the two assumptions proposed on Section \ref{sec:back:iden}, i.e., deterministic failures and the existence of safe values,  do not hold.
 %a very common case in practice which is highly relevant to the suggested framework is that of a test space that contains many MFS of a low degree.
 
@@ -2524,7 +2529,8 @@ In summary, the answer to the Q8 is:
 
 \subsection{Threats to validity}
 
-There are two threats to validity in our empirical studies. First, our experiments are based on only 5 open-source software. {\color{red} } More subject programs are desired to make the results more general, such that the conclusion of our experiment can reduce the impact caused by specific input space and specific degree or location of the MFS.
+There are two threats to validity in our empirical studies. First, our experiments are based on 5 open-source software.  {\color{red} However, these software only represented some specific inputs space and specific degree or location of the MFS. To make the conclusion more general, we need to observe how these approaches performed on other inputs models with different characteristics. For this, we created a batch of synthetic input models.  More specifically, for the synthetic models used in Section \ref{sec:emprical:Sensitivity}, we  consider how approaches performed under a different number of parameters (8 to 100) instead of some specific number of parameters obtained from previous experiments. Additionally, we also consider the different number of MFS (1 to 90) that contained in these synthetic models instead of only 1 or 2. In Section \ref{sec:emprical:Assumption}, these models are created by considering the various probabilities of triggering MFS (1\% to 98\%) instead of 100\% or only some specific probabilities. We also considered the number of times (1 to 47) that unsafe values are introduced each time the MFS identification proceeded in the experiments.}
+%More subject programs are desired to make the results more general, such that the conclusion of our experiment can reduce the impact caused by specific input space and specific degree or location of the MFS.
 
 Second, there are many generation algorithms and MFS identification algorithms. In our empirical studies, we just used AETG \cite{cohen1997aetg} as the test case generation strategy and OFOT \cite{nie2011minimal} as the MFS identification strategy. As different generation and identification algorithms may affect the performance of our proposed CT framework, especially on the number of test cases, some studies using different test case generation and MFS identification approaches are desired.
 %For test case generation, .     But for OFOT, it can significantly accuracy.
@@ -2774,6 +2780,20 @@ In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21
 The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indicates that $S_{mfs\_candi}$ is not the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).
 
 At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there are no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
+
+{\color{red}
+
+\section{The details of the inputs modeling and information of the MFS for the synthetic software}
+In this section, we use the form of (p1:x1, p2:x2, ....) to represents the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to be 2 and the 5th parameter is assigned to be 0.
+\subsection{For evaluating the number of MFS}
+
+\subsection{For evaluating the number of options}
+
+\subsection{For evaluating the  probabilities of triggering MFS}
+
+\subsection{For evaluating the safe values}
+
+}
 
 %Appendix one text goes here.
 %
