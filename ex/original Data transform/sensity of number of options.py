@@ -37,8 +37,8 @@ out_metric = [[11.0,10.6,12.8,12.4,13.6,15.4,16.2,17.6,18.8,19.6,20.4,21.0,21.2,
 [32.4,39.0,43.4,51.8,56.8,101.8,148.6,227.8,322.6,325.2,419.2,510.8,662.0,735.2,],]
 
 
-out_metric = DATA[tests]
-metric = tests
+out_metric = DATA[covered_t]
+metric = covered_t
 
 
 num = len(out_metric[0])

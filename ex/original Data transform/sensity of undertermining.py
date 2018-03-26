@@ -30,8 +30,8 @@ DATA = [
 ],
 ]
 
-out_metric = DATA[f_measure]
-metric = f_measure
+out_metric = DATA[covered_t]
+metric = covered_t
 
 
 

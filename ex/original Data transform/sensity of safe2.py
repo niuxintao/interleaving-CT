@@ -30,8 +30,8 @@ DATA = [
 ],
 ]
 
-out_metric = DATA[tests]
-metric = tests
+out_metric = DATA[covered_t]
+metric = covered_t
 
 
 
