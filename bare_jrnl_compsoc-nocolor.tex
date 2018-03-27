@@ -2531,23 +2531,24 @@ Tcas    & 12 & 48 & 60  & -      \\ \hline
 From this table, we can learn that for most subjects, ELA needs to build high-way covering arrays. In fact, for tcas, the CA that is needed to be built is 60-way, which is far beyond the number of parameters of TCAS (12) and hence, the corresponding covering array cannot be generated. One exception is Jflex, for which ela needs to build a 3-way covering array. It indicates that the 4-way covering arrays generated for Jflex in the previous experiments are unnecessary. From this point of view, ELA can provide an upper-bound on the strength of the covering arrays that need to be generated for one software subject.
 
 
-The number of overall test cases and the quality of the identified MFS are listed in Table \ref{cm_ela}. We can firstly observe that this approach needs more test cases than the approaches discussed before. This is as expected becasue this approach needs to generate a higher-way covering array than previous approaches. Apart from the high cost, this approach correctly identified all the real MFS. The accuracy has been proved in \cite{martinez2008algorithms,martinez2009locating}.  Note that this perfect MFS identification result is based on the fact that it knows the number and degree of the MFS at first, which is usually not available in practice.  %On the other hand, other dynamic approaches can get a similar identification result, nbbu
+The number of overall test cases, the quality of the identified MFS, and the results of masking effects are listed in Table \ref{cm_ela}. We can firstly observe that this approach needs more test cases than the approaches discussed before. This is as expected becasue this approach needs to generate a higher-way covering array than previous approaches. Apart from the high cost, this approach correctly identified all the real MFS. The accuracy has been proved in \cite{martinez2008algorithms,martinez2009locating}.  Note that this perfect MFS identification result is based on the fact that it knows the number and degree of the MFS at first, which is usually not available in practice.  %On the other hand, other dynamic approaches can get a similar identification result, nbbu
+{\color{red} let me see see}
 
 
-\begin{table}[htbp]
+\begin{table*}[htbp]
 \center
 \caption{Results from Error Locating Array}
 \label{cm_ela}
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-Subject & Size   & Precision & Recall & F-measure \\ \hline
-Tomcat  & 210.8  & 1       & 1      & 1         \\
-Hsqldb  & 588.8  & 1       & 1      & 1         \\
-Gcc      &783.4 & 1       & 1      & 1         \\
-Jflex   & 41.8   & 1       & 1      & 1         \\
-Tcas    & - &  -       & -      & -         \\ \hline
+Subject & Size   & Precision & Recall & F-measure & Tested-2-way  & Tested-3-way & Tested-4-way \\ \hline
+Tomcat  & 210.8  & 1       & 1      & 1      &236.0 (1.0) & 1424.0 (1.0)  & 5450.75 (0.97)    \\
+Hsqldb  & 588.8  & 1       & 1      & 1      & 357.0 (1.0) & 2742.0 (1.0) & 14136.0 (1.0)    \\
+Gcc      &783.4 & 1       & 1      & 1       & 252.0 (1.0) & 1536.0 (1.0)  &   6048.0 (1.0) \\
+Jflex   & 41.8   & 1       & 1      & 1      & 473 (1.0) &4096.75 (0.95)  &  19224.5 (0.72)  \\
+Tcas    & - &  -       & -      & -     & -  & - & -   \\ \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 %We further compare their execution time.

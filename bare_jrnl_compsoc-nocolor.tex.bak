@@ -2283,7 +2283,7 @@ Above all, with the increasing of the number of MFS in the SUT, the performance 
 %A endition condition
 
 \subsubsection{Number of options}
-The results for the sensitivity of the number of options are shown in Fig. \ref{sen_opts_f_measure_result}, Fig. \ref{sen_opts_tests_result} and Fig. \ref{sen_option_t_tuple_result}, which depicts the quality of MFS identification, the number of generated test cases, and masking effects, respectively.
+The results for the sensitivity of the number of options are shown in Fig. \ref{sen_opts_f_measure_result}, Fig. \ref{sen_opts_tests_result} and Fig. \ref{sen_option_t_tuple_result}, which depicts the quality of MFS identification, the number of generated test cases, and the results of masking effects, respectively.
 %Note that we do not show the MFS identification result because all three approaches obtain 1.0 of f-measures for all the cases. It shows that the number of  options in the SUT does not influence the quality of MFS identification.
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2362,7 +2362,7 @@ Syn10     &  $4^{50} $ &2(6)\ 13(4)\ 15(4)\ 20(4) \\ \hline
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Non-deterministic failures}
-The results of evaluating the approaches on non-deterministic failures are shown in Fig. \ref{sen_und_f_measure_result}, Fig. \ref{sen_opts_tests_result}, and Fig. \ref{sen_pro_t_tuple_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the non-deterministic failures are triggered, while the second figure shows the number of test cases.
+The results of evaluating the approaches on non-deterministic failures are shown in Fig. \ref{sen_und_f_measure_result}, Fig. \ref{sen_opts_tests_result}, and Fig. \ref{sen_pro_t_tuple_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the non-deterministic failures are triggered, the second figure shows the number of test cases, and the last one shows the results of the masking effects.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_und_f_measure.eps}
@@ -2426,7 +2426,7 @@ Figure \ref{sen_und_f_measure_result_reduncy} shows the results. From this figur
 
 \subsubsection{Non Safe values}
 
-The results of evaluating the approaches on non-safe values are shown in Fig. \ref{sen_safe_f_measure_result} and Fig. \ref{sen_safe_tests_result}.
+The results of evaluating the approaches on non-safe values are shown in Fig. \ref{sen_safe_f_measure_result}, Fig. \ref{sen_safe_tests_result}, and Fig. \ref{sen_safe_t_tuple_result}.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}
@@ -2441,8 +2441,16 @@ The results of evaluating the approaches on non-safe values are shown in Fig. \r
 \label{sen_safe_tests_result}
 \end{figure}
 
-There are several observations about these two figures. First, the non-safe values did affect the MFS identification quality of all the approaches. In fact, the f-measures of all the three approaches listed in Fig. \ref{sen_safe_tests_result} were lower than those 0.7. Specifically, \emph{ict}'s f-measure is ranged from 0.52 to 0.67,  \emph{sct}'s ranged from  0.42 to 0.64, and \emph{fda-cit}'s ranged from 0.01 to about 0.08. Based on these data, we can conclude our second observation, that is, \emph{ict} also performed best under the condition that there are no safe values. We believe this is due to our feedback checking process, which significantly improves the quality of MFS identification, and reduces the negative effects caused by non-safe values.
+\begin{figure}[htbp]
+ \includegraphics[width=3.5in]{sen_safe_t_tuple.eps}
+\caption{number of tested-t-tuples}
+\label{sen_safe_t_tuple_result}
+\end{figure}
+
+There are several observations about these figures. First, the non-safe values did affect the MFS identification quality of all the approaches. In fact, the f-measures of all the three approaches listed in Fig. \ref{sen_safe_tests_result} were lower than those 0.7. Specifically, \emph{ict}'s f-measure is ranged from 0.52 to 0.67,  \emph{sct}'s ranged from  0.42 to 0.64, and \emph{fda-cit}'s ranged from 0.01 to about 0.08. Based on these data, we can conclude our second observation, that is, \emph{ict} also performed best under the condition that there are no safe values. We believe this is due to our feedback checking process, which significantly improves the quality of MFS identification, and reduces the negative effects caused by non-safe values.
 At last, with regard to the number of test cases, \emph{fda-cit} still generated the fewest, but this also led to the low f-measure of MFS identification.
+
+{\color{red}let me see see}
 %These results show that the non-safe value have  negative effects on the MFS identification.
 
 Besides these observations, it's also important to figure out how many times that the effects of non-safe values were triggered. More specifically, for the approaches \emph{ict} and \emph{sct} which need to identify the MFS for each of the failing test cases, we need to figure out how many times when these MFS actually caused failures during the MFS identification for one specific failing test case. We listed the results in Figure \ref{sen_safe_NonTrigger} and Figure \ref{sen_safe_NonTriggerAvg}, in which Figure \ref{sen_safe_NonTrigger} recorded the number of total times that the non-safe MFS are triggered for each software subject, while Figure \ref{sen_safe_NonTriggerAvg} recorded average number of times that the non-safe MFS are triggered for each time of MFS identification.
@@ -2526,20 +2534,20 @@ From this table, we can learn that for most subjects, ELA needs to build high-wa
 The number of overall test cases and the quality of the identified MFS are listed in Table \ref{cm_ela}. We can firstly observe that this approach needs more test cases than the approaches discussed before. This is as expected becasue this approach needs to generate a higher-way covering array than previous approaches. Apart from the high cost, this approach correctly identified all the real MFS. The accuracy has been proved in \cite{martinez2008algorithms,martinez2009locating}.  Note that this perfect MFS identification result is based on the fact that it knows the number and degree of the MFS at first, which is usually not available in practice.  %On the other hand, other dynamic approaches can get a similar identification result, nbbu
 
 
-\begin{table}[htbp]
+\begin{table*}[htbp]
 \center
 \caption{Results from Error Locating Array}
 \label{cm_ela}
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-Subject & Size   & Precision & Recall & F-measure \\ \hline
-Tomcat  & 210.8  & 1       & 1      & 1         \\
-Hsqldb  & 588.8  & 1       & 1      & 1         \\
-Gcc      &783.4 & 1       & 1      & 1         \\
-Jflex   & 41.8   & 1       & 1      & 1         \\
-Tcas    & - &  -       & -      & -         \\ \hline
+Subject & Size   & Precision & Recall & F-measure & Tested-2-way  & Tested-3-way & Tested-4-way \\ \hline
+Tomcat  & 210.8  & 1       & 1      & 1      & &  &    \\
+Hsqldb  & 588.8  & 1       & 1      & 1      & &  &    \\
+Gcc      &783.4 & 1       & 1      & 1       & &  &   \\
+Jflex   & 41.8   & 1       & 1      & 1      & 473 (1.0) &4096.75()  &   \\
+Tcas    & - &  -       & -      & -     & -  & - & -   \\ \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 %We further compare their execution time.
