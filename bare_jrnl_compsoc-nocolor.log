@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  29 MAR 2018 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  29 MAR 2018 19:17
 entering extended mode
 **./bare_jrnl_compsoc-nocolor.tex
 (bare_jrnl_compsoc-nocolor.tex
@@ -900,143 +900,141 @@ Overfull \hbox (4.18799pt too wide) in paragraph at lines 2788--2789
  []
 
 
-Overfull \hbox (39.53995pt too wide) in paragraph at lines 2798--2799
-[] $\OML/cmm/m/it/10 t[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 Gen\OT1/cmr/m/n/10
- (\OML/cmm/m/it/10 S[]; \OT1/cmr/m/n/10 
-\OML/cmm/m/it/10 ; S[]; Cons; T[]\OT1/cmr/m/n/10 )$ 
+Overfull \hbox (0.68105pt too wide) in paragraph at lines 2798--2799
+[] $\OML/cmm/m/it/10 t[]$ $\OMS/cmsy/m/n/10  $ [] 
  []
 
 [30]
 Underfull \vbox (badness 3386) has occurred while \output is active []
 
  [31]
-Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
+Underfull \hbox (badness 10000) in paragraph at lines 2934--2934
 []|\OT1/ppl/m/n/8.03 (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
 :0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
 \OT1/ppl/m/n/8.03 (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) 
 (1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
 \OT1/ppl/m/n/8.03 (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3
 ,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
 :0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
 \OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14
 :1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1)
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 2929--2929
+Underfull \hbox (badness 1436) in paragraph at lines 2936--2936
 \OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14
 :2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
 \OT1/ppl/m/n/8.03 (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2
 ,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
 \OT1/ppl/m/n/8.03 (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,
 28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
 \OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1
 ,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
 \OT1/ppl/m/n/8.03 (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,
 5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
 \OT1/ppl/m/n/8.03 (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:
 2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
 \OT1/ppl/m/n/8.03 (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,1
 9:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13
 :0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
 \OT1/ppl/m/n/8.03 (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,
 40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
 \OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2
 ,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
 \OT1/ppl/m/n/8.03 (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14
 :3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
 \OT1/ppl/m/n/8.03 (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,
 46:1,47:1,48:1) (49:1,50:1) (36:2,37:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
 \OT1/ppl/m/n/8.03 (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,
 50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
 \OT1/ppl/m/n/8.03 (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:
 3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
  []
@@ -1058,63 +1056,63 @@ Missing character: There is no ½ in font pplri7t!
 <niu.png, id=983, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3022. on input line 3022.
+Package pdftex.def Info: niu.png  used on input line 3030. on input line 3030.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3022.
+3030.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3022. on input line 3022.
+Package pdftex.def Info: niu.png  used on input line 3030. on input line 3030.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3022.
+3030.
 <nie.png, id=987, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3029. on input line 3029.
+Package pdftex.def Info: nie.png  used on input line 3037. on input line 3037.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-029.
+037.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3029. on input line 3029.
+Package pdftex.def Info: nie.png  used on input line 3037. on input line 3037.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-029.
+037.
 <hare.png, id=990, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3033. on input line 3033.
+Package pdftex.def Info: hare.png  used on input line 3041. on input line 3041.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3033.
+3041.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3033. on input line 3033.
+Package pdftex.def Info: hare.png  used on input line 3041. on input line 3041.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3033.
+3041.
 <lei.jpg, id=993, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3037. on input line 3037.
+Package pdftex.def Info: lei.jpg  used on input line 3045. on input line 3045.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3037.
+3045.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3037. on input line 3037.
+Package pdftex.def Info: lei.jpg  used on input line 3045. on input line 3045.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3037.
+3045.
  [35 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg>]
 <xy.png, id=1006, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3041. on input line 3041.
+Package pdftex.def Info: xy.png  used on input line 3049. on input line 3049.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3041.
+ 3049.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3041. on input line 3041.
+Package pdftex.def Info: xy.png  used on input line 3049. on input line 3049.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3041.
+ 3049.
 
-Underfull \hbox (badness 1622) in paragraph at lines 3041--3043
+Underfull \hbox (badness 1622) in paragraph at lines 3049--3051
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
@@ -1122,18 +1120,18 @@ g
 <xujiaxi.jpg, id=1009, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3045. on input line 30
-45.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3053. on input line 30
+53.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3045.
+ 3053.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3045. on input line 30
-45.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3053. on input line 30
+53.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3045.
+ 3053.
 
-Underfull \hbox (badness 1418) in paragraph at lines 3045--3047
+Underfull \hbox (badness 1418) in paragraph at lines 3053--3055
 []\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
  in
  []
@@ -1141,23 +1139,23 @@ Underfull \hbox (badness 1418) in paragraph at lines 3045--3047
 <wangyan.png, id=1012, 93.951pt x 136.5903pt>
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3049. on input line 30
-49.
+Package pdftex.def Info: wangyan.png  used on input line 3057. on input line 30
+57.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-049.
+057.
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3049. on input line 30
-49.
+Package pdftex.def Info: wangyan.png  used on input line 3057. on input line 30
+57.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-049.
+057.
 [36
 
  <./xy.png> <./xujiaxi.jpg> <./wangyan.png>] (bare_jrnl_compsoc-nocolor.aux) ) 
 Here is how much of TeX's memory you used:
  5095 strings out of 493312
  76622 string characters out of 3143321
- 182266 words of memory out of 3000000
+ 182337 words of memory out of 3000000
  8500 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1179,7 +1177,7 @@ C:/CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts
 i8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2
 .9/fonts/type1/urw/palatino/uplri8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapf
 ding/uzdr.pfb>
-Output written on bare_jrnl_compsoc-nocolor.pdf (36 pages, 7558112 bytes).
+Output written on bare_jrnl_compsoc-nocolor.pdf (36 pages, 7558158 bytes).
 PDF statistics:
  1086 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

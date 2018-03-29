@@ -1658,7 +1658,7 @@ Tcas	&ict	&178.0	&2914.9	&60725.5	\\
 In summary, the answer to \textbf{Q1} is:  \textbf{Our approach \emph{ict} needs fewer test cases than the augmented sequential CT approach, and the quality of MFS identification of \emph{ict} is higher than \emph{sct}.}
 
 \subsection{Alleviation of the three problems}\label{sec:emprical:alleviation}
-Section \ref{sec:moti} shows three problems that impact the performance of CT process, which are \emph{redundant test case generation}, \emph{multiple MFS in the same test case} and \emph{masking effects}, respectively. To learn if \emph{ict} can alleviate these problems, we re-use the experiment in the first study, i.e., let \emph{sct} and \emph{ict} generate test cases to identify the MFS in the five program subjects. Then, we respectively investigate the extent to which ICT and SCT are affected by those issues. {\color{red} It is noted that, the original definition \cite{yilmaz2013reducing} of tested-t-way coverage including the t-degree tuples that may appeared in the non-option-related failed test case. In our experiments(including the following sections), all these failures are option-related. Hence, the computation of the tested-t-way coverage in our experiments satisfied the original definition.}
+Section \ref{sec:moti} shows three problems that impact the performance of CT process, which are \emph{redundant test case generation}, \emph{multiple MFS in the same test case} and \emph{masking effects}, respectively. To learn if \emph{ict} can alleviate these problems, we re-use the experiment in the first study, i.e., let \emph{sct} and \emph{ict} generate test cases to identify the MFS in the five program subjects. Then, we respectively investigate the extent to which ICT and SCT are affected by those issues. {\color{red} It is noted that the original definition \cite{yilmaz2013reducing} of tested-t-way coverage including the t-degree tuples that may appear in the non-option-related failed test case. In our experiments(including the following sections), all these failures are option-related. Hence, the computation of the tested-t-way coverage in our experiments satisfied the original definition.}
 
 \subsubsection{Study setup}
 We designed three metrics for each of the three problems. First, to measure the \emph{redundant test case generation}, we gathered the number of times that each schema was covered. This metric directly indicates the redundancy of generated test cases, because it is obvious that if there are too many schemas that are repeatedly being covered by different test cases, then the CT process is inefficient (if one schema is covered and tested, it is unnecessary to check them again with other test cases). Note that this metric is closely related to the number of test cases discussed in the previous study, more test cases surely make schemas being covered more times. However, there exists one difference, i.e., test cases can evenly cover many schemas for a relatively few times, or alternatively, some schemas are covered many times, but others not.
@@ -2180,7 +2180,7 @@ There are several observations in the experiments with multiple defeats:
 
 3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS, and the second best approach was \emph{fda-cit}, while the last one was \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated a similar number of test cases that containing multiple schemas at 2-way coverage).
 
-{\color{red}4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{sct} covered the most number of tested-t-way schemas, following by approaches \emph{fda-cit} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{sct} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{sct} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{sct} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{fda-cit}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
+{\color{red}4) Concerning the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{sct} covered the most number of tested-t-way schemas, following by approaches \emph{fda-cit} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{sct} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{sct} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{sct} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{fda-cit}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 
 The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defeats (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA}) is that, the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defeats, \emph{ict} labeled the test cases which failed with the defeats other than the defeat under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defeat, but these test cases which failed with other defeats cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
 }
@@ -2213,7 +2213,7 @@ Specifically, for the first study, that is, evaluating the performance of approa
 The second study is to evaluate the performance of approaches under the different number of options. Hence we used synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). Each option had two values, and each subject had three 2-degree MFS. Then for each subject, we applied the three approaches and compared their performance.
 %Details of each subject can be seen in:
 
-\subsubsection{Number of MFS}
+\subsubsection{Number of MFS}\label{sec:emprical:numberofmfs}
 The results for the sensitivity of the number of MFS are shown in Figure \ref{sen_mfs_f_measure_result},  \ref{sen_mfs_tests_result} and \ref{sen_mfs_t_tuple_result}, of which the first figure focuses on the quality of MFS identification,  the second figure shows the cost, and the last one shows the results of the masking effects.
 
 \begin{figure}[htbp]
@@ -2392,7 +2392,11 @@ The second observation is that when the probability of triggering MFS was larger
 
 With regard to the test cases, our conclusion is similar to the previous study, that is, \emph{fda-cit} needed the smallest amount of test cases, then followed the \emph{ict} and \emph{sct}.
 
-{\color{red}With respect to the masking effects, small and great is good, but between is not. Small, passing test cases more, high, we can easily obtained the MFS, only at the is not good }
+{\color{red}With respect to the masking effects, we can make the following observation.
+If the probability was too small (below 0.15) or too high (above 0.9), all the three approaches performed
+relatively well. This is reasonable, because if the probability of triggering MFS was too small, approaches could hardly
+detect the failure. As a result, there are more passing test cases generated by these three approaches, and more tested-t-way schemas can be checked. On the other hand, if the probability was too high, all these three approaches could easily identify the MFS accurately. Under this condition, the results of the tested-t-way coverage obtained by these three approaches were similar to the condition for handling
+deterministic failure. The worst condition was in between (the probability was around 0.3 to 0.8). Under such condition, all these three approaches can neither identify the MFS accurately nor generate large number of passing test cases.}
 
 Since the non-deterministic failures have negative effects on MFS identification, it is desirable to alleviate the effects. In this paper, we consider the redundancy of test case execution, i.e., we repeatedly run one test case to check whether it fails or not instead of just one time. We conducted an additional experiment to evaluate the performance of this strategy. Specifically, all the experimental set-ups are as the same as the previous experiment on non-deterministic failures, except that we set the redundancy of test execution to be 5 (run 5 times for each test case).
 
@@ -2448,7 +2452,7 @@ The results of evaluating the approaches on non-safe values are shown in Fig. \r
 There are several observations about these figures. First, the non-safe values did affect the MFS identification quality of all the approaches. In fact, the f-measures of all the three approaches listed in Fig. \ref{sen_safe_tests_result} were lower than those 0.7. Specifically, \emph{ict}'s f-measure is ranged from 0.52 to 0.67,  \emph{sct}'s ranged from  0.42 to 0.64, and \emph{fda-cit}'s ranged from 0.01 to about 0.08. Based on these data, we can conclude our second observation, that is, \emph{ict} also performed best under the condition that there are no safe values. We believe this is due to our feedback checking process, which significantly improves the quality of MFS identification, and reduces the negative effects caused by non-safe values.
 At last, with regard to the number of test cases, \emph{fda-cit} still generated the fewest, but this also led to the low f-measure of MFS identification.
 
-{\color{red}With respect to the masking effects, there exists the following relationship.}
+{\color{red}With respect to the masking effects, these three approaches satisfied following relationship: \emph{fda-cit} obtained the highest score at the tested-t-way coverage, following by \emph{ict}, and \emph{sct} was the last one. In fact, this condition is similar to the condition of there is a large number of MFS in the SUT (there are many MFS, so that there was no safe values in our experiments).  As discussed in Section \ref{sec:emprical:numberofmfs}, when the number of MFS is relatively high, \emph{fda-cit} generated more number of passing test cases than approaches \emph{sct} and \emph{ict}. Hence, \emph{fda-cit} performed the best among the three approaches. The reason that \emph{ict} performed better than \emph{sct} is that \emph{ict} identified more MFS than \emph{sct}. As a result, \emph{ict} obtained more schemas that satisfied the tested-t-way coverage.}
 %These results show that the non-safe value have  negative effects on the MFS identification.
 
 Besides these observations, it's also important to figure out how many times that the effects of non-safe values were triggered. More specifically, for the approaches \emph{ict} and \emph{sct} which need to identify the MFS for each of the failing test cases, we need to figure out how many times when these MFS actually caused failures during the MFS identification for one specific failing test case. We listed the results in Figure \ref{sen_safe_NonTrigger} and Figure \ref{sen_safe_NonTriggerAvg}, in which Figure \ref{sen_safe_NonTrigger} recorded the number of total times that the non-safe MFS are triggered for each software subject, while Figure \ref{sen_safe_NonTriggerAvg} recorded average number of times that the non-safe MFS are triggered for each time of MFS identification.
@@ -2791,7 +2795,7 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
                 \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
                 \State $isRealMFS \leftarrow true$
                 \For  {$i = 0; i <= CheckMAX; i++$}
-                    \State $t_{check} \leftarrow Gen(S_{mfs\_candi}, \Omega, S_{MFS}, Cons, T_{history})$
+                    \State $t_{check}$ $\leftarrow$ \parbox[t]{.6\linewidth}{ $Gen(S_{mfs\_candi}$, $\Omega$, $S_{MFS}$, $Cons$, $T_{history}$)}
                     \If{$execute(t_{check}$) == PASS}
                         \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
                         \State $isRealMFS \leftarrow false$
@@ -2827,13 +2831,14 @@ At last, \emph{ict} will update the uncovered schemas (line 36) by removing the 
 {\color{red}
 
 \section{The details of the inputs modeling and information of the MFS for the synthetic software}
-In this section, we use the form of (p1:x1, p2:x2, ....) to represents the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
+In this section, we use the form of (p1:x1, p2:x2, ....) to represents the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.}
 %\subsection{For evaluating the number of MFS}
 
 \begin{table*}[htbp]
 \center
 \caption{The details of the modeling for evaluating the number of MFS}
 \label{detail-eva-mfs}
+{\color{red}
 \begin{tabular}{|c|c|m{1.7\columnwidth}|}
 \hline
 Subject & Inputs & MFS  \\\hline
@@ -2857,12 +2862,14 @@ syn17 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (
 syn18 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1) (3:1,10:1) (3:1,11:1) (4:1,5:1) (4:1,6:1) (4:1,7:1) (4:1,8:1) (4:1,9:1) (4:1,10:1) (4:1,11:1) (5:1,6:1)  \\ \hline
 
 \end{tabular}
+}
 \end{table*}
 %\subsection{For evaluating the number of options}
 \begin{table}[htbp]
 \center
 \caption{The details of the modeling for evaluating the number of options}
 \label{detail-eva-op}
+{\color{red}
 \begin{tabular}{|l|l|l|}
 \hline
 Subject & Inputs & MFS  \\\hline
@@ -2881,6 +2888,7 @@ syn12 & $2^{80}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
 syn13 & $2^{90}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
 syn14 & $2^{100}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
 \end{tabular}
+}
 \end{table}
 %\subsection{For evaluating the  probabilities of triggering MFS}
 
@@ -2889,6 +2897,7 @@ syn14 & $2^{100}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
 \center
 \caption{The details of the modeling for evaluating  probabilities of triggering MFS}
 \label{detail-eva-pro}
+{\color{red}
 \begin{tabular}{|l|l|l|l|}
 \hline
 Subject & Inputs & MFS  & Probability \\\hline
@@ -2906,6 +2915,7 @@ syn11 & $4^{10}$ &  (2:1)  & 0.8 \\ \hline
 syn12 & $4^{10}$ &  (2:1)  & 0.9 \\ \hline
 syn13 & $4^{10}$ &  (2:1)  & 0.98 \\ \hline
 \end{tabular}
+}
 \end{table}
 
 %\subsection{For evaluating the safe values}
@@ -2914,6 +2924,7 @@ syn13 & $4^{10}$ &  (2:1)  & 0.98 \\ \hline
 \center
 \caption{The details of the modeling for evaluating safe values}
 \label{detail-eva-safe}
+{\color{red}
 \begin{tabular}{|c|c|m{1.7\columnwidth}|}
 \hline
 Subject & Inputs & MFS  \\\hline
@@ -2939,11 +2950,12 @@ syn10 & $4^{50}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14
 & & (21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2)  \\
 & & (31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3,41:3,42:3,43:3,44:3,45:3,46:3,47:3,48:3,49:3,50:3) \\ \hline
 \end{tabular}
+}
 \end{table*}
 
 
 
-}
+
 
 %Appendix one text goes here.
 %
