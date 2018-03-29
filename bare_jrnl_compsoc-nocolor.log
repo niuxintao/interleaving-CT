@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  28 MAR 2018 04:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  29 MAR 2018 16:52
 entering extended mode
 **./bare_jrnl_compsoc-nocolor.tex
 (bare_jrnl_compsoc-nocolor.tex
@@ -654,7 +654,7 @@ Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
 e 2268.
  [23 <./sens_mfs_f_measure-eps-converted-to.pdf> <./sens_mfs_tests-eps-converte
 d-to.pdf> <./num_mfs_t_tuple-eps-converted-to.pdf> <./fmeasuremulti-eps-convert
-ed-to.pdf> <./decreasingoffmeasure-eps-converted-to.pdf>]
+ed-to.pdf>]
 Package epstopdf Info: Source file: <sens_options_f_measure.eps>
 (epstopdf)                    date: 2017-06-03 18:16:11
 (epstopdf)                    size: 65942 bytes
@@ -666,7 +666,7 @@ f>
 converted-to.pdf sens_options_f_measure.eps>
 (epstopdf)             \includegraphics on input line 2291.
 Package epstopdf Info: Output file is already uptodate.
-<sens_options_f_measure-eps-converted-to.pdf, id=351, pagebox=cropbox, 589.2012
+<sens_options_f_measure-eps-converted-to.pdf, id=315, pagebox=cropbox, 589.2012
 5pt x 300.12125pt>
 File: sens_options_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_options_f_measure-eps-converted-to.pdf>
@@ -684,7 +684,7 @@ Package epstopdf Info: Source file: <sens_options_tests.eps>
 erted-to.pdf sens_options_tests.eps>
 (epstopdf)             \includegraphics on input line 2298.
 Package epstopdf Info: Output file is already uptodate.
-<sens_options_tests-eps-converted-to.pdf, id=352, pagebox=cropbox, 589.20125pt 
+<sens_options_tests-eps-converted-to.pdf, id=316, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sens_options_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sens_options_tests-eps-converted-to.pdf>
@@ -702,7 +702,7 @@ Package epstopdf Info: Source file: <num_option_t_tuple.eps>
 erted-to.pdf num_option_t_tuple.eps>
 (epstopdf)             \includegraphics on input line 2304.
 Package epstopdf Info: Output file is already uptodate.
-<num_option_t_tuple-eps-converted-to.pdf, id=353, pagebox=cropbox, 589.20125pt 
+<num_option_t_tuple-eps-converted-to.pdf, id=317, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: num_option_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
 <use num_option_t_tuple-eps-converted-to.pdf>
@@ -710,9 +710,10 @@ Package pdftex.def Info: num_option_t_tuple-eps-converted-to.pdf  used on input
  line 2304. on input line 2304.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
 e 2304.
- [24 <./sens_options_f_measure-eps-converted-to.pdf> <./sens_options_tests-eps-
-converted-to.pdf> <./num_option_t_tuple-eps-converted-to.pdf>]
-Underfull \hbox (badness 4647) in paragraph at lines 2365--2366
+ [24 <./decreasingoffmeasure-eps-converted-to.pdf> <./sens_options_f_measure-ep
+s-converted-to.pdf> <./sens_options_tests-eps-converted-to.pdf> <./num_option_t
+_tuple-eps-converted-to.pdf>]
+Underfull \hbox (badness 4647) in paragraph at lines 2363--2364
 \OT1/ppl/m/n/9.53561 The re-sults of eval-u-at-ing the ap-proaches on non-
  []
 
@@ -724,16 +725,16 @@ Package epstopdf Info: Source file: <sen_und_f_measure.eps>
 (epstopdf)                    size: 38334 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_f_measure-eps-conve
 rted-to.pdf sen_und_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2368.
+(epstopdf)             \includegraphics on input line 2366.
 Package epstopdf Info: Output file is already uptodate.
 <sen_und_f_measure-eps-converted-to.pdf, id=509, pagebox=cropbox, 589.20125pt x
  300.12125pt>
 File: sen_und_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_und_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sen_und_f_measure-eps-converted-to.pdf  used on input 
-line 2368. on input line 2368.
+line 2366. on input line 2366.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2368.
+e 2366.
 Package epstopdf Info: Source file: <sen_und_tests.eps>
 (epstopdf)                    date: 2018-01-31 09:44:30
 (epstopdf)                    size: 67365 bytes
@@ -742,16 +743,16 @@ Package epstopdf Info: Source file: <sen_und_tests.eps>
 (epstopdf)                    size: 37965 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_tests-eps-converted
 -to.pdf sen_und_tests.eps>
-(epstopdf)             \includegraphics on input line 2375.
+(epstopdf)             \includegraphics on input line 2373.
 Package epstopdf Info: Output file is already uptodate.
 <sen_und_tests-eps-converted-to.pdf, id=510, pagebox=cropbox, 589.20125pt x 300
 .12125pt>
 File: sen_und_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_und_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sen_und_tests-eps-converted-to.pdf  used on input line
- 2375. on input line 2375.
+ 2373. on input line 2373.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2375.
+e 2373.
 Package epstopdf Info: Source file: <sen_pro_t_tuple.eps>
 (epstopdf)                    date: 2018-03-26 12:45:32
 (epstopdf)                    size: 74861 bytes
@@ -760,18 +761,24 @@ Package epstopdf Info: Source file: <sen_pro_t_tuple.eps>
 (epstopdf)                    size: 39198 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_pro_t_tuple-eps-convert
 ed-to.pdf sen_pro_t_tuple.eps>
-(epstopdf)             \includegraphics on input line 2381.
+(epstopdf)             \includegraphics on input line 2379.
 Package epstopdf Info: Output file is already uptodate.
 <sen_pro_t_tuple-eps-converted-to.pdf, id=511, pagebox=cropbox, 589.20125pt x 3
 00.12125pt>
 File: sen_pro_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_pro_t_tuple-eps-converted-to.pdf>
 Package pdftex.def Info: sen_pro_t_tuple-eps-converted-to.pdf  used on input li
-ne 2381. on input line 2381.
+ne 2379. on input line 2379.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2381.
+e 2379.
+
+Underfull \hbox (badness 1360) in paragraph at lines 2380--2380
+\OT1/phv/m/n/8.03 Fig. 16. The tested-t-way cov-er-age for var-i-ous prob-a-bil
+-ity of un-
+ []
+
 [25 <./sen_und_f_measure-eps-converted-to.pdf> <./sen_und_tests-eps-converted-t
-o.pdf> <./sen_pro_t_tuple-eps-converted-to.pdf>]
+o.pdf>]
 Package epstopdf Info: Source file: <sen_und_redundancy.eps>
 (epstopdf)                    date: 2018-01-31 15:19:49
 (epstopdf)                    size: 68397 bytes
@@ -780,16 +787,16 @@ Package epstopdf Info: Source file: <sen_und_redundancy.eps>
 (epstopdf)                    size: 38472 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_und_redundancy-eps-conv
 erted-to.pdf sen_und_redundancy.eps>
-(epstopdf)             \includegraphics on input line 2403.
+(epstopdf)             \includegraphics on input line 2405.
 Package epstopdf Info: Output file is already uptodate.
-<sen_und_redundancy-eps-converted-to.pdf, id=672, pagebox=cropbox, 589.20125pt 
+<sen_und_redundancy-eps-converted-to.pdf, id=618, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sen_und_redundancy-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_und_redundancy-eps-converted-to.pdf>
 Package pdftex.def Info: sen_und_redundancy-eps-converted-to.pdf  used on input
- line 2403. on input line 2403.
+ line 2405. on input line 2405.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2403.
+e 2405.
 Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
 (epstopdf)                    date: 2018-02-02 22:14:11
 (epstopdf)                    size: 54286 bytes
@@ -798,16 +805,16 @@ Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
 (epstopdf)                    size: 30975 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_f_measure-eps-conv
 erted-to.pdf sen_safe_f_measure.eps>
-(epstopdf)             \includegraphics on input line 2432.
+(epstopdf)             \includegraphics on input line 2434.
 Package epstopdf Info: Output file is already uptodate.
-<sen_safe_f_measure-eps-converted-to.pdf, id=673, pagebox=cropbox, 589.20125pt 
+<sen_safe_f_measure-eps-converted-to.pdf, id=619, pagebox=cropbox, 589.20125pt 
 x 300.12125pt>
 File: sen_safe_f_measure-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_f_measure-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_f_measure-eps-converted-to.pdf  used on input
- line 2432. on input line 2432.
+ line 2434. on input line 2434.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2432.
+e 2434.
 Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    date: 2018-02-02 22:14:49
 (epstopdf)                    size: 55341 bytes
@@ -816,16 +823,16 @@ Package epstopdf Info: Source file: <sen_safe_tests.eps>
 (epstopdf)                    size: 33215 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_tests-eps-converte
 d-to.pdf sen_safe_tests.eps>
-(epstopdf)             \includegraphics on input line 2439.
+(epstopdf)             \includegraphics on input line 2441.
 Package epstopdf Info: Output file is already uptodate.
-<sen_safe_tests-eps-converted-to.pdf, id=674, pagebox=cropbox, 670.505pt x 300.
+<sen_safe_tests-eps-converted-to.pdf, id=620, pagebox=cropbox, 670.505pt x 300.
 12125pt>
 File: sen_safe_tests-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_tests-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_tests-eps-converted-to.pdf  used on input lin
-e 2439. on input line 2439.
+e 2441. on input line 2441.
 Package pdftex.def Info: Requested size: 252.94499pt x 113.21837pt on input lin
-e 2439.
+e 2441.
 Package epstopdf Info: Source file: <sen_safe_t_tuple.eps>
 (epstopdf)                    date: 2018-03-26 12:48:17
 (epstopdf)                    size: 61360 bytes
@@ -834,19 +841,19 @@ Package epstopdf Info: Source file: <sen_safe_t_tuple.eps>
 (epstopdf)                    size: 34745 bytes
 (epstopdf)             Command: <epstopdf --outfile=sen_safe_t_tuple-eps-conver
 ted-to.pdf sen_safe_t_tuple.eps>
-(epstopdf)             \includegraphics on input line 2445.
+(epstopdf)             \includegraphics on input line 2447.
 Package epstopdf Info: Output file is already uptodate.
-<sen_safe_t_tuple-eps-converted-to.pdf, id=675, pagebox=cropbox, 589.20125pt x 
+<sen_safe_t_tuple-eps-converted-to.pdf, id=621, pagebox=cropbox, 589.20125pt x 
 300.12125pt>
 File: sen_safe_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
 <use sen_safe_t_tuple-eps-converted-to.pdf>
 Package pdftex.def Info: sen_safe_t_tuple-eps-converted-to.pdf  used on input l
-ine 2445. on input line 2445.
+ine 2447. on input line 2447.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2445.
- [26 <./sen_und_redundancy-eps-converted-to.pdf> <./sen_safe_f_measure-eps-conv
-erted-to.pdf> <./sen_safe_tests-eps-converted-to.pdf> <./sen_safe_t_tuple-eps-c
-onverted-to.pdf>]
+e 2447.
+ [26 <./sen_pro_t_tuple-eps-converted-to.pdf> <./sen_und_redundancy-eps-convert
+ed-to.pdf> <./sen_safe_f_measure-eps-converted-to.pdf> <./sen_safe_tests-eps-co
+nverted-to.pdf>]
 Package epstopdf Info: Source file: <enNonSafe.eps>
 (epstopdf)                    date: 2018-02-03 17:43:03
 (epstopdf)                    size: 57223 bytes
@@ -855,16 +862,16 @@ Package epstopdf Info: Source file: <enNonSafe.eps>
 (epstopdf)                    size: 34927 bytes
 (epstopdf)             Command: <epstopdf --outfile=enNonSafe-eps-converted-to.
 pdf enNonSafe.eps>
-(epstopdf)             \includegraphics on input line 2459.
+(epstopdf)             \includegraphics on input line 2461.
 Package epstopdf Info: Output file is already uptodate.
-<enNonSafe-eps-converted-to.pdf, id=866, pagebox=cropbox, 589.20125pt x 300.121
+<enNonSafe-eps-converted-to.pdf, id=818, pagebox=cropbox, 589.20125pt x 300.121
 25pt>
 File: enNonSafe-eps-converted-to.pdf Graphic file (type pdf)
 <use enNonSafe-eps-converted-to.pdf>
-Package pdftex.def Info: enNonSafe-eps-converted-to.pdf  used on input line 245
-9. on input line 2459.
+Package pdftex.def Info: enNonSafe-eps-converted-to.pdf  used on input line 246
+1. on input line 2461.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2459.
+e 2461.
 Package epstopdf Info: Source file: <enNonSafeTriggerAvg.eps>
 (epstopdf)                    date: 2018-02-03 17:43:59
 (epstopdf)                    size: 56222 bytes
@@ -873,165 +880,168 @@ Package epstopdf Info: Source file: <enNonSafeTriggerAvg.eps>
 (epstopdf)                    size: 34924 bytes
 (epstopdf)             Command: <epstopdf --outfile=enNonSafeTriggerAvg-eps-con
 verted-to.pdf enNonSafeTriggerAvg.eps>
-(epstopdf)             \includegraphics on input line 2466.
+(epstopdf)             \includegraphics on input line 2468.
 Package epstopdf Info: Output file is already uptodate.
-<enNonSafeTriggerAvg-eps-converted-to.pdf, id=867, pagebox=cropbox, 589.20125pt
+<enNonSafeTriggerAvg-eps-converted-to.pdf, id=819, pagebox=cropbox, 589.20125pt
  x 300.12125pt>
 File: enNonSafeTriggerAvg-eps-converted-to.pdf Graphic file (type pdf)
 <use enNonSafeTriggerAvg-eps-converted-to.pdf>
 Package pdftex.def Info: enNonSafeTriggerAvg-eps-converted-to.pdf  used on inpu
-t line 2466. on input line 2466.
+t line 2468. on input line 2468.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2466.
- [27 <./enNonSafe-eps-converted-to.pdf> <./enNonSafeTriggerAvg-eps-converted-to
-.pdf>]
+e 2468.
+ [27 <./sen_safe_t_tuple-eps-converted-to.pdf> <./enNonSafe-eps-converted-to.pd
+f> <./enNonSafeTriggerAvg-eps-converted-to.pdf>]
 [28] [29]
-Overfull \hbox (4.18799pt too wide) in paragraph at lines 2786--2787
+Overfull \hbox (4.18799pt too wide) in paragraph at lines 2788--2789
 [] $\OML/cmm/m/it/10 t[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 Mutate\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 
 \OML/cmm/m/it/10 ; S[]; Cons; T[]\OT1/cmr/m/n/10 )$ 
  []
 
 
-Overfull \hbox (39.53995pt too wide) in paragraph at lines 2796--2797
+Overfull \hbox (39.53995pt too wide) in paragraph at lines 2798--2799
 [] $\OML/cmm/m/it/10 t[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 Gen\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 S[]; \OT1/cmr/m/n/10 
 \OML/cmm/m/it/10 ; S[]; Cons; T[]\OT1/cmr/m/n/10 )$ 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 2925--2925
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
 []|\OT1/ppl/m/n/8.03 (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
 :0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2926--2926
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
 \OT1/ppl/m/n/8.03 (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) 
 (1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2926--2926
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
 \OT1/ppl/m/n/8.03 (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3
 ,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
+Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
 :0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
+Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
 \OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14
 :1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1)
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 2927--2927
+Underfull \hbox (badness 1436) in paragraph at lines 2929--2929
 \OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14
 :2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
 \OT1/ppl/m/n/8.03 (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2
 ,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
 \OT1/ppl/m/n/8.03 (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,
 28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1
 ,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \OT1/ppl/m/n/8.03 (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,
 5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \OT1/ppl/m/n/8.03 (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:
 2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2931
 \OT1/ppl/m/n/8.03 (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,1
 9:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13
 :0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
 \OT1/ppl/m/n/8.03 (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,
 40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
 \OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2
 ,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2931
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
 \OT1/ppl/m/n/8.03 (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14
 :3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2936--2938
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
 []|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
 ,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2936--2938
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
 \OT1/ppl/m/n/8.03 (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,
 46:1,47:1,48:1) (49:1,50:1) (36:2,37:2)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2936--2938
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
 \OT1/ppl/m/n/8.03 (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,
 50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2936--2938
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
 \OT1/ppl/m/n/8.03 (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:
 3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
  []
 
-(bare_jrnl_compsoc-nocolor.bbl [31] [32] [33] [34]
+(bare_jrnl_compsoc-nocolor.bbl [32] [33] [34]
 Missing character: There is no ï in font pplri7t!
 Missing character: There is no ¿ in font pplri7t!
 Missing character: There is no ½ in font pplri7t!
@@ -1048,127 +1058,130 @@ Missing character: There is no ½ in font pplri7t!
 <niu.png, id=983, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3020. on input line 3020.
+Package pdftex.def Info: niu.png  used on input line 3022. on input line 3022.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3020.
+3022.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3020. on input line 3020.
+Package pdftex.def Info: niu.png  used on input line 3022. on input line 3022.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3020.
+3022.
 <nie.png, id=987, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3027. on input line 3027.
+Package pdftex.def Info: nie.png  used on input line 3029. on input line 3029.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-027.
+029.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3027. on input line 3027.
+Package pdftex.def Info: nie.png  used on input line 3029. on input line 3029.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-027.
+029.
 <hare.png, id=990, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3031. on input line 3031.
+Package pdftex.def Info: hare.png  used on input line 3033. on input line 3033.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3031.
+3033.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3031. on input line 3031.
+Package pdftex.def Info: hare.png  used on input line 3033. on input line 3033.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3031.
+3033.
 <lei.jpg, id=993, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3035. on input line 3035.
+Package pdftex.def Info: lei.jpg  used on input line 3037. on input line 3037.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3035.
+3037.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3035. on input line 3035.
+Package pdftex.def Info: lei.jpg  used on input line 3037. on input line 3037.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3035.
-<xy.png, id=996, 925.95938pt x 1489.81593pt>
+3037.
+ [35 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg>]
+<xy.png, id=1006, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3039. on input line 3039.
+Package pdftex.def Info: xy.png  used on input line 3041. on input line 3041.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3039.
+ 3041.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3039. on input line 3039.
+Package pdftex.def Info: xy.png  used on input line 3041. on input line 3041.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3039.
+ 3041.
 
-Underfull \hbox (badness 1622) in paragraph at lines 3039--3041
+Underfull \hbox (badness 1622) in paragraph at lines 3041--3043
 []\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
 g
  []
 
-<xujiaxi.jpg, id=999, 2080.02094pt x 3120.4078pt>
+<xujiaxi.jpg, id=1009, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3043. on input line 30
-43.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3045. on input line 30
+45.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3043.
+ 3045.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3043. on input line 30
-43.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3045. on input line 30
+45.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3043.
+ 3045.
 
-Underfull \hbox (badness 1418) in paragraph at lines 3043--3045
+Underfull \hbox (badness 1418) in paragraph at lines 3045--3047
 []\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
  in
  []
 
-<wangyan.png, id=1002, 93.951pt x 136.5903pt>
+<wangyan.png, id=1012, 93.951pt x 136.5903pt>
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3047. on input line 30
-47.
+Package pdftex.def Info: wangyan.png  used on input line 3049. on input line 30
+49.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-047.
+049.
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3047. on input line 30
-47.
+Package pdftex.def Info: wangyan.png  used on input line 3049. on input line 30
+49.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-047.
-[35 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg> <./xy.png> <./xujiaxi.jpg>
- <./wangyan.png>] (bare_jrnl_compsoc-nocolor.aux) ) 
+049.
+[36
+
+ <./xy.png> <./xujiaxi.jpg> <./wangyan.png>] (bare_jrnl_compsoc-nocolor.aux) ) 
 Here is how much of TeX's memory you used:
- 5094 strings out of 493312
- 76596 string characters out of 3143321
- 178984 words of memory out of 3000000
- 8499 multiletter control sequences out of 15000+200000
+ 5095 strings out of 493312
+ 76622 string characters out of 3143321
+ 182266 words of memory out of 3000000
+ 8500 multiletter control sequences out of 15000+200000
  58284 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,14n,38p,1911b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/CTEX/MikTex2.9/fonts/enc
-/dvips/base/8r.enc}<C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/CTEX/MikTex2.9
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MikTex2.9/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/CTEX/MikTex2
-.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MikTex2.9/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MikTex
-2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw
-/courier/ucrr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/
-CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/CTEX/MikTex2.9/fonts/typ
-e1/urw/helvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.
-pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/
-fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino
-/uplri8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on bare_jrnl_compsoc-nocolor.pdf (35 pages, 7555118 bytes).
+ 41i,14n,38p,1911b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
+{
+C:/CTEX/MikTex2.9/fonts/enc/dvips/base/8r.enc}<C:/CTEX/MikTex2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/c
+mmi5.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/M
+ikTex2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MikTex2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/
+MikTex2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/CTEX/MikTex2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTE
+X/MikTex2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/u
+rw/helvetic/uhvb8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><
+C:/CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts
+/type1/urw/palatino/uplb8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb
+i8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2
+.9/fonts/type1/urw/palatino/uplri8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/zapf
+ding/uzdr.pfb>
+Output written on bare_jrnl_compsoc-nocolor.pdf (36 pages, 7558112 bytes).
 PDF statistics:
- 1083 PDF objects out of 1200 (max. 8388607)
+ 1086 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
