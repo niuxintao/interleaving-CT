@@ -1,0 +1,1186 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  30 MAR 2018 16:22
+entering extended mode
+**./bare_jrnl_compsoc-nocolor-second.tex
+(bare_jrnl_compsoc-nocolor-second.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
+(IEEEtran.cls
+Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+-- Using IEEE Computer Society mode.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 458.
+
+(C:\CTEX\MikTex2.9\tex\latex\psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1039.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (C:\CTEX\MikTex2.9\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(C:\CTEX\MikTex2.9\tex\latex\ulem\ulem.sty
+\UL@box=\box28
+\UL@hyphenbox=\box29
+\UL@skip=\skip44
+\UL@hook=\toks15
+\UL@height=\dimen125
+\UL@pe=\count94
+\UL@pixel=\dimen126
+\ULC@box=\box30
+Package: ulem 2012/05/18
+\ULdepth=\dimen127
+)
+(C:\CTEX\MikTex2.9\tex\latex\algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+
+(C:\CTEX\MikTex2.9\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\CTEX\MikTex2.9\tex\latex\algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count95
+\c@ALG@rem=\count96
+\c@ALG@nested=\count97
+\ALG@tlm=\skip45
+\ALG@thistlm=\skip46
+\c@ALG@Lnr=\count98
+\c@ALG@blocknr=\count99
+\c@ALG@storecount=\count100
+\c@ALG@tmpcounter=\count101
+\ALG@tmplength=\skip47
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\CTEX\MikTex2.9\tex\latex\algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(C:\CTEX\MikTex2.9\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks16
+\float@box=\box31
+\@float@everytoks=\toks17
+\@floatcapt=\box32
+)
+\@float@every@algorithm=\toks18
+\c@algorithm=\count103
+)
+(C:\CTEX\MikTex2.9\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(C:\CTEX\MikTex2.9\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\CTEX\MikTex2.9\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen128
+))
+(C:\CTEX\MikTex2.9\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen129
+)
+(C:\CTEX\MikTex2.9\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box33
+\strutbox@=\box34
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip10
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks20
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks21
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks22
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(C:\CTEX\MikTex2.9\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MikTex2.9\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+(C:\CTEX\MikTex2.9\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MikTex2.9\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\CTEX\MikTex2.9\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(C:\CTEX\MikTex2.9\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+)
+(C:\CTEX\MikTex2.9\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen139
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen140
+\subfiglabelskip=\skip54
+\c@subfigure=\count116
+\c@lofdepth=\count117
+\c@subtable=\count118
+\c@lotdepth=\count119
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\CTEX\MikTex2.9\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
+(C:\CTEX\MikTex2.9\tex\latex\multirow\multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip57
+\multirow@cntb=\count120
+\multirow@dima=\skip58
+\bigstrutjot=\dimen141
+)
+(C:\CTEX\MikTex2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\CTEX\MikTex2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\CTEX\MikTex2.9\tex\latex\graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(C:\CTEX\MikTex2.9\tex\latex\colortbl\colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(C:\CTEX\MikTex2.9\tex\latex\tools\array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen142
+\extrarowheight=\dimen143
+\NC@list=\toks25
+\extratabsurround=\skip59
+\backup@length=\skip60
+)
+\everycr=\toks26
+\minrowclearance=\skip61
+)
+\rownum=\count121
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\CTEX\MikTex2.9\tex\latex\mdwtools\footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box35
+\fn@width=\dimen144
+)
+(bare_jrnl_compsoc-nocolor-second.aux)
+\openout1 = `bare_jrnl_compsoc-nocolor-second.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+
+-- Lines per column: 61 (exact).
+(C:\CTEX\MikTex2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen145
+\scratchbox=\box36
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen146
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks28
+) (C:\CTEX\MikTex2.9\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(C:\CTEX\MikTex2.9\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(C:\CTEX\MikTex2.9\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\CTEX\MikTex2.9\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 535.
+
+
+(C:\CTEX\MikTex2.9\tex\latex\psnfss\ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 535.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 535.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 53
+5.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 535.
+
+(C:\CTEX\MikTex2.9\tex\latex\psnfss\upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 535.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 563.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
+
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 563.
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 601
+.
+ [1{C:/CTEX/UserData/pdftex/config/pdftex.map}
+
+
+]
+Package epstopdf Info: Source file: <CT_lifecircle.eps>
+(epstopdf)                    date: 2015-01-17 16:45:06
+(epstopdf)                    size: 342748 bytes
+(epstopdf)             Output file: <CT_lifecircle-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:49:52
+(epstopdf)                    size: 41462 bytes
+(epstopdf)             Command: <epstopdf --outfile=CT_lifecircle-eps-converted
+-to.pdf CT_lifecircle.eps>
+(epstopdf)             \includegraphics on input line 642.
+Package epstopdf Info: Output file is already uptodate.
+<CT_lifecircle-eps-converted-to.pdf, id=12, pagebox=cropbox, 633.36626pt x 213.
+79875pt>
+File: CT_lifecircle-eps-converted-to.pdf Graphic file (type pdf)
+<use CT_lifecircle-eps-converted-to.pdf>
+Package pdftex.def Info: CT_lifecircle-eps-converted-to.pdf  used on input line
+ 642. on input line 642.
+Package pdftex.def Info: Requested size: 245.71754pt x 82.94402pt on input line
+ 642.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 657
+.
+\c@definition=\count128
+ [2 <./CT_lifecircle-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 698.
+ [3]
+\c@assumption=\count129
+Missing character: There is no ¡ in font pplb7t!
+Missing character: There is no ° in font pplb7t!
+Missing character: There is no ¡ in font pplb7t!
+Missing character: There is no ± in font pplb7t!
+ [4] [5] [6]
+Package epstopdf Info: Source file: <baicOutline.eps>
+(epstopdf)                    date: 2015-01-20 04:29:37
+(epstopdf)                    size: 298573 bytes
+(epstopdf)             Output file: <baicOutline-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:49:54
+(epstopdf)                    size: 21842 bytes
+(epstopdf)             Command: <epstopdf --outfile=baicOutline-eps-converted-t
+o.pdf baicOutline.eps>
+(epstopdf)             \includegraphics on input line 995.
+Package epstopdf Info: Output file is already uptodate.
+<baicOutline-eps-converted-to.pdf, id=54, pagebox=cropbox, 392.46625pt x 460.72
+125pt>
+File: baicOutline-eps-converted-to.pdf Graphic file (type pdf)
+<use baicOutline-eps-converted-to.pdf>
+Package pdftex.def Info: baicOutline-eps-converted-to.pdf  used on input line 9
+95. on input line 995.
+Package pdftex.def Info: Requested size: 245.71754pt x 288.45624pt on input lin
+e 995.
+
+[7 <./baicOutline-eps-converted-to.pdf>] [8]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1115.
+
+ [9]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 1219
+.
+
+(C:\CTEX\MikTex2.9\tex\latex\psnfss\omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1219.
+
+ [10] [11] [12]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1468
+.
+
+(C:\CTEX\MikTex2.9\tex\latex\psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [13] [14]
+Package epstopdf Info: Source file: <ex1.eps>
+(epstopdf)                    date: 2017-06-03 18:09:21
+(epstopdf)                    size: 1081502 bytes
+(epstopdf)             Output file: <ex1-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:49:57
+(epstopdf)                    size: 185122 bytes
+(epstopdf)             Command: <epstopdf --outfile=ex1-eps-converted-to.pdf ex
+1.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+<ex1-eps-converted-to.pdf, id=94, pagebox=cropbox, 1439.3775pt x 631.35875pt>
+File: ex1-eps-converted-to.pdf Graphic file (type pdf)
+<use ex1-eps-converted-to.pdf>
+Package pdftex.def Info: ex1-eps-converted-to.pdf  used on input line 1677. on 
+input line 1677.
+Package pdftex.def Info: Requested size: 505.89pt x 221.9037pt on input line 16
+77.
+ [15] [16 <./ex1-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1781.
+
+Package epstopdf Info: Source file: <fd-cit.eps>
+(epstopdf)                    date: 2015-05-22 17:14:57
+(epstopdf)                    size: 291970 bytes
+(epstopdf)             Output file: <fd-cit-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:49:59
+(epstopdf)                    size: 20989 bytes
+(epstopdf)             Command: <epstopdf --outfile=fd-cit-eps-converted-to.pdf
+ fd-cit.eps>
+(epstopdf)             \includegraphics on input line 1860.
+Package epstopdf Info: Output file is already uptodate.
+<fd-cit-eps-converted-to.pdf, id=108, pagebox=cropbox, 341.275pt x 427.5975pt>
+File: fd-cit-eps-converted-to.pdf Graphic file (type pdf)
+<use fd-cit-eps-converted-to.pdf>
+Package pdftex.def Info: fd-cit-eps-converted-to.pdf  used on input line 1860. 
+on input line 1860.
+Package pdftex.def Info: Requested size: 245.71754pt x 307.87648pt on input lin
+e 1860.
+ [17] [18 <./fd-cit-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex2.eps>
+(epstopdf)                    date: 2017-06-03 18:08:18
+(epstopdf)                    size: 1465759 bytes
+(epstopdf)             Output file: <ex2-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:50:02
+(epstopdf)                    size: 263648 bytes
+(epstopdf)             Command: <epstopdf --outfile=ex2-eps-converted-to.pdf ex
+2.eps>
+(epstopdf)             \includegraphics on input line 1933.
+Package epstopdf Info: Output file is already uptodate.
+<ex2-eps-converted-to.pdf, id=126, pagebox=cropbox, 1453.43pt x 929.4725pt>
+File: ex2-eps-converted-to.pdf Graphic file (type pdf)
+<use ex2-eps-converted-to.pdf>
+Package pdftex.def Info: ex2-eps-converted-to.pdf  used on input line 1933. on 
+input line 1933.
+Package pdftex.def Info: Requested size: 505.89pt x 323.51906pt on input line 1
+933.
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./ex2-eps-converted-to.pdf>] [21]
+Package epstopdf Info: Source file: <sens_mfs_f_measure.eps>
+(epstopdf)                    date: 2017-06-03 18:12:57
+(epstopdf)                    size: 69964 bytes
+(epstopdf)             Output file: <sens_mfs_f_measure-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:50:03
+(epstopdf)                    size: 38552 bytes
+(epstopdf)             Command: <epstopdf --outfile=sens_mfs_f_measure-eps-conv
+erted-to.pdf sens_mfs_f_measure.eps>
+(epstopdf)             \includegraphics on input line 2220.
+Package epstopdf Info: Output file is already uptodate.
+<sens_mfs_f_measure-eps-converted-to.pdf, id=144, pagebox=cropbox, 589.20125pt 
+x 300.12125pt>
+File: sens_mfs_f_measure-eps-converted-to.pdf Graphic file (type pdf)
+<use sens_mfs_f_measure-eps-converted-to.pdf>
+Package pdftex.def Info: sens_mfs_f_measure-eps-converted-to.pdf  used on input
+ line 2220. on input line 2220.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2220.
+ [22]
+Package epstopdf Info: Source file: <sens_mfs_tests.eps>
+(epstopdf)                    date: 2017-06-03 18:17:15
+(epstopdf)                    size: 69697 bytes
+(epstopdf)             Output file: <sens_mfs_tests-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:50:04
+(epstopdf)                    size: 38083 bytes
+(epstopdf)             Command: <epstopdf --outfile=sens_mfs_tests-eps-converte
+d-to.pdf sens_mfs_tests.eps>
+(epstopdf)             \includegraphics on input line 2234.
+Package epstopdf Info: Output file is already uptodate.
+<sens_mfs_tests-eps-converted-to.pdf, id=148, pagebox=cropbox, 589.20125pt x 30
+0.12125pt>
+File: sens_mfs_tests-eps-converted-to.pdf Graphic file (type pdf)
+<use sens_mfs_tests-eps-converted-to.pdf>
+Package pdftex.def Info: sens_mfs_tests-eps-converted-to.pdf  used on input lin
+e 2234. on input line 2234.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2234.
+Package epstopdf Info: Source file: <num_mfs_t_tuple.eps>
+(epstopdf)                    date: 2018-03-26 12:43:13
+(epstopdf)                    size: 73194 bytes
+(epstopdf)             Output file: <num_mfs_t_tuple-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 12:50:58
+(epstopdf)                    size: 40240 bytes
+(epstopdf)             Command: <epstopdf --outfile=num_mfs_t_tuple-eps-convert
+ed-to.pdf num_mfs_t_tuple.eps>
+(epstopdf)             \includegraphics on input line 2251.
+Package epstopdf Info: Output file is already uptodate.
+<num_mfs_t_tuple-eps-converted-to.pdf, id=149, pagebox=cropbox, 589.20125pt x 3
+00.12125pt>
+File: num_mfs_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
+<use num_mfs_t_tuple-eps-converted-to.pdf>
+Package pdftex.def Info: num_mfs_t_tuple-eps-converted-to.pdf  used on input li
+ne 2251. on input line 2251.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2251.
+Package epstopdf Info: Source file: <fmeasuremulti.eps>
+(epstopdf)                    date: 2018-01-30 13:44:22
+(epstopdf)                    size: 377278 bytes
+(epstopdf)             Output file: <fmeasuremulti-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-30 13:46:11
+(epstopdf)                    size: 60470 bytes
+(epstopdf)             Command: <epstopdf --outfile=fmeasuremulti-eps-converted
+-to.pdf fmeasuremulti.eps>
+(epstopdf)             \includegraphics on input line 2262.
+Package epstopdf Info: Output file is already uptodate.
+<fmeasuremulti-eps-converted-to.pdf, id=150, pagebox=cropbox, 589.20125pt x 300
+.12125pt>
+File: fmeasuremulti-eps-converted-to.pdf Graphic file (type pdf)
+<use fmeasuremulti-eps-converted-to.pdf>
+Package pdftex.def Info: fmeasuremulti-eps-converted-to.pdf  used on input line
+ 2262. on input line 2262.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2262.
+Package epstopdf Info: Source file: <decreasingoffmeasure.eps>
+(epstopdf)                    date: 2018-01-30 19:36:31
+(epstopdf)                    size: 50924 bytes
+(epstopdf)             Output file: <decreasingoffmeasure-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-01-30 19:38:20
+(epstopdf)                    size: 19786 bytes
+(epstopdf)             Command: <epstopdf --outfile=decreasingoffmeasure-eps-co
+nverted-to.pdf decreasingoffmeasure.eps>
+(epstopdf)             \includegraphics on input line 2268.
+Package epstopdf Info: Output file is already uptodate.
+<decreasingoffmeasure-eps-converted-to.pdf, id=151, pagebox=cropbox, 589.20125p
+t x 300.12125pt>
+File: decreasingoffmeasure-eps-converted-to.pdf Graphic file (type pdf)
+<use decreasingoffmeasure-eps-converted-to.pdf>
+Package pdftex.def Info: decreasingoffmeasure-eps-converted-to.pdf  used on inp
+ut line 2268. on input line 2268.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2268.
+ [23 <./sens_mfs_f_measure-eps-converted-to.pdf> <./sens_mfs_tests-eps-converte
+d-to.pdf> <./num_mfs_t_tuple-eps-converted-to.pdf> <./fmeasuremulti-eps-convert
+ed-to.pdf>]
+Package epstopdf Info: Source file: <sens_options_f_measure.eps>
+(epstopdf)                    date: 2017-06-03 18:16:11
+(epstopdf)                    size: 65942 bytes
+(epstopdf)             Output file: <sens_options_f_measure-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-01-23 16:50:06
+(epstopdf)                    size: 37631 bytes
+(epstopdf)             Command: <epstopdf --outfile=sens_options_f_measure-eps-
+converted-to.pdf sens_options_f_measure.eps>
+(epstopdf)             \includegraphics on input line 2291.
+Package epstopdf Info: Output file is already uptodate.
+<sens_options_f_measure-eps-converted-to.pdf, id=315, pagebox=cropbox, 589.2012
+5pt x 300.12125pt>
+File: sens_options_f_measure-eps-converted-to.pdf Graphic file (type pdf)
+<use sens_options_f_measure-eps-converted-to.pdf>
+Package pdftex.def Info: sens_options_f_measure-eps-converted-to.pdf  used on i
+nput line 2291. on input line 2291.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2291.
+Package epstopdf Info: Source file: <sens_options_tests.eps>
+(epstopdf)                    date: 2017-06-03 18:14:49
+(epstopdf)                    size: 66297 bytes
+(epstopdf)             Output file: <sens_options_tests-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-23 16:50:07
+(epstopdf)                    size: 36224 bytes
+(epstopdf)             Command: <epstopdf --outfile=sens_options_tests-eps-conv
+erted-to.pdf sens_options_tests.eps>
+(epstopdf)             \includegraphics on input line 2298.
+Package epstopdf Info: Output file is already uptodate.
+<sens_options_tests-eps-converted-to.pdf, id=316, pagebox=cropbox, 589.20125pt 
+x 300.12125pt>
+File: sens_options_tests-eps-converted-to.pdf Graphic file (type pdf)
+<use sens_options_tests-eps-converted-to.pdf>
+Package pdftex.def Info: sens_options_tests-eps-converted-to.pdf  used on input
+ line 2298. on input line 2298.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2298.
+Package epstopdf Info: Source file: <num_option_t_tuple.eps>
+(epstopdf)                    date: 2018-03-26 12:43:53
+(epstopdf)                    size: 69729 bytes
+(epstopdf)             Output file: <num_option_t_tuple-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 12:54:41
+(epstopdf)                    size: 39203 bytes
+(epstopdf)             Command: <epstopdf --outfile=num_option_t_tuple-eps-conv
+erted-to.pdf num_option_t_tuple.eps>
+(epstopdf)             \includegraphics on input line 2304.
+Package epstopdf Info: Output file is already uptodate.
+<num_option_t_tuple-eps-converted-to.pdf, id=317, pagebox=cropbox, 589.20125pt 
+x 300.12125pt>
+File: num_option_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
+<use num_option_t_tuple-eps-converted-to.pdf>
+Package pdftex.def Info: num_option_t_tuple-eps-converted-to.pdf  used on input
+ line 2304. on input line 2304.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2304.
+ [24 <./decreasingoffmeasure-eps-converted-to.pdf> <./sens_options_f_measure-ep
+s-converted-to.pdf> <./sens_options_tests-eps-converted-to.pdf> <./num_option_t
+_tuple-eps-converted-to.pdf>]
+Underfull \hbox (badness 4647) in paragraph at lines 2361--2362
+\OT1/ppl/m/n/9.53561 The re-sults of eval-u-at-ing the ap-proaches on non-
+ []
+
+Package epstopdf Info: Source file: <sen_und_f_measure.eps>
+(epstopdf)                    date: 2018-01-31 15:36:19
+(epstopdf)                    size: 68384 bytes
+(epstopdf)             Output file: <sen_und_f_measure-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-31 15:36:24
+(epstopdf)                    size: 38334 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_und_f_measure-eps-conve
+rted-to.pdf sen_und_f_measure.eps>
+(epstopdf)             \includegraphics on input line 2364.
+Package epstopdf Info: Output file is already uptodate.
+<sen_und_f_measure-eps-converted-to.pdf, id=509, pagebox=cropbox, 589.20125pt x
+ 300.12125pt>
+File: sen_und_f_measure-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_und_f_measure-eps-converted-to.pdf>
+Package pdftex.def Info: sen_und_f_measure-eps-converted-to.pdf  used on input 
+line 2364. on input line 2364.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2364.
+Package epstopdf Info: Source file: <sen_und_tests.eps>
+(epstopdf)                    date: 2018-01-31 09:44:30
+(epstopdf)                    size: 67365 bytes
+(epstopdf)             Output file: <sen_und_tests-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-31 09:44:36
+(epstopdf)                    size: 37965 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_und_tests-eps-converted
+-to.pdf sen_und_tests.eps>
+(epstopdf)             \includegraphics on input line 2371.
+Package epstopdf Info: Output file is already uptodate.
+<sen_und_tests-eps-converted-to.pdf, id=510, pagebox=cropbox, 589.20125pt x 300
+.12125pt>
+File: sen_und_tests-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_und_tests-eps-converted-to.pdf>
+Package pdftex.def Info: sen_und_tests-eps-converted-to.pdf  used on input line
+ 2371. on input line 2371.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2371.
+Package epstopdf Info: Source file: <sen_pro_t_tuple.eps>
+(epstopdf)                    date: 2018-03-26 12:45:32
+(epstopdf)                    size: 74861 bytes
+(epstopdf)             Output file: <sen_pro_t_tuple-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 15:12:16
+(epstopdf)                    size: 39198 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_pro_t_tuple-eps-convert
+ed-to.pdf sen_pro_t_tuple.eps>
+(epstopdf)             \includegraphics on input line 2377.
+Package epstopdf Info: Output file is already uptodate.
+<sen_pro_t_tuple-eps-converted-to.pdf, id=511, pagebox=cropbox, 589.20125pt x 3
+00.12125pt>
+File: sen_pro_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_pro_t_tuple-eps-converted-to.pdf>
+Package pdftex.def Info: sen_pro_t_tuple-eps-converted-to.pdf  used on input li
+ne 2377. on input line 2377.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2377.
+
+Underfull \hbox (badness 1360) in paragraph at lines 2378--2378
+\OT1/phv/m/n/8.03 Fig. 16. The tested-t-way cov-er-age for var-i-ous prob-a-bil
+-ity of un-
+ []
+
+[25 <./sen_und_f_measure-eps-converted-to.pdf> <./sen_und_tests-eps-converted-t
+o.pdf>]
+Package epstopdf Info: Source file: <sen_und_redundancy.eps>
+(epstopdf)                    date: 2018-01-31 15:19:49
+(epstopdf)                    size: 68397 bytes
+(epstopdf)             Output file: <sen_und_redundancy-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-31 15:20:27
+(epstopdf)                    size: 38472 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_und_redundancy-eps-conv
+erted-to.pdf sen_und_redundancy.eps>
+(epstopdf)             \includegraphics on input line 2403.
+Package epstopdf Info: Output file is already uptodate.
+<sen_und_redundancy-eps-converted-to.pdf, id=618, pagebox=cropbox, 589.20125pt 
+x 300.12125pt>
+File: sen_und_redundancy-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_und_redundancy-eps-converted-to.pdf>
+Package pdftex.def Info: sen_und_redundancy-eps-converted-to.pdf  used on input
+ line 2403. on input line 2403.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2403.
+Package epstopdf Info: Source file: <sen_safe_f_measure.eps>
+(epstopdf)                    date: 2018-02-02 22:14:11
+(epstopdf)                    size: 54286 bytes
+(epstopdf)             Output file: <sen_safe_f_measure-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-02 22:14:57
+(epstopdf)                    size: 30975 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_safe_f_measure-eps-conv
+erted-to.pdf sen_safe_f_measure.eps>
+(epstopdf)             \includegraphics on input line 2432.
+Package epstopdf Info: Output file is already uptodate.
+<sen_safe_f_measure-eps-converted-to.pdf, id=619, pagebox=cropbox, 589.20125pt 
+x 300.12125pt>
+File: sen_safe_f_measure-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_safe_f_measure-eps-converted-to.pdf>
+Package pdftex.def Info: sen_safe_f_measure-eps-converted-to.pdf  used on input
+ line 2432. on input line 2432.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2432.
+Package epstopdf Info: Source file: <sen_safe_tests.eps>
+(epstopdf)                    date: 2018-02-02 22:14:49
+(epstopdf)                    size: 55341 bytes
+(epstopdf)             Output file: <sen_safe_tests-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-02 22:14:57
+(epstopdf)                    size: 33215 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_safe_tests-eps-converte
+d-to.pdf sen_safe_tests.eps>
+(epstopdf)             \includegraphics on input line 2439.
+Package epstopdf Info: Output file is already uptodate.
+<sen_safe_tests-eps-converted-to.pdf, id=620, pagebox=cropbox, 670.505pt x 300.
+12125pt>
+File: sen_safe_tests-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_safe_tests-eps-converted-to.pdf>
+Package pdftex.def Info: sen_safe_tests-eps-converted-to.pdf  used on input lin
+e 2439. on input line 2439.
+Package pdftex.def Info: Requested size: 252.94499pt x 113.21837pt on input lin
+e 2439.
+Package epstopdf Info: Source file: <sen_safe_t_tuple.eps>
+(epstopdf)                    date: 2018-03-26 12:48:17
+(epstopdf)                    size: 61360 bytes
+(epstopdf)             Output file: <sen_safe_t_tuple-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 16:16:23
+(epstopdf)                    size: 34745 bytes
+(epstopdf)             Command: <epstopdf --outfile=sen_safe_t_tuple-eps-conver
+ted-to.pdf sen_safe_t_tuple.eps>
+(epstopdf)             \includegraphics on input line 2445.
+Package epstopdf Info: Output file is already uptodate.
+<sen_safe_t_tuple-eps-converted-to.pdf, id=621, pagebox=cropbox, 589.20125pt x 
+300.12125pt>
+File: sen_safe_t_tuple-eps-converted-to.pdf Graphic file (type pdf)
+<use sen_safe_t_tuple-eps-converted-to.pdf>
+Package pdftex.def Info: sen_safe_t_tuple-eps-converted-to.pdf  used on input l
+ine 2445. on input line 2445.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2445.
+ [26 <./sen_pro_t_tuple-eps-converted-to.pdf> <./sen_und_redundancy-eps-convert
+ed-to.pdf> <./sen_safe_f_measure-eps-converted-to.pdf> <./sen_safe_tests-eps-co
+nverted-to.pdf>]
+Package epstopdf Info: Source file: <enNonSafe.eps>
+(epstopdf)                    date: 2018-02-03 17:43:03
+(epstopdf)                    size: 57223 bytes
+(epstopdf)             Output file: <enNonSafe-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-03 17:47:04
+(epstopdf)                    size: 34927 bytes
+(epstopdf)             Command: <epstopdf --outfile=enNonSafe-eps-converted-to.
+pdf enNonSafe.eps>
+(epstopdf)             \includegraphics on input line 2459.
+Package epstopdf Info: Output file is already uptodate.
+<enNonSafe-eps-converted-to.pdf, id=818, pagebox=cropbox, 589.20125pt x 300.121
+25pt>
+File: enNonSafe-eps-converted-to.pdf Graphic file (type pdf)
+<use enNonSafe-eps-converted-to.pdf>
+Package pdftex.def Info: enNonSafe-eps-converted-to.pdf  used on input line 245
+9. on input line 2459.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2459.
+Package epstopdf Info: Source file: <enNonSafeTriggerAvg.eps>
+(epstopdf)                    date: 2018-02-03 17:43:59
+(epstopdf)                    size: 56222 bytes
+(epstopdf)             Output file: <enNonSafeTriggerAvg-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-03 17:47:06
+(epstopdf)                    size: 34924 bytes
+(epstopdf)             Command: <epstopdf --outfile=enNonSafeTriggerAvg-eps-con
+verted-to.pdf enNonSafeTriggerAvg.eps>
+(epstopdf)             \includegraphics on input line 2466.
+Package epstopdf Info: Output file is already uptodate.
+<enNonSafeTriggerAvg-eps-converted-to.pdf, id=819, pagebox=cropbox, 589.20125pt
+ x 300.12125pt>
+File: enNonSafeTriggerAvg-eps-converted-to.pdf Graphic file (type pdf)
+<use enNonSafeTriggerAvg-eps-converted-to.pdf>
+Package pdftex.def Info: enNonSafeTriggerAvg-eps-converted-to.pdf  used on inpu
+t line 2466. on input line 2466.
+Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
+e 2466.
+ [27 <./sen_safe_t_tuple-eps-converted-to.pdf> <./enNonSafe-eps-converted-to.pd
+f> <./enNonSafeTriggerAvg-eps-converted-to.pdf>]
+[28] [29]
+Overfull \hbox (4.18799pt too wide) in paragraph at lines 2786--2787
+[] $\OML/cmm/m/it/10 t[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 Mutate\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 
+\OML/cmm/m/it/10 ; S[]; Cons; T[]\OT1/cmr/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (0.68105pt too wide) in paragraph at lines 2796--2797
+[] $\OML/cmm/m/it/10 t[]$ $\OMS/cmsy/m/n/10  $ [] 
+ []
+
+[30]
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2932
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
+:0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2933--2933
+\OT1/ppl/m/n/8.03 (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) 
+(1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2933--2933
+\OT1/ppl/m/n/8.03 (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3
+,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2934--2934
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13
+:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2934--2934
+\OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14
+:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1)
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 2934--2934
+\OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14
+:2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
+,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+\OT1/ppl/m/n/8.03 (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2
+,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+\OT1/ppl/m/n/8.03 (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,
+28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
+,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\OT1/ppl/m/n/8.03 (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1
+,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\OT1/ppl/m/n/8.03 (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,
+5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\OT1/ppl/m/n/8.03 (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:
+2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\OT1/ppl/m/n/8.03 (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,1
+9:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2938
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13
+:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2938
+\OT1/ppl/m/n/8.03 (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,
+40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2938
+\OT1/ppl/m/n/8.03 (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2
+,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2938
+\OT1/ppl/m/n/8.03 (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14
+:3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2943--2945
+[]|\OT1/ppl/m/n/8.03 (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0
+,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2943--2945
+\OT1/ppl/m/n/8.03 (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,
+46:1,47:1,48:1) (49:1,50:1) (36:2,37:2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2943--2945
+\OT1/ppl/m/n/8.03 (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,
+50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2943--2945
+\OT1/ppl/m/n/8.03 (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:
+3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
+ []
+
+(bare_jrnl_compsoc-nocolor-second.bbl [32] [33] [34]
+Missing character: There is no ï in font pplri7t!
+Missing character: There is no ¿ in font pplri7t!
+Missing character: There is no ½ in font pplri7t!
+Missing character: There is no ï in font pplri7t!
+Missing character: There is no ¿ in font pplri7t!
+Missing character: There is no ½ in font pplri7t!
+Missing character: There is no ï in font pplri7t!
+Missing character: There is no ¿ in font pplri7t!
+Missing character: There is no ½ in font pplri7t!
+Missing character: There is no ï in font pplri7t!
+Missing character: There is no ¿ in font pplri7t!
+Missing character: There is no ½ in font pplri7t!
+)
+<niu.png, id=983, 1281.78876pt x 1490.56876pt>
+File: niu.png Graphic file (type png)
+<use niu.png>
+Package pdftex.def Info: niu.png  used on input line 3028. on input line 3028.
+Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
+3028.
+File: niu.png Graphic file (type png)
+<use niu.png>
+Package pdftex.def Info: niu.png  used on input line 3028. on input line 3028.
+Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
+3028.
+<nie.png, id=987, 230.36063pt x 258.21469pt>
+File: nie.png Graphic file (type png)
+<use nie.png>
+Package pdftex.def Info: nie.png  used on input line 3035. on input line 3035.
+Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
+035.
+File: nie.png Graphic file (type png)
+<use nie.png>
+Package pdftex.def Info: nie.png  used on input line 3035. on input line 3035.
+Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
+035.
+<hare.png, id=990, 1214.136pt x 1402.038pt>
+File: hare.png Graphic file (type png)
+<use hare.png>
+Package pdftex.def Info: hare.png  used on input line 3039. on input line 3039.
+
+Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
+3039.
+File: hare.png Graphic file (type png)
+<use hare.png>
+Package pdftex.def Info: hare.png  used on input line 3039. on input line 3039.
+
+Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
+3039.
+<lei.jpg, id=993, 242.1045pt x 327.3831pt>
+File: lei.jpg Graphic file (type jpg)
+<use lei.jpg>
+Package pdftex.def Info: lei.jpg  used on input line 3043. on input line 3043.
+Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
+3043.
+File: lei.jpg Graphic file (type jpg)
+<use lei.jpg>
+Package pdftex.def Info: lei.jpg  used on input line 3043. on input line 3043.
+Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
+3043.
+ [35 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg>]
+<xy.png, id=1006, 925.95938pt x 1489.81593pt>
+File: xy.png Graphic file (type png)
+<use xy.png>
+Package pdftex.def Info: xy.png  used on input line 3047. on input line 3047.
+Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
+ 3047.
+File: xy.png Graphic file (type png)
+<use xy.png>
+Package pdftex.def Info: xy.png  used on input line 3047. on input line 3047.
+Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
+ 3047.
+
+Underfull \hbox (badness 1622) in paragraph at lines 3047--3049
+[]\OT1/phv/b/n/8.03 Xiaoyin Wang \OT1/phv/m/n/8.03 born in Harbin, Hei-longjian
+g
+ []
+
+<xujiaxi.jpg, id=1009, 2080.02094pt x 3120.4078pt>
+File: xujiaxi.jpg Graphic file (type jpg)
+<use xujiaxi.jpg>
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3051. on input line 30
+51.
+Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
+ 3051.
+File: xujiaxi.jpg Graphic file (type jpg)
+<use xujiaxi.jpg>
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3051. on input line 30
+51.
+Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
+ 3051.
+
+Underfull \hbox (badness 1418) in paragraph at lines 3051--3053
+[]\OT1/phv/b/n/8.03 Jiaxi Xu \OT1/phv/m/n/8.03 born in 1972, Se-nior En-gi-neer
+ in
+ []
+
+<wangyan.png, id=1012, 93.951pt x 136.5903pt>
+File: wangyan.png Graphic file (type png)
+<use wangyan.png>
+Package pdftex.def Info: wangyan.png  used on input line 3055. on input line 30
+55.
+Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
+055.
+File: wangyan.png Graphic file (type png)
+<use wangyan.png>
+Package pdftex.def Info: wangyan.png  used on input line 3055. on input line 30
+55.
+Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
+055.
+[36
+
+ <./xy.png> <./xujiaxi.jpg> <./wangyan.png>]
+(bare_jrnl_compsoc-nocolor-second.aux) ) 
+Here is how much of TeX's memory you used:
+ 5095 strings out of 493312
+ 76706 string characters out of 3143321
+ 182270 words of memory out of 3000000
+ 8500 multiletter control sequences out of 15000+200000
+ 58284 words of font info for 121 fonts, out of 3000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 41i,14n,38p,1918b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/CTEX/MikTex2.9/fonts/enc/dvips/base
+/8r.enc}<C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/M
+ikTex2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/CTEX/MikTex2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTE
+X/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/CTEX/MikTex2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX
+/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MikTex2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/courier/uc
+rr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/CTEX/MikTex
+2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/helv
+etic/uhvro8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/CTE
+X/MikTex2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/CTEX/MikTex2.9/fonts/type1
+/urw/palatino/uplr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/palatino/uplri8a.pf
+b><C:/CTEX/MikTex2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on bare_jrnl_compsoc-nocolor-second.pdf (36 pages, 7557962 bytes
+).
+PDF statistics:
+ 1086 PDF objects out of 1200 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
+
