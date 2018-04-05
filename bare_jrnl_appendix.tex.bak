@@ -1,0 +1,754 @@
+
+%% bare_jrnl_compsoc.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% Computer Society journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[10pt,journal,compsoc]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\ifCLASSOPTIONcompsoc
+  % IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+%
+% Note that some packages require special options to format as the Computer
+% Society requires. In particular, Computer Society  papers do not use
+% compressed citation ranges as is done in typical IEEE papers
+% (e.g., [1]-[4]). Instead, they list every citation separately in order
+% (e.g., [1], [2], [3], [4]). To get the latter we need to load the cite
+% package with the nocompress option which is supported by cite.sty v4.0
+% and later. Note also the use of a CLASSOPTION conditional provided by
+% IEEEtran.cls V1.7 and later.
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at:
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=footnotesize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a sans serif font rather
+% than the serif font used in traditional IEEE formatting and thus the need
+% to invoke different subfig.sty package options depending on whether
+% compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+%\ifCLASSOPTIONcaptionsoff
+%  \usepackage[nomarkers]{endfloat}
+% \let\MYoriglatexcaption\caption
+% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+%\fi
+% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and
+% Axel Sommerfeldt. This package may be useful when used in conjunction with
+% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
+% submissions have lists of figures/tables at the end of the paper and that
+% figures/tables without any captions are placed on a page by themselves at
+% the end of the document. If needed, the draftcls IEEEtran class option or
+% \CLASSINPUTbaselinestretch interface can be used to increase the line
+% spacing as well. Be sure and use the nomarkers option of endfloat to
+% prevent endfloat from "marking" where the figures would have been placed
+% in the text. The two hack lines of code above are a slight modification of
+% that suggested by in the endfloat docs (section 8.4.1) to ensure that
+% the full captions always appear in the list of figures/tables - even if
+% the user used the short optional argument of \caption[]{}.
+% IEEE papers do not typically make use of \caption[]'s optional argument,
+% so this should not be an issue. A similar trick can be used to disable
+% captions of packages such as subfig.sty that lack options to turn off
+% the subcaptions:
+% For subfig.sty:
+% \let\MYorigsubfloat\subfloat
+% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
+% However, the above trick will not work if both optional arguments of
+% the \subfloat command are used. Furthermore, there needs to be a
+% description of each subfigure *somewhere* and endfloat does not add
+% subfigure captions to its list of figures. Thus, the best approach is to
+% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
+% and instead reference/explain all the subfigures within the main caption.
+% The latest version of endfloat.sty and its documentation can obtained at:
+% http://www.ctan.org/pkg/endfloat
+%
+% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
+% later in the document, say, to conditionally put the References on a
+% page by themselves.
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage[normalem]{ulem}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{amsthm}
+%\usepackage{booktabs}
+%\usepackage{multirow}
+
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+% Metadata Information
+%\acmVolume{9}
+%\acmNumber{4}
+%\acmArticle{39}
+%\acmYear{2010}
+%\acmMonth{3}
+
+\newtheorem{assumption}{Assumption}
+
+\begin{document}
+
+\appendices
+\appendices
+\section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
+
+\subsection{the algorithm of SCT}
+\begin{algorithm}
+  \caption{The overall procedure of SCT}
+  \begin{algorithmic}[1]
+     \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Constraints$  \Comment{The constraints of SUT}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $MFS \leftarrow \emptyset$
+       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+       \ForAll  {$t_{fail} \in T_{fail}$}
+         \State  $mfs \leftarrow OFOT(t_{fail}) $
+         \State $MFS.append(mfs) $
+       \EndFor
+    \State \Return   MFS
+  \end{algorithmic}
+\end{algorithm}
+
+The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
+
+\subsection{the algorithm of the augmented SCT}
+\begin{algorithm}
+  \caption{The overall procedure of augmented SCT}
+  \begin{algorithmic}[1]
+     \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Constraints$  \Comment{The constraints of SUT}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $MFS \leftarrow \emptyset$
+       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+       \ForAll  {$t_{fail} \in T_{fail}$}
+          \State $t_{mutated} \leftarrow t_{fail}$
+          \ForAll  {$s \in MFS$}
+         \If {$s \in t_{mutated}$}
+          \State $t_{mutated} \leftarrow remove(t_{mutated}, s)$
+         \EndIf
+         \If {$t_{fail} == t_{mutated}$}
+            \State  $mfs \leftarrow OFOT(t_{fail}) $
+            \State $MFS.append(mfs) $
+         \Else
+            \If{$execute(t_{mutated}$) == FAIL}
+                \State  $mfs \leftarrow OFOT(t_{mutated}) $
+                \State $MFS.append(mfs) $
+            \EndIf
+         \EndIf
+          \EndFor
+       \EndFor
+    \State \Return   MFS
+  \end{algorithmic}
+\end{algorithm}
+
+Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case (line 6), the augmented SCT first needs to  check whether there exists any existing MFS contained in it (line 6 - 7). If so, the augmented SCT needs to remove the existing MFS in it (line 8) by mutating the corresponding parameter values of the test case to any values other than the ones contained in the MFS. Note that if we have removed some MFS in the original failing test case (line 14), we need to execute the newly generated test case $t_{mutated}$ to see if it fails again (line 14). If it fails, which means that $t_{mutated}$ contained some MFS other than the previously identified MFS, the augmented SCT needs to take OFOT to identify the MFS in $t_{mutated}$. On the other hand, if we did not find any previously identified schema (line 10), the augmented SCT just needs to directly take OFOT to identify the MFS in the original failing test case. At last, the same as SCT, the augmented SCT needs to return all the identified MFS (line 21).
+
+\subsection{the algorithm of ICT}
+\begin{algorithm}
+  \caption{The overall procedure of ICT}
+  \begin{algorithmic}[1]
+         \Require
+
+    % $t_{original}$ \Comment{original failing test case}
+
+     $Param$ \Comment{the parameter values of the SUT}
+
+     $\tau$ \Comment{the strength of the covering array}
+    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+
+     $Cons$  \Comment{The constraints of SUT}
+
+     $CheckMAX$ \Comment{The strength of checking mechanism}
+
+ %    $\Omega$ \Comment{the schemas that are still uncovered}
+
+ %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+
+ %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+
+
+\Ensure  $MFS$ \Comment{The MFS of SUT}
+\
+   %  \ForAll  {$s \in S_{identified}$}
+%       \State $S_{MFS}.append(s)$
+    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+       \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
+       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, Cons)$  \Comment{the uncovered schemas}
+       \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
+       \While{$\Omega$ is not empty}
+         \State $test \leftarrow Greedy\_Gen(\Omega, Cons, S_{{MFS}})$
+           \If{$execute(test$) == PASS}
+                \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
+            \Else  \Comment{start OFOT, and checking process}
+                \State $S_{mfs\_candi} \leftarrow \emptyset$
+                \State $T_{history} \leftarrow \emptyset$
+                \While{true}
+                \State $T_{for\_MFS} \leftarrow \emptyset$
+                \ForAll  {$\Delta \in test$}
+                \State $t_{\Delta} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Cons, T_{history}) $
+                \State $T_{for\_MFS}.append(t_{\Delta})$
+                \If{$execute(t_{for\_MFS}$) == PASS}
+                   \State  $\Omega \leftarrow Update(\Omega, t_{\Delta}, \tau) $
+                \EndIf
+                \EndFor
+                \State $T_{history}.append(T_{for\_MFS})$
+                \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
+                \State $isRealMFS \leftarrow true$
+                \For  {$i = 0; i <= CheckMAX; i++$}
+                    \State $t_{check}$ $\leftarrow$ \parbox[t]{.6\linewidth}{ $Gen(S_{mfs\_candi}$, $\Omega$, $S_{MFS}$, $Cons$, $T_{history}$)}
+                    \If{$execute(t_{check}$) == PASS}
+                        \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
+                        \State $isRealMFS \leftarrow false$
+                        \State  break
+                    \EndIf
+                \EndFor
+                \If{$isRealMFS == true$}
+                   \State  break
+                \EndIf
+                \EndWhile
+                \State $S_{current} \leftarrow S_{mfs\_candi}$
+                \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
+                \State $S_{MFS}.append(S_{current})$
+           \EndIf
+       \EndWhile
+
+    \State $MFS \leftarrow S_{MFS}$
+    \State \Return   MFS
+  \end{algorithmic}
+\end{algorithm}
+The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism).
+
+This algorithm consists of two main loops. The outer loop  (line 4 - 39) focuses on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+
+There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before.
+
+In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21). Different from the original OFOT algorithm, for each test case $t_{\Delta}$, \emph{ict} needs to consider the following facts: 1) cover as more un-covered schemas $\Omega$ as possible, 2)do not contain existing identified MFS $S_{MFS}$,  and constraints, 3) do not generate the  test cases generated in the previous iterations (line 14).  It is noted that in this paper, we use the same greedy method as used in AETG to generate such test case. Specifically, for the parameter value that is  needed to select, \emph{ict} selects the parameter value has the most un-covered schemas that contain this parameter value. Additionally, we use SAT solver to ensure that the selected parameter value will not introduce any constraint, any MFS, nor any test case that have already generated.  After $t_{\Delta}$ is generated, \emph{ict} will execute it (line 16), and if it passes, \emph{ict} will update the un-covered schemas set (line 17). \emph{ict} then identifies the candidate MFS $S_{mfs\_candi}$ according to the corresponding test cases generated by OFOT (line 21).
+
+The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indicates that $S_{mfs\_candi}$ is not the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).
+
+At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there are no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
+
+
+
+\section{The details of the inputs modeling and information of the MFS for the synthetic software}
+In this section, we use the form of (p1:x1, p2:x2, ....) to represent the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
+%\subsection{For evaluating the number of MFS}
+
+\begin{table*}[htbp]
+\center
+\caption{The details of the modeling for evaluating the number of MFS}
+\label{detail-eva-mfs}
+
+\begin{tabular}{|c|c|m{1.7\columnwidth}|}
+\hline
+Subject & Inputs & MFS  \\\hline
+syn1 & $5^{11}$ & (1:0,2:0)  \\ \hline
+syn2 & $5^{11}$ & (1:0,2:0) (1:0,3:0)  \\ \hline
+syn3 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0)  \\ \hline
+syn4 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0)  \\ \hline
+syn5 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0)  \\ \hline
+syn6 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0)  \\ \hline
+syn7 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0)  \\ \hline
+syn8 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0)  \\ \hline
+syn9 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0)  \\ \hline
+syn10 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0)  \\ \hline
+syn11 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0)  \\ \hline
+syn12 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0)  \\ \hline
+syn13 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0)  \\ \hline
+syn14 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0)  \\ \hline
+syn15 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1)  \\ \hline
+syn16 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1)  \\ \hline
+syn17 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1)  \\ \hline
+syn18 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1) (3:1,10:1) (3:1,11:1) (4:1,5:1) (4:1,6:1) (4:1,7:1) (4:1,8:1) (4:1,9:1) (4:1,10:1) (4:1,11:1) (5:1,6:1)  \\ \hline
+
+\end{tabular}
+
+\end{table*}
+%\subsection{For evaluating the number of options}
+\begin{table}[htbp]
+\center
+\caption{The details of the modeling for evaluating the number of options}
+\label{detail-eva-op}
+
+\begin{tabular}{|l|l|l|}
+\hline
+Subject & Inputs & MFS  \\\hline
+syn1 & $2^{8}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn2 & $2^{9}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn3 & $2^{10}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn4 & $2^{12}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn5 & $2^{16}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn6 & $2^{20}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn7 & $2^{30}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn8 & $2^{40}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn9 & $2^{50}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn10 & $2^{60}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn11 & $2^{70}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn12 & $2^{80}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn13 & $2^{90}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+syn14 & $2^{100}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+\end{tabular}
+
+\end{table}
+%\subsection{For evaluating the  probabilities of triggering MFS}
+
+
+\begin{table}[htbp]
+\center
+\caption{The details of the modeling for evaluating  probabilities of triggering MFS}
+\label{detail-eva-pro}
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Subject & Inputs & MFS  & Probability \\\hline
+syn1 & $4^{10}$ &  (2:1)  & 0.01 \\ \hline
+syn2 & $4^{10}$ &  (2:1)  & 0.05 \\ \hline
+syn3 & $4^{10}$ &  (2:1)  & 0.1 \\ \hline
+syn4 & $4^{10}$ &  (2:1)  & 0.15 \\ \hline
+syn5 & $4^{10}$ &  (2:1)  & 0.2 \\ \hline
+syn6 & $4^{10}$ &  (2:1)  & 0.3 \\ \hline
+syn7 & $4^{10}$ &  (2:1)  & 0.4 \\ \hline
+syn8 & $4^{10}$ &  (2:1)  & 0.5 \\ \hline
+syn9 & $4^{10}$ &  (2:1)  & 0.6 \\ \hline
+syn10 & $4^{10}$ &  (2:1)  & 0.7 \\ \hline
+syn11 & $4^{10}$ &  (2:1)  & 0.8 \\ \hline
+syn12 & $4^{10}$ &  (2:1)  & 0.9 \\ \hline
+syn13 & $4^{10}$ &  (2:1)  & 0.98 \\ \hline
+\end{tabular}
+
+\end{table}
+
+%\subsection{For evaluating the safe values}
+
+\begin{table*}[htbp]
+\center
+\caption{The details of the modeling for evaluating safe values}
+\label{detail-eva-safe}
+
+\begin{tabular}{|c|c|m{1.7\columnwidth}|}
+\hline
+Subject & Inputs & MFS  \\\hline
+syn1 & $4^{8}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (1:2,2:2) (3:2,4:2,5:2,6:2,7:2,8:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn2 & $4^{10}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (9:0,10:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (9:1,10:1) (1:2,2:2) (3:2,4:2) (5:2,6:2,7:2,8:2,9:2,10:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3) (9:3,10:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn3 & $4^{12}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0) (10:0,11:0,12:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1) (8:1,9:1,10:1) (11:1,12:1) (1:2,2:2,3:2) (4:2,5:2) (6:2,7:2,8:2,9:2,10:2,11:2,12:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3,9:3) (10:3,11:3,12:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn4 & $4^{16}$ & (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (9:1,10:1,11:1,12:1,13:1) (14:1,15:1,16:1) (1:2,2:2,3:2,4:2,5:2) (6:2,7:2,8:2) (9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2) (1:3,2:3,3:3) (4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3) (12:3,13:3,14:3,15:3,16:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn5 & $4^{20}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0) (19:0,20:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2) (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn6 & $4^{25}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14:2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn7 & $4^30$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1) (16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1) (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2) (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3) (6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3) (21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+syn8 & $4^{35}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1) (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2) (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0) (20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0)  (26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3) \\ \hline
+syn9 & $4^{40}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3) (24:3,25:3,26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3) (1:0,5:1) (2:1,4:0)
+
+(26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1,34:1,35:1,36:1,37:1,38:1)
+(18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2)
+(9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1)
+  \\ \hline
+syn10 & $4^{50}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1) (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,46:1,47:1,48:1) (49:1,50:1) (36:2,37:2) (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3) (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
+(16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0) \\
+& & (36:0,37:0,38:0,39:0,40:0,41:0,42:0,43:0,44:0,45:0,46:0,47:0,48:0,49:0,50:0) \\
+& & (14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1)  \\
+& & (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) \\
+& & (21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2)  \\
+& & (31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3,41:3,42:3,43:3,44:3,45:3,46:3,47:3,48:3,49:3,50:3) \\ \hline
+\end{tabular}
+
+\end{table*}
+
+
+
+
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+%
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%
+%\end{thebibliography}
+%
+
+% biography section
+%
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}
+
+
