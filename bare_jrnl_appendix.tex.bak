@@ -365,39 +365,39 @@
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
-\usepackage[ruled,linesnumbered]{algorithm2e}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{subfigure}
+
 \usepackage[normalem]{ulem}
-\usepackage{longtable}
-\usepackage{rotating}
-\usepackage{threeparttable}
-\usepackage{amssymb}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\usepackage{algorithm,algpseudocode}
+\makeatletter
+\newcommand{\StatexIndent}[1][3]{%
+  \setlength\@tempdima{\algorithmicindent}%
+  \Statex\hskip\dimexpr#1\@tempdima\relax}
+\algdef{S}[WHILE]{WhileNoDo}[1]{\algorithmicwhile\ #1}%
+\makeatother
+
+
+\usepackage{amsmath}
+%\usepackage{url}
+\usepackage{graphicx}
+\usepackage{subfigure}
 \usepackage{multirow}
-\usepackage{amsthm}
-%\usepackage{booktabs}
-%\usepackage{multirow}
+ \usepackage{url}
+\usepackage[table]{xcolor}
 
-\renewcommand{\algorithmcfname}{ALGORITHM}
-\SetAlFnt{\small}
-\SetAlCapFnt{\small}
-\SetAlCapNameFnt{\small}
-\SetAlCapHSkip{0pt}
-\IncMargin{-\parindent}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
 
-% Metadata Information
-%\acmVolume{9}
-%\acmNumber{4}
-%\acmArticle{39}
-%\acmYear{2010}
-%\acmMonth{3}
-
-\newtheorem{assumption}{Assumption}
+\algrenewcommand{\algorithmicrequire}{\textbf{Input:}}
+\algrenewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmicforall}{\textbf{for each}}
 
 \begin{document}
 
-\appendices
+
 \appendices
 \section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
 
@@ -439,7 +439,9 @@
   \end{algorithmic}
 \end{algorithm}
 
-The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
+The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm [11] (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT [6] to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
+
+%\cite{cohen2003augmenting} \cite{nie2011minimal} 
 
 \subsection{the algorithm of the augmented SCT}
 \begin{algorithm}
@@ -569,7 +571,9 @@ Algorithm 4 is similar to Algorithm 3, except that it needs to consider the prev
 \end{algorithm}
 The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism).
 
-This algorithm consists of two main loops. The outer loop  (line 4 - 39) focuses on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+This algorithm consists of two main loops. The outer loop  (line 4 - 39) focuses on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG [8]. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+
+%\cite{cohen1997aetg}
 
 There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before.
 
@@ -582,7 +586,11 @@ At last, \emph{ict} will update the uncovered schemas (line 36) by removing the 
 
 
 \section{The details of the inputs modeling and information of the MFS for the synthetic software}
-In this section, we use the form of (p1:x1, p2:x2, ....) to represent the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
+In this section, we use the form of (p1:x1, p2:x2, ....) to represent the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section 5.7 and 5.8 are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
+\setcounter{table}{30}
+%\ref{sec:emprical:Sensitivity} \ref{sec:emprical:Assumption}
+
+%    
 %\subsection{For evaluating the number of MFS}
 
 \begin{table*}[htbp]

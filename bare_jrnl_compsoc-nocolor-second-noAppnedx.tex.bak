@@ -2430,20 +2430,20 @@ The results of evaluating the approaches on non-safe values are shown in Fig. \r
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}
-\caption{F-measure for various number of un-safe values}
+\caption{F-measure for various SUT of un-safe values}
 \label{sen_safe_f_measure_result}
 \end{figure}
 
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_tests.eps}
-\caption{Test Cases for various number of un-safe values}
+\caption{Test Cases for various SUT of un-safe values}
 \label{sen_safe_tests_result}
 \end{figure}
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_t_tuple.eps}
-\caption{The tested-t-way coverage}
+\caption{The tested-t-way coverage for various SUT of un-safe values}
 \label{sen_safe_t_tuple_result}
 \end{figure}
 
@@ -2532,7 +2532,7 @@ From this table, we can learn that for most subjects, ELA needs to build high-wa
 
 
 The number of overall test cases, the quality of the identified MFS, and the results of masking effects are listed in Table \ref{cm_ela}. We can firstly observe that this approach needs more test cases than the approaches discussed before. This is as expected becasue this approach needs to generate a higher-way covering array than previous approaches. Apart from the high cost, this approach correctly identified all the real MFS. The accuracy has been proved in \cite{martinez2008algorithms,martinez2009locating}.  Note that this perfect MFS identification result is based on the fact that it knows the number and degree of the MFS at first, which is usually not available in practice.  %On the other hand, other dynamic approaches can get a similar identification result, nbbu
-With respect to the masking effects, ELA nearly obtained the 100\% tested-t-way (2, 3, and 4) coverage of most subjects. They do so at the cost of using significantly more tests. Additionally, in the case when the MFS is of low degrees, ELA obtained a low percentage of the tested-t-way coverage when \emph{t} is relatively high (See Tested-3-way and Tested-4-way of Jflex in Table \ref{cm_ela}). 
+With respect to the masking effects, ELA nearly obtained the 100\% tested-t-way (2, 3, and 4) coverage of most subjects. They do so at the cost of using significantly more tests. Additionally, in the case when the MFS is of low degrees, ELA obtained a low percentage of the tested-t-way coverage when \emph{t} is relatively high (See Tested-3-way and Tested-4-way of Jflex in Table \ref{cm_ela}).
 
 
 \begin{table*}[htbp]
@@ -2645,314 +2645,314 @@ As a future work, we plan to extend our interleaving CT approach with more test 
 %
 
 
-\appendices
-\section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
-
-\subsection{the algorithm of SCT}
-\begin{algorithm}
-  \caption{The overall procedure of SCT}
-  \begin{algorithmic}[1]
-     \Require
-
-    % $t_{original}$ \Comment{original failing test case}
-
-     $Param$ \Comment{the parameter values of the SUT}
-
-     $\tau$ \Comment{the strength of the covering array}
-    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
-
-     $Constraints$  \Comment{The constraints of SUT}
-
- %    $\Omega$ \Comment{the schemas that are still uncovered}
-
- %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
-
- %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
-
-
-\Ensure  $MFS$ \Comment{The MFS of SUT}
-\
-   %  \ForAll  {$s \in S_{identified}$}
-%       \State $S_{MFS}.append(s)$
-    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
-       \State $MFS \leftarrow \emptyset$
-       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
-       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
-       \ForAll  {$t_{fail} \in T_{fail}$}
-         \State  $mfs \leftarrow OFOT(t_{fail}) $
-         \State $MFS.append(mfs) $
-       \EndFor
-    \State \Return   MFS
-  \end{algorithmic}
-\end{algorithm}
-
-The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
-
-\subsection{the algorithm of the augmented SCT}
-\begin{algorithm}
-  \caption{The overall procedure of augmented SCT}
-  \begin{algorithmic}[1]
-     \Require
-
-    % $t_{original}$ \Comment{original failing test case}
-
-     $Param$ \Comment{the parameter values of the SUT}
-
-     $\tau$ \Comment{the strength of the covering array}
-    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
-
-     $Constraints$  \Comment{The constraints of SUT}
-
- %    $\Omega$ \Comment{the schemas that are still uncovered}
-
- %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
-
- %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
-
-
-\Ensure  $MFS$ \Comment{The MFS of SUT}
-\
-   %  \ForAll  {$s \in S_{identified}$}
-%       \State $S_{MFS}.append(s)$
-    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
-       \State $MFS \leftarrow \emptyset$
-       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
-       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
-       \ForAll  {$t_{fail} \in T_{fail}$}
-          \State $t_{mutated} \leftarrow t_{fail}$
-          \ForAll  {$s \in MFS$}
-         \If {$s \in t_{mutated}$}
-          \State $t_{mutated} \leftarrow remove(t_{mutated}, s)$
-         \EndIf
-         \If {$t_{fail} == t_{mutated}$}
-            \State  $mfs \leftarrow OFOT(t_{fail}) $
-            \State $MFS.append(mfs) $
-         \Else
-            \If{$execute(t_{mutated}$) == FAIL}
-                \State  $mfs \leftarrow OFOT(t_{mutated}) $
-                \State $MFS.append(mfs) $
-            \EndIf
-         \EndIf
-          \EndFor
-       \EndFor
-    \State \Return   MFS
-  \end{algorithmic}
-\end{algorithm}
-
-Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case (line 6), the augmented SCT first needs to  check whether there exists any existing MFS contained in it (line 6 - 7). If so, the augmented SCT needs to remove the existing MFS in it (line 8) by mutating the corresponding parameter values of the test case to any values other than the ones contained in the MFS. Note that if we have removed some MFS in the original failing test case (line 14), we need to execute the newly generated test case $t_{mutated}$ to see if it fails again (line 14). If it fails, which means that $t_{mutated}$ contained some MFS other than the previously identified MFS, the augmented SCT needs to take OFOT to identify the MFS in $t_{mutated}$. On the other hand, if we did not find any previously identified schema (line 10), the augmented SCT just needs to directly take OFOT to identify the MFS in the original failing test case. At last, the same as SCT, the augmented SCT needs to return all the identified MFS (line 21).
-
-\subsection{the algorithm of ICT}
-\begin{algorithm}
-  \caption{The overall procedure of ICT}
-  \begin{algorithmic}[1]
-         \Require
-
-    % $t_{original}$ \Comment{original failing test case}
-
-     $Param$ \Comment{the parameter values of the SUT}
-
-     $\tau$ \Comment{the strength of the covering array}
-    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
-
-     $Cons$  \Comment{The constraints of SUT}
-
-     $CheckMAX$ \Comment{The strength of checking mechanism}
-
- %    $\Omega$ \Comment{the schemas that are still uncovered}
-
- %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
-
- %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
-
-
-\Ensure  $MFS$ \Comment{The MFS of SUT}
-\
-   %  \ForAll  {$s \in S_{identified}$}
-%       \State $S_{MFS}.append(s)$
-    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
-       \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
-       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, Cons)$  \Comment{the uncovered schemas}
-       \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
-       \While{$\Omega$ is not empty}
-         \State $test \leftarrow Greedy\_Gen(\Omega, Cons, S_{{MFS}})$
-           \If{$execute(test$) == PASS}
-                \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
-            \Else  \Comment{start OFOT, and checking process}
-                \State $S_{mfs\_candi} \leftarrow \emptyset$
-                \State $T_{history} \leftarrow \emptyset$
-                \While{true}
-                \State $T_{for\_MFS} \leftarrow \emptyset$
-                \ForAll  {$\Delta \in test$}
-                \State $t_{\Delta} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Cons, T_{history}) $
-                \State $T_{for\_MFS}.append(t_{\Delta})$
-                \If{$execute(t_{for\_MFS}$) == PASS}
-                   \State  $\Omega \leftarrow Update(\Omega, t_{\Delta}, \tau) $
-                \EndIf
-                \EndFor
-                \State $T_{history}.append(T_{for\_MFS})$
-                \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
-                \State $isRealMFS \leftarrow true$
-                \For  {$i = 0; i <= CheckMAX; i++$}
-                    \State $t_{check}$ $\leftarrow$ \parbox[t]{.6\linewidth}{ $Gen(S_{mfs\_candi}$, $\Omega$, $S_{MFS}$, $Cons$, $T_{history}$)}
-                    \If{$execute(t_{check}$) == PASS}
-                        \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
-                        \State $isRealMFS \leftarrow false$
-                        \State  break
-                    \EndIf
-                \EndFor
-                \If{$isRealMFS == true$}
-                   \State  break
-                \EndIf
-                \EndWhile
-                \State $S_{current} \leftarrow S_{mfs\_candi}$
-                \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
-                \State $S_{MFS}.append(S_{current})$
-           \EndIf
-       \EndWhile
-
-    \State $MFS \leftarrow S_{MFS}$
-    \State \Return   MFS
-  \end{algorithmic}
-\end{algorithm}
-The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism).
-
-This algorithm consists of two main loops. The outer loop  (line 4 - 39) focuses on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
-
-There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before.
-
-In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21). Different from the original OFOT algorithm, for each test case $t_{\Delta}$, \emph{ict} needs to consider the following facts: 1) cover as more un-covered schemas $\Omega$ as possible, 2)do not contain existing identified MFS $S_{MFS}$,  and constraints, 3) do not generate the  test cases generated in the previous iterations (line 14).  It is noted that in this paper, we use the same greedy method as used in AETG to generate such test case. Specifically, for the parameter value that is  needed to select, \emph{ict} selects the parameter value has the most un-covered schemas that contain this parameter value. Additionally, we use SAT solver to ensure that the selected parameter value will not introduce any constraint, any MFS, nor any test case that have already generated.  After $t_{\Delta}$ is generated, \emph{ict} will execute it (line 16), and if it passes, \emph{ict} will update the un-covered schemas set (line 17). \emph{ict} then identifies the candidate MFS $S_{mfs\_candi}$ according to the corresponding test cases generated by OFOT (line 21).
-
-The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indicates that $S_{mfs\_candi}$ is not the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).
-
-At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there are no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
-
-
-
-\section{The details of the inputs modeling and information of the MFS for the synthetic software}
-In this section, we use the form of (p1:x1, p2:x2, ....) to represent the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
-%\subsection{For evaluating the number of MFS}
-
-\begin{table*}[htbp]
-\center
-\caption{The details of the modeling for evaluating the number of MFS}
-\label{detail-eva-mfs}
-
-\begin{tabular}{|c|c|m{1.7\columnwidth}|}
-\hline
-Subject & Inputs & MFS  \\\hline
-syn1 & $5^{11}$ & (1:0,2:0)  \\ \hline
-syn2 & $5^{11}$ & (1:0,2:0) (1:0,3:0)  \\ \hline
-syn3 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0)  \\ \hline
-syn4 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0)  \\ \hline
-syn5 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0)  \\ \hline
-syn6 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0)  \\ \hline
-syn7 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0)  \\ \hline
-syn8 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0)  \\ \hline
-syn9 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0)  \\ \hline
-syn10 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0)  \\ \hline
-syn11 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0)  \\ \hline
-syn12 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0)  \\ \hline
-syn13 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0)  \\ \hline
-syn14 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0)  \\ \hline
-syn15 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1)  \\ \hline
-syn16 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1)  \\ \hline
-syn17 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1)  \\ \hline
-syn18 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1) (3:1,10:1) (3:1,11:1) (4:1,5:1) (4:1,6:1) (4:1,7:1) (4:1,8:1) (4:1,9:1) (4:1,10:1) (4:1,11:1) (5:1,6:1)  \\ \hline
-
-\end{tabular}
-
-\end{table*}
-%\subsection{For evaluating the number of options}
-\begin{table}[htbp]
-\center
-\caption{The details of the modeling for evaluating the number of options}
-\label{detail-eva-op}
-
-\begin{tabular}{|l|l|l|}
-\hline
-Subject & Inputs & MFS  \\\hline
-syn1 & $2^{8}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn2 & $2^{9}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn3 & $2^{10}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn4 & $2^{12}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn5 & $2^{16}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn6 & $2^{20}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn7 & $2^{30}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn8 & $2^{40}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn9 & $2^{50}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn10 & $2^{60}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn11 & $2^{70}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn12 & $2^{80}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn13 & $2^{90}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-syn14 & $2^{100}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
-\end{tabular}
-
-\end{table}
-%\subsection{For evaluating the  probabilities of triggering MFS}
-
-
-\begin{table}[htbp]
-\center
-\caption{The details of the modeling for evaluating  probabilities of triggering MFS}
-\label{detail-eva-pro}
-
-\begin{tabular}{|l|l|l|l|}
-\hline
-Subject & Inputs & MFS  & Probability \\\hline
-syn1 & $4^{10}$ &  (2:1)  & 0.01 \\ \hline
-syn2 & $4^{10}$ &  (2:1)  & 0.05 \\ \hline
-syn3 & $4^{10}$ &  (2:1)  & 0.1 \\ \hline
-syn4 & $4^{10}$ &  (2:1)  & 0.15 \\ \hline
-syn5 & $4^{10}$ &  (2:1)  & 0.2 \\ \hline
-syn6 & $4^{10}$ &  (2:1)  & 0.3 \\ \hline
-syn7 & $4^{10}$ &  (2:1)  & 0.4 \\ \hline
-syn8 & $4^{10}$ &  (2:1)  & 0.5 \\ \hline
-syn9 & $4^{10}$ &  (2:1)  & 0.6 \\ \hline
-syn10 & $4^{10}$ &  (2:1)  & 0.7 \\ \hline
-syn11 & $4^{10}$ &  (2:1)  & 0.8 \\ \hline
-syn12 & $4^{10}$ &  (2:1)  & 0.9 \\ \hline
-syn13 & $4^{10}$ &  (2:1)  & 0.98 \\ \hline
-\end{tabular}
-
-\end{table}
-
-%\subsection{For evaluating the safe values}
-
-\begin{table*}[htbp]
-\center
-\caption{The details of the modeling for evaluating safe values}
-\label{detail-eva-safe}
-
-\begin{tabular}{|c|c|m{1.7\columnwidth}|}
-\hline
-Subject & Inputs & MFS  \\\hline
-syn1 & $4^{8}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (1:2,2:2) (3:2,4:2,5:2,6:2,7:2,8:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn2 & $4^{10}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (9:0,10:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (9:1,10:1) (1:2,2:2) (3:2,4:2) (5:2,6:2,7:2,8:2,9:2,10:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3) (9:3,10:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn3 & $4^{12}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0) (10:0,11:0,12:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1) (8:1,9:1,10:1) (11:1,12:1) (1:2,2:2,3:2) (4:2,5:2) (6:2,7:2,8:2,9:2,10:2,11:2,12:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3,9:3) (10:3,11:3,12:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn4 & $4^{16}$ & (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (9:1,10:1,11:1,12:1,13:1) (14:1,15:1,16:1) (1:2,2:2,3:2,4:2,5:2) (6:2,7:2,8:2) (9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2) (1:3,2:3,3:3) (4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3) (12:3,13:3,14:3,15:3,16:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn5 & $4^{20}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0) (19:0,20:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2) (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn6 & $4^{25}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14:2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn7 & $4^30$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1) (16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1) (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2) (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3) (6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3) (21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)  \\ \hline
-syn8 & $4^{35}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1) (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2) (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0) (20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0)  (26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3) \\ \hline
-syn9 & $4^{40}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3) (24:3,25:3,26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3) (1:0,5:1) (2:1,4:0)
-
-(26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1,34:1,35:1,36:1,37:1,38:1)
-(18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2)
-(9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1)
-  \\ \hline
-syn10 & $4^{50}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1) (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,46:1,47:1,48:1) (49:1,50:1) (36:2,37:2) (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3) (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
-(16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0) \\
-& & (36:0,37:0,38:0,39:0,40:0,41:0,42:0,43:0,44:0,45:0,46:0,47:0,48:0,49:0,50:0) \\
-& & (14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1)  \\
-& & (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) \\
-& & (21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2)  \\
-& & (31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3,41:3,42:3,43:3,44:3,45:3,46:3,47:3,48:3,49:3,50:3) \\ \hline
-\end{tabular}
-
-\end{table*}
-
-
-
+%\appendices
+%\section{The detail of the Algorithms of SCT, Augmented SCT, and ICT}
+%
+%\subsection{the algorithm of SCT}
+%\begin{algorithm}
+%  \caption{The overall procedure of SCT}
+%  \begin{algorithmic}[1]
+%     \Require
+%
+%    % $t_{original}$ \Comment{original failing test case}
+%
+%     $Param$ \Comment{the parameter values of the SUT}
+%
+%     $\tau$ \Comment{the strength of the covering array}
+%    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+%
+%     $Constraints$  \Comment{The constraints of SUT}
+%
+% %    $\Omega$ \Comment{the schemas that are still uncovered}
+%
+% %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+%
+% %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+%
+%
+%\Ensure  $MFS$ \Comment{The MFS of SUT}
+%\
+%   %  \ForAll  {$s \in S_{identified}$}
+%%       \State $S_{MFS}.append(s)$
+%    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+%       \State $MFS \leftarrow \emptyset$
+%       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+%       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+%       \ForAll  {$t_{fail} \in T_{fail}$}
+%         \State  $mfs \leftarrow OFOT(t_{fail}) $
+%         \State $MFS.append(mfs) $
+%       \EndFor
+%    \State \Return   MFS
+%  \end{algorithmic}
+%\end{algorithm}
+%
+%The inputs of Algorithm 3 are information of parameters of the SUT, the strength of the covering array, and constraints. The output is the MFS. In this algorithm, SCT firstly generates a covering array using simulated Annealing algorithm\cite{cohen2003augmenting} (line 2). It then executes each test case contained in this algorithm and collects the failing test case set $T_{fail}$ (line 3).  For each failing test case in this set, SCT uses OFOT\cite{nie2011minimal} to identifies the MFS in it (line 4 to 7). At last, SCT returns all the identified MFS (line 8).
+%
+%\subsection{the algorithm of the augmented SCT}
+%\begin{algorithm}
+%  \caption{The overall procedure of augmented SCT}
+%  \begin{algorithmic}[1]
+%     \Require
+%
+%    % $t_{original}$ \Comment{original failing test case}
+%
+%     $Param$ \Comment{the parameter values of the SUT}
+%
+%     $\tau$ \Comment{the strength of the covering array}
+%    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+%
+%     $Constraints$  \Comment{The constraints of SUT}
+%
+% %    $\Omega$ \Comment{the schemas that are still uncovered}
+%
+% %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+%
+% %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+%
+%
+%\Ensure  $MFS$ \Comment{The MFS of SUT}
+%\
+%   %  \ForAll  {$s \in S_{identified}$}
+%%       \State $S_{MFS}.append(s)$
+%    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+%       \State $MFS \leftarrow \emptyset$
+%       \State $T \leftarrow CA\_GEN\_SA(Param, \tau, Constraints)$
+%       \State $T_{pass}, T_{fail}\leftarrow execute(T)$
+%       \ForAll  {$t_{fail} \in T_{fail}$}
+%          \State $t_{mutated} \leftarrow t_{fail}$
+%          \ForAll  {$s \in MFS$}
+%         \If {$s \in t_{mutated}$}
+%          \State $t_{mutated} \leftarrow remove(t_{mutated}, s)$
+%         \EndIf
+%         \If {$t_{fail} == t_{mutated}$}
+%            \State  $mfs \leftarrow OFOT(t_{fail}) $
+%            \State $MFS.append(mfs) $
+%         \Else
+%            \If{$execute(t_{mutated}$) == FAIL}
+%                \State  $mfs \leftarrow OFOT(t_{mutated}) $
+%                \State $MFS.append(mfs) $
+%            \EndIf
+%         \EndIf
+%          \EndFor
+%       \EndFor
+%    \State \Return   MFS
+%  \end{algorithmic}
+%\end{algorithm}
+%
+%Algorithm 4 is similar to Algorithm 3, except that it needs to consider the previously identified MFS. Specifically, for each failing test case (line 6), the augmented SCT first needs to  check whether there exists any existing MFS contained in it (line 6 - 7). If so, the augmented SCT needs to remove the existing MFS in it (line 8) by mutating the corresponding parameter values of the test case to any values other than the ones contained in the MFS. Note that if we have removed some MFS in the original failing test case (line 14), we need to execute the newly generated test case $t_{mutated}$ to see if it fails again (line 14). If it fails, which means that $t_{mutated}$ contained some MFS other than the previously identified MFS, the augmented SCT needs to take OFOT to identify the MFS in $t_{mutated}$. On the other hand, if we did not find any previously identified schema (line 10), the augmented SCT just needs to directly take OFOT to identify the MFS in the original failing test case. At last, the same as SCT, the augmented SCT needs to return all the identified MFS (line 21).
+%
+%\subsection{the algorithm of ICT}
+%\begin{algorithm}
+%  \caption{The overall procedure of ICT}
+%  \begin{algorithmic}[1]
+%         \Require
+%
+%    % $t_{original}$ \Comment{original failing test case}
+%
+%     $Param$ \Comment{the parameter values of the SUT}
+%
+%     $\tau$ \Comment{the strength of the covering array}
+%    % $\mathcal{S}_{MFS}$ \Comment{all the already identified MFS}
+%
+%     $Cons$  \Comment{The constraints of SUT}
+%
+%     $CheckMAX$ \Comment{The strength of checking mechanism}
+%
+% %    $\Omega$ \Comment{the schemas that are still uncovered}
+%
+% %    $\mathcal{T}_{MFS}$ \Comment{all the valid test cases that contain MFS}
+%
+% %   $\mathcal{T}_{candi}$ \Comment{all the valid test cases that contain candi}
+%
+%
+%\Ensure  $MFS$ \Comment{The MFS of SUT}
+%\
+%   %  \ForAll  {$s \in S_{identified}$}
+%%       \State $S_{MFS}.append(s)$
+%    % \ForAll {$s_{c}  \in  \mathcal{S}_{Candidate}$}
+%       \State $MFS \leftarrow \emptyset$ \Comment{the identified MFS returned by this algorithm}
+%       \State $\Omega \leftarrow Valid\_\tau\_Schemas(Param, \tau, Cons)$  \Comment{the uncovered schemas}
+%       \State $S_{MFS} \leftarrow \emptyset$ \Comment{already identified MFS}
+%       \While{$\Omega$ is not empty}
+%         \State $test \leftarrow Greedy\_Gen(\Omega, Cons, S_{{MFS}})$
+%           \If{$execute(test$) == PASS}
+%                \State  $\Omega \leftarrow Update(\Omega, test, \tau) $
+%            \Else  \Comment{start OFOT, and checking process}
+%                \State $S_{mfs\_candi} \leftarrow \emptyset$
+%                \State $T_{history} \leftarrow \emptyset$
+%                \While{true}
+%                \State $T_{for\_MFS} \leftarrow \emptyset$
+%                \ForAll  {$\Delta \in test$}
+%                \State $t_{\Delta} \leftarrow Mutate(\Delta, \Omega, S_{MFS}, Cons, T_{history}) $
+%                \State $T_{for\_MFS}.append(t_{\Delta})$
+%                \If{$execute(t_{for\_MFS}$) == PASS}
+%                   \State  $\Omega \leftarrow Update(\Omega, t_{\Delta}, \tau) $
+%                \EndIf
+%                \EndFor
+%                \State $T_{history}.append(T_{for\_MFS})$
+%                \State $S_{mfs\_candi} \leftarrow OFOT(T_{for\_MFS})$
+%                \State $isRealMFS \leftarrow true$
+%                \For  {$i = 0; i <= CheckMAX; i++$}
+%                    \State $t_{check}$ $\leftarrow$ \parbox[t]{.6\linewidth}{ $Gen(S_{mfs\_candi}$, $\Omega$, $S_{MFS}$, $Cons$, $T_{history}$)}
+%                    \If{$execute(t_{check}$) == PASS}
+%                        \State  $\Omega \leftarrow Update(\Omega, t_{check}, \tau) $
+%                        \State $isRealMFS \leftarrow false$
+%                        \State  break
+%                    \EndIf
+%                \EndFor
+%                \If{$isRealMFS == true$}
+%                   \State  break
+%                \EndIf
+%                \EndWhile
+%                \State $S_{current} \leftarrow S_{mfs\_candi}$
+%                \State $\Omega \leftarrow ChangingCoveage(\Omega, S_{current}, S_{MFS})$
+%                \State $S_{MFS}.append(S_{current})$
+%           \EndIf
+%       \EndWhile
+%
+%    \State $MFS \leftarrow S_{MFS}$
+%    \State \Return   MFS
+%  \end{algorithmic}
+%\end{algorithm}
+%The inputs of Algorithm 5 contained one new parameter, i.e., $CheckMAX$, which is used to set the checking strength (number of test cases generated in checking mechanism).
+%
+%This algorithm consists of two main loops. The outer loop  (line 4 - 39) focuses on checking the un-covered schemas (line 4), and if it is not empty, \emph{ict} needs to generate test cases (one test at a time) to cover them (line 5). Our generation method for \emph{ict} in this paper is AETG \cite{cohen1997aetg}. After generating the test case, \emph{ict} needs to execute it (line 6) and  if it passes, \emph{ict} will update the un-covered schemas by eliminating the $\tau$-degree schemas in it (line 6 - 7). Otherwise, \emph{ict} will start the inner loop, i.e., the MFS identification stage (line 11 - 34).
+%
+%There are two variables used in this inner loop. The first one is $S_{mfs\_candi}$ (line 9), which records the candidate MFS identified in each iteration of this loop. The other one is $T_{history}$ (line 10), which is used to record the test cases generated in each iteration of this MFS identification stage, such that it will not generate the same test cases as generated before.
+%
+%In this inner loop, it first uses OFOT to identify a candidate MFS (line 12 - 21). Different from the original OFOT algorithm, for each test case $t_{\Delta}$, \emph{ict} needs to consider the following facts: 1) cover as more un-covered schemas $\Omega$ as possible, 2)do not contain existing identified MFS $S_{MFS}$,  and constraints, 3) do not generate the  test cases generated in the previous iterations (line 14).  It is noted that in this paper, we use the same greedy method as used in AETG to generate such test case. Specifically, for the parameter value that is  needed to select, \emph{ict} selects the parameter value has the most un-covered schemas that contain this parameter value. Additionally, we use SAT solver to ensure that the selected parameter value will not introduce any constraint, any MFS, nor any test case that have already generated.  After $t_{\Delta}$ is generated, \emph{ict} will execute it (line 16), and if it passes, \emph{ict} will update the un-covered schemas set (line 17). \emph{ict} then identifies the candidate MFS $S_{mfs\_candi}$ according to the corresponding test cases generated by OFOT (line 21).
+%
+%The second part of this inner loop is to check the $S_{mfs\_candi}$ to be real MFS or not (line 23- 33). Specifically, for each iteration of this checking mechanism (line 23), \emph{ict} additionally generates one test case $t_{check}$ (line 24). $t_{check}$ must satisfy the following conditions: it should 1) contain the candidate identified MFS $S_{mfs\_candi}$, 2)cover as more un-covered schemas $\Omega$ as possible,  3)do not contain existing identified MFS $S_{MFS}$,  and constraints, 4) do not generate the  test cases generated in previous iteration. Note that in this paper, $t_{check}$ is generated the same way as we generate $t_{\Delta}$. After $t_{check}$ is generated, \emph{ict} executes it and if it passes (line 25), \emph{ict} will update the un-covered schemas set (line 26). Also, the pass of $t_{check}$ indicates that $S_{mfs\_candi}$ is not the real MFS (line 27), and hence, \emph{ict} will jump out the checking mechanism (line 28), and continue to re-identify the MFS. Otherwise, \emph{ict} will regard $S_{mfs\_candi}$  as the real MFS after the checking  mechanism (line 31), and \emph{ict} will jump out the inner loop of MFS identification (line 32) to report the MFS it identifies (line 35).
+%
+%At last, \emph{ict} will update the uncovered schemas (line 36) by removing the identified MFS, and some other schemas that are related to it (super-schemas, implicated constraints). This algorithm repeats until there are no un-covered schemas, and it will return all the identified MFS (line 40 - 41).
+%
+%
+%
+%\section{The details of the inputs modeling and information of the MFS for the synthetic software}
+%In this section, we use the form of (p1:x1, p2:x2, ....) to represent the MFS. For example, (1:2, 5:0) indicates the MFS is the schema that the 1st parameter is assigned to 2 and the 5th parameter is assigned to 0. The input modelings and information of the MFS of all these synthetic software used in Section \ref{sec:emprical:Sensitivity} and \ref{sec:emprical:Assumption} are listed in Table \ref{detail-eva-mfs}, \ref{detail-eva-op}, \ref{detail-eva-pro}, and \ref{detail-eva-safe}, respectively.
+%%\subsection{For evaluating the number of MFS}
+%
+%\begin{table*}[htbp]
+%\center
+%\caption{The details of the modeling for evaluating the number of MFS}
+%\label{detail-eva-mfs}
+%
+%\begin{tabular}{|c|c|m{1.7\columnwidth}|}
+%\hline
+%Subject & Inputs & MFS  \\\hline
+%syn1 & $5^{11}$ & (1:0,2:0)  \\ \hline
+%syn2 & $5^{11}$ & (1:0,2:0) (1:0,3:0)  \\ \hline
+%syn3 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0)  \\ \hline
+%syn4 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0)  \\ \hline
+%syn5 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0)  \\ \hline
+%syn6 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0)  \\ \hline
+%syn7 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0)  \\ \hline
+%syn8 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0)  \\ \hline
+%syn9 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0)  \\ \hline
+%syn10 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0)  \\ \hline
+%syn11 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0)  \\ \hline
+%syn12 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0)  \\ \hline
+%syn13 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0)  \\ \hline
+%syn14 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0)  \\ \hline
+%syn15 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1)  \\ \hline
+%syn16 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1)  \\ \hline
+%syn17 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1)  \\ \hline
+%syn18 & $5^{11}$ & (1:0,2:0) (1:0,3:0) (1:0,4:0) (1:0,5:0) (1:0,6:0) (1:0,7:0) (1:0,8:0) (1:0,9:0) (1:0,10:0) (1:0,11:0) (2:0,3:0) (2:0,4:0) (2:0,5:0) (2:0,6:0) (2:0,7:0) (2:0,8:0) (2:0,9:0) (2:0,10:0) (2:0,11:0) (3:0,4:0) (3:0,5:0) (3:0,6:0) (3:0,7:0) (3:0,8:0) (3:0,9:0) (3:0,10:0) (3:0,11:0) (4:0,5:0) (4:0,6:0) (4:0,7:0) (4:0,8:0) (4:0,9:0) (4:0,10:0) (4:0,11:0) (5:0,6:0) (5:0,7:0) (5:0,8:0) (5:0,9:0) (5:0,10:0) (5:0,11:0) (6:0,7:0) (6:0,8:0) (6:0,9:0) (6:0,10:0) (6:0,11:0) (7:0,8:0) (7:0,9:0) (7:0,10:0) (7:0,11:0) (8:0,9:0) (8:0,10:0) (8:0,11:0) (9:0,10:0) (9:0,11:0) (10:0,11:0) (1:1,2:1) (1:1,3:1) (1:1,4:1) (1:1,5:1) (1:1,6:1) (1:1,7:1) (1:1,8:1) (1:1,9:1) (1:1,10:1) (1:1,11:1) (2:1,3:1) (2:1,4:1) (2:1,5:1) (2:1,6:1) (2:1,7:1) (2:1,8:1) (2:1,9:1) (2:1,10:1) (2:1,11:1) (3:1,4:1) (3:1,5:1) (3:1,6:1) (3:1,7:1) (3:1,8:1) (3:1,9:1) (3:1,10:1) (3:1,11:1) (4:1,5:1) (4:1,6:1) (4:1,7:1) (4:1,8:1) (4:1,9:1) (4:1,10:1) (4:1,11:1) (5:1,6:1)  \\ \hline
+%
+%\end{tabular}
+%
+%\end{table*}
+%%\subsection{For evaluating the number of options}
+%\begin{table}[htbp]
+%\center
+%\caption{The details of the modeling for evaluating the number of options}
+%\label{detail-eva-op}
+%
+%\begin{tabular}{|l|l|l|}
+%\hline
+%Subject & Inputs & MFS  \\\hline
+%syn1 & $2^{8}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn2 & $2^{9}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn3 & $2^{10}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn4 & $2^{12}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn5 & $2^{16}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn6 & $2^{20}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn7 & $2^{30}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn8 & $2^{40}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn9 & $2^{50}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn10 & $2^{60}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn11 & $2^{70}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn12 & $2^{80}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn13 & $2^{90}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%syn14 & $2^{100}$ & (1:0,4:0) (2:0,5:0) (3:0,7:0)  \\ \hline
+%\end{tabular}
+%
+%\end{table}
+%%\subsection{For evaluating the  probabilities of triggering MFS}
+%
+%
+%\begin{table}[htbp]
+%\center
+%\caption{The details of the modeling for evaluating  probabilities of triggering MFS}
+%\label{detail-eva-pro}
+%
+%\begin{tabular}{|l|l|l|l|}
+%\hline
+%Subject & Inputs & MFS  & Probability \\\hline
+%syn1 & $4^{10}$ &  (2:1)  & 0.01 \\ \hline
+%syn2 & $4^{10}$ &  (2:1)  & 0.05 \\ \hline
+%syn3 & $4^{10}$ &  (2:1)  & 0.1 \\ \hline
+%syn4 & $4^{10}$ &  (2:1)  & 0.15 \\ \hline
+%syn5 & $4^{10}$ &  (2:1)  & 0.2 \\ \hline
+%syn6 & $4^{10}$ &  (2:1)  & 0.3 \\ \hline
+%syn7 & $4^{10}$ &  (2:1)  & 0.4 \\ \hline
+%syn8 & $4^{10}$ &  (2:1)  & 0.5 \\ \hline
+%syn9 & $4^{10}$ &  (2:1)  & 0.6 \\ \hline
+%syn10 & $4^{10}$ &  (2:1)  & 0.7 \\ \hline
+%syn11 & $4^{10}$ &  (2:1)  & 0.8 \\ \hline
+%syn12 & $4^{10}$ &  (2:1)  & 0.9 \\ \hline
+%syn13 & $4^{10}$ &  (2:1)  & 0.98 \\ \hline
+%\end{tabular}
+%
+%\end{table}
+%
+%%\subsection{For evaluating the safe values}
+%
+%\begin{table*}[htbp]
+%\center
+%\caption{The details of the modeling for evaluating safe values}
+%\label{detail-eva-safe}
+%
+%\begin{tabular}{|c|c|m{1.7\columnwidth}|}
+%\hline
+%Subject & Inputs & MFS  \\\hline
+%syn1 & $4^{8}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (1:2,2:2) (3:2,4:2,5:2,6:2,7:2,8:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn2 & $4^{10}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0) (9:0,10:0) (1:1,2:1,3:1,4:1,5:1,6:1) (7:1,8:1) (9:1,10:1) (1:2,2:2) (3:2,4:2) (5:2,6:2,7:2,8:2,9:2,10:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3) (9:3,10:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn3 & $4^{12}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0) (10:0,11:0,12:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1) (8:1,9:1,10:1) (11:1,12:1) (1:2,2:2,3:2) (4:2,5:2) (6:2,7:2,8:2,9:2,10:2,11:2,12:2) (1:3,2:3) (3:3,4:3,5:3,6:3,7:3,8:3,9:3) (10:3,11:3,12:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn4 & $4^{16}$ & (1:0,2:0,3:0) (4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (9:1,10:1,11:1,12:1,13:1) (14:1,15:1,16:1) (1:2,2:2,3:2,4:2,5:2) (6:2,7:2,8:2) (9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2) (1:3,2:3,3:3) (4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3) (12:3,13:3,14:3,15:3,16:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn5 & $4^{20}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0) (19:0,20:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1) (17:1,18:1) (19:1,20:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2) (8:2,9:2) (10:2,11:2) (12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn6 & $4^{25}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0) (12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0) (24:0,25:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1) (10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1) (22:1,23:1) (24:1,25:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2) (13:2,14:2) (15:2,16:2) (17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2) (1:3,2:3) (3:3,4:3) (5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn7 & $4^30$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0) (18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1) (16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1) (26:1,27:1,28:1) (29:1,30:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2) (14:2,15:2) (16:2,17:2,18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2) (1:3,2:3,3:3) (4:3,5:3) (6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3) (21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)  \\ \hline
+%syn8 & $4^{35}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0) (30:0,31:0,32:0,33:0,34:0,35:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1) (18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1) (28:1,29:1,30:1,31:1,32:1,33:1) (34:1,35:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2) (11:2,12:2,13:2,14:2,15:2,16:2) (17:2,18:2) (19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2) (1:3,2:3,3:3,4:3,5:3,6:3) (7:3,8:3) (9:3,10:3,11:3,12:3,13:3,14:3,15:3,16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3) (1:0,5:1) (2:1,4:0) (20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0)  (26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3) \\ \hline
+%syn9 & $4^{40}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0) (11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0) (28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0,36:0,37:0,38:0,39:0,40:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1) (39:1,40:1) (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2) (31:2,32:2) (33:2,34:2,35:2,36:2,37:2,38:2,39:2,40:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3) (14:3,15:3) (16:3,17:3,18:3,19:3,20:3,21:3,22:3,23:3) (24:3,25:3,26:3,27:3,28:3,29:3,30:3,31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3) (1:0,5:1) (2:1,4:0)
+%
+%(26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1,34:1,35:1,36:1,37:1,38:1)
+%(18:2,19:2,20:2,21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2)
+%(9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1)
+%  \\ \hline
+%syn10 & $4^{50}$ & (1:0,2:0) (3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0) (1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1) (34:1,35:1,36:1,37:1,38:1,39:1,40:1,41:1,42:1,43:1,44:1,45:1,46:1,47:1,48:1) (49:1,50:1) (36:2,37:2) (38:2,39:2,40:2,41:2,42:2,43:2,44:2,45:2,46:2,47:2,48:2,49:2,50:2) (1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:3,9:3,10:3,11:3,12:3,13:3,14:3,15:3) (16:3,17:3) (18:3,19:3,20:3,21:3,22:3,23:3,24:3,25:3,26:3,27:3,28:3,29:3,30:3) (1:0,5:1) (2:1,4:0)
+%(16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0,30:0,31:0,32:0,33:0,34:0,35:0) \\
+%& & (36:0,37:0,38:0,39:0,40:0,41:0,42:0,43:0,44:0,45:0,46:0,47:0,48:0,49:0,50:0) \\
+%& & (14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1)  \\
+%& & (1:2,2:2,3:2,4:2,5:2,6:2,7:2,8:2,9:2,10:2,11:2,12:2,13:2,14:2,15:2,16:2,17:2,18:2,19:2,20:2) \\
+%& & (21:2,22:2,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:2,32:2,33:2,34:2,35:2)  \\
+%& & (31:3,32:3,33:3,34:3,35:3,36:3,37:3,38:3,39:3,40:3,41:3,42:3,43:3,44:3,45:3,46:3,47:3,48:3,49:3,50:3) \\ \hline
+%\end{tabular}
+%
+%\end{table*}
+%
+%
+%
 
 
 %Appendix one text goes here.
