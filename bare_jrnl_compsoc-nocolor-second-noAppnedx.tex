@@ -436,7 +436,7 @@
 \author{ Xintao Niu, Changhai Nie,~\IEEEmembership{Member,~IEEE,} Hareton Leung,~\IEEEmembership{Member,~IEEE,}
    Jeff Y. Lei,~\IEEEmembership{Member,~IEEE,}
    Xiaoyin Wang, ~\IEEEmembership{Member,~IEEE,}
-   JiaXi Xu and Yan Wang
+   Jiaxi Xu and Yan Wang
 
 %\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
 %        John~Doe,~\IEEEmembership{Fellow,~OSA,}
@@ -601,7 +601,8 @@ Although this conventional CT framework is simple and straightforward, in terms 
 
 Based on the idea, we propose a new CT framework, which integrates these two stages together instead of dividing the generation and identification into two independent stages. Specifically, we first execute one or more tests until a failure is observed. Next we immediately turn to the fault localization stage, i.e., identify failure-inducing interactions for that failure. These failure-inducing interactions are used to update the current coverage. In particular, interactions that are related to these failure-inducing interactions do not need to be covered in future executions. Then, we continue to perform regular combinatorial testing.
 
-We remodel the test case generation and failure-inducing interactions identification modules to make them better adapt to this new framework. Specifically, for the generation part of our framework, we augment it by forbidding the appearance of test cases which contain the identified failure-inducing interactions. This is because those test cases containing a failure-inducing interaction will fail as expected so that it makes no sense for the further failure detection. For the failure-inducing identification module, we augment it by achieving higher coverage.  More specifically, we refine the additional test case generation in this module, so that it can not only help to identify the failure-inducing interactions, but also cover as many uncovered interactions as possible. As a result, our new CT framework needs fewer test cases than traditional CT.
+We remodel the test case generation and failure-inducing interactions identification modules to make them better adapt to this new framework. Specifically, for the generation part of our framework, we augment it by forbidding the appearance of test cases which contain the identified failure-inducing interactions. This is because those test cases containing a failure-inducing interaction will fail as expected so that it makes no sense for the further failure detection. For the failure-inducing identification module, we augment it by achieving higher coverage.  More specifically, we refine the additional test case generation in this module, so that it can not only help to identify the failure-inducing interactions, but also cover as many uncovered interactions as possible.
+{\color{red}As a result, our new CT framework is efficient at test case generation and MFS identification.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -619,8 +620,20 @@ To improve the accuracy of the failure-inducing interaction identification resul
 %
 %
 
+We conducted a series of empirical studies on 5 open-source software {\color{red} and several synthetic software} to evaluate our new framework. These studies start with two comparisons. The first one is to compare our new interleaving framework with the traditional sequential framework, which first generates a complete set of test cases and then performs the fault localization. The second one is to compare our framework with the feedback-driven CT \cite{dumlu2011feedback,yilmaz2013reducing}, which also adapts an iterative framework to generate test cases and identifying failure-inducing interactions, but to address the problem of inadequate testing. {\color{red}We also evaluated the sensitivities of these approaches with respect to the number of the options of the system under test and the number of failure-inducing interactions contained in it. Besides, we discussed the negative influences of none deterministic failures and the issue of a system with no option value that is irrelevant to any failure-inducing interaction (called the non-safe value issue). The main results of these experiments are summarized as follows:}
 
-We conducted a series of empirical studies on 5 open-source software to evaluate our new framework. These studies consist of two comparisons. The first one is to compare our new framework with the traditional one, which first generates a complete set of test cases and then performs the fault localization. The second one is to compare our framework with the Feedback-driven CT \cite{dumlu2011feedback,yilmaz2013reducing}, which also adapts an iterative framework to generate test cases and identifying failure-inducing interactions, but to address the problem of inadequate testing. The results show that, in terms of test case generation and failure-inducing interactions identification, our approach can significantly reduce the overall needed test cases and as a result it can more quickly identify the failure-inducing interactions of the system under test.
+%The results show that, in terms of test case generation and failure-inducing interactions identification, our approach can significantly reduce the overall needed test cases and as a result it can more quickly identify the failure-inducing interactions of the system under test.
+
+{\color{red}
+ \begin{enumerate}
+\item	Compared to the other approaches, our new interleaving framework obtained better failure-inducing interaction identification results in most cases (both empirical studies on real software and empirical studies on synthetic software).  The new interleaving framework also decreased the number of generated test cases when compared with the traditional sequential framework in most cases, and it obtained a good result at the reduction of masking effects caused by different failure-inducing interactions even when compared to the feedback-driven CT which focuses on the reduction of masking effects.
+\item	The novel feedback checking mechanism benefits our new interleaving framework a lot, especially on the improvement of the accurateness of  failure-inducing interaction identification and the coverage of interactions to be covered.
+\item	Increasing the number of failure-inducing interactions has a negative effect on all these approaches when considering the accurateness of failure-inducing interaction identification.
+\item	The none deterministic failures also have a negative effect on these approaches, especially when the possibility of the appearance of failures is ranged from 0.3 to 0.8. One potential solution is to increase the redundancy of test case execution.
+\item	Similar to the large number of failure-inducing interactions, the none safe value issue also has a negative effect on all these three approaches, but the feedback mechanism can help our new interleaving framework to alleviate this negative effect to some extent.
+\end{enumerate}
+}
+
 % Additionally, when combining our approach with Feedback-driven CT, the results can be more effective than both approaches alone.
 
 The main contributions of this paper are as follows.
@@ -751,7 +764,7 @@ In this paper, we focus on the first strategy: One test case one time as it imme
 To detect the existence of MFS in the SUT is still far from figuring out the root cause of the failure \cite{colbourn2008locating,martinez2008algorithms,martinez2009locating}, as we do not know exactly which schemas in the failed test cases should be responsible for the failure. For example, if $t_{1}$ in Table \ref{ca_example} failed during testing, there are six 2-degree candidate failure-inducing schemas, which are (0, 0, -, -), (0, -, 0, -), (0, -, -, 0) , (-, 0, 0, -), (-, 0, -, 0), (-, -, 0, 0), respectively. Without
 additional information, it is difficult to figure out the specific schemas in this suspicious set that caused the failure. Considering that the failure can be triggered by schemas with other degrees, e.g., (0, -, -, -) or (0, 0, 0, -), the problem of MFS identification becomes more complicated.
 
-In fact, for a failing test case ($v_{1},v_{2},...,v_{n}$), there can be at most $2^{n} - 1$ possible schemas for the MFS. Hence, more test cases should be generated to identify the MFS. In CT, the main work in fault localization is to identify the failure-inducing interactions. So in this paper, we only focus on the MFS identification. Further works of fault localization such as isolating the specific defective source code will not be discussed.
+In fact, for a failing test case ($v_{1},v_{2},...,v_{n}$), there can be at most $2^{n} - 1$ possible schemas for the MFS. Hence, more test cases should be generated to identify the MFS. In CT, the main work in fault localization is to identify the failure-inducing interactions. Further works of fault localization such as isolating the specific defective source code will not be discussed.
 
 A typical MFS identification process is shown in Table \ref{ofot-identify}. This example assumes the SUT has 3 parameters, each of which can take on 2 values, and the test case (1, 1, 1) fails. Then in Table \ref{ofot-identify}, as test case \emph{t} failed, we mutate one factor of test case \emph{t} one time to generate new test cases: $t_{1}$ -- $t_{3}$, It turns out that test case $t_{1}$ passed, which indicates that this test case breaks the MFS in the original test case \emph{t}. So (1,-,-) should be a failure-causing factor. Besides, since other mutating test cases all failed, there is no any other failure-inducing factor that is broken. Therefore, the MFS in \emph{t} is (1,-,-).
 
@@ -898,7 +911,7 @@ For example in Table \ref{tradition-gi}, $t_{1}$ contained a single MFS (-, 0, -
 
 When a failing test case has \textbf{multiple} MFS, however, SCT fails to meet that criterion. As discussed previously, SCT cannot properly work on test cases with multiple MFS--and even cannot obtain a valid schema. With this in mind, we cannot determine which schemas in this failing test case are MFS or not. Consequently, we cannot ensure we have examined all the $t$-degree schemas in this failing test case. For example, $t_{4}$ has two MFS--(-, 0, -, -), (-, -, 0, 1), which can not be identified with OFOT approach (In fact, there is no passing additionally generated test case). As a result, there are two 2-degree schemas (1, 0, -, -) (-, -, 0, 1) in this test case that are neither contained in a passing test case nor determined as MFS or faulty schemas.  Hence, \emph{tested t-way interaction criterion} is not satisfied.  Since multiple MFS in a test case can introduce masking effects, SCT must be negatively affected as it lacks mechanisms to avoid the appearance of multiple MFS in failing test cases.
 
-Note that the \emph{masking effects} are actually caused by the \emph{multiple MFS problem} we discussed previously. But these two problems focus on different aspects of combinatorial testing. The \emph{masking effects} mainly focus on the test sufficiency of CT, which can be regarded as a metric to evaluate how many schemas are actually tested \cite{yilmaz2013reducing}. While for \emph{multiple MFS problem}, it mainly focuses on the quality of MFS identification. To be convenient, we separately discuss these two problems later in this paper.
+Note that {\color{red}in this running example of this paper,} \emph{masking effects} are actually caused by the \emph{multiple MFS problem} we discussed previously. But these two problems focus on different aspects of combinatorial testing. The \emph{masking effects} mainly focus on the test sufficiency of CT, which can be regarded as a metric to evaluate how many schemas are actually tested \cite{yilmaz2013reducing}. While for \emph{multiple MFS problem}, it mainly focuses on the quality of MFS identification. To be convenient, we separately discuss these two problems later in this paper.
 
 %\begin{table}[h]
 %\caption{The satisfaction of tested t-way interaction criterion}
@@ -2012,7 +2025,8 @@ Tcas	&837.0(0.00\%,0.00\%)	&9158.0(0.00\%,0.00\%)	&64695.9(-0.00\%,-0.00\%)	\\\h
 
 
 To summarize, the answer to \textbf{Q4} is that
-\textbf{when compared to the adaptive CT approach \emph{fda-cit}, our approach \emph{ict} performed more effectively, especially at the quality of MFS identification and reduction of masking effects, while there are no apparent differences between them at the cost (the number of test cases). This also indicates that \emph{ict} is a more efficient approach.}
+{\color{red} \textbf{when compared to the adaptive CT approach \emph{fda-cit}, \emph{ict} did better at MFS identification, reduction of masking effects, and reduction of test cases containing multiple MFS in most cases, while \emph{fda-cit} generated smaller number of test cases.}}
+%\textbf{when compared to the adaptive CT approach \emph{fda-cit}, our approach \emph{ict} performed more effectively, especially at the quality of MFS identification and reduction of masking effects, while there are no apparent differences between them at the cost (the number of test cases). This also indicates that \emph{ict} is a more efficient approach.}
 %Additionally, our approach supports a better MFS identification than \emph{fda-cit}.
 
 
@@ -2064,7 +2078,7 @@ Jflex& 1.4.1 &  10040 &58 & \#87 \& \#80  & $2^{10} \times 3^{2} \times 4^{1}$ &
 \end{tabular}
 \end{table*}
 
-For each subject, we applied the previous three approaches, i.e., \emph{ict}, \emph{sct}, and \emph{fda-cit}, on generating test cases and fault diagnosis. It is noted that, for \emph{sct} and \emph{ict}, we need to distinguish different faults for them. In our experiments, we simply took the one-bug-at-a-time strategy \cite{wong2016survey}. More specifically, when identifying the MFS for one particular defeat, we only labeled the test cases failed with this specific defeat as \emph{fail}, and labeled other test cases (either passed after execution or failed with other defeats) as \emph{pass}.
+For each subject, we applied the previous three approaches, i.e., \emph{ict}, \emph{sct}, and \emph{fda-cit}, on generating test cases and fault diagnosis. It is noted that, for \emph{sct} and \emph{ict}, we need to distinguish different faults for them. In our experiments, we simply took the one-bug-at-a-time strategy \cite{wong2016survey}. More specifically, when identifying the MFS for one particular defect, we only labeled the test cases failed with this specific defect as \emph{fail}, and labeled other test cases (either passed after execution or failed with other defects) as \emph{pass}.
 
 \subsubsection{Result and discussion}
 
@@ -2078,19 +2092,19 @@ We list the results of the number of test cases generated in this experiment in 
 Software&  Approach &  2-way & 3-way & 4-way\\ \hline
 hsqldb 2.0rc	&ict	&37.2	&129.8	&216.2	\\
 	&sct	&41.2	&111.6	&212.2	\\
-	&fd	&21.0	&196.2	&170.2	\\\hline
+	&fda-cit	&21.0	&196.2	&170.2	\\\hline
 hsqldb 2.25	&ict	&40.4	&56.0	&101.2	\\
 	&sct	&42.0	&87.8	&171.2	\\
-	&fd	&22.8	&50.6	&115.2	\\\hline
+	&fda-cit	&22.8	&50.6	&115.2	\\\hline
 hsqldb 2.29	&ict	&48.2	&77.6	&122.6	\\
 	&sct	&40.0	&88.4	&186.2	\\
-	&fd	&39.4	&51.2	&115.4	\\\hline
+	&fda-cit	&39.4	&51.2	&115.4	\\\hline
 Jflex 1.4.1	&ict	&45.4	&71.4	&131.8	\\
 	&sct	&61.2	&120.8	&247.6	\\
-	&fd	&22.8	&61.2	&163.4	\\\hline
+	&fda-cit	&22.8	&61.2	&163.4	\\\hline
 Jflex 1.4.2	&ict	&68.0	&72.4	&145.6	\\
 	&sct	&53.6	&108.4	&232.0	\\
-	&fd	&30.2	&61.8	&156.4	\\\hline
+	&fda-cit	&30.2	&61.8	&156.4	\\\hline
 \end{tabular}
 \end{table}
 
@@ -2102,19 +2116,19 @@ Jflex 1.4.2	&ict	&68.0	&72.4	&145.6	\\
 Software&  Approach & 2-way & 3-way & 4-way\\ \hline
 hsqldb 2.0rc	&ict	&0.11	&0.96	&0.78	\\
 	&sct	&0.33	&0.34	&0.25	\\
-	&fd	&0.04	&0.25	&0.15	\\  \hline
+	&fda-cit	&0.04	&0.25	&0.15	\\  \hline
 hsqldb 2.25	&ict	&0.93	&1.0	&1.0	\\
 	&sct	&0.86	&0.72	&0.56	\\
-	&fd	&0.23	&0.04	&0.0	\\  \hline
+	&fda-cit	&0.23	&0.04	&0.0	\\  \hline
 hsqldb 2.29	&ict	&0.52	&0.81	&0.84	\\
 	&sct	&0.4	&0.57	&0.53	\\
-	&fd	&0.17	&0.17	&0.19	\\  \hline
+	&fda-cit	&0.17	&0.17	&0.19	\\  \hline
 Jflex 1.4.1	&ict	&1.0	&1.0	&1.0	\\
 	&sct	&0.88	&0.92	&0.96	\\
-	&fd	&0.1	&0.0	&0.0	\\  \hline
+	&fda-cit	&0.1	&0.0	&0.0	\\  \hline
 Jflex 1.4.2	&ict	&0.76	&1.0	&1.0	\\
 	&sct	&0.96	&0.72	&0.72	\\
-	&fd	&0.16	&0.0	&0.0	\\  \hline
+	&fda-cit	&0.16	&0.0	&0.0	\\  \hline
 \end{tabular}
 \end{table}
 
@@ -2128,19 +2142,19 @@ Jflex 1.4.2	&ict	&0.76	&1.0	&1.0	\\
 Software&  Approach & 2-way & 3-way & 4-way\\ \hline
 hsqldb 2.0rc	&ict	&0.0	&0.6	&0.4	\\
 	&sct	&0.6	&1.4	&6.4	\\
-	&fd	&0.4	&2.6	&4.0	\\ \hline
+	&fda-cit	&0.4	&2.6	&4.0	\\ \hline
 hsqldb 2.25	&ict	&0.8	&0.8	&0.4	\\
 	&sct	&0.6	&2.2	&7.0	\\
-	&fd	&0.6	&3.2	&7.6	\\ \hline
+	&fda-cit	&0.6	&3.2	&7.6	\\ \hline
 hsqldb 2.29	&ict	&1.4	&1.8	&2.2	\\
 	&sct	&1.4	&5.8	&17.6	\\
-	&fd	&5.0	&9.0	&16.4	\\ \hline
+	&fda-cit	&5.0	&9.0	&16.4	\\ \hline
 Jflex 1.4.1	&ict	&1.0	&1.0	&1.0	\\
 	&sct	&4.6	&12.4	&26.2	\\
-	&fd	&2.2	&6.6	&17.4	\\\hline
+	&fda-cit	&2.2	&6.6	&17.4	\\\hline
 Jflex 1.4.2	&ict	&1.0	&1.0	&0.2	\\
 	&sct	&0.6	&3.6	&9.8	\\
-	&fd	&1.0	&3.0	&9.0	\\\hline
+	&fda-cit	&1.0	&3.0	&9.0	\\\hline
 \end{tabular}
 \end{table}
 
@@ -2153,36 +2167,36 @@ Jflex 1.4.2	&ict	&1.0	&1.0	&0.2	\\
 Software&  Approach & 2-way & 3-way & 4-way\\ \hline
 hsqldb 2.0rc	&ict	&92.8(25.99\%)	&956.0(34.87\%)	&3211.8(22.72\%)	\\
 	&sct	&142.2(39.83\%)	&1214.2(44.28\%)	&5732.6(40.55\%)	\\
-	&fd	&122.8(34.40\%)	&1123.4(40.97\%)	&4845.8(34.28\%)	\\  \hline
+	&fda-cit	&122.8(34.40\%)	&1123.4(40.97\%)	&4845.8(34.28\%)	\\  \hline
 hsqldb 2.25	&ict	&194.8(68.83\%)	&862.4(45.03\%)	&3004.0(34.90\%)	\\
 	&sct	&190.8(67.42\%)	&1299.6(67.86\%)	&5383.4(62.54\%)	\\
-	&fd	&181.0(63.96\%)	&1031.6(53.87\%)	&4115.2(47.81\%)	\\  \hline
+	&fda-cit	&181.0(63.96\%)	&1031.6(53.87\%)	&4115.2(47.81\%)	\\  \hline
 hsqldb 2.29	&ict	&177.2(62.61\%)	&815.6(42.59\%)	&2716.0(31.55\%)	\\
 	&sct	&207.4(73.29\%)	&1301.6(67.97\%)	&5624.4(65.34\%)	\\
-	&fd	&162.4(57.39\%)	&1129.4(58.98\%)	&5141.8(59.73\%)	\\  \hline
+	&fda-cit	&162.4(57.39\%)	&1129.4(58.98\%)	&5141.8(59.73\%)	\\  \hline
 Jflex 1.4.1	&ict	&273.0(66.10\%)	&1644.0(47.57\%)	&7680.0(39.14\%)	\\
 	&sct	&328.6(79.56\%)	&2588.0(74.88\%)	&14154.0(72.14\%)	\\
-	&fd	&281.4(68.14\%)	&2232.8(64.61\%)	&12652.0(64.49\%)	\\  \hline
+	&fda-cit	&281.4(68.14\%)	&2232.8(64.61\%)	&12652.0(64.49\%)	\\  \hline
 Jflex 1.4.2	&ict	&336.6(71.16\%)	&1896.0(44.28\%)	&8438.0(31.80\%)	\\
 	&sct	&319.8(67.61\%)	&2955.6(69.02\%)	&17741.4(66.87\%)	\\
-	&fd	&269.2(56.91\%)	&2241.8(52.35\%)	&14309.2(53.93\%)	\\  \hline
+	&fda-cit	&269.2(56.91\%)	&2241.8(52.35\%)	&14309.2(53.93\%)	\\  \hline
 \end{tabular}
 \end{table*}
 
-There are several observations in the experiments with multiple defeats:
+There are several observations in the experiments with multiple defects:
 
-1) The results of the number of test cases satisfied the following relationship:  \emph{fda-cit} generated the smallest number of test cases, and the second best was \emph{ict}, while the last one is \emph{sct}.  Specifically, \emph{fda-cit} reduced 20.36 test cases on average at 2-way coverage when compared with the approach \emph{sct}, and 19.2 test case at 3-way coverage, and 65.7 test cases at 4-way coverage. \emph{fda-cit} also reduced about 20.6 test cases when compared to \emph{ict} at 2-way coverage, but generated slightly more test cases than \emph{ict} at 3-way coverage and 4-way coverage (increased of 2.7 and 0.6, respectively). With respect to \emph{ict}, it reduced about 21.9 and 66.4 test cases at 3-way and 4-way coverage, respectively, when compared to \emph{sct}. These two approaches generated almost the same number of test cases at 2-way coverage.
+1) The results of the number of test cases satisfied the following relationship:  \emph{fda-cit} generated the smallest number of test cases {\color{red} in most cases}, and the second best was \emph{ict}, while the last one is \emph{sct}.  Specifically, \emph{fda-cit} reduced 20.36 test cases on average at 2-way coverage when compared with the approach \emph{sct}, and 19.2 test case at 3-way coverage, and 65.7 test cases at 4-way coverage. \emph{fda-cit} also reduced about 20.6 test cases when compared to \emph{ict} at 2-way coverage, but generated slightly more test cases than \emph{ict} at 3-way coverage and 4-way coverage (increased of 2.7 and 0.6, respectively). With respect to \emph{ict}, it reduced about 21.9 and 66.4 test cases at 3-way and 4-way coverage, respectively, when compared to \emph{sct}. These two approaches generated almost the same number of test cases at 2-way coverage.
 %The gaps among them
 
 
 2) With respect to the quality of MFS identification, these three approaches satisfied the following relationship: \emph{ict} obtained the highest score at MFS identification, following by \emph{sct} and \emph{fda-cit}. In fact, except for the 2-way coverage at which \emph{ict} and \emph{sct} obtained almost the same f-measure on average, \emph{ict} increased the f-measure at least by 30\% and 32\% on average, respectively, at 3-way and 4-way coverage when compared with other two approaches.
 
 
-3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS, and the second best approach was \emph{fda-cit}, while the last one was \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated a similar number of test cases that containing multiple schemas at 2-way coverage).
+3) The results that related to the number of test cases containing multiple MFS satisfied the following relationship:  \emph{ict} generated the smallest number of test cases that containing multiple MFS {\color{red} in most cases}, and the second best approach was \emph{fda-cit}, while the last one was \emph{sct}. Specifically, \emph{ict} reduced about 1.0 test cases (containing multiple MFS) at the 2-way coverage when compared with \emph{fda-cit}, 3.84 test cases at the 3-way coverage, and 10.04 test cases at the 4-way coverage. For \emph{fda-cit}, it reduced about 0.2 test cases at the 3-way coverage when compared with \emph{sct}, and 2.52 test cases at the 4-way coverage (These two approaches generated a similar number of test cases that containing multiple schemas at 2-way coverage).
 
 4) Concerning the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{sct} covered the most number of tested-t-way schemas, following by approaches \emph{fda-cit} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{sct} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{sct} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{sct} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{fda-cit}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 
-The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defeats (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA}) is that the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defeats, \emph{ict} labeled the test cases which failed with the defeats other than the defeat under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defeat, but these test cases which failed with other defeats cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
+The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing masking effects under multiple defects (this is the only different conclusion when compared with the results of Section \ref{sec:emprical:CompareFDA}) is that the decreasing of the tested-t-way coverage of \emph{ict} was caused by the reduction of passing test cases. This is because due to the one-bug-at-one-time strategy for handling multiple defects, \emph{ict} labeled the test cases which failed with the defects other than the defect under analysis as passing test cases. As a consequence, it can normally identify the MFS for the defect, but these test cases which failed with other defects cannot contribute to any tested-t-way coverage. Therefore, the tested-t-way coverage obtained by \emph{ict} decreased.
 
 %4) With respect to the tested-t-way coverage, these three approaches satisfied the following relationship: \emph{fda-cit} covered the most number of tested-t-way schemas, following by approaches \emph{sct} and \emph{ict}, respectively. In fact, except for the 2-way coverage at which \emph{fda-cit} and \emph{ict} covered almost the same number of tested-t-way schemas, \emph{fda-cit} outperformed the other two approaches at 3-way and 4-way coverage.  Specifically, \emph{fda-cit} increased the tested-3-way coverage by 20\% and 16\%, when compared with approaches \emph{ict} and \emph{sct}, respectively, and increased the tested-4-way coverage by 38\% and 16\%, respectively.
 %For example.
@@ -2192,10 +2206,10 @@ The reason why \emph{ict} was clearly outperformed by \emph{sct} at reducing mas
 
 Above all, the answer to Q5 is:
 
-\textbf{Except for the masking effects, other results matched well with the results obtained from the experiments of a single defeat. Specifically, \emph{ict} obtained the best MFS identification results and generated the least number of test cases containing multiple MFS, \emph{sct} obtained the most tested-t-way coverage, and \emph{fda-cit} generated the smallest number of test cases.
+\textbf{Except for the masking effects, other results matched well with the results obtained from the experiments of a single defect. Specifically, \emph{ict} obtained the best MFS identification results and generated the least number of test cases containing multiple MFS, \emph{sct} obtained the most tested-t-way coverage, and \emph{fda-cit} generated the smallest number of test cases.
 }
 
-%\textbf{Most results matched pretty well with the results obtained from the experiments of a single defeat. Particularly, \emph{ict} performed better at MFS identification and reducing the number of test cases that containing multiple MFS, while \emph{fda-cit} generated the least number of test cases and covered the most number of tested-t-way schemas.}
+%\textbf{Most results matched pretty well with the results obtained from the experiments of a single defect. Particularly, \emph{ict} performed better at MFS identification and reducing the number of test cases that containing multiple MFS, while \emph{fda-cit} generated the least number of test cases and covered the most number of tested-t-way schemas.}
 
 
 
@@ -2207,10 +2221,10 @@ In order to reduce the bias of the choice of subjects, and to obtain a more gene
 \subsubsection{Study setup}
 To vary parameters of interest in a controlled setting in this study, we used synthetic subjects instead of real programs (the real program typically represents only one particular parameter setting, and hence it is hard to get software with the expected number of options or MFS).
 
-Specifically, for the first study, that is, evaluating the performance of approaches under different number of MFS, we used the subject with 11 parameters, and each parameter had 5 values, i.e., the inputs model is ( $5^{11}$ ). Then we considered the following possible number of 2-degree MFS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80 and 90. Then for each run of the experiment, we first injected the corresponding number of MFS into the synthetic subject and then ran all the three approaches on the subject. At last, the results of each approach were collected and analysed.
+Specifically, for the first study, that is, evaluating the performance of approaches under different number of MFS, we used the subject with 11 parameters, and each parameter had 5 values, i.e., the inputs model is ( $5^{11}$ ). Then we considered the following possible number of 2-degree MFS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80 and 90. {\color{red}The detailed information of each synthetic subject application is shown in Table 31 in Appendix B.} Then for each run of the experiment, we first injected the corresponding number of MFS into the synthetic subject and then ran all the three approaches on the subject. At last, the results of each approach were collected and analysed.
 %(MFS identification quality and cost)
 
-The second study is to evaluate the performance of approaches under the different number of options. Hence we used synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). Each option had two values, and each subject had three 2-degree MFS. Then for each subject, we applied the three approaches and compared their performance.
+The second study is to evaluate the performance of approaches under the different number of options. Hence we used synthetic subjects with the following number of options (8, 9, 10, 12, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100). {\color{red}The detailed information of each synthetic subject application is shown in Table 32 in Appendix B.} Each option had two values, and each subject had three 2-degree MFS. Then for each subject, we applied the three approaches and compared their performance.
 %Details of each subject can be seen in:
 
 \subsubsection{Number of MFS}\label{sec:emprical:numberofmfs}
@@ -2310,7 +2324,7 @@ With regard to the quality of MFS identification, it is clear that \emph{ict} pe
 
 Another observation about the MFS identification is that there was no clear correlation between the MFS quality and the number of options. In fact, there were no clear regularities for the curves representing the f-measures of \emph{sct} and \emph{fda-cit} with the increasing of the number of options. It shows that the number of options in the SUT did not have influence on the quality of MFS identification.
 
-With regard to the number of test cases, there was a clear trend that \emph{fda-cit} performed the best, of which the number of needed test cases grew slowly. This is mainly because it did not generate additional test cases for MFS identification. The second best was \emph{ict}, as the number of test cases increased linearly with the number of options in the SUT. This is due to the mechanism of the MFS identification approach applied in the \emph{ict} framework, i.e., we must always generate the same number of test cases as the number of options in the SUT to identify the MFS. The complexity can be further reduced (O(log N)\cite{zhang2011characterizing,li2012improved,niu2013identifying}). The last one was \emph{sct}, of which the number of test cases was always larger than that of \emph{ict}.
+With regard to the number of test cases, there was a clear trend that \emph{fda-cit} performed the best, of which the number of needed test cases grew slowly. This is mainly because it did not generate additional test cases for MFS identification. The second best was \emph{ict}, as the number of test cases increased linearly with the number of options in the SUT. This is due to the mechanism of the MFS identification approach applied in the \emph{ict} framework, i.e., we must always generate the same number of test cases as the number of options in the SUT to identify the MFS. {\color{red} Note that if we use the MFS identification algorithms proposed in \cite{zhang2011characterizing,li2012improved,niu2013identifying}, the number of test cases generated will be reduced. The number of test cases generated by the MFS identification algorithm (OFOT) used in our approach is \emph{N}, where \emph{N} is the number of parameter options of the SUT. Hence, the complexity of the MFS identification algorithm (OFOT) used in our approach is (O(\emph{N})), while the complexities of others are (O(log \emph{N})). In our paper, we did not use other algorithms proposed in \cite{zhang2011characterizing,li2012improved,niu2013identifying}. Hence, it is possible that the number of test cases generated in this paper would be further reduced.} The last one was \emph{sct}, of which the number of test cases was always larger than that of \emph{ict}.
 
 
 In regard to the masking effects, we can observe that the number of options had no influence on the results of \emph{ict}. Specifically, \emph{ict} always covered all the tested-t-way schemas no matter what was the number of the options. For the other two approaches, i.e., \emph{sct} and \emph{fda-cit}, their tested-t-way coverage increased with the increase of the number of options. This is because with the increase of the number of options, the number of all the schemas that need to be covered increased, but the number of MFS did not change. As a result, although these two approaches cannot identify the MFS as accurately as \emph{ict}, the proportion of the number of MFS deceased. Hence, the tested-t-way coverage of these two approaches increased.
@@ -2320,7 +2334,7 @@ In regard to the masking effects, we can observe that the number of options had 
 Therefore, the number of options in the SUT did not have influence on the quality of MFS identification; and although generating more test cases than \emph{fda-cit}, \emph{ict} was still a better choice when considering the quality of MFS identification and the reduction of masking effects.
 
 In summary, the answer to Q6 is:
-\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not. Additionally, \emph{ict} performs best among the three approaches for various number of MFS and options.}
+\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not.} {\color{red}\textbf{Additionally, concerning various number of MFS, \emph{ict} obtained the best MFS identification results and generated the smallest number of test cases in most cases, \emph{fda-cit} obtained the highest covered-t-coverage. As for various number of options, \emph{ict} still did the best at MFS identification, and it also obtained the highest covered-t-coverage, while \emph{fda-cit} generated the smallest number of test cases. Besides, in these two conditions, the results obtained by \emph{sct} always lay in between.}}
 
 \subsection{The ability of handling assumptions}\label{sec:emprical:Assumption}
 The last study is designed to evaluate the performances of the three approaches when the two assumptions proposed on Section \ref{sec:back:iden}, i.e., deterministic failures and the existence of safe values,  do not hold.
@@ -2329,9 +2343,9 @@ The last study is designed to evaluate the performances of the three approaches 
 \subsubsection{Study setup}
 The same as the previous study, in order to make the characteristics of the SUT under control, we decided to use synthetic subjects instead of real programs in this case study. Particularly, synthetic subjects can be injected with various types of faults, e.g., the non-deterministic failures with various probabilities that can be triggered during testing, such that it helps us to evaluate the performance of these approaches for various extent to which these two assumptions do not hold. As a result, we can obtain a more general conclusion instead of those results based on some specific programs.
 
-Specifically, for the first assumption, we decided to inject the MFS that is non-deterministic (the test case which contains it may fail or may not after execution). Then we considered the following possible probabilities that the non-deterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98, respectively. We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject and recorded their results (MFS identification quality and cost).
+Specifically, for the first assumption, we decided to inject the MFS that is non-deterministic (the test case which contains it may fail or may not after execution). Then we considered the following possible probabilities that the non-deterministic MFS may be triggered (The probability that the test case which contains it fails after execution): 0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.80, 0.9, and 0.98, respectively. {\color{red}The detailed information of each synthetic subject application is shown in Table 33 in Appendix B.} We repeated the experiment 30 times for each probability to avoid the random affects. For each run of the experiment, we applied all the three approaches on the subject and recorded their results (MFS identification quality and cost).
 
-The second study is to evaluate the performance of approaches when the safe value assumption does not hold. In fact, in our previous studies, the safe value assumption was also not always hold. For example, in the first study, we did not give any safe value to our approach \emph{ict}. Instead, we just generated additional test cases containing the schemas under test. As a result, we did not always reach the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is none safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with  the input model, and the information of MFS are listed in Table \ref{inputs_non_safe}. The same as Table \ref{inputs}, input model is presented in the abbreviated form $\#values^{\#number\ of\ parameters} \times ...$, and  Column ``MFS" shows the degrees of each MFS and the number of MFS (in the parentheses) with that corresponding degree. Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
+The second study is to evaluate the performance of approaches when the safe value assumption does not hold. In fact, in our previous studies, the safe value assumption was also not always hold. For example, in the first study, we did not give any safe value to our approach \emph{ict}. Instead, we just generated additional test cases containing the schemas under test. As a result, we did not always reach the 100\% f-measure of MFS identification. For this study, we decided to evaluate these approaches on the condition that there is none safe value, i.e., every parameter value is contained in at least one MFS. We used synthetic subjects with  the input model, and the information of MFS are listed in Table \ref{inputs_non_safe}. The same as Table \ref{inputs}, input model is presented in the abbreviated form $\#values^{\#number\ of\ parameters} \times ...$, and  Column ``MFS" shows the degrees of each MFS and the number of MFS (in the parentheses) with that corresponding degree.  {\color{red}The detailed information of each synthetic subject application is shown in Table 34 in Appendix B.} Then we applied the three approaches on each subject and compared their performance under the condition that there is non-safe value in each subject.
 
 \begin{table}[ht]
 \caption{Inputs model for experiments of non-safe value}
@@ -2483,7 +2497,9 @@ Based on these two figures (Figure \ref{sen_safe_NonTrigger} and \ref{sen_safe_N
 
 Above all, the answer to the Q7 is:
 
-\textbf{The non-deterministic failures and non-safe values do negatively affect the results of all the three approaches.  Due to the feedback checking process, \emph{ict} can alleviate impacts of the non-safe values. While for non-deterministic failures, one potential solution is the redundancy of test case execution.}
+{\color{red} \textbf{The non-deterministic failures and non-safe values do negatively affect the results of all the three approaches. Besides, concerning the condition of non-safe values, \emph{ict} obtained the best MFS identification results and performed better than \emph{sct} at the reduction of test cases and masking effects, while \emph{fda-cit} generated the smallest number of test cases and obtained the highest covered-t-coverage. As for non-deterministic failures, \emph{ict} still obtained the best MFS identification results and the second highest covered-t-coverage in most cases, \emph{fda-cit }did the best at the reduction of test cases, while \emph{sct} obtained the highest covered-t-coverage in most cases. Moreover, one potential solution for handling non-deterministic failures is the redundancy of test case execution.}
+}
+%\textbf{The non-deterministic failures and non-safe values do negatively affect the results of all the three approaches.  Due to the feedback checking process, \emph{ict} can alleviate impacts of the non-safe values. While for non-deterministic failures, one potential solution is the redundancy of test case execution.}
 
 
 
@@ -2574,7 +2590,7 @@ In summary, the answer to the Q8 is:
 
 \subsection{Threats to validity}
 
-There are two threats to validity in our empirical studies. First, our experiments are based on 5 open-source software.  However, these software only represented some specific inputs space and specific degree or location of the MFS. To make the conclusion more general, we need to observe how these approaches performed on other inputs models with different characteristics. For this, we created a batch of synthetic input models.  More specifically, for the synthetic models used in Section \ref{sec:emprical:Sensitivity}, we  consider how approaches performed under a different number of parameters (8 to 100) instead of some specific number of parameters obtained from previous experiments. Additionally, we also consider the different number of MFS (1 to 90) that contained in these synthetic models instead of only 1 or 2. In Section \ref{sec:emprical:Assumption}, these models are created by considering the various probabilities of triggering MFS (1\% to 98\%) instead of 100\% or only some specific probabilities. We also considered the number of times (1 to 47) that unsafe values are introduced each time the MFS identification proceeded in the experiments.
+There are two threats to validity in our empirical studies. First, our experiments are based on 5 open-source software.  However, these software only represented some specific inputs space and specific degree or location of the MFS. To make the conclusion more general, we need to observe how these approaches performed on other inputs models with different characteristics. For this, we created a batch of synthetic input models.  More specifically, for the synthetic models used in Section \ref{sec:emprical:Sensitivity}, we  consider how approaches performed under a different number of parameters (8 to 100) instead of some specific number of parameters obtained from previous experiments. Additionally, we also consider the different number of MFS (1 to 90) that contained in these synthetic models instead of only 1 or 2. In Section \ref{sec:emprical:Assumption}, these models are created by considering the various probabilities of triggering MFS (1\% to 98\%) instead of 100\% or only some specific probabilities. We also considered the number of times (1 to 47) that unsafe values are introduced each time the MFS identification proceeded in the experiments. {\color{red}Another point that is related to the subject application is that the number of test cases needed by the proposed approach would grow linearly with the number of configuration options of the subject application under testing.}
 %More subject programs are desired to make the results more general, such that the conclusion of our experiment can reduce the impact caused by specific input space and specific degree or location of the MFS.
 
 Second, there are many generation algorithms and MFS identification algorithms. In our empirical studies, we just used AETG \cite{cohen1997aetg} as the test case generation strategy and OFOT \cite{nie2011minimal} as the MFS identification strategy. As different generation and identification algorithms may affect the performance of our proposed CT framework, especially on the number of test cases, some studies using different test case generation and MFS identification approaches are desired.
@@ -2622,7 +2638,10 @@ Another work which shares similar ideas comes from the Software Product Lines (S
 \section{Conclusion and Future works}\label{sec:conclusion}
 Combinatorial testing is an effective testing technique at detecting and diagnosis of the failure-inducing interactions in the SUT. Traditional CT separately studies test case generation and MFS identification. In this paper, we proposed a new CT framework, i.e., \emph{interleaving CT}, that integrates these two important stages, which allows for both generation and identification better share each other's information. As a result, the interleaving CT approach can provide a more efficient testing than augmented sequential CT.
 
-Empirical studies were conducted on five open-source software subjects. The results show that with our new CT framework, there is a reduction on the number of generated test cases when compared to the augmented sequential CT approach, while there is a significant improvement in the quality of the identified MFS. Further, when compared with another adaptive CT framework  \emph{fda-cit} \cite{dumlu2011feedback,yilmaz2013reducing}, our approach also performed better, especially with the better quality of the MFS identification. At last, we showed that our approach \emph{ict} can still perform well on the subjects with various number of options, MFS, and on the condition that there are non-deterministic failures and non-safe values.
+Empirical studies were conducted on five open-source software subjects {\color{red} and several other synthetic software. The results showed that when compared to the other approaches, \emph{ict} obtained better MFS identification results in most cases (both empirical studies on real software and empirical studies on synthetic software). \emph{ict} also decreased the number of generated test cases when compared with \emph{sct}, and it obtained a good result at the reduction of masking effects between different MFS even when compared to \emph{fda-cit}. Additionally, we learned that there are several factors that may have negative effects on these approaches, which are the large number of MFS, the non-deterministic failures (especially when the possibility of the appearance of failures ranged from 0.3 to 0.8), and the non-safe values, respectively. The feedback checking mechanism and redundancy of test case execution may help to alleviate these negative effects to some extent.
+}
+
+%with our new CT framework, there is a reduction on the number of generated test cases when compared to the augmented sequential CT approach, while there is a significant improvement in the quality of the identified MFS. Further, when compared with another adaptive CT framework  \emph{fda-cit} \cite{dumlu2011feedback,yilmaz2013reducing}, our approach also performed better, especially with the better quality of the MFS identification. At last, we showed that our approach \emph{ict} can still perform well on the subjects with various number of options, MFS, and on the condition that there are non-deterministic failures and non-safe values.
 
 As a future work, we plan to extend our interleaving CT approach with more test case generation and MFS identification algorithms, to see the extent on which our new CT framework can enhance those different CT-based algorithms. Another interesting work is to combine the interleaving CT approach with the masking effects technique \emph{fda-cit}\cite{yilmaz2013reducing}. By this, we believe the impacts of masking effects can be further reduced and it can support a better quality of MFS identification.
 
@@ -2973,7 +2992,7 @@ As a future work, we plan to extend our interleaving CT approach with more test 
 \fi
 
 
-This work was supported by the National Natural Science Foundation of China (No. 61272079), the Research Fund for the Doctoral Program of Higher Education of China (No.20130091110032), the Science Fund for Creative Research Groups of the National Natural Science Foundation of China(No. 61321491), the Major Program of National Natural Science Foundation of China (No. 91318301), and National Science Foundation Award CCF-1464425.
+We would like to thank anonymous referees for their suggestions and comments on this paper. This work was supported by the National Key Research and Development Plan (No. 2018YFB1003800), US National Science Foundation Award CNS-1748109, US Department of Homeland Security (DHS-14-ST-062-001), and US National Institute of Standards and Technologies Award(70NANB15H199).
 
 
 % Can use something like this to put references on a page
