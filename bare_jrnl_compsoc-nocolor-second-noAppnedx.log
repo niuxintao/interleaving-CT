@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  25 JUN 2018 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.21)  26 JUN 2018 17:53
 entering extended mode
 **./bare_jrnl_compsoc-nocolor-second-noAppnedx.tex
 (bare_jrnl_compsoc-nocolor-second-noAppnedx.tex
@@ -830,16 +830,16 @@ Package epstopdf Info: Source file: <enNonSafe.eps>
 (epstopdf)                    size: 34927 bytes
 (epstopdf)             Command: <epstopdf --outfile=enNonSafe-eps-converted-to.
 pdf enNonSafe.eps>
-(epstopdf)             \includegraphics on input line 2475.
+(epstopdf)             \includegraphics on input line 2474.
 Package epstopdf Info: Output file is already uptodate.
 <enNonSafe-eps-converted-to.pdf, id=987, pagebox=cropbox, 589.20125pt x 300.121
 25pt>
 File: enNonSafe-eps-converted-to.pdf Graphic file (type pdf)
 <use enNonSafe-eps-converted-to.pdf>
 Package pdftex.def Info: enNonSafe-eps-converted-to.pdf  used on input line 247
-5. on input line 2475.
+4. on input line 2474.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2475.
+e 2474.
 Package epstopdf Info: Source file: <enNonSafeTriggerAvg.eps>
 (epstopdf)                    date: 2018-02-03 17:43:59
 (epstopdf)                    size: 56222 bytes
@@ -848,16 +848,16 @@ Package epstopdf Info: Source file: <enNonSafeTriggerAvg.eps>
 (epstopdf)                    size: 34924 bytes
 (epstopdf)             Command: <epstopdf --outfile=enNonSafeTriggerAvg-eps-con
 verted-to.pdf enNonSafeTriggerAvg.eps>
-(epstopdf)             \includegraphics on input line 2482.
+(epstopdf)             \includegraphics on input line 2481.
 Package epstopdf Info: Output file is already uptodate.
 <enNonSafeTriggerAvg-eps-converted-to.pdf, id=988, pagebox=cropbox, 589.20125pt
  x 300.12125pt>
 File: enNonSafeTriggerAvg-eps-converted-to.pdf Graphic file (type pdf)
 <use enNonSafeTriggerAvg-eps-converted-to.pdf>
 Package pdftex.def Info: enNonSafeTriggerAvg-eps-converted-to.pdf  used on inpu
-t line 2482. on input line 2482.
+t line 2481. on input line 2481.
 Package pdftex.def Info: Requested size: 252.94499pt x 128.84354pt on input lin
-e 2482.
+e 2481.
  [67 <./enNonSafe-eps-converted-to.pdf> <./enNonSafeTriggerAvg-eps-converted-to
 .pdf>]
 [68] [69] [70] [71] [72] [73] (bare_jrnl_compsoc-nocolor-second-noAppnedx.bbl
@@ -878,87 +878,87 @@ Missing character: There is no ½ in font ptmri7t!
 <niu.png, id=1117, 1281.78876pt x 1490.56876pt>
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3048. on input line 3048.
+Package pdftex.def Info: niu.png  used on input line 3047. on input line 3047.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3048.
+3047.
 File: niu.png Graphic file (type png)
 <use niu.png>
-Package pdftex.def Info: niu.png  used on input line 3048. on input line 3048.
+Package pdftex.def Info: niu.png  used on input line 3047. on input line 3047.
 Package pdftex.def Info: Requested size: 71.46674pt x 83.10736pt on input line 
-3048.
+3047.
 <nie.png, id=1121, 230.36063pt x 258.21469pt>
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3055. on input line 3055.
+Package pdftex.def Info: nie.png  used on input line 3054. on input line 3054.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-055.
+054.
 File: nie.png Graphic file (type png)
 <use nie.png>
-Package pdftex.def Info: nie.png  used on input line 3055. on input line 3055.
+Package pdftex.def Info: nie.png  used on input line 3054. on input line 3054.
 Package pdftex.def Info: Requested size: 72.2687pt x 81.00708pt on input line 3
-055.
+054.
 <hare.png, id=1124, 1214.136pt x 1402.038pt>
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3059. on input line 3059.
+Package pdftex.def Info: hare.png  used on input line 3058. on input line 3058.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3059.
+3058.
 File: hare.png Graphic file (type png)
 <use hare.png>
-Package pdftex.def Info: hare.png  used on input line 3059. on input line 3059.
+Package pdftex.def Info: hare.png  used on input line 3058. on input line 3058.
 
 Package pdftex.def Info: Requested size: 72.25217pt x 83.43405pt on input line 
-3059.
+3058.
 <lei.jpg, id=1127, 242.1045pt x 327.3831pt>
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3063. on input line 3063.
+Package pdftex.def Info: lei.jpg  used on input line 3062. on input line 3062.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3063.
+3062.
 File: lei.jpg Graphic file (type jpg)
 <use lei.jpg>
-Package pdftex.def Info: lei.jpg  used on input line 3063. on input line 3063.
+Package pdftex.def Info: lei.jpg  used on input line 3062. on input line 3062.
 Package pdftex.def Info: Requested size: 66.80614pt x 90.33784pt on input line 
-3063.
+3062.
  [79 <./niu.png> <./nie.png> <./hare.png> <./lei.jpg>]
 <xy.png, id=1141, 925.95938pt x 1489.81593pt>
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3067. on input line 3067.
+Package pdftex.def Info: xy.png  used on input line 3066. on input line 3066.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3067.
+ 3066.
 File: xy.png Graphic file (type png)
 <use xy.png>
-Package pdftex.def Info: xy.png  used on input line 3067. on input line 3067.
+Package pdftex.def Info: xy.png  used on input line 3066. on input line 3066.
 Package pdftex.def Info: Requested size: 65.12048pt x 104.77515pt on input line
- 3067.
+ 3066.
 <xujiaxi.jpg, id=1144, 2080.02094pt x 3120.4078pt>
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3071. on input line 30
-71.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3070. on input line 30
+70.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3071.
+ 3070.
 File: xujiaxi.jpg Graphic file (type jpg)
 <use xujiaxi.jpg>
-Package pdftex.def Info: xujiaxi.jpg  used on input line 3071. on input line 30
-71.
+Package pdftex.def Info: xujiaxi.jpg  used on input line 3070. on input line 30
+70.
 Package pdftex.def Info: Requested size: 69.82474pt x 104.74976pt on input line
- 3071.
+ 3070.
 <wangyan.png, id=1147, 93.951pt x 136.5903pt>
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3075. on input line 30
-75.
+Package pdftex.def Info: wangyan.png  used on input line 3074. on input line 30
+74.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-075.
+074.
 File: wangyan.png Graphic file (type png)
 <use wangyan.png>
-Package pdftex.def Info: wangyan.png  used on input line 3075. on input line 30
-75.
+Package pdftex.def Info: wangyan.png  used on input line 3074. on input line 30
+74.
 Package pdftex.def Info: Requested size: 62.1383pt x 90.33952pt on input line 3
-075.
+074.
 [80 <./xy.png> <./xujiaxi.jpg> <./wangyan.png>]
 (bare_jrnl_compsoc-nocolor-second-noAppnedx.aux) ) 
 Here is how much of TeX's memory you used:
@@ -983,7 +983,7 @@ pfb><C:/CTEX/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/CTEX/MikTex
 x2.9/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MikTex2.9/fonts/type1/urw/times/
 utmri8a.pfb>
 Output written on bare_jrnl_compsoc-nocolor-second-noAppnedx.pdf (80 pages, 751
-7027 bytes).
+6437 bytes).
 PDF statistics:
  1209 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
