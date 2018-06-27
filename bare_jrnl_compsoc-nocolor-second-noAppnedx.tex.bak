@@ -53,8 +53,8 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
-%\documentclass[10pt,journal,compsoc]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+\documentclass[10pt,journal,compsoc]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -455,6 +455,7 @@ E-mail: niuxintao@gmail.com, changhainie@nju.edu.cn
   E-mail: Xiaoyin.Wang@utsa.edu
 \IEEEcompsocthanksitem Jiaxi Xu and Yan Wang are with School of Information Engineering, Nanjing Xiaozhuang University. \protect\\
   E-mail: xujiaxi@njxzc.edu.cn, wangyan@njxzc.edu.cn}% <-this % stops an unwanted space
+\thanks{Corresponding author: Changhai Nie}
 \thanks{Manuscript received April 19, 2005; revised September 17, 2014.}}
 
 %\IEEEcompsocitemizethanks{
@@ -1031,7 +1032,7 @@ More details of the modifications of CT activities are listed as follows:
 We adopt the \emph{one test case one time} method as the basic skeleton of the generation process. Originally, the generation of one test case can be formulated as \ref{eq1}.
 \begin{displaymath} t \leftarrow  select (\mathcal{T}_{all}, \Omega ,  \xi) \tag{EQ1} \label{eq1} \end{displaymath}
 
-There are three factors that determine the selection of test case $t$. $\mathcal{T}_{all}$ represents all the valid test cases that can be selected to execute. Usually, the test cases that have been tested will not be included as they have no more contribution to the coverage. $\Omega$ indicates the set of schemas that have not been covered yet. $\xi$ is a random factor. Most CT generation approaches prefer to select a test case that can cover as many uncovered schemas as possible. This greedy selection process does not guarantee an optimal solution, i.e., the final size of the set of test cases is not guaranteed to be minimal. The random factor $\xi$ is used to help to escape from the local optimum.
+There are three factors that determine the selection of test case $t$. $\mathcal{T}_{all}$ represents all the valid test cases that can be selected to execute. Usually, the test cases that have been tested will not be included as they have no more contribution to the coverage. $\Omega$ indicates the set of schemas that have not been covered yet. $\xi$ is a random factor. Most CT generation approaches prefer to select a test case that can cover as many uncovered schemas as possible. This greedy selection process does not guarantee an optimal solution, i.e., the final size of the set of test cases is not guaranteed to be minimal. The random factor $\xi$ is used to help to escape from the local optimum (We will not discuss the specific usage of factor $\xi$ in this paper, many papers that focus on generating covering array have given the specific implements).
 
 %the parameters and their values, which indicates a valid test case. $\Omega$ gives the uncovered schemas currently. Note that the is to . To the oppiste , each test case. It is noted that for a . Thus some random factor $xi$ is needed to the local optimization.
 
@@ -2374,7 +2375,7 @@ Syn10     &  $4^{50} $ &2(6)\ 13(4)\ 15(4)\ 20(4) \\ \hline
 %%%%%%%%%%%%%----%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Non-deterministic failures}
-The results of evaluating the approaches on non-deterministic failures are shown in Fig. \ref{sen_und_f_measure_result}, Fig. \ref{sen_opts_tests_result}, and Fig. \ref{sen_pro_t_tuple_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the non-deterministic failures are triggered, the second figure shows the number of test cases, and the last one shows the results of the masking effects.
+The results of evaluating how well these approaches handle non-deterministic failures are shown in Fig. \ref{sen_und_f_measure_result}, Fig. \ref{sen_opts_tests_result}, and Fig. \ref{sen_pro_t_tuple_result}, of which the first figure depicts the quality of MFS identification with various probabilities that the non-deterministic failures are triggered, the second figure shows the number of test cases, and the last one shows the results of the masking effects.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_und_f_measure.eps}
@@ -2442,7 +2443,7 @@ Figure \ref{sen_und_f_measure_result_reduncy} shows the results. From this figur
 
 \subsubsection{Non-Safe values}
 
-The results of evaluating the approaches on non-safe values are shown in Fig. \ref{sen_safe_f_measure_result}, Fig. \ref{sen_safe_tests_result}, and Fig. \ref{sen_safe_t_tuple_result}.
+The results of evaluating how well these approaches handle non-safe values are shown in Fig. \ref{sen_safe_f_measure_result}, Fig. \ref{sen_safe_tests_result}, and Fig. \ref{sen_safe_t_tuple_result}.
 
 \begin{figure}[htbp]
  \includegraphics[width=3.5in]{sen_safe_f_measure.eps}

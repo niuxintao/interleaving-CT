@@ -53,8 +53,8 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
-%\documentclass[10pt,journal,compsoc]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+\documentclass[10pt,journal,compsoc]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -455,6 +455,7 @@ E-mail: niuxintao@gmail.com, changhainie@nju.edu.cn
   E-mail: Xiaoyin.Wang@utsa.edu
 \IEEEcompsocthanksitem Jiaxi Xu and Yan Wang are with School of Information Engineering, Nanjing Xiaozhuang University. \protect\\
   E-mail: xujiaxi@njxzc.edu.cn, wangyan@njxzc.edu.cn}% <-this % stops an unwanted space
+\thanks{Corresponding author: Changhai Nie}
 \thanks{Manuscript received April 19, 2005; revised September 17, 2014.}}
 
 %\IEEEcompsocitemizethanks{
@@ -628,7 +629,7 @@ We conducted a series of empirical studies on 5 open-source software {\color{red
  \begin{enumerate}
 \item	Compared to the other approaches, our new interleaving framework obtained better failure-inducing interaction identification results in most cases (both empirical studies on real software and empirical studies on synthetic software).  The new interleaving framework also decreased the number of generated test cases when compared with the traditional sequential framework in most cases, and it obtained a good result at the reduction of masking effects caused by different failure-inducing interactions even when compared to the feedback-driven CT which focuses on the reduction of masking effects.
 \item Feedback-driven CT generated the smallest number of test cases in most cases, especially when the number of options of the system under testing is large, it also obtained a good result at the reduction of masking effects. As for traditional sequential framework, its results of these experiments lay in between those of the other two approaches in most cases.
-\item	The novel feedback checking mechanism benefits our new interleaving framework a lot, especially on the improvement of the accurateness of  failure-inducing interaction identification and the coverage of interactions to be covered.
+\item	The novel feedback checking mechanism benefits our new interleaving framework a lot, especially on the improvement of the accurateness of  failure-inducing interaction identification and the coverage of interactions to be checked.
 \item	Increasing the number of failure-inducing interactions has a negative effect on all these approaches when considering the accurateness of failure-inducing interaction identification.
 \item	The non-deterministic failures also have a negative effect on these approaches, especially when the possibility of the appearance of failures ranges from 0.3 to 0.8. One potential solution is to increase the redundancy of test case execution.
 \item	Similar to the issue caused by a large number of failure-inducing interactions, the non-safe value issue also has a negative effect on all these three approaches, but the feedback mechanism can help our new interleaving framework to alleviate this negative effect to some extent.
@@ -2063,7 +2064,7 @@ Since there is only one defect in each software subject used in the previous exp
 \subsubsection{Study setup}
 The software subjects with multiple bugs used in this experiment are listed in Table \ref{multiple_defects_subjects}. In this table, we listed corresponding versions of each software, lines of code, number of classes, the bug IDs, their corresponding input model, and MFS information.
 
-{\color{red}Note that in this study we only selected 2 out of 5 subject applications to experiment with multiple defects. The reason for this is that it is very hard and time-consuming to obtain reproducible testing scenarios that contain multiple option-related defects. In order to simplify the process, we adopted the strategy to select a small number of subject application, but for each subject application, we obtained more different versions of that application. By doing so, we can also reuse the test scripts we have built for a subject application. As a result, for the experiments of multiple defects, we have built five different versions of subject applications, of which the number is equal to the number of the subject applications used in the experiment for a single defect. This is also why we only use a limited number of bugs for these applications. Also, we believe it is common that the test cases under execution have limited number of multiple bugs. This is because in practice if there are too many distinct defects is the SUT, it needs human re-examination rather than just doing an automatic diagnosis \cite{zhang2011characterizing}.}
+{\color{red}Note that in this study we only selected 2 out of 5 subject applications to experiment with multiple defects. The reason for this is that it is very hard and time-consuming to obtain reproducible testing scenarios that contain multiple option-related defects. In order to simplify the process, we adopted the strategy to select a small number of subject applications, but for each subject application, we obtained more different versions of that application. By doing so, we can also reuse the test scripts we have built for a subject application. As a result, for the experiments of multiple defects, we have built five different versions of subject applications, of which the number is equal to the number of the subject applications used in the experiment for a single defect. This is also why we only use a limited number of bugs for these applications. Also, we believe it is common that the test cases under execution have limited number of multiple bugs. This is because in practice if there are too many distinct defects is the SUT, it needs human re-examination rather than just doing an automatic diagnosis \cite{zhang2011characterizing}.}
 
 \begin{table*}[ht]
 \caption{The software subjects with multiple defects}
@@ -2336,7 +2337,7 @@ In regard to the masking effects, we can observe that the number of options had 
 Therefore, the number of options in the SUT did not have much influence on the quality of MFS identification; and although generating more test cases than \emph{fda-cit}, \emph{ict} was still a better choice when considering the quality of MFS identification and the reduction of masking effects.
 
 In summary, the answer to Q6 is:
-\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not.} {\color{red}\textbf{Additionally, concerning various numbers of MFS, \emph{ict} obtained the best MFS identification results and generated the smallest number of test cases in most cases, \emph{fda-cit} obtained the highest covered-t-coverage. As for various numbers of options, \emph{ict} still did the best at MFS identification, and it also obtained the highest covered-t-coverage, while \emph{fda-cit} generated the smallest number of test cases. Besides, in these two conditions, the results obtained by \emph{sct} always lay in between those of the other two approaches.}}
+\textbf{Large number of MFS has a negative impact on the quality of the MFS identification of all the three approaches, while the number of options does not.} {\color{red}\textbf{Additionally, concerning various numbers of MFS, \emph{ict} obtained the best MFS identification results and generated the smallest number of test cases in most cases, \emph{fda-cit} obtained the highest covered-t-coverage. As for various numbers of options, \emph{ict} still did the best at MFS identification, and it also obtained the highest covered-t-coverage, while \emph{fda-cit} generated the smallest number of test cases. Besides, in these two conditions, the results obtained by \emph{sct} lay in between those of the other two approaches in most cases.}}
 
 \subsection{The ability of handling assumptions}\label{sec:emprical:Assumption}
 The last study is designed to evaluate the performances of the three approaches when the two assumptions proposed in Section \ref{sec:back:iden}, i.e., deterministic failures and the existence of safe values,  do not hold.
